@@ -7,7 +7,7 @@ const App = () => {
    <>
    {/* <Header/> */}
     {/* <p><h1>Helllo</h1></p> */}
-<Outlet/>
+   <Outlet/>
    <Footer/>
  
    </>

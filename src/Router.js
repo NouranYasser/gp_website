@@ -37,7 +37,7 @@ import Guest from "./middleware/Guest.js";
 import UpdateExercise from "./Admin/UpdateExercise.js";
 //import { createBrowserRouter } from 'some-library-or-module';
 import { createBrowserRouter } from "react-router-dom";
-import test from "./Admin/test";
+
 
 export const router = createBrowserRouter([
   {
@@ -52,11 +52,6 @@ export const router = createBrowserRouter([
       {
         path: "/SignUp",
         element: <SignUp/>,
-      },
-
-      {
-        path: "/test",
-        element: <test/>,
       },
 
       // {
@@ -162,7 +157,7 @@ export const router = createBrowserRouter([
           },
         
           {
-            path: "/UpdateExercise",
+            path: "/UpdateExercise/:id",
             element: <UpdateExercise />,
           },
 
