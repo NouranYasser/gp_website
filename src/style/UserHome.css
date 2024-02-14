@@ -6,10 +6,13 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-
-}
-.b-div{
     
+}
+.nouran{
+    background-image: url("../images/images.jfif");
+    background-repeat: no-repeat;
+}
+.b-div{   
     max-width: 450px;
     max-height: 450px;
     display: flex;
