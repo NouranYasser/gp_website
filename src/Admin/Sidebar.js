@@ -9,8 +9,8 @@ import { FaBaby } from "react-icons/fa";
 import { IoFastFoodOutline } from "react-icons/io5";
 import { IoAccessibility } from "react-icons/io5";
 import { IoDesktopSharp } from "react-icons/io5";
+import { FaBars } from 'react-icons/fa';
 
-import {FaBars}from "react-icons/fa";
 import {  NavLink } from 'react-router-dom';
 
 

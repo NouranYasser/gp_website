@@ -35,6 +35,9 @@ import FoodMonth6 from "./Admin/FoodMonth6.js";
 import UpdateFood from "./Admin/UpdateFood.js";
 import Guest from "./middleware/Guest.js";
 import UpdateExercise from "./Admin/UpdateExercise.js";
+//import { createBrowserRouter } from 'some-library-or-module';
+import { createBrowserRouter } from "react-router-dom";
+import test from "./Admin/test";
 
 export const router = createBrowserRouter([
   {
@@ -50,9 +53,15 @@ export const router = createBrowserRouter([
         path: "/SignUp",
         element: <SignUp/>,
       },
+
       {
-        element: <Guest />,
-        children: [
+        path: "/test",
+        element: <test/>,
+      },
+
+      // {
+        // element: <Guest />,
+        // children: [
           {
             path: "/UserHome",
             element: <UserHome />,
@@ -212,5 +221,7 @@ export const router = createBrowserRouter([
         ],
       },
     ],
-  },
-]);
+  // },
+// ]
+
+);
