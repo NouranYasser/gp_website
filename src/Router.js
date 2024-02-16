@@ -91,11 +91,11 @@ export const router = createBrowserRouter([
             path: "/TipsAndActivitiesMonth6",
             element: <TipsAndActivitiesMonth6 />,
           },
-          { 
-            path: "/SquareContainer",
-            element: <SquareContainer />,
+          // { 
+          //   path: "/SquareContainer",
+          //   element: <SquareContainer />,
 
-          },
+          // },
           {
             path: "/TipsAndActivities",
             element: <TipsAndActivities />,
