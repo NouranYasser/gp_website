@@ -55,7 +55,9 @@ import Nutrition from "../src/Admin/Baby/Nutrition.js"
 import Feeding from "./Admin/Baby/Feeding.js"
 import BreastFeeding from "./Admin/Baby/BreastFeeding.js"
 import ArtificalFeeding from "./Admin/Baby/ArtificalFeeding.js"
+import CommonIssues from "./Admin/Baby/CommonIssues.js"
 
+import ShowDetails from "./Admin/Baby/ShowDetails.js"
 
 
 export const router = createBrowserRouter([
@@ -162,6 +164,16 @@ export const router = createBrowserRouter([
           {
             path: "/ArtificalFeeding",
             element: <ArtificalFeeding/>,
+          },
+
+          {
+            path: "/CommonIssues",
+            element: <CommonIssues/>,
+          },
+      
+          {
+            path: "/ShowDetails",
+            element: <ShowDetails/>,
           },
 
           {
