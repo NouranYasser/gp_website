@@ -38,12 +38,11 @@ import UpdateExercise from "./Admin/Prgnancy/UpdateExercise.js";
 import BabyHome from "./Admin/Baby/BabyHome.js";
 import TipsAndActivities from "./Admin/Baby/TipsAndActivities.js";
 import TipsAndActivitiesMonth1 from "../src/Admin/Baby/TipsAndActivitiesMonth1.js";
-import TipsAndActivitiesMonth3 from "../src/Admin/Baby/TipsAndActivitiesMonth3.js"
-import TipsAndActivitiesMonth6 from "../src/Admin/Baby/TipsAndActivitiesMonth6.js"
-import { createBrowserRouter } from "react-router-dom";
-import test from "./Admin/test";
-import ChildGrowth from "../src/Admin/Baby/ChildGrowth.js"
-
+import TipsAndActivitiesMonth3 from "../src/Admin/Baby/TipsAndActivitiesMonth3.js";
+import TipsAndActivitiesMonth6 from "../src/Admin/Baby/TipsAndActivitiesMonth6.js";
+import { Form, createBrowserRouter } from "react-router-dom";
+import ChildGrowth from "../src/Admin/Baby/ChildGrowth.js";
+import SquareContainer from "../src/Admin/Baby/test.js";
 import ChildGrowthMonth1 from "../src/Admin/Baby/ChildGrowthMonth1.js"
 import ChildGrowthMonth3 from "../src/Admin/Baby/ChildGrowthMonth3.js"
 import ChildGrowthMonth6 from "../src/Admin/Baby/ChildGrowthMonth6.js"
@@ -93,8 +92,12 @@ export const router = createBrowserRouter([
           {
             path: "/TipsAndActivitiesMonth6",
             element: <TipsAndActivitiesMonth6 />,
-          },       
-          
+          },
+          { 
+            path: "/SquareContainer",
+            element: <SquareContainer />,
+
+          },
           {
             path: "/TipsAndActivities",
             element: <TipsAndActivities />,
@@ -121,10 +124,18 @@ export const router = createBrowserRouter([
             path: "/ChildGrowthMonth6",
             element: <ChildGrowthMonth6 />,
           },
+          {
+            path: "/ChildGrowthMonth9",
+            element: <ChildGrowthMonth9 />,
+          },
 
           {
             path: "/ChildGrowthMonth12",
             element: <ChildGrowthMonth12 />,
+          },
+          {
+            path: "/ChildGrowthMonth15",
+            element: <ChildGrowthMonth15 />,
           },
           
           {
