@@ -1,42 +1,63 @@
 import UserHome from "./Admin/UserHome.js";
-import SignUp from "./Admin/SignUp.js";
-import Login from "./Admin/Login.js";
+import SignUp from "./Admin/Auth/SignUp.js";
+import Login from "./Admin/Auth/Login.js";
 import App from "./App";
-import Pregnancy from "./Admin/Pregnancy.js";
-import Babygrowth from "./Admin/Babygrowth.js";
-import Bodychange from "./Admin/Bodychange.js";
-import BodychangeMonth1 from "./Admin/BodyChangeMonth1.js";
-import BodychangeMonth2 from "./Admin/BodyChangeMonth2.js";
-import BodychangeMonth3 from "./Admin/BodyChangeMonth3.js";
-import BodychangeMonth4 from "./Admin/BodyChangeMonth4.js";
-import BodychangeMonth5 from "./Admin/BodyChangeMonth5.js";
-import BodychangeMonth6 from "./Admin/BodyChangeMonth6.js";
-import BodychangeMonth7 from "./Admin/BodyChangeMonth7.js";
-import BodychangeMonth8 from "./Admin/BodyChangeMonth8.js";
-import BodychangeMonth9 from "./Admin/BodyChangeMonth9.js";
-import UpdateBodyChange from "./Admin/UpdateBodyChange.js";
-import UpdateBabygrowth from "./Admin/UpdateBabygrowth.js";
-import Food from "./Admin/Food.js";
-import Vitamins from "./Admin/Vitamins.js";
-import Exercises from "./Admin/Exercises.js";
-import Courses from "./Admin/Courses.js";
-import BabyGrowthMonth1 from "./Admin/BabyGrowthMonth1.js";
-import BabyGrowthMonth2 from "./Admin/BabyGrowthMonth2.js";
-import BabyGrowthMonth3 from "./Admin/BabyGrowthMonth3.js";
-import BabyGrowthMonth4 from "./Admin/BabyGrowthMonth4.js";
-import BabyGrowthMonth5 from "./Admin/BabyGrowthMonth5.js";
-import BabyGrowthMonth6 from "./Admin/BabyGrowthMonth6.js";
-import BabyGrowthMonth7 from "./Admin/BabyGrowthMonth7.js";
-import BabyGrowthMonth8 from "./Admin/BabyGrowthMonth8.js";
-import BabyGrowthMonth9 from "./Admin/BabyGrowthMonth9.js";
-import FoodMonth1 from "./Admin/FoodMonth1.js";
-import FoodMonth3 from "./Admin/FoodMonth3.js";
-import FoodMonth6 from "./Admin/FoodMonth6.js";
-import UpdateFood from "./Admin/UpdateFood.js";
-import Guest from "./middleware/Guest.js";
-import UpdateExercise from "./Admin/UpdateExercise.js";
-//import { createBrowserRouter } from 'some-library-or-module';
+import Pregnancy from "./Admin/Prgnancy/Pregnancy.js";
+import Babygrowth from "./Admin/Prgnancy/Babygrowth.js";
+import Bodychange from "./Admin/Prgnancy/Bodychange.js";
+import BodychangeMonth1 from "./Admin/Prgnancy/BodyChangeMonth1.js";
+import BodychangeMonth2 from "./Admin/Prgnancy/BodyChangeMonth2.js";
+import BodychangeMonth3 from "./Admin/Prgnancy/BodyChangeMonth3.js";
+import BodychangeMonth4 from "./Admin/Prgnancy/BodyChangeMonth4.js";
+import BodychangeMonth5 from "./Admin/Prgnancy/BodyChangeMonth5.js";
+import BodychangeMonth6 from "./Admin/Prgnancy/BodyChangeMonth6.js";
+import BodychangeMonth7 from "./Admin/Prgnancy/BodyChangeMonth7.js";
+import BodychangeMonth8 from "./Admin/Prgnancy/BodyChangeMonth8.js";
+import BodychangeMonth9 from "./Admin/Prgnancy/BodyChangeMonth9.js";
+import UpdateBodyChange from "./Admin/Prgnancy/UpdateBodyChange.js";
+import UpdateBabygrowth from "./Admin/Prgnancy/UpdateBabygrowth.js";
+import Food from "./Admin/Prgnancy/Food.js";
+import Vitamins from "./Admin/Prgnancy/Vitamins.js";
+import Exercises from "./Admin/Prgnancy/Exercises.js";
+import Courses from "./Admin/Prgnancy/Courses.js";
+import BabyGrowthMonth1 from "./Admin/Prgnancy/BabyGrowthMonth1.js";
+import BabyGrowthMonth2 from "./Admin/Prgnancy/BabyGrowthMonth2.js";
+import BabyGrowthMonth3 from "./Admin/Prgnancy/BabyGrowthMonth3.js";
+import BabyGrowthMonth4 from "./Admin/Prgnancy/BabyGrowthMonth4.js";
+import BabyGrowthMonth5 from "./Admin/Prgnancy/BabyGrowthMonth5.js";
+import BabyGrowthMonth6 from "./Admin/Prgnancy/BabyGrowthMonth6.js";
+import BabyGrowthMonth7 from "./Admin/Prgnancy/BabyGrowthMonth7.js";
+import BabyGrowthMonth8 from "./Admin/Prgnancy/BabyGrowthMonth8.js";
+import BabyGrowthMonth9 from "./Admin/Prgnancy/BabyGrowthMonth9.js";
+import FoodMonth1 from "./Admin/Prgnancy/FoodMonth1.js";
+import FoodMonth3 from "./Admin/Prgnancy/FoodMonth3.js";
+import FoodMonth6 from "./Admin/Prgnancy/FoodMonth6.js";
+import UpdateFood from "./Admin/Prgnancy/UpdateFood.js";
+import Guest from "../src/middleware/Guest.js";
+import UpdateExercise from "./Admin/Prgnancy/UpdateExercise.js";
+import BabyHome from "./Admin/Baby/BabyHome.js";
+import TipsAndActivities from "./Admin/Baby/TipsAndActivities.js";
+import TipsAndActivitiesMonth1 from "../src/Admin/Baby/TipsAndActivitiesMonth1.js";
+import TipsAndActivitiesMonth3 from "../src/Admin/Baby/TipsAndActivitiesMonth3.js"
+import TipsAndActivitiesMonth6 from "../src/Admin/Baby/TipsAndActivitiesMonth6.js"
 import { createBrowserRouter } from "react-router-dom";
+import test from "./Admin/test";
+import ChildGrowth from "../src/Admin/Baby/ChildGrowth.js"
+
+import ChildGrowthMonth1 from "../src/Admin/Baby/ChildGrowthMonth1.js"
+import ChildGrowthMonth3 from "../src/Admin/Baby/ChildGrowthMonth3.js"
+import ChildGrowthMonth6 from "../src/Admin/Baby/ChildGrowthMonth6.js"
+import ChildGrowthMonth9 from "../src/Admin/Baby/ChildGrowthMonth9.js"
+import ChildGrowthMonth12 from "../src/Admin/Baby/ChildGrowthMonth12.js"
+import ChildGrowthMonth15 from "../src/Admin/Baby/ChildGrowthMonth15.js"
+import ChildGrowthMonth18 from "../src/Admin/Baby/ChildGrowthMonth18.js"
+import ChildGrowthMonth21 from "../src/Admin/Baby/ChildGrowthMonth21.js"
+
+import Nutrition from "../src/Admin/Baby/Nutrition.js"
+import Feeding from "./Admin/Baby/Feeding.js"
+import BreastFeeding from "./Admin/Baby/BreastFeeding.js"
+import ArtificalFeeding from "./Admin/Baby/ArtificalFeeding.js"
+
 
 
 export const router = createBrowserRouter([
@@ -54,13 +75,94 @@ export const router = createBrowserRouter([
         element: <SignUp/>,
       },
 
-      // {
-        // element: <Guest />,
-        // children: [
+      {
+        element: <Guest />,
+        children: [
           {
             path: "/UserHome",
             element: <UserHome />,
           },
+          {
+            path: "/TipsAndActivitiesMonth1",
+            element: <TipsAndActivitiesMonth1 />,
+          },
+          {
+            path: "/TipsAndActivitiesMonth3",
+            element: <TipsAndActivitiesMonth3 />,
+          },
+          {
+            path: "/TipsAndActivitiesMonth6",
+            element: <TipsAndActivitiesMonth6 />,
+          },       
+          
+          {
+            path: "/TipsAndActivities",
+            element: <TipsAndActivities />,
+          },
+         
+          {
+            path: "/ChildGrowth",
+            element: <ChildGrowth />,
+          },
+
+
+          {
+            path: "/ChildGrowthMonth1",
+            element: <ChildGrowthMonth1 />,
+          },
+
+          {
+            path: "/ChildGrowthMonth3",
+            element: <ChildGrowthMonth3 />,
+          },
+
+          
+          {
+            path: "/ChildGrowthMonth6",
+            element: <ChildGrowthMonth6 />,
+          },
+
+          {
+            path: "/ChildGrowthMonth12",
+            element: <ChildGrowthMonth12 />,
+          },
+          
+          {
+            path: "/ChildGrowthMonth18",
+            element: <ChildGrowthMonth18 />,
+          },
+
+          {
+            path: "/ChildGrowthMonth21",
+            element: <ChildGrowthMonth21 />,
+          },
+         
+          {
+            path: "/Nutrition",
+            element: <Nutrition />,
+          },
+
+
+          {
+            path: "/Feeding",
+            element: <Feeding/>,
+          },
+         
+          {
+            path: "/BreastFeeding",
+            element: <BreastFeeding/>,
+          },
+
+          {
+            path: "/ArtificalFeeding",
+            element: <ArtificalFeeding/>,
+          },
+
+          {
+            path: "/BabyHome",
+            element: <BabyHome />,
+          },
+          
           {
             path: "/Babygrowth",
             element: <Babygrowth />,
@@ -216,7 +318,6 @@ export const router = createBrowserRouter([
         ],
       },
     ],
-  // },
-// ]
-
+  },
+]
 );

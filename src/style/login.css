@@ -10,6 +10,7 @@
     background-color: rgb(83, 78, 158); 
     color: white;
     margin: 30px;  
+    cursor: pointer;
   }
    
   .bodyForm{
