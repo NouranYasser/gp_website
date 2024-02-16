@@ -40,7 +40,7 @@ import TipsAndActivities from "./Admin/Baby/TipsAndActivities.js";
 import TipsAndActivitiesMonth1 from "../src/Admin/Baby/TipsAndActivitiesMonth1.js";
 import TipsAndActivitiesMonth3 from "../src/Admin/Baby/TipsAndActivitiesMonth3.js";
 import TipsAndActivitiesMonth6 from "../src/Admin/Baby/TipsAndActivitiesMonth6.js";
-import { Form, createBrowserRouter } from "react-router-dom";
+import {createBrowserRouter } from "react-router-dom";
 import ChildGrowth from "../src/Admin/Baby/ChildGrowth.js";
 import ChildGrowthMonth1 from "../src/Admin/Baby/ChildGrowthMonth1.js"
 import ChildGrowthMonth3 from "../src/Admin/Baby/ChildGrowthMonth3.js"
@@ -50,11 +50,11 @@ import ChildGrowthMonth12 from "../src/Admin/Baby/ChildGrowthMonth12.js"
 import ChildGrowthMonth15 from "../src/Admin/Baby/ChildGrowthMonth15.js"
 import ChildGrowthMonth18 from "../src/Admin/Baby/ChildGrowthMonth18.js"
 import ChildGrowthMonth21 from "../src/Admin/Baby/ChildGrowthMonth21.js"
-import Nutrition from "../src/Admin/Baby/Nutrition.js"
-import Feeding from "./Admin/Baby/Feeding.js"
-import BreastFeeding from "./Admin/Baby/BreastFeeding.js"
-import ArtificalFeeding from "./Admin/Baby/ArtificalFeeding.js"
-
+import Nutrition from "../src/Admin/Baby/Nutrition.js";
+import Feeding from "./Admin/Baby/Feeding.js";
+import BreastFeeding from "./Admin/Baby/BreastFeeding.js";
+import ArtificalFeeding from "./Admin/Baby/ArtificalFeeding.js";
+import NotFound from "./shared/NotFound.js";
 
 
 export const router = createBrowserRouter([
@@ -91,11 +91,7 @@ export const router = createBrowserRouter([
             path: "/TipsAndActivitiesMonth6",
             element: <TipsAndActivitiesMonth6 />,
           },
-          { 
-            path: "/SquareContainer",
-            element: <SquareContainer />,
 
-          },
           {
             path: "/TipsAndActivities",
             element: <TipsAndActivities />,
@@ -116,7 +112,10 @@ export const router = createBrowserRouter([
             path: "/ChildGrowthMonth3",
             element: <ChildGrowthMonth3 />,
           },
-
+          {
+            path : "*",
+            element : <NotFound />,
+          },
           
           {
             path: "/ChildGrowthMonth6",
