@@ -4,21 +4,19 @@ import axios from "axios";
 import { removeAuthUser } from "../../helper/Storage";
 import "../../style/Babygrowth.css";
 
-
 const Bodychange = () => {
-
   return (
     <>
-            <br></br>
+      <br></br>
       <div className="container">
         <div>
           <Link to="/BodyChangeMonth1">
             <button className="signadmin"> Month 1</button>
           </Link>
 
-      <Link to="/BodyChangeMonth2">
-        <button className="signadmin"> Month 4</button>
-      </Link>
+          <Link to="/BodyChangeMonth2">
+            <button className="signadmin"> Month 4</button>
+          </Link>
 
           <Link to="/BodyChangeMonth7">
             <button className="signadmin"> Month 7</button>
@@ -51,7 +49,6 @@ const Bodychange = () => {
           </Link>
         </div>
       </div>
-      
     </>
   );
 };

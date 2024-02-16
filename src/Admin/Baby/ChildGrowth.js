@@ -1,59 +1,56 @@
 import React, { useState, useEffect } from "react";
  import { Link } from "react-router-dom";
  import axios from "axios";
- import "../../style/food.css"
+ //import "../../style/food.css"
 
 
-const TipsAndActivities = () => {
+const ChildGrowth = () => {
  
     return (
       <>  
-   
+
+<br></br>
+<h1 className="f-p"> Child Growth </h1>
 <br></br>
 <br></br>
 <br></br>
-<br></br>
-<h1 className="f-p">Tips And Activities </h1>
-<br></br>
-<br></br>
-<br></br>
-<br></br>
+<br></br> 
 <div className="fo-container">
       <div>
-      <Link to="/TipsAndActivitiesMonth1">
+      <Link to="/ChildGrowthMonth1">
         <button className="fo-b"> Month 1-3</button>
       </Link> 
        
-      <Link to="/TipsAndActivitiesMonth9">
+      <Link to="/ChildGrowthMonth9">
         <button className="fo-b"> Month 9-12</button>
       </Link> 
-      <Link to="/TipsAndActivitiesMonth18">
+      <Link to="/ChildGrowthMonth18">
         <button className="fo-b"> Month 18-21</button>
       </Link>    
       </div>
       <div>
-        <Link to="/TipsAndActivitiesMonth3">
+        <Link to="/ChildGrowthMonth3">
         <button className="fo-b"> Month 3-6</button>
       </Link>  
       
-      <Link to="/TipsAndActivitiesMonth12">
+      <Link to="/ChildGrowthMonth12">
         <button className="fo-b"> Month 12-15</button>
       </Link> 
-      <Link to="/TipsAndActivitiesMonth21">
+      <Link to="/ChildGrowthMonth21">
         <button className="fo-b"> Month 21-24</button>
       </Link> 
        
       </div>
       <div>
-      <Link to="/TipsAndActivitiesMonth6">
+      <Link to="/ChildGrowthMonth6">
         <button className="fo-b"> Month 6-9</button>
         </Link> 
-        <Link to="/TipsAndActivitiesMonth15">
+        <Link to="/ChildGrowthMonth15">
         <button className="fo-b"> Month 15-18</button>
       </Link> 
 
       </div>
-      </div> 
+      </div>
 
 
 <br></br>
@@ -69,4 +66,4 @@ const TipsAndActivities = () => {
         </>
     );
   };
-  export default TipsAndActivities;
+  export default ChildGrowth;
