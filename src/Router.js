@@ -42,10 +42,7 @@ import TipsAndActivitiesMonth3 from "../src/Admin/Baby/TipsAndActivitiesMonth3.j
 import TipsAndActivitiesMonth6 from "../src/Admin/Baby/TipsAndActivitiesMonth6.js";
 import { Form, createBrowserRouter } from "react-router-dom";
 import ChildGrowth from "../src/Admin/Baby/ChildGrowth.js";
-<<<<<<< HEAD
 //import SquareContainer from "../src/Admin/Baby/test.js";
-=======
->>>>>>> 107fdf26524e0d69600b1aec19a0ae0cf2e1cfee
 import ChildGrowthMonth1 from "../src/Admin/Baby/ChildGrowthMonth1.js"
 import ChildGrowthMonth3 from "../src/Admin/Baby/ChildGrowthMonth3.js"
 import ChildGrowthMonth6 from "../src/Admin/Baby/ChildGrowthMonth6.js"
@@ -97,11 +94,7 @@ export const router = createBrowserRouter([
             path: "/TipsAndActivitiesMonth6",
             element: <TipsAndActivitiesMonth6 />,
           },
-          { 
-            path: "/SquareContainer",
-            element: <SquareContainer />,
-
-          },
+          
           {
             path: "/TipsAndActivities",
             element: <TipsAndActivities />,
