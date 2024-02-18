@@ -1,0 +1,10 @@
+.t-p{
+    text-align: center;
+    margin: 10px auto;
+    font-size: 2cm ;
+}
+.last{
+    align-items: start;
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+    margin-bottom: 100px;}

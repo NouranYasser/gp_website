@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import "../../style/update.css";
 
 function UpdateBodyChanges() {
   const [title, setTitle] = useState('');
@@ -35,45 +36,60 @@ function UpdateBodyChanges() {
   };
 
   return (
-    <div>
+    <div className='body-u'>
+    <div className='container-u'>
       <form onSubmit={handleSubmit}>
-      
-        <label htmlFor="title">Title:</label>
-        <input
+      <div className='row'>
+      <div className=' clo-25'>
+
+        <label htmlFor="title" className='label-u'>Title:</label></div>
+        <div><input
           type="text"
           id="title"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
-        />
-      
-     
-        <label htmlFor="description">Description:</label>
+        /></div>
+         </div>
+        <div className='row'>
+        <div className=' clo-25'>
+        <label htmlFor="description" className='label-u'>Description:</label></div>
+        <div>
         <textarea
-          id="description"
+          id="description-u"
           value={description}
           onChange={(e) => setDescription(e.target.value)}
-        />
+        /></div>
+        </div>
       
-      
-        <label htmlFor="month">Month:</label>
+        <div className='row'>
+            <div className=' clo-25'>
+        <label htmlFor="month" className='label-u'>Month:</label></div>
+            <div>
         <input
           type="text"
           id="month"
           value={month}
           onChange={(e) => setMonth(e.target.value)}
-        />
+        /></div>
+        </div>
       
-      
-        <label htmlFor="image">Image:</label>
+        <div className='row'>
+            <div className=' clo-25'>
+        <label htmlFor="image">Image:</label></div>
+            <div>
         <input
+         className='file-upload'
           type="file"
           id="image"
           onChange={(e) => setImage(e.target.files[0])}
-        />
+        /></div>
+        </div>
+        <div class="row">
      
-        <button type="submit">Submit</button>
+        <button type="submit" className='b-u'>Submit</button></div>
       </form>
       {message && <p>{message}</p>}
+      </div>
     </div>
   );
 }
