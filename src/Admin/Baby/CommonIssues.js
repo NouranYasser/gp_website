@@ -4,6 +4,8 @@ import ProductList from "./ProductList";
 import ProductCard from "./ProductCard";
 
 function CommonIssues(){
+ 
+ 
   return (
  
    <>
