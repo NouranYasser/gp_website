@@ -55,8 +55,8 @@ import Feeding from "./Admin/Baby/Feeding.js";
 import BreastFeeding from "./Admin/Baby/BreastFeeding.js";
 import ArtificalFeeding from "./Admin/Baby/ArtificalFeeding.js";
 import NotFound from "./shared/NotFound.js";
-
-
+import CommonIssues from "./Admin/Baby/CommonIssues.js";
+import ShowDetails from "./Admin/Baby/ShowDetails"
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -91,7 +91,6 @@ export const router = createBrowserRouter([
             path: "/TipsAndActivitiesMonth6",
             element: <TipsAndActivitiesMonth6 />,
           },
-
           {
             path: "/TipsAndActivities",
             element: <TipsAndActivities />,
@@ -164,6 +163,16 @@ export const router = createBrowserRouter([
           {
             path: "/ArtificalFeeding",
             element: <ArtificalFeeding/>,
+          },
+
+          {
+            path: "/CommonIssues",
+            element: <CommonIssues/>,
+          },
+      
+          {
+            path: "/ShowDetails/:id",
+            element: <ShowDetails/>,
           },
 
           {

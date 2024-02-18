@@ -1,0 +1,103 @@
+  .body-u{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  .container-u  input[type=text], select, textarea {
+    width: 90%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+  }
+.file-upload{
+  display: inline-block;
+  /* padding: 10px 20px; */
+  cursor: pointer;
+  background-color: #fdfdfd;
+  color: #8eacda;
+  border: 1px solid #fcfcfc;
+  border-radius: 50px;
+  box-shadow: 5px 5px 10px black;
+  outline: none;
+}
+::-webkit-file-upload-button{
+  color:white;
+  background-color:  rgb(112, 109, 153);
+  /* padding: 20px; */
+  border: none;
+  border-radius: 50px;
+  box-shadow: 1px 0 1px 1px black;
+
+}
+  
+  .label-u {
+    font-size: x-large;
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+  }
+  
+  /* input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+   */
+  .container-u {
+    background-color: rgb(112, 109, 156) ;
+    width: 50%;
+    border-radius: 5px;
+    color:white;
+    padding:0  20px ;
+  }
+  
+  .col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+  }
+  
+  .col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .b-u{
+    font-size: large;
+    width: 80%;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    background-color: rgb(83, 78, 158); 
+    color: white;
+    margin-top: 30px; 
+    cursor: pointer; 
+    margin-left: 30px;
+    margin-bottom: 5px;
+  }
+  
+  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+      width: 100%;
+      margin-top: 0;
+    }
+  }
+  
