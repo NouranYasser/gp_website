@@ -40,8 +40,9 @@ import TipsAndActivities from "./Admin/Baby/TipsAndActivities.js";
 import TipsAndActivitiesMonth1 from "../src/Admin/Baby/TipsAndActivitiesMonth1.js";
 import TipsAndActivitiesMonth3 from "../src/Admin/Baby/TipsAndActivitiesMonth3.js";
 import TipsAndActivitiesMonth6 from "../src/Admin/Baby/TipsAndActivitiesMonth6.js";
-import { Form, createBrowserRouter } from "react-router-dom";
+import {createBrowserRouter } from "react-router-dom";
 import ChildGrowth from "../src/Admin/Baby/ChildGrowth.js";
+
 //import SquareContainer from "../src/Admin/Baby/test.js";
 
 import ChildGrowthMonth1 from "../src/Admin/Baby/ChildGrowthMonth1.js"
@@ -57,8 +58,8 @@ import Feeding from "./Admin/Baby/Feeding.js"
 import BreastFeeding from "./Admin/Baby/BreastFeeding.js"
 import ArtificalFeeding from "./Admin/Baby/ArtificalFeeding.js"
 import CommonIssues from "./Admin/Baby/CommonIssues.js"
-
 import ShowDetails from "./Admin/Baby/ShowDetails.js"
+import NotFound from "./shared/NotFound.js";
 
 export const router = createBrowserRouter([
   {
@@ -94,7 +95,7 @@ export const router = createBrowserRouter([
             path: "/TipsAndActivitiesMonth6",
             element: <TipsAndActivitiesMonth6 />,
           },
-         
+          
           {
             path: "/TipsAndActivities",
             element: <TipsAndActivities />,
@@ -115,7 +116,10 @@ export const router = createBrowserRouter([
             path: "/ChildGrowthMonth3",
             element: <ChildGrowthMonth3 />,
           },
-
+          {
+            path : "*",
+            element : <NotFound />,
+          },
           
           {
             path: "/ChildGrowthMonth6",

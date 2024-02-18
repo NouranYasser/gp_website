@@ -1,23 +1,16 @@
 import React, { useState, useEffect } from "react";
  import { Link } from "react-router-dom";
  import axios from "axios";
- import "../../style/food.css"
+ import "../../style/food.css";
+ import "../../style/tips.css";
 
 
 const TipsAndActivities = () => {
  
     return (
       <>  
-   
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-<h1 className="f-p">Tips And Activities </h1>
-<br></br>
-<br></br>
-<br></br>
-<br></br>
+<h1 className="t-p">Tips And Activities </h1>
+
 <div className="fo-container">
       <div>
       <Link to="/TipsAndActivitiesMonth1">
@@ -44,7 +37,7 @@ const TipsAndActivities = () => {
       </Link> 
        
       </div>
-      <div>
+      <div className="last">
       <Link to="/TipsAndActivitiesMonth6">
         <button className="fo-b"> Month 6-9</button>
         </Link> 
