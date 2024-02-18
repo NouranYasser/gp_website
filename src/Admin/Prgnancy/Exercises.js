@@ -70,8 +70,6 @@ const Exercises = () => {
                   <td>{exercise.description}</td>
                   <td>
                     {exercise.video ? (
-
-
                       <iframe
                       src={exercise.video}
                       // width="640"
@@ -84,11 +82,10 @@ const Exercises = () => {
                     )}
                   </td>
                  
-                    <td>
-                    <Link to={'/UpdateExercise/${Exercises.id}'}>
+                  <td>
+                    <Link to={"/UpdateExercise/" + exercise.id}>
                       <button className="btnUpdate">Update</button>
                     </Link>             
-
                   </td>
                   <td>
                     <button

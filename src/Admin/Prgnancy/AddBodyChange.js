@@ -2,52 +2,47 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "../../style/Babygrowth.css";
 
-const Bodychange = () => {
+const AddBodyChange = () => {
   return (
     <>
-    <br></br>
-     <Link to="/AddBodyChange">
-        <button className="bb"> Add Data on Body change </button>
-      </Link>
       <br></br>
-     
       <div className="container">
         <div>
-          <Link to="/BodyChangeMonth1">
+          <Link to="/BabyGrowthMonth1">
             <button className="signadmin"> Month 1</button>
           </Link>
 
-          <Link to="/BodyChangeMonth2">
+          <Link to="/BabyGrowthMonth4">
             <button className="signadmin"> Month 4</button>
           </Link>
 
-          <Link to="/BodyChangeMonth7">
+          <Link to="/BabyGrowthMonth7">
             <button className="signadmin"> Month 7</button>
           </Link>
         </div>
         <div>
-          <Link to="/BodyChangeMonth2">
+          <Link to="/BabyGrowthMonth2">
             <button className="signadmin"> Month 2</button>
           </Link>
 
-          <Link to="/BodyChangeMonth5">
+          <Link to="/BabyGrowthMonth5">
             <button className="signadmin"> Month 5</button>
           </Link>
 
-          <Link to="/BodyChangeMonth8">
+          <Link to="/BabyGrowthMonth8">
             <button className="signadmin"> Month 8</button>
           </Link>
         </div>
         <div>
-          <Link to="/BodyChangeMonth3">
+          <Link to="/BabyGrowthMonth3">
             <button className="signadmin"> Month 3</button>
           </Link>
 
-          <Link to="/BodyChangeMonth6">
+          <Link to="/BabyGrowthMonth6">
             <button className="signadmin"> Month 6</button>
           </Link>
 
-          <Link to="/BodyChangeMonth9">
+          <Link to="/BabyGrowthMonth9">
             <button className="signadmin"> Month 9</button>
           </Link>
         </div>
@@ -55,4 +50,5 @@ const Bodychange = () => {
     </>
   );
 };
-export default Bodychange;
+
+export default AddBodyChange;
