@@ -1,9 +1,10 @@
-import UserHome from "./Admin/UserHome.js";
+import HomePage from "./Admin/HomePage.js";
 import SignUp from "./Admin/Auth/SignUp.js";
 import Login from "./Admin/Auth/Login.js";
 import App from "./App";
 import Pregnancy from "./Admin/Prgnancy/Pregnancy.js";
 import Babygrowth from "./Admin/Prgnancy/Babygrowth.js";
+import AddBodyChange from "./Admin/Prgnancy/AddBodyChange.js"
 import Bodychange from "./Admin/Prgnancy/Bodychange.js";
 import BodychangeMonth1 from "./Admin/Prgnancy/BodyChangeMonth1.js";
 import BodychangeMonth2 from "./Admin/Prgnancy/BodyChangeMonth2.js";
@@ -43,6 +44,7 @@ import TipsAndActivitiesMonth6 from "../src/Admin/Baby/TipsAndActivitiesMonth6.j
 import {createBrowserRouter } from "react-router-dom";
 import ChildGrowth from "../src/Admin/Baby/ChildGrowth.js";
 
+
 //import SquareContainer from "../src/Admin/Baby/test.js";
 
 import ChildGrowthMonth1 from "../src/Admin/Baby/ChildGrowthMonth1.js"
@@ -80,9 +82,14 @@ export const router = createBrowserRouter([
         element: <Guest />,
         children: [
           {
-            path: "/UserHome",
-            element: <UserHome />,
+            path: "/HomePage",
+            element: <HomePage />,
           },
+          {
+            path: "/AddBodyChange",
+            element: <AddBodyChange />,
+          },
+
           {
             path: "/TipsAndActivitiesMonth1",
             element: <TipsAndActivitiesMonth1 />,
@@ -94,8 +101,8 @@ export const router = createBrowserRouter([
           {
             path: "/TipsAndActivitiesMonth6",
             element: <TipsAndActivitiesMonth6 />,
-          },
-          
+          },          
+
           {
             path: "/TipsAndActivities",
             element: <TipsAndActivities />,

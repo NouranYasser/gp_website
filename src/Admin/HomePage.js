@@ -4,8 +4,8 @@ import "../style/UserHome.css";
 import { Link } from "react-router-dom";
 import Image from "../images/logo.png"
 import myImage from '../images/images logo.png';
-import "../Admin/Baby/Sidebar";
-import "../Admin/Baby/BabyHome";
+import "./Baby/Sidebar";
+import "./Baby/BabyHome";
 //import { useState } from "react";
 
 const UserHome = () => {

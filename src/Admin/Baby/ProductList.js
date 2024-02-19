@@ -1,29 +1,48 @@
-import React from "react";
-import {Data} from "../../Data/CommonProblem";
-import ProductCard  from "./ProductCard";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import ProductCard from "./ProductCard";
 import "../../style/productList.css";
-import { useState, useEffect } from 'react';
 
+function ProductList() {
+  const [issues, setIssues] = useState({
+    loading: true,
+    results: [],
+    err: null,
+    reload: 0,
+  });
 
-function ProductList (){
-    const items = Data;
-    return (
-        <div class='productCard'>
-            {
-               items.map((item) => {
-                    return <ProductCard key={item.id} 
-                    name={item.name} 
-                    description={item.description}       
-                 
-                    />
-                    ;
-                })
-            
-            }
-        </div>
-        
-    );
-  
-};
+  useEffect(() => {
+    setIssues({ ...issues, loading: true });
+    axios
+      .get("https://gradhub.hwnix.com/api/get_issues")
+      .then((resp) => {
+        setIssues({
+          ...issues,
+          results: resp.data,
+          loading: false,
+          err: null,
+        });
+      })
+      .catch((err) => {
+        setIssues({
+          ...issues,
+          loading: false,
+          err: "Something went wrong, please try again later!",
+        });
+      });
+  }, [issues.reload]);
+
+  return (
+    <div className="productCard">
+      {issues.loading ? (
+        <p>Loading...</p>
+      ) : issues.err ? (
+        <p>{issues.err}</p>
+      ) : (
+        <ProductCard/>
+      )}
+    </div>
+  );
+}
 
 export default ProductList;

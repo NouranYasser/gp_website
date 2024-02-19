@@ -1,0 +1,36 @@
+.main-form{
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.form-pppp{
+ width: 600px;
+ background-color: rgb(233, 231, 234);
+ border-radius: 20px;
+ padding-top: 15px;
+}
+.title-show{
+    width: 90%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    margin-left: 10px;
+    resize: vertical;
+    justify-content:start ;
+    height: 30px;
+    display: block;
+}
+.label-Show{
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}

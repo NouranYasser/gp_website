@@ -81,6 +81,13 @@ const FoodMonth6 = () => {
                   )}
                 </td>
                 <td>
+
+                <Link to={"/UpdateFood/" + foods.results.id}>
+                    <button className="btnUpdate">Update</button>
+                  </Link>
+                  
+                  </td>
+                  <td>
                   <button
                     className="btnDelete"
                     onClick={(e) => {
@@ -89,11 +96,7 @@ const FoodMonth6 = () => {
                   >
                     Delete
                   </button>
-                  </td>
-                  <td>
-                  <Link to={"/UpdateFood/" + foods.results.id}>
-                    <button className="btnUpdate">Update</button>
-                  </Link>
+                 
                 </td>
               </tr>
             </tbody>

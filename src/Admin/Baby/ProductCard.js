@@ -1,35 +1,38 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "../../style/productCard.css";
-//import { Helmet } from 'react-helmet';
-//import ShowDetails from "./Admin/Baby/ShowDetails.js"
+import axios from "axios";
 import { Link } from 'react-router-dom';
- 
-//props read only
-function ProductCard (props) {
 
+function ProductCard() {
+  const [issues, setIssues] = useState([]);
 
-  return ( 
-    <div className="product-Card">
-      <div className="card-top">
-      </div> 
+  useEffect(() => {
+    axios
+      .get("https://gradhub.hwnix.com/api/get_issues")
+      .then((res) => {
+        setIssues(res.data);
+      })
+      .catch((err) => {
+        console.error("Error fetching issues:", err);
+        // Handle error appropriately, e.g., setIssues([]) or display an error message
+      });
+  }, []);
 
-
-       <div className="card-info">
-
-         <h3 className="title"><h3>{props.name}</h3></h3>
-         <h4> {props.description}</h4>
-        
-        
-        <Link to={`/ShowDetails`}>Show Details</Link>
-
-
-       </div>
+  return (
+    <div>
+      {issues.map((item) => (
+        <div key={item.id} className="product-Card">
+          <div className="card-top"></div>
+          <div className="card-info">
+            <h3 className="title">{item.title}</h3>
+            <Link to={"/ShowDetails/" + item.id}>
+              <button className="btnShow">Show Details</button>
+            </Link>
+          </div>
+        </div>
+      ))}
     </div>
-    )
-};
+  );
+}
 
 export default ProductCard;
-   
-
-// <button className="buy"><h4 className="now">Buy now</h4></button>
-// /${ProductId}
