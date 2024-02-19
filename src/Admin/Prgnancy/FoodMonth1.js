@@ -84,8 +84,7 @@ const FoodMonth1 = () => {
 
                 <Link to={"/UpdateFood/" + foods.results.id}>
                     <button className="btnUpdate">Update</button>
-                  </Link>
-                  
+                </Link>              
                   </td>
                     <td>
                     <button
