@@ -36,7 +36,7 @@ const Courses = () => {
 
   const deleteCourse = (id) => {
     axios
-      .delete(`http://localhost:8000/api/delete/${id}`)
+      .delete(`https://gradhub.hwnix.com/api/delete/${id}`)
       .then((resp) => {
         setCourses({ ...courses, reload: courses.reload + 1 });
       })
@@ -60,8 +60,7 @@ const Courses = () => {
                 <th>Description</th>
                 <th>Video</th>
                 <th></th>
-                <th></th>
-                
+                <th></th>                
               </tr>
             </thead>
             <tbody>
@@ -71,8 +70,6 @@ const Courses = () => {
                   <td>{course.description}</td>
                   <td>
                     {course.video ? (
-
-
                       <iframe
                       src={course.video}
                       // width="640"

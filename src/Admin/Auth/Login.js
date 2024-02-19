@@ -19,7 +19,7 @@ const Login = () => {
         { email, password }
       );
       console.log(response.data);
-      navigate("/UserHome");
+      navigate("/HomePage");
       setAuthUser(response.data);
     } catch (error) {
       console.log(error.response.data);

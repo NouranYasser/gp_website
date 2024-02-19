@@ -4,6 +4,7 @@ import Login from "./Admin/Auth/Login.js";
 import App from "./App";
 import Pregnancy from "./Admin/Prgnancy/Pregnancy.js";
 import Babygrowth from "./Admin/Prgnancy/Babygrowth.js";
+import AddIssue from "./Admin/Baby/AddIssue.js";
 import AddBodyChange from "./Admin/Prgnancy/AddBodyChange.js"
 import Bodychange from "./Admin/Prgnancy/Bodychange.js";
 import BodychangeMonth1 from "./Admin/Prgnancy/BodyChangeMonth1.js";
@@ -17,6 +18,8 @@ import BodychangeMonth8 from "./Admin/Prgnancy/BodyChangeMonth8.js";
 import BodychangeMonth9 from "./Admin/Prgnancy/BodyChangeMonth9.js";
 import UpdateBodyChange from "./Admin/Prgnancy/UpdateBodyChange.js";
 import UpdateBabygrowth from "./Admin/Prgnancy/UpdateBabygrowth.js";
+import UpdateFood from "./Admin/Prgnancy/UpdateFood.js";
+import UpdateVitamins from "./Admin/Prgnancy/UpdateVitamins.js";
 import Food from "./Admin/Prgnancy/Food.js";
 import Vitamins from "./Admin/Prgnancy/Vitamins.js";
 import Exercises from "./Admin/Prgnancy/Exercises.js";
@@ -33,7 +36,6 @@ import BabyGrowthMonth9 from "./Admin/Prgnancy/BabyGrowthMonth9.js";
 import FoodMonth1 from "./Admin/Prgnancy/FoodMonth1.js";
 import FoodMonth3 from "./Admin/Prgnancy/FoodMonth3.js";
 import FoodMonth6 from "./Admin/Prgnancy/FoodMonth6.js";
-import UpdateFood from "./Admin/Prgnancy/UpdateFood.js";
 import Guest from "../src/middleware/Guest.js";
 import UpdateExercise from "./Admin/Prgnancy/UpdateExercise.js";
 import BabyHome from "./Admin/Baby/BabyHome.js";
@@ -89,14 +91,17 @@ export const router = createBrowserRouter([
             path: "/TipsAndActivitiesMonth1",
             element: <TipsAndActivitiesMonth1 />,
           },
+
           {
             path: "/TipsAndActivitiesMonth3",
             element: <TipsAndActivitiesMonth3 />,
           },
+
           {
             path: "/TipsAndActivitiesMonth6",
             element: <TipsAndActivitiesMonth6 />,
           },
+
           {
             path: "/TipsAndActivities",
             element: <TipsAndActivities />,
@@ -107,7 +112,6 @@ export const router = createBrowserRouter([
             element: <ChildGrowth />,
           },
 
-
           {
             path: "/ChildGrowthMonth1",
             element: <ChildGrowthMonth1 />,
@@ -117,6 +121,7 @@ export const router = createBrowserRouter([
             path: "/ChildGrowthMonth3",
             element: <ChildGrowthMonth3 />,
           },
+
           {
             path : "*",
             element : <NotFound />,
@@ -126,6 +131,7 @@ export const router = createBrowserRouter([
             path: "/ChildGrowthMonth6",
             element: <ChildGrowthMonth6 />,
           },
+
           {
             path: "/ChildGrowthMonth9",
             element: <ChildGrowthMonth9 />,
@@ -135,6 +141,7 @@ export const router = createBrowserRouter([
             path: "/ChildGrowthMonth12",
             element: <ChildGrowthMonth12 />,
           },
+
           {
             path: "/ChildGrowthMonth15",
             element: <ChildGrowthMonth15 />,
@@ -155,7 +162,6 @@ export const router = createBrowserRouter([
             element: <Nutrition />,
           },
 
-
           {
             path: "/Feeding",
             element: <Feeding/>,
@@ -175,7 +181,11 @@ export const router = createBrowserRouter([
             path: "/CommonIssues",
             element: <CommonIssues/>,
           },
-      
+          {
+            path: "/AddIssue",
+            element: <AddIssue/>,
+          },
+     
           {
             path: "/ShowDetails/:id",
             element: <ShowDetails/>,
@@ -190,92 +200,106 @@ export const router = createBrowserRouter([
             path: "/Babygrowth",
             element: <Babygrowth />,
           },
+
           {
             path: "/Pregnancy",
             element: <Pregnancy />,
           },
+
           {
             path: "/Bodychange",
             element: <Bodychange />,
           },
+
           {
             path: "/BodychangeMonth1",
             element: <BodychangeMonth1 />,
           },
+
           {
             path: "/BodychangeMonth2",
             element: <BodychangeMonth2 />,
           },
+
           {
             path: "/BodychangeMonth3",
             element: <BodychangeMonth3 />,
           },
+
           {
             path: "/BodychangeMonth4",
             element: <BodychangeMonth4/>,
           },
+
           {
             path: "/BodychangeMonth5",
             element: <BodychangeMonth5/>,
           },
+
           {
             path: "/BodychangeMonth6",
             element: <BodychangeMonth6/>,
           },
+
           {
             path: "/BodychangeMonth7",
             element: <BodychangeMonth7/>,
           },
+
           {
             path: "/BodychangeMonth8",
             element: <BodychangeMonth8/>,
           },
+
           {
             path: "/BodychangeMonth9",
             element: <BodychangeMonth9/>,
           },
 
-          // other paths...
           {
             path: "/UpdateBodyChange/:id",
             element: <UpdateBodyChange />,
           },
-          // other paths...
+          
           {
             path: "/UpdateBabygrowth/:id",
             element: <UpdateBabygrowth />,
           },
-          // other paths...
+          
           {
             path: "/Food",
             element: <Food />,
           },
-          // other paths...
+          
           {
             path: "/UpdateFood/:id",
             element: <UpdateFood />,
           },
-          // other paths...
+          
           {
             path: "/FoodMonth1",
             element: <FoodMonth1 />,
           },
-          // other paths...
+          
           {
             path: "/FoodMonth3",
             element: <FoodMonth3 />,
           },
-          // other paths...
+          
           {
             path: "/FoodMonth6",
             element: <FoodMonth6 />,
           },
-          // other paths...
+         
           {
             path: "/Vitamins",
             element: <Vitamins />,
           },
-          // other paths...
+          {
+            path: "/UpdateVitamins/:id",
+            element: <UpdateVitamins />,
+          },
+
           {
             path: "/Exercises",
             element: <Exercises />,
@@ -286,54 +310,51 @@ export const router = createBrowserRouter([
             element: <UpdateExercise />,
           },
 
-
-
-          // other paths...
           {
             path: "/Courses",
             element: <Courses />,
           },
-          // other paths...
+          
           {
             path: "/BabyGrowthMonth1",
             element: <BabyGrowthMonth1 />,
           },
-          // other paths...
+          
           {
             path: "/BabyGrowthMonth2",
             element: <BabyGrowthMonth2 />,
           },
-          // other paths...
+          
           {
             path: "/BabyGrowthMonth3",
             element: <BabyGrowthMonth3 />,
           },
-          // other paths...
+          
           {
             path: "/BabyGrowthMonth4",
             element: <BabyGrowthMonth4 />,
           },
-          // other paths...
+          
           {
             path: "/BabyGrowthMonth5",
             element: <BabyGrowthMonth5 />,
           },
-          // other paths...
+          
           {
             path: "/BabyGrowthMonth6",
             element: <BabyGrowthMonth6 />,
           },
-          // other paths...
+          
           {
             path: "/BabyGrowthMonth7",
             element: <BabyGrowthMonth7 />,
           },
-          // other paths...
+          
           {
             path: "/BabyGrowthMonth8",
             element: <BabyGrowthMonth8 />,
           },
-          // other paths...
+          
           {
             path: "/BabyGrowthMonth9",
             element: <BabyGrowthMonth9 />,

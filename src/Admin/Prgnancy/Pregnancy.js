@@ -47,7 +47,7 @@ function AddData() {
       <Sidebar />
       <div  onClick={handleLogout}>
            Logout
-          </div>
+      </div>
          
       <div className='main-divp'>
         <form className="form-p" onSubmit={handleSubmit}>

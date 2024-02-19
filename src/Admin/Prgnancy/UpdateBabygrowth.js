@@ -42,7 +42,7 @@ function UpdateBabygrowth() {
         <form onSubmit={handleSubmit}>
           <div className='row'>
             <div className=' clo-25'>
-              <label htmlFor="title" className='label-u'>Title:</label></div>
+            <label htmlFor="title" className='label-u'>Title:</label></div>
             <div><input
               type="text"
               id="title"
@@ -57,7 +57,6 @@ function UpdateBabygrowth() {
             <div>
               <textarea
                 id="description-u"
-
                 value={description}
                 onChange={(e) => setDescription(e.target.value)}
               /></div>
