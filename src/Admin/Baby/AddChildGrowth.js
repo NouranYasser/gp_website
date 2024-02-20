@@ -4,7 +4,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 
-function AddBabyGrowth() {
+function AddChildGrowth() {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [month, setMonth] = useState('');
@@ -22,13 +22,13 @@ function AddBabyGrowth() {
     formData.append('image', image);
 
     try {
-      const response = await axios.post(`https://gradhub.hwnix.com/api/add_DESC/2`, formData, {
+      const response = await axios.post(`https://gradhub.hwnix.com/api/add_DESC/8`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
       });
       setMessage(response.data.Result);
-      navigate("/Babygrowth");
+      navigate("/Bodychange");
     } catch (error) {
       setMessage('There is something wrong');
     }
@@ -47,6 +47,7 @@ function AddBabyGrowth() {
             value={title}
             onChange={(e) => setTitle(e.target.value)}
           />
+
 
           <label htmlFor="description"  className='label-pregnancy'>Description:</label><br></br>
 
@@ -76,14 +77,9 @@ function AddBabyGrowth() {
           <button type="submit" className='b-pregnancy'>Submit</button>
         </form>
         {message && <p>{message}</p>}
-      </div>
-      {/* <br></br>
-      <br></br>
-      <br></br>
-      <br></br> */}
-      
+      </div>     
     </>
   );
 }
 
-export default AddBabyGrowth;
+export default AddChildGrowth;

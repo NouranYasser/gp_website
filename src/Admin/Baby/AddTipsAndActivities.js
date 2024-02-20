@@ -3,8 +3,7 @@ import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
-
-function AddBabyGrowth() {
+function AddTipsAndActivities() {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [month, setMonth] = useState('');
@@ -22,13 +21,13 @@ function AddBabyGrowth() {
     formData.append('image', image);
 
     try {
-      const response = await axios.post(`https://gradhub.hwnix.com/api/add_DESC/2`, formData, {
+      const response = await axios.post(`https://gradhub.hwnix.com/api/add_DESC/7`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
       });
       setMessage(response.data.Result);
-      navigate("/Babygrowth");
+      navigate("/TipsAndActivities");
     } catch (error) {
       setMessage('There is something wrong');
     }
@@ -77,13 +76,9 @@ function AddBabyGrowth() {
         </form>
         {message && <p>{message}</p>}
       </div>
-      {/* <br></br>
-      <br></br>
-      <br></br>
-      <br></br> */}
       
     </>
   );
 }
 
-export default AddBabyGrowth;
+export default AddTipsAndActivities;

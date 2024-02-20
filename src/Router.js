@@ -43,6 +43,11 @@ import TipsAndActivities from "./Admin/Baby/TipsAndActivities.js";
 import TipsAndActivitiesMonth1 from "../src/Admin/Baby/TipsAndActivitiesMonth1.js";
 import TipsAndActivitiesMonth3 from "../src/Admin/Baby/TipsAndActivitiesMonth3.js";
 import TipsAndActivitiesMonth6 from "../src/Admin/Baby/TipsAndActivitiesMonth6.js";
+import TipsAndActivitiesMonth9 from "./Admin/Baby/TipsAndActivitiesMonth9.js";
+import TipsAndActivitiesMonth12 from "../src/Admin/Baby/TipsAndActivitiesMonth12.js";
+import TipsAndActivitiesMonth15 from "./Admin/Baby/TipsAndActivitiesMonth15.js";
+import TipsAndActivitiesMonth18 from "../src/Admin/Baby/TipsAndActivitiesMonth18.js";
+import TipsAndActivitiesMonth21 from "./Admin/Baby/TipsAndActivitiesMonth21.js";
 import {createBrowserRouter } from "react-router-dom";
 import ChildGrowth from "../src/Admin/Baby/ChildGrowth.js";
 import Vaccinations from "../src/Admin/Baby/Vaccinations"
@@ -62,6 +67,9 @@ import CommonIssues from "./Admin/Baby/CommonIssues.js"
 import ShowDetails from "./Admin/Baby/ShowDetails.js"
 import NotFound from "./shared/NotFound.js";
 import AddBabyGrowth from "./Admin/Prgnancy/AddBabyGrowth.js";
+import AddTipsAndActivities from "./Admin/Baby/AddTipsAndActivities.js";
+import AddChildGrowth from "./Admin/Baby/AddChildGrowth.js";
+
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -88,10 +96,23 @@ export const router = createBrowserRouter([
             path: "/AddBabyGrowth",
             element: <AddBabyGrowth />,
           },
+          {
+            path: "/AddTipsAndActivities",
+            element: <AddTipsAndActivities/>,
+          },
+          {
+            path: "/AddChildGrowth",
+            element: <AddChildGrowth/>,
+          },
           
           {
             path: "/AddBodyChange",
             element: <AddBodyChange />,
+          },
+
+          {
+            path: "/TipsAndActivities",
+            element: <TipsAndActivities />,
           },
 
           {
@@ -109,9 +130,29 @@ export const router = createBrowserRouter([
             element: <TipsAndActivitiesMonth6 />,
           },
           {
-            path: "/TipsAndActivities",
-            element: <TipsAndActivities />,
+            path: "/TipsAndActivitiesMonth9",
+            element: <TipsAndActivitiesMonth9 />,
           },
+
+          {
+            path: "/TipsAndActivitiesMonth12",
+            element: <TipsAndActivitiesMonth12/>,
+          },
+
+          {
+            path: "/TipsAndActivitiesMonth15",
+            element: <TipsAndActivitiesMonth15/>,
+          },
+
+          {
+            path: "/TipsAndActivitiesMonth18",
+            element: <TipsAndActivitiesMonth18 />,
+          },
+          {
+            path: "/TipsAndActivitiesMonth21",
+            element: <TipsAndActivitiesMonth21/>,
+          },
+
           {
             path: "/Vaccinations",
             element: <Vaccinations />,

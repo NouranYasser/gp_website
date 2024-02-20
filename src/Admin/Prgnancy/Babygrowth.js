@@ -6,6 +6,9 @@ const Babygrowth = () => {
   return (
     <>
       <br></br>
+      <Link to="/AddBabyGrowth">
+        <button className="btn-addBG"> Add Data on Baby Growth </button>
+      </Link>
       <div className="container">
         <div>
           <Link to="/BabyGrowthMonth1">
