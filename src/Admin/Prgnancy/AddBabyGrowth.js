@@ -4,7 +4,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 
-function AddBodyChange() {
+function AddBabyGrowth() {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [month, setMonth] = useState('');
@@ -22,13 +22,13 @@ function AddBodyChange() {
     formData.append('image', image);
 
     try {
-      const response = await axios.post(`https://gradhub.hwnix.com/api/add_DESC/1`, formData, {
+      const response = await axios.post(`https://gradhub.hwnix.com/api/add_DESC/2`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
       });
       setMessage(response.data.Result);
-      navigate("/Bodychange");
+      navigate("/Babygrowth");
     } catch (error) {
       setMessage('There is something wrong');
     }
@@ -87,4 +87,4 @@ function AddBodyChange() {
   );
 }
 
-export default AddBodyChange;
+export default AddBabyGrowth;

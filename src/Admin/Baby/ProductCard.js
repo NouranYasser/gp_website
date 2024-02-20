@@ -14,7 +14,6 @@ function ProductCard() {
       })
       .catch((err) => {
         console.error("Error fetching issues:", err);
-        // Handle error appropriately, e.g., setIssues([]) or display an error message
       });
   }, []);
 

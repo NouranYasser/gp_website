@@ -45,10 +45,7 @@ import TipsAndActivitiesMonth3 from "../src/Admin/Baby/TipsAndActivitiesMonth3.j
 import TipsAndActivitiesMonth6 from "../src/Admin/Baby/TipsAndActivitiesMonth6.js";
 import {createBrowserRouter } from "react-router-dom";
 import ChildGrowth from "../src/Admin/Baby/ChildGrowth.js";
-
-
-//import SquareContainer from "../src/Admin/Baby/test.js";
-
+import Vaccinations from "../src/Admin/Baby/Vaccinations"
 import ChildGrowthMonth1 from "../src/Admin/Baby/ChildGrowthMonth1.js"
 import ChildGrowthMonth3 from "../src/Admin/Baby/ChildGrowthMonth3.js"
 import ChildGrowthMonth6 from "../src/Admin/Baby/ChildGrowthMonth6.js"
@@ -64,7 +61,7 @@ import ArtificalFeeding from "./Admin/Baby/ArtificalFeeding.js"
 import CommonIssues from "./Admin/Baby/CommonIssues.js"
 import ShowDetails from "./Admin/Baby/ShowDetails.js"
 import NotFound from "./shared/NotFound.js";
-
+import AddBabyGrowth from "./Admin/Prgnancy/AddBabyGrowth.js";
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -88,6 +85,11 @@ export const router = createBrowserRouter([
             element: <HomePage />,
           },
           {
+            path: "/AddBabyGrowth",
+            element: <AddBabyGrowth />,
+          },
+          
+          {
             path: "/AddBodyChange",
             element: <AddBodyChange />,
           },
@@ -109,6 +111,10 @@ export const router = createBrowserRouter([
           {
             path: "/TipsAndActivities",
             element: <TipsAndActivities />,
+          },
+          {
+            path: "/Vaccinations",
+            element: <Vaccinations />,
           },
          
           {

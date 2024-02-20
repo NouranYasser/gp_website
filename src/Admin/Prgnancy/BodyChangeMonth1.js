@@ -35,7 +35,7 @@ const BodychangeMonth1 = () => {
 
   const deleteBodychange = (id) => {
     axios
-      .delete(`https://gradhub.hwnix.com/api/delete/${id}`)
+      .delete(`https://gradhub.hwnix.com/api/delete_desc/${id}`)
       .then((resp) => {
         setBodychanges({ ...bodychanges, reload: bodychanges.reload + 1 });
       })
