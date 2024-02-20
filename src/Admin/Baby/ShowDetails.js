@@ -45,14 +45,59 @@ const ShowDetails = () => {
 
   return (
     <>
+
+<div>
+        {details.err && <p>{details.err}</p>}
+        {details.loading ? (
+          <p>Loading...</p>
+        ) : (
+          <div className="div-container">
+            <table className="table-content">
+              <thead>
+                <tr>
+                  <th>Title</th>
+                  <th>Description</th>
+                 
+                  <th></th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                {details.results.map((result) => (
+                  <tr key={result.id}>
+                    <td>{result.title}</td>
+                    <td>{result.description}</td>
+                   
+                    {/* <td>
+                      <Link to={"/Update/" + result.id}>
+                        <button className="btnUpdate">Update</button>
+                      </Link>
+                    </td>
+                    <td>
+                      <button
+                        className="btnDelete"
+                        onClick={() => {
+                          deleteBabygrowth(result.id);
+                        }}
+                      >
+                        Delete
+                      </button>
+                    </td> */}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        )}
+      </div>
       
-     <div key={details.id} className="product-Card">
+     {/* <div key={details.id} className="product-Card">
     <div className="card-top"></div>
     <div className="card-info">
       <h3 className="title">{details.title}</h3>
       <h4 className="description">{details.description}</h4>
     </div>
-  </div>
+  </div> */}
          
       {/* <div className='main-form'>
         <form className="form-pppp">

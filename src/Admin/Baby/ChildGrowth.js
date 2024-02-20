@@ -10,7 +10,7 @@ const ChildGrowth = () => {
     return (
       <>  
 
-<br></br>
+<br></br>  <br></br>
 <Link to="/AddChildGrowth">
         <button className="btn-addBCh">
           Add Data on Child Growth

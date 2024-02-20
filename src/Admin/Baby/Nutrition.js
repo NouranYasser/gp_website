@@ -14,8 +14,8 @@ const Nutrition = () => {
 <br></br>
 <br></br> 
 <div className="fo-container">
-<Link to="/Feeding">
-        <button className="fo-b">Food</button>
+<Link to="/Weaning">
+        <button className="fo-b">Weaning</button>
       </Link> 
 
       <Link to="/BreastFeeding">
