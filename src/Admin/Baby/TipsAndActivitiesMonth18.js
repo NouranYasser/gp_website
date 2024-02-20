@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import "../../style/babygrowthMonth.css";
 
-const ChildGrowthMonth6 = () => {
+const TipsAndActivitiesMonth18 = () => {
   const [tips, setTips] = useState({
     loading: true,
     results: [],
@@ -14,7 +14,7 @@ const ChildGrowthMonth6 = () => {
   useEffect(() => {
     setTips({ ...tips, loading: true });
     axios
-      .get(`https://gradhub.hwnix.com/api/get_ChildGrowth/6`)
+      .get(`https://gradhub.hwnix.com/api/get_tips/18`)
       .then((resp) => {
         setTips({
           ...tips,
@@ -34,7 +34,7 @@ const ChildGrowthMonth6 = () => {
 
   const deleteBabygrowth = (id) => {
     axios
-      .delete(`https://gradhub.hwnix.com/api/delete_desc/${id}`)
+      .delete(`http://localhost:8000/api/delete/${id}`)
       .then((resp) => {
         setTips({ ...tips, reload: tips.reload + 1 });
       })
@@ -57,21 +57,30 @@ const ChildGrowthMonth6 = () => {
                   <th>Title</th>
                   <th>Description</th>
                   <th>Month</th>
+                  <th>Image</th>
                   <th></th>
-                 
                   <th></th>
                 </tr>
               </thead>
               <tbody>
-                {tips.results.map((result) => (
-                  <tr key={result.id}>
-                    <td>{result.title}</td>
-                    <td>{result.description}</td>
-                    <td>{result.month}</td>
-                   
-
+                {tips.results.map((tip) => (
+                  <tr key={tip.id}>
+                    <td>{tip.title}</td>
+                    <td>{tip.description}</td>
+                    <td>{tip.month}</td>
                     <td>
-                      <Link to={"/Update/" + result.id}>
+                      {tip.FullSrc ? (
+                        <img
+                          src={tip.FullSrc}
+                          alt="Baby Image"
+                          style={{ maxWidth: "80%", maxHeight: "80%" }}
+                        />
+                      ) : (
+                        <span>No image available</span>
+                      )}
+                    </td>
+                    <td>
+                      <Link to={"/Update/" + tip.id}>
                         <button className="btnUpdate">Update</button>
                       </Link>
                     </td>
@@ -79,7 +88,7 @@ const ChildGrowthMonth6 = () => {
                       <button
                         className="btnDelete"
                         onClick={() => {
-                          deleteBabygrowth(result.id);
+                          deleteBabygrowth(tip.id);
                         }}
                       >
                         Delete
@@ -96,6 +105,4 @@ const ChildGrowthMonth6 = () => {
   );
 };
 
-export default ChildGrowthMonth6;
-
-
+export default TipsAndActivitiesMonth18;

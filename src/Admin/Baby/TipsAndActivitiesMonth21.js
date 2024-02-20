@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import "../../style/babygrowthMonth.css";
 
-const ChildGrowthMonth6 = () => {
+const TipsAndActivitiesMonth21 = () => {
   const [tips, setTips] = useState({
     loading: true,
     results: [],
@@ -14,7 +14,7 @@ const ChildGrowthMonth6 = () => {
   useEffect(() => {
     setTips({ ...tips, loading: true });
     axios
-      .get(`https://gradhub.hwnix.com/api/get_ChildGrowth/6`)
+      .get(`https://gradhub.hwnix.com/api/get_tips/21`)
       .then((resp) => {
         setTips({
           ...tips,
@@ -34,7 +34,7 @@ const ChildGrowthMonth6 = () => {
 
   const deleteBabygrowth = (id) => {
     axios
-      .delete(`https://gradhub.hwnix.com/api/delete_desc/${id}`)
+      .delete(`http://localhost:8000/api/delete/${id}`)
       .then((resp) => {
         setTips({ ...tips, reload: tips.reload + 1 });
       })
@@ -57,8 +57,8 @@ const ChildGrowthMonth6 = () => {
                   <th>Title</th>
                   <th>Description</th>
                   <th>Month</th>
+                  <th>Image</th>
                   <th></th>
-                 
                   <th></th>
                 </tr>
               </thead>
@@ -68,8 +68,17 @@ const ChildGrowthMonth6 = () => {
                     <td>{result.title}</td>
                     <td>{result.description}</td>
                     <td>{result.month}</td>
-                   
-
+                    <td>
+                      {result.FullSrc ? (
+                        <img
+                          src={result.FullSrc}
+                          alt="Baby Image"
+                          style={{ maxWidth: "80%", maxHeight: "80%" }}
+                        />
+                      ) : (
+                        <span>No image available</span>
+                      )}
+                    </td>
                     <td>
                       <Link to={"/Update/" + result.id}>
                         <button className="btnUpdate">Update</button>
@@ -96,6 +105,4 @@ const ChildGrowthMonth6 = () => {
   );
 };
 
-export default ChildGrowthMonth6;
-
-
+export default TipsAndActivitiesMonth21;

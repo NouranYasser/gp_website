@@ -11,7 +11,12 @@ const ChildGrowth = () => {
       <>  
 
 <br></br>
-<h1 className="f-p"> Child Growth </h1>
+<Link to="/AddChildGrowth">
+        <button className="btn-addBCh">
+          Add Data on Child Growth
+        </button>
+      </Link>
+
 <br></br>
 <br></br>
 <br></br>

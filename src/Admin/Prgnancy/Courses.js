@@ -3,7 +3,8 @@ import  { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 // import {DefaultPlayer as video } from 'react-html5video';
-import "../../style/babygrowthMonth.css"
+import "../../style/babygrowthMonth.css";
+import Footer from "../../shared/Footer";
 
 const Courses = () => {
   const [courses, setCourses] = useState({
@@ -100,8 +101,11 @@ const Courses = () => {
               ))}
             </tbody>
           </table>
+          
           </div>
+          
         )}
+        
            <div>
         {/* <iframe
           src={babygrowth.fullSrc}
@@ -112,6 +116,7 @@ const Courses = () => {
         ></iframe> */}
       </div>
       </div>
+      <Footer/>
     </>
   );
 };

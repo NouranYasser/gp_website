@@ -1,17 +1,60 @@
-import React, { useState } from 'react';
+import React, { useState , useEffect} from 'react';
 import "../../style/ShowDetails.css";
-//import Select from 'react-select';
+import axios from "axios";
 
-
-function ShowDetails() {
-  const [title, setTitle] = useState('');
-  const [description, setDescription] = useState('');
+const ShowDetails = () => {
+    const [details, setDetails] = useState({
+      loading: true,
+      results: [],
+      err: null,
+      reload: 0,
+    });
+  
+    useEffect(() => {
+        setDetails({ ...details, loading: true });
+      axios
+        .get("https://gradhub.hwnix.com/api/get_issue/{id}")
+        .then((resp) => {
+            setDetails({
+            ...details,
+            results: resp.data,
+            loading: false,
+            err: null,
+          });
+        })
+        .catch((err) => {
+            setDetails({
+            ...details,
+            loading: false,
+            err: "Something went wrong, please try again later!",
+          });
+        });
+    }, [details.reload]);
+  
+    // const deleteCourse = (id) => {
+    //   axios
+    //     .delete(`https://gradhub.hwnix.com/api/delete/${id}`)
+    //     .then((resp) => {
+    //         setDetails({ ...details, reload: details.reload + 1 });
+    //     })
+    //     .catch((err) => {
+    //       console.log(err);
+    //     });
+    // };
   
 
   return (
     <>
+      
+     <div key={details.id} className="product-Card">
+    <div className="card-top"></div>
+    <div className="card-info">
+      <h3 className="title">{details.title}</h3>
+      <h4 className="description">{details.description}</h4>
+    </div>
+  </div>
          
-      <div className='main-form'>
+      {/* <div className='main-form'>
         <form className="form-pppp">
 
           <label htmlFor="title"  className='label-Show'>Title:</label>
@@ -35,7 +78,7 @@ function ShowDetails() {
         </form>
     
       </div>
-  
+   */}
       
     </>
   );

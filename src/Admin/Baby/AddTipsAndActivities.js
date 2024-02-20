@@ -3,8 +3,7 @@ import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
-
-function AddBodyChange() {
+function AddTipsAndActivities() {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [month, setMonth] = useState('');
@@ -22,13 +21,13 @@ function AddBodyChange() {
     formData.append('image', image);
 
     try {
-      const response = await axios.post(`https://gradhub.hwnix.com/api/add_DESC/1`, formData, {
+      const response = await axios.post(`https://gradhub.hwnix.com/api/add_DESC/7`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
       });
       setMessage(response.data.Result);
-      navigate("/Bodychange");
+      navigate("/TipsAndActivities");
     } catch (error) {
       setMessage('There is something wrong');
     }
@@ -47,7 +46,6 @@ function AddBodyChange() {
             value={title}
             onChange={(e) => setTitle(e.target.value)}
           />
-
 
           <label htmlFor="description"  className='label-pregnancy'>Description:</label><br></br>
 
@@ -78,13 +76,9 @@ function AddBodyChange() {
         </form>
         {message && <p>{message}</p>}
       </div>
-      {/* <br></br>
-      <br></br>
-      <br></br>
-      <br></br> */}
       
     </>
   );
 }
 
-export default AddBodyChange;
+export default AddTipsAndActivities;

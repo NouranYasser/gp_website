@@ -14,7 +14,6 @@ function ProductCard() {
       })
       .catch((err) => {
         console.error("Error fetching issues:", err);
-        // Handle error appropriately, e.g., setIssues([]) or display an error message
       });
   }, []);
 
@@ -24,7 +23,7 @@ function ProductCard() {
         <div key={item.id} className="product-Card">
           <div className="card-top"></div>
           <div className="card-info">
-            <h3 className="title">{item.title}</h3>
+            <h3 className="title">{item.name}</h3>
             <Link to={"/ShowDetails/" + item.id}>
               <button className="btnShow">Show Details</button>
             </Link>
