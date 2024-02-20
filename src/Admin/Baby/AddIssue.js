@@ -76,7 +76,7 @@ function AddIssue() {
           </div>
 
           <br></br>
-          <button className="succ">
+          <button type="submit" className="succ">
             <h3>Add</h3>
           </button>
         </form>

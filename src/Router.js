@@ -64,6 +64,9 @@ import ArtificalFeeding from "./Admin/Baby/ArtificalFeeding.js"
 import CommonIssues from "./Admin/Baby/CommonIssues.js"
 import ShowDetails from "./Admin/Baby/ShowDetails.js"
 import NotFound from "./shared/NotFound.js";
+import UpdateCourses from "./Admin/Prgnancy/UpdateCourses.js";
+
+
 
 export const router = createBrowserRouter([
   {
@@ -319,6 +322,11 @@ export const router = createBrowserRouter([
             element: <Courses />,
           },
           
+          {
+            path: "/UpdateCourses/:id",
+            element: <UpdateCourses />,
+          },
+
           {
             path: "/BabyGrowthMonth1",
             element: <BabyGrowthMonth1 />,
