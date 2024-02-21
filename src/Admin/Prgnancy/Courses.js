@@ -48,6 +48,11 @@ const Courses = () => {
 
   return (
     <>
+     
+     <Link to={"/AddCourses/"}>
+                      <button className="">AddCourses</button>
+                    </Link>      
+     
       <div>
         {courses.err && <p>{courses.err}</p>}
         {courses.loading ? (

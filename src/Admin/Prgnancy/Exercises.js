@@ -46,6 +46,10 @@ const Exercises = () => {
 
   return (
     <>
+    <Link to={"/AddExercises/"}>
+                      <button className="">AddExercise</button>
+                    </Link> 
+
       <div>
         {exercises.err && <p>{exercises.err}</p>}
         {exercises.loading ? (

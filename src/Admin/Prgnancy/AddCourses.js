@@ -3,11 +3,10 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import "../../style/addBodyChange.css";
 
-function AddBodyChange() {
+function AddCourses() {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
-  const [month, setMonth] = useState('');
-  const [image, setImage] = useState(null);
+  const [Video, setVideo] = useState('');
   const [message, setMessage] = useState('');
   const navigate = useNavigate();
 
@@ -17,17 +16,16 @@ function AddBodyChange() {
     const formData = new FormData();
     formData.append('title', title);
     formData.append('description', description);
-    formData.append('month', month);
-    formData.append('image', image);
+    formData.append('Video', Video);
 
     try {
-      const response = await axios.post(`https://gradhub.hwnix.com/api/add_DESC/1`, formData, {
+      const response = await axios.post(`https://gradhub.hwnix.com/api/add_exercise`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
       });
       setMessage(response.data.Result);
-      navigate("/Bodychange");
+      navigate("/Exercises");
     } catch (error) {
       setMessage('There is something wrong');
     }
@@ -53,31 +51,15 @@ function AddBodyChange() {
             onChange={(e) => setDescription(e.target.value)}
           />
           <br />
-          <label htmlFor="month" className='label-CH'>Month:</label><br />
-          <select
-
-            id="month"
-            value={month}
-            onChange={(e) => setMonth(e.target.value)}
-          >
-           <option value="">Select Month</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option> 
-          <option value="5">5</option>
-          <option value="6">6</option>
-          <option value="7">7</option>
-          <option value="8">8</option>
-          <option value="9">9</option>
-          </select>
-
-          <label htmlFor="image" className='label-CH'>Image:</label>
-          <input
-            type="file"
-            id="image"
-            onChange={(e) => setImage(e.target.files[0])}
+         
+          <label htmlFor="Video" className='label-CH'>Video:</label><br />
+          <textarea
+            id="Video"
+            value={Video}
+            onChange={(e) => setVideo(e.target.value)}
           />
+          <br />
+
           <br /><br />
           <button type="submit" className='b-Change'>Submit</button>
         </form>
@@ -87,4 +69,4 @@ function AddBodyChange() {
   );
 }
 
-export default AddBodyChange;
+export default AddCourses;
