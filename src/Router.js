@@ -76,6 +76,21 @@ import AddBabyGrowth from "./Admin/Prgnancy/AddBabyGrowth.js";
 import AddChildGrowth from "./Admin/Baby/AddChildGrowth.js";
 import UpdateCourses from "./Admin/Prgnancy/UpdateCourses.js";
 
+
+import BreastFeedingMonth1 from "./Admin/Baby/BreastFeedingMonth1"
+import BreastFeedingMonth6 from "./Admin/Baby/BreastFeedingMonth6"
+import BreastFeedingMonth12 from "./Admin/Baby/BreastFeedingMonth12"
+import BreastFeedingMonth18 from "./Admin/Baby/BreastFeedingMonth18"
+
+import ArtificalFeedingMonth1 from "./Admin/Baby/ArtificalFeedingMonth1"
+import ArtificalFeedingMonth6 from "./Admin/Baby/ArtificalFeedingMonth6"
+import ArtificalFeedingMonth12 from "./Admin/Baby/ArtificalFeedingMonth12"
+import ArtificalFeedingMonth18 from "./Admin/Baby/ArtificalFeedingMonth18"
+
+import AddBreastFeeding from "./Admin/Baby/AddBreastFeeding"
+import AddArtificalFeeding from "./Admin/Baby/AddArtificalFeeding"
+
+
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -179,7 +194,54 @@ export const router = createBrowserRouter([
             path: "/WeaningMonth18",
             element: <WeaningMonth18 />,
           },
+                   
+          {
+            path: "/BreastFeedingMonth1",
+            element: <BreastFeedingMonth1 />,
+          },
+
+          {
+            path: "/BreastFeedingMonth6",
+            element: <BreastFeedingMonth6 />,
+          },
+
+          {
+            path: "/BreastFeedingMonth12",
+            element: <BreastFeedingMonth12 />,
+          },
+         
+          {
+            path: "/BreastFeedingMonth18",
+            element: <BreastFeedingMonth18 />,
+          },
           
+          {
+            path: "/ArtificalFeedingMonth1",
+            element: <ArtificalFeedingMonth1 />,
+          },
+          {
+            path: "/ArtificalFeedingMonth6",
+            element: <ArtificalFeedingMonth6 />,
+          },
+          {
+            path: "/ArtificalFeedingMonth12",
+            element: <ArtificalFeedingMonth12 />,
+          },
+
+          {
+            path: "/ArtificalFeedingMonth18",
+            element: <ArtificalFeedingMonth18 />,
+          },
+
+          {
+            path: "/AddBreastFeeding",
+            element: <AddBreastFeeding />,
+          },
+          
+          {
+            path: "/AddArtificalFeeding",
+            element: <AddArtificalFeeding />,
+          },
           {
             path: "/ChildGrowth",
             element: <ChildGrowth />,
