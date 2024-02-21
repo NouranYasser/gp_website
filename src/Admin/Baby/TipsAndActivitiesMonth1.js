@@ -56,7 +56,6 @@ const TipsAndActivitiesMonth1 = () => {
                 <tr>
                   <th>Title</th>
                   <th>Description</th>
-                  <th>Month</th>
                   <th></th>
                   <th></th>
                 </tr>

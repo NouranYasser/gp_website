@@ -65,17 +65,7 @@ const TipsAndActivitiesMonth3 = () => {
                   <tr key={result.id}>
                     <td>{result.title}</td>
                     <td>{result.description}</td>
-                    <td>
-                      {result.FullSrc ? (
-                        <img
-                          src={result.FullSrc}
-                          alt="Baby Image"
-                          style={{ maxWidth: "80%", maxHeight: "80%" }}
-                        />
-                      ) : (
-                        <span>No image available</span>
-                      )}
-                    </td>
+                   
                     <td>
                       <Link to={"/Update/" + result.id}>
                         <button className="btnUpdate">Update</button>
