@@ -43,6 +43,11 @@ import TipsAndActivities from "./Admin/Baby/TipsAndActivities.js";
 import TipsAndActivitiesMonth1 from "../src/Admin/Baby/TipsAndActivitiesMonth1.js";
 import TipsAndActivitiesMonth3 from "../src/Admin/Baby/TipsAndActivitiesMonth3.js";
 import TipsAndActivitiesMonth6 from "../src/Admin/Baby/TipsAndActivitiesMonth6.js";
+import TipsAndActivitiesMonth9 from "./Admin/Baby/TipsAndActivitiesMonth9.js";
+import TipsAndActivitiesMonth12 from "../src/Admin/Baby/TipsAndActivitiesMonth12.js";
+import TipsAndActivitiesMonth15 from "./Admin/Baby/TipsAndActivitiesMonth15.js";
+import TipsAndActivitiesMonth18 from "../src/Admin/Baby/TipsAndActivitiesMonth18.js";
+import TipsAndActivitiesMonth21 from "./Admin/Baby/TipsAndActivitiesMonth21.js";
 import {createBrowserRouter } from "react-router-dom";
 import ChildGrowth from "../src/Admin/Baby/ChildGrowth.js";
 import Vaccinations from "../src/Admin/Baby/Vaccinations"
@@ -55,13 +60,21 @@ import ChildGrowthMonth15 from "../src/Admin/Baby/ChildGrowthMonth15.js"
 import ChildGrowthMonth18 from "../src/Admin/Baby/ChildGrowthMonth18.js"
 import ChildGrowthMonth21 from "../src/Admin/Baby/ChildGrowthMonth21.js"
 import Nutrition from "../src/Admin/Baby/Nutrition.js"
-import Feeding from "./Admin/Baby/Feeding.js"
+import Weaning from "./Admin/Baby/Weaning.js"
+import AddWeaning from "./Admin/Baby/AddWeaning.js";
+import WeaningMonth1 from "./Admin/Baby/WeaningMonth1"
+import WeaningMonth6 from "./Admin/Baby/WeaningMonth6"
+import WeaningMonth12 from "./Admin/Baby/WeaningMonth12.js";
+import WeaningMonth18 from "./Admin/Baby/WeaningMonth18.js";
 import BreastFeeding from "./Admin/Baby/BreastFeeding.js"
 import ArtificalFeeding from "./Admin/Baby/ArtificalFeeding.js"
 import CommonIssues from "./Admin/Baby/CommonIssues.js"
 import ShowDetails from "./Admin/Baby/ShowDetails.js"
 import NotFound from "./shared/NotFound.js";
 import AddBabyGrowth from "./Admin/Prgnancy/AddBabyGrowth.js";
+import AddTipsAndActivities from "./Admin/Baby/AddTipsAndActivities.js";
+import AddChildGrowth from "./Admin/Baby/AddChildGrowth.js";
+
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -88,10 +101,23 @@ export const router = createBrowserRouter([
             path: "/AddBabyGrowth",
             element: <AddBabyGrowth />,
           },
+          {
+            path: "/AddTipsAndActivities",
+            element: <AddTipsAndActivities/>,
+          },
+          {
+            path: "/AddChildGrowth",
+            element: <AddChildGrowth/>,
+          },
           
           {
             path: "/AddBodyChange",
             element: <AddBodyChange />,
+          },
+
+          {
+            path: "/TipsAndActivities",
+            element: <TipsAndActivities />,
           },
 
           {
@@ -109,14 +135,50 @@ export const router = createBrowserRouter([
             element: <TipsAndActivitiesMonth6 />,
           },
           {
-            path: "/TipsAndActivities",
-            element: <TipsAndActivities />,
+            path: "/TipsAndActivitiesMonth9",
+            element: <TipsAndActivitiesMonth9 />,
+          },
+
+          {
+            path: "/TipsAndActivitiesMonth12",
+            element: <TipsAndActivitiesMonth12/>,
+          },
+
+          {
+            path: "/TipsAndActivitiesMonth15",
+            element: <TipsAndActivitiesMonth15/>,
+          },
+
+          {
+            path: "/TipsAndActivitiesMonth18",
+            element: <TipsAndActivitiesMonth18 />,
           },
           {
-            path: "/Vaccinations",
-            element: <Vaccinations />,
+            path: "/TipsAndActivitiesMonth21",
+            element: <TipsAndActivitiesMonth21/>,
           },
-         
+
+          {
+            path: "/AddWeaning",
+            element: <AddWeaning />,
+          },
+          {
+            path: "/WeaningMonth1",
+            element: <WeaningMonth1 />,
+          },
+          {
+            path: "/WeaningMonth6",
+            element: <WeaningMonth6 />,
+          },
+          {
+            path: "/WeaningMonth12",
+            element: <WeaningMonth12 />,
+          },
+          {
+            path: "/WeaningMonth18",
+            element: <WeaningMonth18 />,
+          },
+          
           {
             path: "/ChildGrowth",
             element: <ChildGrowth />,
@@ -173,8 +235,8 @@ export const router = createBrowserRouter([
           },
 
           {
-            path: "/Feeding",
-            element: <Feeding/>,
+            path: "/Weaning",
+            element: <Weaning/>,
           },
          
           {

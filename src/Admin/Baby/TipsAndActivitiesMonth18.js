@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import "../../style/babygrowthMonth.css";
 
-const TipsAndActivitiesMonth3 = () => {
+const TipsAndActivitiesMonth18 = () => {
   const [tips, setTips] = useState({
     loading: true,
     results: [],
@@ -14,7 +14,7 @@ const TipsAndActivitiesMonth3 = () => {
   useEffect(() => {
     setTips({ ...tips, loading: true });
     axios
-      .get(`https://gradhub.hwnix.com/api/get_tips/3`)
+      .get(`https://gradhub.hwnix.com/api/get_tips/18`)
       .then((resp) => {
         setTips({
           ...tips,
@@ -63,15 +63,15 @@ const TipsAndActivitiesMonth3 = () => {
                 </tr>
               </thead>
               <tbody>
-                {tips.results.map((result) => (
-                  <tr key={result.id}>
-                    <td>{result.title}</td>
-                    <td>{result.description}</td>
-                    <td>{result.month}</td>
+                {tips.results.map((tip) => (
+                  <tr key={tip.id}>
+                    <td>{tip.title}</td>
+                    <td>{tip.description}</td>
+                    <td>{tip.month}</td>
                     <td>
-                      {result.FullSrc ? (
+                      {tip.FullSrc ? (
                         <img
-                          src={result.FullSrc}
+                          src={tip.FullSrc}
                           alt="Baby Image"
                           style={{ maxWidth: "80%", maxHeight: "80%" }}
                         />
@@ -80,7 +80,7 @@ const TipsAndActivitiesMonth3 = () => {
                       )}
                     </td>
                     <td>
-                      <Link to={"/Update/" + result.id}>
+                      <Link to={"/Update/" + tip.id}>
                         <button className="btnUpdate">Update</button>
                       </Link>
                     </td>
@@ -88,7 +88,7 @@ const TipsAndActivitiesMonth3 = () => {
                       <button
                         className="btnDelete"
                         onClick={() => {
-                          deleteBabygrowth(result.id);
+                          deleteBabygrowth(tip.id);
                         }}
                       >
                         Delete
@@ -105,4 +105,4 @@ const TipsAndActivitiesMonth3 = () => {
   );
 };
 
-export default TipsAndActivitiesMonth3;
+export default TipsAndActivitiesMonth18;

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import "../../style/babygrowthMonth.css";
 
-const TipsAndActivitiesMonth3 = () => {
+const TipsAndActivitiesMonth21 = () => {
   const [tips, setTips] = useState({
     loading: true,
     results: [],
@@ -14,7 +14,7 @@ const TipsAndActivitiesMonth3 = () => {
   useEffect(() => {
     setTips({ ...tips, loading: true });
     axios
-      .get(`https://gradhub.hwnix.com/api/get_tips/3`)
+      .get(`https://gradhub.hwnix.com/api/get_tips/21`)
       .then((resp) => {
         setTips({
           ...tips,
@@ -105,4 +105,4 @@ const TipsAndActivitiesMonth3 = () => {
   );
 };
 
-export default TipsAndActivitiesMonth3;
+export default TipsAndActivitiesMonth21;

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import "../../style/babygrowthMonth.css";
 
-const TipsAndActivitiesMonth3 = () => {
+const WeaningMonth12 = () => {
   const [tips, setTips] = useState({
     loading: true,
     results: [],
@@ -14,7 +14,7 @@ const TipsAndActivitiesMonth3 = () => {
   useEffect(() => {
     setTips({ ...tips, loading: true });
     axios
-      .get(`https://gradhub.hwnix.com/api/get_tips/3`)
+      .get(`https://gradhub.hwnix.com/api/get_weaning/12`)
       .then((resp) => {
         setTips({
           ...tips,
@@ -34,7 +34,7 @@ const TipsAndActivitiesMonth3 = () => {
 
   const deleteBabygrowth = (id) => {
     axios
-      .delete(`http://localhost:8000/api/delete/${id}`)
+      .delete(`https://gradhub.hwnix.com/api/delete_desc/${id}`)
       .then((resp) => {
         setTips({ ...tips, reload: tips.reload + 1 });
       })
@@ -57,7 +57,7 @@ const TipsAndActivitiesMonth3 = () => {
                   <th>Title</th>
                   <th>Description</th>
                   <th>Month</th>
-                  <th>Image</th>
+                 
                   <th></th>
                   <th></th>
                 </tr>
@@ -68,17 +68,7 @@ const TipsAndActivitiesMonth3 = () => {
                     <td>{result.title}</td>
                     <td>{result.description}</td>
                     <td>{result.month}</td>
-                    <td>
-                      {result.FullSrc ? (
-                        <img
-                          src={result.FullSrc}
-                          alt="Baby Image"
-                          style={{ maxWidth: "80%", maxHeight: "80%" }}
-                        />
-                      ) : (
-                        <span>No image available</span>
-                      )}
-                    </td>
+                   
                     <td>
                       <Link to={"/Update/" + result.id}>
                         <button className="btnUpdate">Update</button>
@@ -105,4 +95,4 @@ const TipsAndActivitiesMonth3 = () => {
   );
 };
 
-export default TipsAndActivitiesMonth3;
+export default WeaningMonth12;

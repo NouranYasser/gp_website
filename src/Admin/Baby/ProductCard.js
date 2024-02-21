@@ -23,7 +23,7 @@ function ProductCard() {
         <div key={item.id} className="product-Card">
           <div className="card-top"></div>
           <div className="card-info">
-            <h3 className="title">{item.title}</h3>
+            <h3 className="title">{item.name}</h3>
             <Link to={"/ShowDetails/" + item.id}>
               <button className="btnShow">Show Details</button>
             </Link>
