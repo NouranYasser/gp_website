@@ -57,7 +57,7 @@ function UpdateExercise() {
         <label htmlFor="description"className='label-u-EX'>Description:</label></div>
         <div>
         <textarea
-          id="description"
+          id="description-E"
           value={description}
           onChange={(e) => setDescription(e.target.value)}
         /></div>
