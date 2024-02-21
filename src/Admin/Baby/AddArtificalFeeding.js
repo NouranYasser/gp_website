@@ -7,7 +7,6 @@ function AddArtificalFeeding() {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [month, setMonth] = useState('');
-  const [image, setImage] = useState(null);
   const [message, setMessage] = useState('');
   const navigate = useNavigate();
 
@@ -18,7 +17,6 @@ function AddArtificalFeeding() {
     formData.append('title', title);
     formData.append('description', description);
     formData.append('month', month);
-    formData.append('image', image);
 
     try {
       const response = await axios.post(`https://gradhub.hwnix.com/api/add_DESC/11`, formData, {
@@ -64,13 +62,6 @@ function AddArtificalFeeding() {
             onChange={(e) => setMonth(e.target.value)}
           />
 
-
-          <label htmlFor="image"  className='label-pregnancy'>Image:</label>
-          <input
-            type="file"
-            id="image"
-            onChange={(e) => setImage(e.target.files[0])}
-          />
           <br></br><br></br>
           <button type="submit" className='b-pregnancy'>Submit</button>
         </form>

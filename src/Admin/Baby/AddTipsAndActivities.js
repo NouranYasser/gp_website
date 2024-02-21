@@ -66,15 +66,8 @@ function AddTipsAndActivities() {
         title="Please enter a valid month (1, 3, 6, 9, 12, 15, 18, or 21)"
       />
     </div>
-    <br></br>
+       <br></br>
 
-          {/* <label htmlFor="month"  className='label-pregnancy'>Month:</label><br></br>
-          <input className='outbox'
-            type="text"
-            id="month"
-            value={month}
-            onChange={(e) => setMonth(e.target.value)}
-          /> */}
 
           <br></br><br></br>
           <button type="submit" className='b-pregnancy'>Submit</button>

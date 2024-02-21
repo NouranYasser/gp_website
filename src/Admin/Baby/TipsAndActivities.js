@@ -9,7 +9,7 @@ const TipsAndActivities = () => {
       <Link to="/AddTipsAndActivities">
         <button className="btn-addBCh">
           {" "}
-          Add Data on Tips And Activities{" "}
+          Add Data in Tips And Activities{" "}
         </button>
       </Link>
 

@@ -18,7 +18,7 @@ const BreastFeeding = () => {
 <Link to="/AddBreastFeeding">
         <button className="btn-addBCh">
           {" "}
-          Add Data on BreastFeeding{" "}
+          Add Data in BreastFeeding{" "}
         </button>
       </Link>
 <br></br>

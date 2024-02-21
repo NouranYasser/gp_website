@@ -18,7 +18,7 @@ const ArtificalFeeding = () => {
 <Link to="/AddArtificalFeeding">
         <button className="btn-addBCh">
           {" "}
-          Add Data on ArtificalFeeding{" "}
+          Add Data in ArtificalFeeding{" "}
         </button>
       </Link>
 <br></br>
