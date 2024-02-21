@@ -122,7 +122,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import "../../style/update.css";
+import "../../style/updateFood.css";
 
 function UpdateFood() {
   const [title, setTitle] = useState('');
@@ -156,13 +156,13 @@ function UpdateFood() {
   };
 
   return (
-    <div className='body-u'>
-    <div className='container-u'>
+    <div className='body-uFO'>
+    <div className='container-u-FO'>
       <form onSubmit={handleSubmit}>
-      <div className='row'>
-      <div className=' clo-25'>
+      <div className='row-FO'>
+      <div className=' clo-25-FO'>
 
-          <label htmlFor="title"className='label-u'>Title:</label></div>
+          <label htmlFor="title"className='label-u-FO'>Title:</label></div>
         <div>
           <input
             type="text"
@@ -171,9 +171,9 @@ function UpdateFood() {
             onChange={(e) => setTitle(e.target.value)}
           /></div>
           </div>
-         <div className='row'>
-         <div className=' clo-25'>
-          <label htmlFor="description" className='label-u'>Description:</label>
+         <div className='row-FO'>
+         <div className=' clo-25-FO'>
+          <label htmlFor="description" className='label-u-FO'>Description:</label>
           <textarea
             id="description-u"
             value={description}
@@ -181,9 +181,9 @@ function UpdateFood() {
           /></div>
           </div>
         
-          <div className='row'>
-              <div className=' clo-25'>
-          <label htmlFor="month" className='label-u'>Month:</label></div>
+          <div className='row-FO'>
+              <div className=' clo-25-FO'>
+          <label htmlFor="month" className='label-u-FO'>Month:</label></div>
             <div>
           <input
             type="text"
@@ -193,19 +193,19 @@ function UpdateFood() {
           /></div>
           </div>
         
-          <div className='row'>
-              <div className=' clo-25'>
-          <label htmlFor="image" className='label-u'>Image:</label></div>
+          <div className='row-FO'>
+              <div className=' clo-25-FO'>
+          <label htmlFor="image" className='label-u-FO'>Image:</label></div>
             <div>
           <input
-           className='file-upload'
+           className='file-upload-FO'
             type="file"
             id="image"
             onChange={(e) => setImage(e.target.files[0])}
           /></div>
           </div>
           <div class="row">
-        <button type="submit"className='b-u'>Submit</button></div>
+        <button type="submit"className='b-u-FO'>Submit</button></div>
       </form>
       {message && <p>{message}</p>}
       </div>

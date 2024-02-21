@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import"../../style/addBodyChange.css";
 
 
 function AddBodyChange() {
@@ -37,10 +38,10 @@ function AddBodyChange() {
   return (
     <>
 
-      <div className='main-divp'>
+      <div className='main-divCH'>
         <form className="form-p" onSubmit={handleSubmit}>
           
-          <label htmlFor="title"  className='label-pregnancy'>Title:</label>
+          <label htmlFor="title"  className='CH'>Title:</label>
           <input className='outbox'
             type="text"
             id="title"
@@ -49,7 +50,7 @@ function AddBodyChange() {
           />
 
 
-          <label htmlFor="description"  className='label-pregnancy'>Description:</label><br></br>
+          <label htmlFor="description"  className='label-CH'>Description:</label><br></br>
 
           <textarea
 
@@ -58,7 +59,7 @@ function AddBodyChange() {
             onChange={(e) => setDescription(e.target.value)}
           />
           <br></br>
-          <label htmlFor="month"  className='label-pregnancy'>Month:</label><br></br>
+          <label htmlFor="month"  className='label-CH'>Month:</label><br></br>
           <input className='outbox'
             type="text"
             id="month"
@@ -67,14 +68,14 @@ function AddBodyChange() {
           />
 
 
-          <label htmlFor="image"  className='label-pregnancy'>Image:</label>
+          <label htmlFor="image"  className='label-CH'>Image:</label>
           <input
             type="file"
             id="image"
             onChange={(e) => setImage(e.target.files[0])}
           />
           <br></br><br></br>
-          <button type="submit" className='b-pregnancy'>Submit</button>
+          <button type="submit" className='b-Change'>Submit</button>
         </form>
         {message && <p>{message}</p>}
       </div>

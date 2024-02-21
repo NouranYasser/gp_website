@@ -6,47 +6,44 @@ const Babygrowth = () => {
   return (
     <>
       <br></br>
-      <Link to="/AddBabyGrowth">
-        <button className="btn-addBG"> Add Data on Baby Growth </button>
-      </Link>
       <div className="container">
         <div>
           <Link to="/BabyGrowthMonth1">
-            <button className="signadmin"> Month 1</button>
+            <button className="bt-MG"> Month 1</button>
           </Link>
 
           <Link to="/BabyGrowthMonth4">
-            <button className="signadmin"> Month 4</button>
+            <button className="bt-MG"> Month 4</button>
           </Link>
 
           <Link to="/BabyGrowthMonth7">
-            <button className="signadmin"> Month 7</button>
+            <button className="bt-MG"> Month 7</button>
           </Link>
         </div>
         <div>
           <Link to="/BabyGrowthMonth2">
-            <button className="signadmin"> Month 2</button>
+            <button className="bt-MG"> Month 2</button>
           </Link>
 
           <Link to="/BabyGrowthMonth5">
-            <button className="signadmin"> Month 5</button>
+            <button className="bt-MG"> Month 5</button>
           </Link>
 
           <Link to="/BabyGrowthMonth8">
-            <button className="signadmin"> Month 8</button>
+            <button className="bt-MG"> Month 8</button>
           </Link>
         </div>
-        <div>
+        <div className="last-divG"> 
           <Link to="/BabyGrowthMonth3">
-            <button className="signadmin"> Month 3</button>
+            <button className="bt-MG"> Month 3</button>
           </Link>
 
           <Link to="/BabyGrowthMonth6">
-            <button className="signadmin"> Month 6</button>
+            <button className="bt-MG"> Month 6</button>
           </Link>
 
           <Link to="/BabyGrowthMonth9">
-            <button className="signadmin"> Month 9</button>
+            <button className="bt-MG"> Month 9</button>
           </Link>
         </div>
       </div>

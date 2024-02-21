@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import "../../style/update.css";
+import "../../style/updateBabygrowth.css";
 
 function UpdateBabygrowth() {
   const [title, setTitle] = useState('');
@@ -37,12 +37,12 @@ function UpdateBabygrowth() {
 
   return (
 
-    <div className='body-u'>
-      <div className='container-u'>
+    <div className='body-uG'>
+      <div className='container-u-G'>
         <form onSubmit={handleSubmit}>
-          <div className='row'>
-            <div className=' clo-25'>
-            <label htmlFor="title" className='label-u'>Title:</label></div>
+          <div className='row-G'>
+            <div className=' clo-25-G'>
+            <label htmlFor="title" className='label-U-G'>Title:</label></div>
             <div><input
               type="text"
               id="title"
@@ -51,21 +51,21 @@ function UpdateBabygrowth() {
             /></div>
           </div>
 
-          <div className='row'>
-            <div className=' clo-25'>
-              <label htmlFor="description" className='label-u'>Description:</label></div>
+          <div className='row-G'>
+            <div className=' clo-25-G'>
+              <label htmlFor="description" className='label-U-G'>Description:</label></div>
             <div>
               <textarea
-                id="description-u"
+                id="description-G"
                 value={description}
                 onChange={(e) => setDescription(e.target.value)}
               /></div>
           </div>
 
-          <div className='row'>
-            <div className=' clo-25'>
+          <div className='row-G'>
+            <div className=' clo-25-G'>
 
-              <label htmlFor="month" className='label-u'>Month:</label></div>
+              <label htmlFor="month" className='label-U-G'>Month:</label></div>
             <div>
               <input
                 type="text"
@@ -75,20 +75,20 @@ function UpdateBabygrowth() {
               /></div>
           </div>
 
-          <div className='row'>
-            <div className=' clo-25'>
+          <div className='row-G'>
+            <div className=' clo-25-G'>
 
-              <label htmlFor="image" className='label-u'>Image:</label></div>
+              <label htmlFor="image" className='label-U-G'>Image:</label></div>
             <div>
               <input
-                className='file-upload'
+                className='file-upload-G'
                 type="file"
                 id="image"
                 onChange={(e) => setImage(e.target.files[0])}
               /></div>
           </div>
-          <div class="row">
-            <button type="submit" className='b-u'>Submit</button></div>
+          <div class="row-G">
+            <button type="submit" className='b-uG'>Submit</button></div>
         </form>
         {message && <p>{message}</p>}
         </div>

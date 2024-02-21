@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import"../../style/Vitamins.css";
 
 const Vitamins = () => {
   const [vitamines, setVitamines] = useState({
@@ -49,8 +50,8 @@ const Vitamins = () => {
         {vitamines.loading ? (
           <p>Loading...</p>
         ) : (
-          <div className="div-container">
-          <table className="table-content">
+          <div className="div-container-v">
+          <table className="table-content-v">
             <thead>
               <tr>
                 <th>Title</th>
@@ -88,13 +89,13 @@ const Vitamins = () => {
                   
                     <td>
                     <Link to={"/UpdateVitamins/" + vitamine.id}>
-                      <button className="btnUpdate">Update</button>
+                      <button className="btnUpdate-v">Update</button>
                     </Link>
                   </td>
 
                   <td>
                     <button
-                      className="btnDelete"
+                      className="btnDelete-v"
                       onClick={() => deleteVitamines(vitamine.id)}
                     >
                       Delete
