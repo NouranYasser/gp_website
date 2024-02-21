@@ -36,45 +36,61 @@ function UpdateExercise() {
   };
 
   return (
-    <div>
+    
+      <div className='body-u-EX'>
+    <div className='container-u-EX'>
       <form onSubmit={handleSubmit}>
-      
-        <label htmlFor="title">Title:</label>
+      <div className='row-EX'>
+      <div className=' clo-25-EX'>
+<label htmlFor="title" className='label-u-EX'>Title:</label></div>
+        <div>
         <input
           type="text"
           id="title"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
-        />
+        /></div>
+        </div>
       
-     
-        <label htmlFor="description">Description:</label>
+        <div className='row-EX'>
+      <div className=' clo-25-EX'>
+        <label htmlFor="description"className='label-u-EX'>Description:</label></div>
+        <div>
         <textarea
           id="description"
           value={description}
           onChange={(e) => setDescription(e.target.value)}
-        />
+        /></div>
+        </div>
+        <div className='row-EX'>
+      <div className=' clo-25-EX'>
       
-      
-        <label htmlFor="month">Month:</label>
+        <label htmlFor="month"className='label-u-EX'>Month:</label></div>
+        <div>
         <input
           type="text"
           id="month"
           value={month}
           onChange={(e) => setMonth(e.target.value)}
-        />
-      
-        <label htmlFor="image">Image:</label>
+        /></div>
+        </div>
+        <div className='row-EX'>
+      <div className=' clo-25-EX'>
+        <label htmlFor="image"className='label-u-EX'>Image:</label></div>
+        <div>
         <input
           type="file"
           id="image"
           onChange={(e) => setImage(e.target.files[0])}
-        />
-     
-        <button type="submit">Submit</button>
+        /></div>
+        </div>
+        <div class="row-EX">
+        <button type="submit"className='b-u-EX'>Submit</button></div>
       </form>
       {message && <p>{message}</p>}
     </div>
+    </div>
+    
   );
 }
 

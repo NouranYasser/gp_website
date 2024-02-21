@@ -1,18 +1,18 @@
-.body-u{
+.body-u-V{
     display:flex;
     align-items: center;
     justify-content: center;
     margin-top: 20px;
     margin-bottom: 10px;
   }
-  .container-u  input[type=text], select, textarea {
+  .container-u-V  input[type=text], select, textarea {
     width: 90%;
     padding: 12px;
     border: 1px solid #ccc;
     border-radius: 4px;
     resize: vertical;
   }
-.file-upload{
+.file-upload-V{
   display: inline-block;
   /* padding: 10px 20px; */
   cursor: pointer;
@@ -33,7 +33,7 @@
 
 }
   
-  .label-u {
+  .label-u-V {
     font-size: x-large;
     padding: 12px 12px 12px 0;
     display: inline-block;
@@ -53,7 +53,7 @@
     background-color: #45a049;
   }
    */
-  .container-u {
+  .container-u-V {
     background-color: rgb(112, 109, 156) ;
     width: 50%;
     border-radius: 5px;
@@ -61,25 +61,25 @@
     padding:0  20px ;
   }
   
-  .col-25 {
+  .col-25-V {
     float: left;
     width: 25%;
     margin-top: 6px;
   }
   
-  .col-75 {
+  .col-75-V {
     float: left;
     width: 75%;
     margin-top: 6px;
   }
   
   /* Clear floats after the columns */
-  .row:after {
+  .row-V:after {
     content: "";
     display: table;
     clear: both;
   }
-  .b-u{
+  .b-u-V{
     font-size: large;
     width: 80%;
     height: 40px;

@@ -6,7 +6,7 @@ const Babygrowth = () => {
   return (
     <>
       <br></br>
-      <div className="container">
+      <div className="container-g">
         <div>
           <Link to="/BabyGrowthMonth1">
             <button className="bt-MG"> Month 1</button>
