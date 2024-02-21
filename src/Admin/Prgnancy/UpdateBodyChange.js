@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import "../../style/update.css";
+import "../../style/updateBodychange.css";
 
 function UpdateBodyChanges() {
   const [title, setTitle] = useState('');
@@ -36,13 +36,13 @@ function UpdateBodyChanges() {
   };
 
   return (
-    <div className='body-u'>
-    <div className='container-u'>
+    <div className='body-uCH'>
+    <div className='container-u-CH'>
       <form onSubmit={handleSubmit}>
-      <div className='row'>
-      <div className=' clo-25'>
+      <div className='row-CH'>
+      <div className=' clo-25-CH'>
 
-        <label htmlFor="title" className='label-u'>Title:</label></div>
+        <label htmlFor="title" className='label-u-CH'>Title:</label></div>
         <div><input
           type="text"
           id="title"
@@ -50,20 +50,20 @@ function UpdateBodyChanges() {
           onChange={(e) => setTitle(e.target.value)}
         /></div>
          </div>
-        <div className='row'>
-        <div className=' clo-25'>
-        <label htmlFor="description" className='label-u'>Description:</label></div>
+        <div className='row-CH'>
+        <div className=' clo-25-CH'>
+        <label htmlFor="description" className='label-u-CH'>Description:</label></div>
         <div>
         <textarea
-          id="description-u"
+          id="description-u-CH"
           value={description}
           onChange={(e) => setDescription(e.target.value)}
         /></div>
         </div>
       
-        <div className='row'>
-            <div className=' clo-25'>
-        <label htmlFor="month" className='label-u'>Month:</label></div>
+        <div className='row-CH'>
+            <div className=' clo-25-CH'>
+        <label htmlFor="month" className='label-u-CH'>Month:</label></div>
             <div>
         <input
           type="text"
@@ -73,20 +73,20 @@ function UpdateBodyChanges() {
         /></div>
         </div>
       
-        <div className='row'>
-            <div className=' clo-25'>
+        <div className='row-CH'>
+            <div className=' clo-25-CH'>
         <label htmlFor="image">Image:</label></div>
             <div>
         <input
-         className='file-upload'
+         className='file-upload-CH'
           type="file"
           id="image"
           onChange={(e) => setImage(e.target.files[0])}
         /></div>
         </div>
-        <div class="row">
+        <div class="row-CH">
      
-        <button type="submit" className='b-u'>Submit</button></div>
+        <button type="submit" className='b-u-CH'>Submit</button></div>
       </form>
       {message && <p>{message}</p>}
       </div>

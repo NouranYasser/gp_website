@@ -2,6 +2,8 @@ import React from "react";
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import"../../style/addBabyGrowth.css";
+
 
 
 function AddBabyGrowth() {
@@ -37,10 +39,10 @@ function AddBabyGrowth() {
   return (
     <>
 
-      <div className='main-divp'>
-        <form className="form-p" onSubmit={handleSubmit}>
+      <div className='main-divG'>
+        <form className="form-G" onSubmit={handleSubmit}>
           
-          <label htmlFor="title"  className='label-pregnancy'>Title:</label>
+          <label htmlFor="title"  className='label-G'>Title:</label>
           <input className='outbox'
             type="text"
             id="title"
@@ -49,7 +51,7 @@ function AddBabyGrowth() {
           />
 
 
-          <label htmlFor="description"  className='label-pregnancy'>Description:</label><br></br>
+          <label htmlFor="description"  className='label-G'>Description:</label><br></br>
 
           <textarea
 
@@ -58,7 +60,7 @@ function AddBabyGrowth() {
             onChange={(e) => setDescription(e.target.value)}
           />
           <br></br>
-          <label htmlFor="month"  className='label-pregnancy'>Month:</label><br></br>
+          <label htmlFor="month"  className='label-G'>Month:</label><br></br>
           <input className='outbox'
             type="text"
             id="month"
@@ -67,14 +69,14 @@ function AddBabyGrowth() {
           />
 
 
-          <label htmlFor="image"  className='label-pregnancy'>Image:</label>
+          <label htmlFor="image"  className='label-G'>Image:</label>
           <input
             type="file"
             id="image"
             onChange={(e) => setImage(e.target.files[0])}
           />
           <br></br><br></br>
-          <button type="submit" className='b-pregnancy'>Submit</button>
+          <button type="submit" className='b-Growth'>Submit</button>
         </form>
         {message && <p>{message}</p>}
       </div>

@@ -3,7 +3,7 @@ import  { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 // import {DefaultPlayer as video } from 'react-html5video';
-import "../../style/babygrowthMonth.css";
+import "../../style/Courses.css";
 import Footer from "../../shared/Footer";
 
 const Courses = () => {
@@ -53,8 +53,8 @@ const Courses = () => {
         {courses.loading ? (
           <p>Loading...</p>
         ) : (
-          <div className="div-container">
-          <table className="table-content">
+          <div className="div-C-container">
+          <table className="table-content-C">
             <thead>
               <tr>
                 <th>Title</th>
@@ -85,13 +85,13 @@ const Courses = () => {
                  
                     <td>
                     <Link to={'/UpdateCourses/${course.id}'}>
-                      <button className="btnUpdate">Update</button>
+                      <button className="btnUpdate-C">Update</button>
                     </Link>             
 
                   </td>
                   <td>
                     <button
-                      className="btnDelete"
+                      className="btnDelete-C"
                       onClick={() => deleteCourse(course.id)}
                     >
                       Delete

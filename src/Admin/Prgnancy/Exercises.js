@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 // import {DefaultPlayer as video } from 'react-html5video';
-import "../../style/babygrowthMonth.css"
+import "../../style/Exercises.css";
 
 const Exercises = () => {
   const [exercises, setExercises] = useState({
@@ -51,8 +51,8 @@ const Exercises = () => {
         {exercises.loading ? (
           <p>Loading...</p>
         ) : (
-          <div className="div-container">
-          <table className="table-content">
+          <div className="div-E-container">
+          <table className="table-content-E">
             <thead>
               <tr>
                 <th>Title</th>
@@ -84,12 +84,12 @@ const Exercises = () => {
                  
                   <td>
                     <Link to={"/UpdateExercise/" + exercise.id}>
-                      <button className="btnUpdate">Update</button>
+                      <button className="btnUpdate-E">Update</button>
                     </Link>             
                   </td>
                   <td>
                     <button
-                      className="btnDelete"
+                      className="btnDelete-E"
                       onClick={() => deleteExercise(exercise.id)}
                     >
                       Delete

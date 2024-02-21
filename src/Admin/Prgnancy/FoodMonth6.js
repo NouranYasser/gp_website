@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import "../../style/babygrowthMonth.css";
+import "../../style/FoodMonth.css";
 
 const FoodMonth6 = () => {
   const [foods, setFoods] = useState({
@@ -51,8 +51,8 @@ const FoodMonth6 = () => {
         {foods.loading ? (
           <p>Loading...</p>
         ) : (
-          <div className="div-container">
-          <table className="table-content"> 
+          <div className="div-container-fm">
+          <table className="table-content-fm"> 
             <thead>
               <tr>
                 <th>Title</th>
@@ -83,13 +83,13 @@ const FoodMonth6 = () => {
                 <td>
 
                 <Link to={"/UpdateFood/" + foods.results.id}>
-                    <button className="btnUpdate">Update</button>
+                    <button className="btnUpdate-fm">Update</button>
                   </Link>
                   
                   </td>
                   <td>
                   <button
-                    className="btnDelete"
+                    className="btnDelete-fm"
                     onClick={(e) => {
                       deleteFood(foods.results.id);
                     }}
