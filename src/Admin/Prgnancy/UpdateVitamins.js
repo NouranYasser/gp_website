@@ -36,44 +36,58 @@ function UpdateVitamin() {
   };
 
   return (
-    <div>
+    <div className='body-u-V'>
+    <div className='container-u-V'>
       <form onSubmit={handleSubmit}>
-      
-        <label htmlFor="title">Title:</label>
+      <div className='row-V'>
+      <div className=' clo-25-V'>
+        <label htmlFor="title"className='label-u-V'>Title:</label></div>
+        <div>
         <input
           type="text"
           id="title"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
-        />
-      
+        /></div>
+        </div>
+        <div className='row-V'>
+      <div className=' clo-25-V'>
      
-        <label htmlFor="description">Description:</label>
+  <label htmlFor="description"className='label-u-V'>Description:</label></div>
+        <div>
         <textarea
-          id="description"
+          id="description-V"
           value={description}
           onChange={(e) => setDescription(e.target.value)}
         />
-      
-      
-        <label htmlFor="month">Month:</label>
+      </div>
+        </div>
+        <div className='row-V'>
+      <div className=' clo-25-V'>
+        <label htmlFor="month"className='label-u-V'>Month:</label></div>
+        <div>
         <input
           type="text"
           id="month"
           value={month}
           onChange={(e) => setMonth(e.target.value)}
-        />
-      
-        <label htmlFor="image">Image:</label>
+        /> </div>
+        </div>
+        <div className='row-V'>
+      <div className=' clo-25-V'>
+        <label htmlFor="image"className='label-u-V'>Image:</label></div>
+        <div>
         <input
           type="file"
           id="image"
           onChange={(e) => setImage(e.target.files[0])}
-        />
-     
-        <button type="submit">Submit</button>
+        /></div>
+        </div>
+        <div class="row">
+        <button type="submit"className='b-u-V'>Submit</button></div>
       </form>
       {message && <p>{message}</p>}
+      </div>
     </div>
   );
 }

@@ -7,4 +7,37 @@
   align-items: center;
 }
 
-   
+.btn-addBG{
+  font-size: large;
+  width: 20%;
+  height: 40px;
+  border-radius: 20px;
+  border: none;
+  background-color: rgb(83, 78, 158);
+  color: white;
+  margin-left: 600px;
+  cursor: pointer;
+}
+
+.bt-MG{
+  font-size: large;
+  width: 90%;
+  height: 40px;
+  border-radius: 20px;
+  border: none;
+  background-color: rgb(83, 78, 158);
+  color: white;
+  margin: 30px;
+  cursor: pointer;
+}
+.containerBG{
+  font-family: arial;
+  padding-top: 20px;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.last-div-g{
+  margin-left: 150px;
+}
