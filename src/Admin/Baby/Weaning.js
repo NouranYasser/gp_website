@@ -18,7 +18,7 @@ const Weaning = () => {
 <Link to="/AddWeaning">
         <button className="btn-addBCh">
           {" "}
-          Add Data on Weaning{" "}
+          Add Data in Weaning{" "}
         </button>
       </Link>
 <br></br>

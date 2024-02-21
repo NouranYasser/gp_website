@@ -3,7 +3,7 @@ import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
-function AddTipsAndActivities() {
+function AddArtificalFeeding() {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [month, setMonth] = useState('');
@@ -19,13 +19,13 @@ function AddTipsAndActivities() {
     formData.append('month', month);
 
     try {
-      const response = await axios.post(`https://gradhub.hwnix.com/api/add_DESC/7`, formData, {
+      const response = await axios.post(`https://gradhub.hwnix.com/api/add_DESC/11`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
       });
       setMessage(response.data.Result);
-      navigate("/TipsAndActivities");
+      navigate("/ArtificalFeeding");
     } catch (error) {
       setMessage('There is something wrong');
     }
@@ -54,20 +54,13 @@ function AddTipsAndActivities() {
             onChange={(e) => setDescription(e.target.value)}
           />
           <br></br>
-          <div className="mb-2">
-      <label htmlFor="month" className='label-pregnancy'>
-        Month{" "}
-      </label>
-      <input
-        id="month"
-        value={month}
-        onChange={(e) => setMonth(e.target.value)}
-        pattern="(1|3|6|9|12|15|18|21)"
-        title="Please enter a valid month (1, 3, 6, 9, 12, 15, 18, or 21)"
-      />
-    </div>
-       <br></br>
-
+          <label htmlFor="month"  className='label-pregnancy'>Month:</label><br></br>
+          <input className='outbox'
+            type="text"
+            id="month"
+            value={month}
+            onChange={(e) => setMonth(e.target.value)}
+          />
 
           <br></br><br></br>
           <button type="submit" className='b-pregnancy'>Submit</button>
@@ -79,4 +72,4 @@ function AddTipsAndActivities() {
   );
 }
 
-export default AddTipsAndActivities;
+export default AddArtificalFeeding;

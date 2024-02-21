@@ -13,7 +13,7 @@ const ChildGrowth = () => {
 <br></br>  <br></br>
 <Link to="/AddChildGrowth">
         <button className="btn-addBCh">
-          Add Data on Child Growth
+          Add Data in Child Growth
         </button>
       </Link>
 
