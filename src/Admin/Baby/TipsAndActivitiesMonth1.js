@@ -66,7 +66,6 @@ const TipsAndActivitiesMonth1 = () => {
                   <tr key={result.id}>
                     <td>{result.title}</td>
                     <td>{result.description}</td>
-                    <td>{result.month}</td>
                     <td>
                       <Link to={"/Update/" + result.id}>
                         <button className="btnUpdate">Update</button>

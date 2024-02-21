@@ -56,8 +56,6 @@ const TipsAndActivitiesMonth3 = () => {
                 <tr>
                   <th>Title</th>
                   <th>Description</th>
-                  <th>Month</th>
-                  <th>Image</th>
                   <th></th>
                   <th></th>
                 </tr>
@@ -67,7 +65,6 @@ const TipsAndActivitiesMonth3 = () => {
                   <tr key={result.id}>
                     <td>{result.title}</td>
                     <td>{result.description}</td>
-                    <td>{result.month}</td>
                     <td>
                       {result.FullSrc ? (
                         <img

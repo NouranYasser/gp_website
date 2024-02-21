@@ -56,8 +56,6 @@ const TipsAndActivitiesMonth18 = () => {
                 <tr>
                   <th>Title</th>
                   <th>Description</th>
-                  <th>Month</th>
-                  <th>Image</th>
                   <th></th>
                   <th></th>
                 </tr>
@@ -67,18 +65,6 @@ const TipsAndActivitiesMonth18 = () => {
                   <tr key={tip.id}>
                     <td>{tip.title}</td>
                     <td>{tip.description}</td>
-                    <td>{tip.month}</td>
-                    <td>
-                      {tip.FullSrc ? (
-                        <img
-                          src={tip.FullSrc}
-                          alt="Baby Image"
-                          style={{ maxWidth: "80%", maxHeight: "80%" }}
-                        />
-                      ) : (
-                        <span>No image available</span>
-                      )}
-                    </td>
                     <td>
                       <Link to={"/Update/" + tip.id}>
                         <button className="btnUpdate">Update</button>
