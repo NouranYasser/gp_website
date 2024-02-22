@@ -45,7 +45,7 @@ const TipsAndActivitiesMonth21 = () => {
 
   return (
     <>
-      <div>
+      <div className="bmo">
         {tips.err && <p>{tips.err}</p>}
         {tips.loading ? (
           <p>Loading...</p>
