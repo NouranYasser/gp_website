@@ -50,7 +50,7 @@ const Courses = () => {
     <>
      <div className="bho">
      <Link to={"/AddCourses/"}>
-                      <button className="">AddCourses</button>
+                      <button className="btn-addBC">AddCourses</button>
                     </Link>      
      
       
