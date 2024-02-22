@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import"../../style/addissue.css";
 
 function AddIssue() {
   const [name, setName] = useState("");
@@ -20,18 +21,20 @@ function AddIssue() {
   }
 
   return (
-    <section className="Destination">
+    <section className="Destination-a">
       <div className="divv">
-        <form onSubmit={handleSubmit}>
+      
+        <form className="fas" onSubmit={handleSubmit}>
           <br />
           <br />
-          <h2>Add Issue</h2>
+          <h2  className="h2">Add Issue</h2>
 
           <div className="mb-2">
             <label htmlFor="from" className="ee">
               Title
             </label>
             <input
+            
               placeholder="Enter from"
               className="form-controlDes"
               value={name}
