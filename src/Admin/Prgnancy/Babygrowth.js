@@ -7,6 +7,9 @@ const Babygrowth = () => {
     <>
       <br></br>
       <div className="container">
+         <Link to="/AddBabyGrowth">
+          <button className="btn-addBG"> Add Data in Baby Growth</button>
+         </Link>
         <div>
           <Link to="/BabyGrowthMonth1">
             <button className="bt-MG"> Month 1</button>

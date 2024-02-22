@@ -47,6 +47,9 @@ const Exercises = () => {
   return (
     <>
       <div>
+        <Link to="/AddExercises">
+          <button className="btn-addBCh"> Add Data in Exercises</button>
+         </Link>
         {exercises.err && <p>{exercises.err}</p>}
         {exercises.loading ? (
           <p>Loading...</p>

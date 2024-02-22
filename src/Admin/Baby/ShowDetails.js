@@ -24,11 +24,7 @@ const ShowDetails = () => {
         }));
       })
       .catch((err) => {
-        setDetails((prevDetails) => ({
-          ...prevDetails,
-          loading: false,
-          err: "Something went wrong, please try again later!",
-        }));
+        console.log(err); // Log the error
       });
   }, [details.reload]);
 

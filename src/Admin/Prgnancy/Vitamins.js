@@ -46,11 +46,17 @@ const Vitamins = () => {
   return (
     <>
       <div>
+        <br></br>
+      <Link to="/AddVitamin">
+          <button className="btn-addBCh"> Add Data in Vitamins</button>
+         </Link>
         {vitamines.err && <p>{vitamines.err}</p>}
         {vitamines.loading ? (
           <p>Loading...</p>
         ) : (
+          
           <div className="div-container-v">
+           
           <table className="table-content-v">
             <thead>
               <tr>

@@ -4,7 +4,8 @@ import {Link} from "react-router-dom";
 import { removeAuthUser } from "../helper/Storage";
 // import { Link } from "react-router-dom";
 
-import myImage from '../images/images.png';
+// import myImage from '../images/images.png';
+import myImage from "../images/final.png";
 
 
 const Header = () => {

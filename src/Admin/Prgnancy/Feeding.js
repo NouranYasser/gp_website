@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
  import "../../style/food.css";
 
 
-const Food = () => {
+const Feeding = () => {
  
     return (
       <>
@@ -14,7 +14,9 @@ const Food = () => {
 <br></br>
 <br></br>
 <br></br>
-<h1 className="f-p">Food </h1>
+<Link to="/AddFeeding">
+        <button className="btn-addBCh"> Add Data in Feeding</button>
+      </Link>
 <br></br>
 <br></br>
 <br></br>
@@ -47,4 +49,4 @@ const Food = () => {
         </>
     );
   };
-  export default Food;
+  export default Feeding;

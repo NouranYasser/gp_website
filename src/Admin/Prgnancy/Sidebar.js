@@ -30,8 +30,8 @@ const Sidebar  = ({children}) => {
         },
       
         {
-            path:"/Food",
-            name:"Food",
+            path:"/Feeding",
+            name:"Feeding",
             icon:<IoFastFoodOutline/>
         },
         {

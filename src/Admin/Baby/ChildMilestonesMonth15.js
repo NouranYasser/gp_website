@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import "../../style/babygrowthMonth.css";
 
-const ChildGrowthMonth15 = () => {
+const ChildMilestonesMonth15 = () => {
   const [tips, setTips] = useState({
     loading: true,
     results: [],
@@ -96,6 +96,6 @@ const ChildGrowthMonth15 = () => {
   );
 };
 
-export default ChildGrowthMonth15;
+export default ChildMilestonesMonth15;
 
 
