@@ -68,13 +68,12 @@ const FoodMonth1 = () => {
               <tr>
                 <td>{foods.results.title}</td>
                 <td>{foods.results.description}</td>
-                <td>{foods.results.month}</td>
                 <td>
                   {foods.results.FullSrc ? (
                     <img
                       src={foods.results.FullSrc}
                       alt="Baby Image"
-                      style={{ maxWidth: '10%', maxHeight: '10%' }}
+                      style={{ maxWidth: '200px', maxHeight: '200px' }}
                     />
                   ) : (
                     <span>No image available</span>

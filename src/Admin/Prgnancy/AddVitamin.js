@@ -9,7 +9,6 @@ import"../../style/addBabyGrowth.css";
 function AddVitamin() {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
-  const [month, setMonth] = useState('');
   const [image, setImage] = useState(null);
   const [message, setMessage] = useState('');
   const navigate = useNavigate();
@@ -20,7 +19,6 @@ function AddVitamin() {
     const formData = new FormData();
     formData.append('title', title);
     formData.append('description', description);
-    formData.append('month', month);
     formData.append('image', image);
 
     try {
@@ -59,13 +57,6 @@ function AddVitamin() {
             onChange={(e) => setDescription(e.target.value)}
           />
           <br></br>
-          <label htmlFor="month"  className='label-G'>Month:</label><br></br>
-          <input className='outbox'
-            type="text"
-            id="month"
-            value={month}
-            onChange={(e) => setMonth(e.target.value)}
-          />
 
 
           <label htmlFor="image"  className='label-G'>Image:</label>

@@ -49,6 +49,12 @@ function AddData() {
            Logout
       </div>
          
+
+         <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+         <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+         <br></br><br></br><br></br><br></br>
+         
+      
       {/* <div className='main-divp'>
         <form className="form-p" onSubmit={handleSubmit}>
           <label htmlFor="category_id" className='label-pregnancy'>Category ID:</label>

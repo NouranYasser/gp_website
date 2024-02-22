@@ -17,7 +17,7 @@ function UpdateCourses() {
     const formData = new FormData();
     if (title !== '') formData.append('title', title);
     if (description !== '') formData.append('description', description);
-
+    if (video !== '') formData.append('video', video);
     try {
       const response = await axios.post(`https://gradhub.hwnix.com/api/update/${id}`, formData, {
         headers: {
@@ -59,7 +59,7 @@ function UpdateCourses() {
       
         <div className='row-C'>
       <div className=' clo-25-C'>
-        <label htmlFor="Video" className='label-u-C'>Video:</label></div>
+        <label htmlFor="Video" className='label-u-C'>Video URL:</label></div>
         <div>
         <input
           type="text"

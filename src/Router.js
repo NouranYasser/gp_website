@@ -88,7 +88,7 @@ import AddArtificalFeeding from "./Admin/Baby/AddArtificalFeeding"
 import AddFeeding from "./Admin/Prgnancy/AddFeeding.js";
 import AddVitamin from "./Admin/Prgnancy/AddVitamin.js";
 import AddExercises from "./Admin/Prgnancy/AddExercises.js";
-// import AddCourses from "./Admin/Baby/AddCourses";
+import AddCourses from "./Admin/Prgnancy/AddCourses.js";
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -117,10 +117,10 @@ export const router = createBrowserRouter([
             element: <AddExercises />,
           },
 
-          // {
-          //   path: "/AddCourses",
-          //   element: <AddCourses />,
-          // },
+          {
+            path: "/AddCourses",
+            element: <AddCourses />,
+          },
 
           {
             path: "/AddBabyGrowth",

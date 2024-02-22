@@ -62,7 +62,6 @@ const Vitamins = () => {
               <tr>
                 <th>Title</th>
                 <th>Description</th>
-                <th>Month</th>
                 <th>Image</th>
                 <th></th>
                 <th></th>
@@ -74,7 +73,6 @@ const Vitamins = () => {
                 <tr key={vitamine.id}>
                   <td>{vitamine.title}</td>
                   <td>{vitamine.description}</td>
-                  <td>{vitamine.month}</td>
                   <td>
                     {vitamine.results ? (
                       <td>

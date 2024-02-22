@@ -10,25 +10,25 @@ const Feeding = () => {
 
   return (
     <> 
+    <br></br><br></br><br></br><br></br>
     <Link to="/AddFeeding">
         <button className="btn-addBCh"> Add Data in Feeding</button>
       </Link>
+    
 
       <div className="f_foot">
-
-        <h1 className="f-p">Food </h1>
-
+      <br></br><br></br>
         <div className="fo-container">
-          <Link to="/FoodMonth1">
+          <Link to="/FeedingMonth1">
             <button className="fo-b"> Month 1-3</button>
           </Link>
 
-          <Link to="/FoodMonth3">
+          <Link to="/FeedingMonth3">
             <button className="fo-b"> Month 3-6</button>
           </Link>
 
 
-          <Link to="/FoodMonth6">
+          <Link to="/FeedingMonth6">
             <button className="fo-b"> Month 6-9</button>
           </Link>
         </div>
