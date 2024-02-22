@@ -8,7 +8,7 @@ function BabyHome() {
     <>
       <Sidebar />
       {}
-      
+      <div></div>
     </>
   );
 
