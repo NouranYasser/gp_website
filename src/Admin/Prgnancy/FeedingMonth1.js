@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import "../../style/FoodMonth.css";
-const FoodMonth3 = () => {
+
+const FoodMonth1 = () => {
   const [foods, setFoods] = useState({
     loading: true,
     results: {},
@@ -13,7 +14,7 @@ const FoodMonth3 = () => {
   useEffect(() => {
     setFoods({ ...foods, loading: true });
     axios
-      .get("https://gradhub.hwnix.com/api/get_Food_3")
+      .get("https://gradhub.hwnix.com/api/get_Food_1")
       .then((resp) => {
         setFoods({
           ...foods,
@@ -45,14 +46,13 @@ const FoodMonth3 = () => {
 
   return (
     <>
-     <div>
+     <div className="fo-m_foot">
         {foods.err && <p>{foods.err}</p>}
         {foods.loading ? (
           <p>Loading...</p>
         ) : (
           <div className="div-container-fm">
           <table className="table-content-fm"> 
-          
             <thead>
               <tr>
                 <th>Title</th>
@@ -60,7 +60,7 @@ const FoodMonth3 = () => {
                 <th>Month</th>
                 <th>Image</th>
                 <th></th>
-                <td></td>
+                <th></th>
               
               </tr>
             </thead>
@@ -81,21 +81,22 @@ const FoodMonth3 = () => {
                   )}
                 </td>
                 <td>
+
                 <Link to={"/UpdateFood/" + foods.results.id}>
                     <button className="btnUpdate-fm">Update</button>
-                  </Link>
-                  
+                </Link>              
                   </td>
-                  <td>
-                  <button
+                    <td>
+                    <button
                     className="btnDelete-fm"
                     onClick={(e) => {
                       deleteFood(foods.results.id);
                     }}
                   >
                     Delete
+                    
                   </button>
-                 
+                  
                 </td>
               </tr>
             </tbody>
@@ -105,8 +106,8 @@ const FoodMonth3 = () => {
 
       </div>
     
-    </>
+        </>
   );
 };
 
-export default FoodMonth3;
+export default FoodMonth1;

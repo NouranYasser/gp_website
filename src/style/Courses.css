@@ -1,8 +1,12 @@
+.bho{
+  min-height: calc(100vh - 220px);
+}
 .div-C-container{
     margin-top: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
+    
   }
   .table-content-C{
     border-collapse: collapse;
@@ -12,6 +16,7 @@
     border-radius: 5px 5px 0 0;
     overflow: hidden;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    height: 90%;
   
   }
   .table-content-C thead tr{

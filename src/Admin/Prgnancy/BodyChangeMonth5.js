@@ -45,7 +45,7 @@ const BodychangeMonth5 = () => {
 
   return (
     <>
-      <div>
+      <div className="bmo">
         {bodychanges.err && <p>{bodychanges.err}</p>}
         {bodychanges.loading ? (
           <p>Loading...</p>

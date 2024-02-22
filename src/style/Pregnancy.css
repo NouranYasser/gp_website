@@ -1,3 +1,6 @@
+.pfot{
+  in-height: calc(100vh - 220px- 10px);
+}
 
 .main-divp{
   /* background-image: url("../R.png"); */
@@ -9,6 +12,7 @@
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  
 
 } 
 
@@ -38,9 +42,9 @@
     display: block;
 
   }
-  #description{
+  #description-P{
     margin-left: 10px;
-  width: 333px; 
+  width: 85%; 
   height: 22px;}
   .label-pregnancy{
     margin-top: 10px;

@@ -1,7 +1,7 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import"../../style/AddArtificalFeeding.css";
 
 function AddArtificalFeeding() {
   const [title, setTitle] = useState('');
@@ -17,9 +17,10 @@ function AddArtificalFeeding() {
     formData.append('title', title);
     formData.append('description', description);
     formData.append('month', month);
+    
 
     try {
-      const response = await axios.post(`https://gradhub.hwnix.com/api/add_DESC/11`, formData, {
+      const response = await axios.post(`https://gradhub.hwnix.com/api/add_DESC/10`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
@@ -32,43 +33,43 @@ function AddArtificalFeeding() {
   };
 
   return (
-    <>
+    <div className='main-divp'>
+      <form className="form-p" onSubmit={handleSubmit}>
+        <label htmlFor="title" className='label-pregnancy'>Title:</label>
+        <input
+          className='outbox'
+          type="text"
+          id="title"
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
+        />
 
-      <div className='main-divp'>
-        <form className="form-p" onSubmit={handleSubmit}>
-          
-          <label htmlFor="title"  className='label-pregnancy'>Title:</label>
-          <input className='outbox'
-            type="text"
-            id="title"
-            value={title}
-            onChange={(e) => setTitle(e.target.value)}
-          />
-
-          <label htmlFor="description"  className='label-pregnancy'>Description:</label><br></br>
-
-          <textarea
-
-            id="description"
-            value={description}
-            onChange={(e) => setDescription(e.target.value)}
-          />
-          <br></br>
-          <label htmlFor="month"  className='label-pregnancy'>Month:</label><br></br>
-          <input className='outbox'
-            type="text"
-            id="month"
-            value={month}
-            onChange={(e) => setMonth(e.target.value)}
-          />
-
-          <br></br><br></br>
-          <button type="submit" className='b-pregnancy'>Submit</button>
-        </form>
-        {message && <p>{message}</p>}
-      </div>
-      
-    </>
+        <label htmlFor="description" className='label-pregnancy'>Description:</label><br />
+        <textarea
+          id="description"
+          value={description}
+          onChange={(e) => setDescription(e.target.value)}
+        />
+        <br />
+        <label htmlFor="month" className='label-pregnancy'>Month:</label><br />
+        <select
+          id="month"
+          value={month}
+          onChange={(e) => setMonth(e.target.value)}
+        >
+          <option value="">Select Month</option>
+          <option value="1">1</option>
+          <option value="6">6</option>
+          <option value="12">12</option>
+          <option value="18">18</option>
+       
+         
+        </select>
+        <br /><br />
+        <button type="submit" className='b-pregnancy'>Submit</button>
+      </form>
+      {message && <p>{message}</p>}
+    </div>
   );
 }
 

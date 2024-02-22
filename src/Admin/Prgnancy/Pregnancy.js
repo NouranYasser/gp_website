@@ -73,7 +73,7 @@ function AddData() {
 
           <textarea
 
-            id="description"
+            id="description-P"
             value={description}
             onChange={(e) => setDescription(e.target.value)}
           />
@@ -97,6 +97,7 @@ function AddData() {
           <button type="submit" className='b-pregnancy'>Submit</button>
         </form>
         {message && <p>{message}</p>}
+      </div>
       </div>
       {/* <br></br>
       <br></br>

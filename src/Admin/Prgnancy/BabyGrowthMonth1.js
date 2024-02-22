@@ -45,7 +45,7 @@ const BabyGrowthMonth1 = () => {
 
   return (
     <>
-      <div  >
+      <div className="bmo">
         {babygrowths.err && <p>{babygrowths.err}</p>}
         {babygrowths.loading ? (
           <p>Loading...</p>

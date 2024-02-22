@@ -8,3 +8,20 @@
     flex-direction: column-reverse;
     justify-content: flex-start;
     margin-bottom: 100px;}
+.btn-addATA{
+        font-size: large;
+        width: 20%;
+        height: 40px;
+        border-radius: 20px;
+        border: none;
+        background-color: rgb(83, 78, 158);
+        color: white;
+        margin-left: 600px;
+        cursor: pointer;
+    }
+    .TA-container{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }

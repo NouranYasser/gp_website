@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-
+import"../../style/updatecourses.css";
 function UpdateCourses() {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
@@ -32,38 +32,50 @@ function UpdateCourses() {
   };
 
   return (
-    <div>
+    <div className='body-u-C'>
+    <div className='container-u-C'>
       <form onSubmit={handleSubmit}>
-      
-        <label htmlFor="title">Title:</label>
+      <div className='row-C'>
+      <div className=' clo-25-C'>
+        <label htmlFor="title"className='label-u-C'>Title:</label></div>
+        <div>
         <input
           type="text"
           id="title"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
-        />
-      
-     
-        <label htmlFor="description">Description:</label>
+        /></div>
+        </div>
+        <div className='row-C'>
+      <div className=' clo-25-C'>
+        <label htmlFor="description"className='label-u-C'>Description:</label></div>
+        <div>
         <textarea
-          id="description"
+          id="description-C"
           value={description}
           onChange={(e) => setDescription(e.target.value)}
-        />
+        /></div>
+        </div>
       
-      
-        <label htmlFor="Video">Video:</label>
+        <div className='row-C'>
+      <div className=' clo-25-C'>
+        <label htmlFor="Video" className='label-u-C'>Video:</label></div>
+        <div>
         <input
           type="text"
           id="Video"
           value={video}
           onChange={(e) => setVideo(e.target.value)}
-        />
+        /></div>
+        </div>
+        <div class="row">
        
-        <button type="submit">Submit</button>
+        <button type="submit" className='b-u-C'>Submit</button></div>
       </form>
       {message && <p>{message}</p>}
     </div>
+    </div>
+    
   );
 }
 

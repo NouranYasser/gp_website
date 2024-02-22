@@ -2,8 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import "../../style/FoodMonth.css";
-
-const FoodMonth6 = () => {
+const FoodMonth3 = () => {
   const [foods, setFoods] = useState({
     loading: true,
     results: {},
@@ -14,7 +13,7 @@ const FoodMonth6 = () => {
   useEffect(() => {
     setFoods({ ...foods, loading: true });
     axios
-      .get("https://gradhub.hwnix.com/api/get_Food_6")
+      .get("https://gradhub.hwnix.com/api/get_Food_3")
       .then((resp) => {
         setFoods({
           ...foods,
@@ -46,13 +45,14 @@ const FoodMonth6 = () => {
 
   return (
     <>
- <div>
+     <div className="fo-m_foot">
         {foods.err && <p>{foods.err}</p>}
         {foods.loading ? (
           <p>Loading...</p>
         ) : (
           <div className="div-container-fm">
           <table className="table-content-fm"> 
+          
             <thead>
               <tr>
                 <th>Title</th>
@@ -60,7 +60,7 @@ const FoodMonth6 = () => {
                 <th>Month</th>
                 <th>Image</th>
                 <th></th>
-                <th></th>
+                <td></td>
               
               </tr>
             </thead>
@@ -81,7 +81,6 @@ const FoodMonth6 = () => {
                   )}
                 </td>
                 <td>
-
                 <Link to={"/UpdateFood/" + foods.results.id}>
                     <button className="btnUpdate-fm">Update</button>
                   </Link>
@@ -110,4 +109,4 @@ const FoodMonth6 = () => {
   );
 };
 
-export default FoodMonth6;
+export default FoodMonth3;

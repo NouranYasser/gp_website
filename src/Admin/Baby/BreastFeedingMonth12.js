@@ -56,7 +56,7 @@ const BreastFeedingMonth12 = () => {
                 <tr>
                   <th>Title</th>
                   <th>Description</th>
-                  <th>Month</th>
+                   
                   <th></th>
                  
                   <th></th>
@@ -67,7 +67,7 @@ const BreastFeedingMonth12 = () => {
                   <tr key={result.id}>
                     <td>{result.title}</td>
                     <td>{result.description}</td>
-                    <td>{result.month}</td>
+                    
                    
 
                     <td>

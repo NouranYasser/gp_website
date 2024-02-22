@@ -33,9 +33,9 @@ import BabyGrowthMonth6 from "./Admin/Prgnancy/BabyGrowthMonth6.js";
 import BabyGrowthMonth7 from "./Admin/Prgnancy/BabyGrowthMonth7.js";
 import BabyGrowthMonth8 from "./Admin/Prgnancy/BabyGrowthMonth8.js";
 import BabyGrowthMonth9 from "./Admin/Prgnancy/BabyGrowthMonth9.js";
-import FoodMonth1 from "./Admin/Prgnancy/FoodMonth1.js";
-import FoodMonth3 from "./Admin/Prgnancy/FoodMonth3.js";
-import FoodMonth6 from "./Admin/Prgnancy/FoodMonth6.js";
+import FeedingMonth1 from "./Admin/Prgnancy/FeedingMonth1.js";
+import FeedingMonth3 from "./Admin/Prgnancy/FeedingMonth3.js";
+import FeedingMonth6 from "./Admin/Prgnancy/FeedingMonth6.js";
 import Guest from "../src/middleware/Guest.js";
 import UpdateExercise from "./Admin/Prgnancy/UpdateExercise.js";
 import BabyHome from "./Admin/Baby/BabyHome.js";
@@ -88,6 +88,7 @@ import AddArtificalFeeding from "./Admin/Baby/AddArtificalFeeding"
 import AddFeeding from "./Admin/Prgnancy/AddFeeding.js";
 import AddVitamin from "./Admin/Prgnancy/AddVitamin.js";
 import AddExercises from "./Admin/Prgnancy/AddExercises.js";
+// import AddCourses from "./Admin/Baby/AddCourses";
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -110,6 +111,17 @@ export const router = createBrowserRouter([
             path: "/HomePage",
             element: <HomePage />,
           },
+
+          {
+            path: "/AddExercises",
+            element: <AddExercises />,
+          },
+
+          // {
+          //   path: "/AddCourses",
+          //   element: <AddCourses />,
+          // },
+
           {
             path: "/AddBabyGrowth",
             element: <AddBabyGrowth />,
@@ -417,18 +429,18 @@ export const router = createBrowserRouter([
           },
           
           {
-            path: "/FoodMonth1",
-            element: <FoodMonth1 />,
+            path: "/FeedingMonth1",
+            element: <FeedingMonth1 />,
           },
           
           {
-            path: "/FoodMonth3",
-            element: <FoodMonth3 />,
+            path: "/FeedingMonth3",
+            element: <FeedingMonth3 />,
           },
           
           {
-            path: "/FoodMonth6",
-            element: <FoodMonth6 />,
+            path: "/FeedingMonth6",
+            element: <FeedingMonth6 />,
           },
          
           {
