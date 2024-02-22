@@ -7,7 +7,6 @@ import "../../style/updateVitamins.css";
 function UpdateVitamin() {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
-  const [month, setMonth] = useState('');
   const [image, setImage] = useState(null);
   const [message, setMessage] = useState('');
   const navigate = useNavigate();
@@ -19,11 +18,10 @@ function UpdateVitamin() {
     const formData = new FormData();
     if (title !== '') formData.append('title', title);
     if (description !== '') formData.append('description', description);
-    if (month !== '') formData.append('month', month);
     if (image !== null) formData.append('image', image);
 
     try {
-      const response = await axios.post(`https://gradhub.hwnix.com/api/update_one/${id}`, formData, {
+      const response = await axios.post(`https://gradhub.hwnix.com/api/update_DESC/${id}`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
@@ -62,17 +60,7 @@ function UpdateVitamin() {
         />
       </div>
         </div>
-        <div className='row-V'>
-      <div className=' clo-25-V'>
-        <label htmlFor="month"className='label-u-V'>Month:</label></div>
-        <div>
-        <input
-          type="text"
-          id="month"
-          value={month}
-          onChange={(e) => setMonth(e.target.value)}
-        /> </div>
-        </div>
+
         <div className='row-V'>
       <div className=' clo-25-V'>
         <label htmlFor="image"className='label-u-V'>Image:</label></div>

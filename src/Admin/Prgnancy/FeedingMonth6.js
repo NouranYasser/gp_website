@@ -74,7 +74,7 @@ const FoodMonth6 = () => {
                     <img
                       src={foods.results.FullSrc}
                       alt="Baby Image"
-                      style={{ maxWidth: '10%', maxHeight: '10%' }}
+                      style={{ maxWidth: '150px', maxHeight: '150px' }}
                     />
                   ) : (
                     <span>No image available</span>

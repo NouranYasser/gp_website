@@ -49,9 +49,9 @@ const Courses = () => {
   return (
     <>
      <div className="bho">
-     <Link to={"/AddCourses/"}>
-                      <button className="btn-addBC">AddCourses</button>
-                    </Link>      
+     <Link to={"/AddCourses"}>
+            <button className="btn-addBCh">Add Course</button>
+     </Link>      
      
       
         {courses.err && <p>{courses.err}</p>}
@@ -89,7 +89,7 @@ const Courses = () => {
                   </td>
                  
                     <td>
-                    <Link to={'/UpdateCourses/${course.id}'}>
+                    <Link to={'/UpdateCourses/'+ course.id}>
                       <button className="btnUpdate-C">Update</button>
                     </Link>             
 
