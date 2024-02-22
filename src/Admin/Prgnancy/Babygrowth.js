@@ -5,7 +5,7 @@ import "../../style/Babygrowth.css";
 const Babygrowth = () => {
   return (
     <>
-      <br></br>
+      <div className="g_foot">
       <div className="container-g">
         <div>
           <Link to="/BabyGrowthMonth1">
@@ -46,6 +46,7 @@ const Babygrowth = () => {
             <button className="bt-MG"> Month 9</button>
           </Link>
         </div>
+      </div>
       </div>
     </>
   );

@@ -45,7 +45,7 @@ const Vitamins = () => {
 
   return (
     <>
-      <div>
+      <div className="v_foot">
         {vitamines.err && <p>{vitamines.err}</p>}
         {vitamines.loading ? (
           <p>Loading...</p>

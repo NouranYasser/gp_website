@@ -7,13 +7,13 @@ const TipsAndActivities = () => {
   return (
     <>
       <Link to="/AddTipsAndActivities">
-        <button className="btn-addBCh">
+        <button className="btn-addATA">
           {" "}
           Add Data in Tips And Activities{" "}
         </button>
       </Link>
 
-      <div className="fo-container">
+      <div className="TA-container">
         <div>
           <Link to="/TipsAndActivitiesMonth1">
             <button className="fo-b"> Month 1-3</button>

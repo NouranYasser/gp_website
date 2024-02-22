@@ -1,3 +1,6 @@
+.bmo{
+  min-height: calc(100vh - 220px);
+}
 .div-container{
   margin-top: 15px;
   display: flex;

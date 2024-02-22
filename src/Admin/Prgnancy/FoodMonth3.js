@@ -45,7 +45,7 @@ const FoodMonth3 = () => {
 
   return (
     <>
-     <div>
+     <div className="fo-m_foot">
         {foods.err && <p>{foods.err}</p>}
         {foods.loading ? (
           <p>Loading...</p>

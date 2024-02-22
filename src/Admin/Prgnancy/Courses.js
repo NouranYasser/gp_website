@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 // import {DefaultPlayer as video } from 'react-html5video';
 import "../../style/Courses.css";
-import Footer from "../../shared/Footer";
+// import Footer from "../../shared/Footer";
 
-const Courses = () => {
+const Courses = () => { 
   const [courses, setCourses] = useState({
     loading: true,
     results: [],
@@ -48,7 +48,7 @@ const Courses = () => {
 
   return (
     <>
-      <div>
+      <div className="bho">
         {courses.err && <p>{courses.err}</p>}
         {courses.loading ? (
           <p>Loading...</p>
@@ -116,7 +116,7 @@ const Courses = () => {
         ></iframe> */}
       </div>
       </div>
-      <Footer/>
+      
     </>
   );
 };

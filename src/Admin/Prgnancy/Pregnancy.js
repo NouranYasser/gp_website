@@ -48,7 +48,7 @@ function AddData() {
       <div  onClick={handleLogout}>
            Logout
       </div>
-         
+         <div className='pfot'>
       <div className='main-divp'>
         <form className="form-p" onSubmit={handleSubmit}>
           <label htmlFor="category_id" className='label-pregnancy'>Category ID:</label>
@@ -97,6 +97,7 @@ function AddData() {
           <button type="submit" className='b-pregnancy'>Submit</button>
         </form>
         {message && <p>{message}</p>}
+      </div>
       </div>
       {/* <br></br>
       <br></br>

@@ -1,3 +1,6 @@
+.v_foot{
+  min-height: calc(100vh - 220px);
+}
 .div-container-v{
     margin-top: 15px;
     display: flex;

@@ -46,7 +46,7 @@ const Exercises = () => {
 
   return (
     <>
-      <div>
+      <div className="exf">
         {exercises.err && <p>{exercises.err}</p>}
         {exercises.loading ? (
           <p>Loading...</p>
