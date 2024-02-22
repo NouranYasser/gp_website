@@ -102,10 +102,9 @@ function AddData() {
           <br></br><br></br>
           <button type="submit" className='b-pregnancy'>Submit</button>
         </form>
-        {message && <p>{message}</p>}
-      </div>
-      </div>
-      {/* <br></br>
+        {message && <p>{message}</p>} */}
+
+      {/* /* <br></br>
       <br></br>
       <br></br>
       <br></br> */}

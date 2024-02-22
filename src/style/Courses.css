@@ -57,8 +57,7 @@
       color: rgb(251, 250, 252);
       /* margin: 30px; */
   }
-
-  .btn-addBCh{
+  .btn-addBC{
     font-size: large;
     width: 20%;
     height: 40px;
@@ -67,6 +66,6 @@
     background-color: rgb(83, 78, 158);
     color: white;
     margin-left: 600px;
-    margin-top: 40px;
+    margin-top: 20px;
     cursor: pointer;
-}
+  }

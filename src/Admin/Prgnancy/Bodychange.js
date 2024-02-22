@@ -6,8 +6,8 @@ import Footer from "../../shared/Footer";
 const Bodychange = () => {
   return (
     <>
-    <div className="ch_foot">
-
+      <div className="ch_foot">
+        
       <Link to="/AddBodyChange">
         <button className="btn-addBCh"> Add Data in Body change </button>
       </Link>
@@ -40,7 +40,7 @@ const Bodychange = () => {
             <button className="btn-M"> Month 8</button>
           </Link>
         </div>
-        <div className="last-div-ch">
+        <div className="last-div">
           <Link to="/BodyChangeMonth3">
             <button className="btn-M"> Month 3</button>
           </Link>

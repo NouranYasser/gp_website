@@ -12,7 +12,7 @@ const Feeding = () => {
     <> 
     <br></br><br></br><br></br><br></br>
     <Link to="/AddFeeding">
-        <button className="btn-addBCh"> Add Data in Feeding</button>
+        <button className="btn-addBF"> Add Data in Feeding</button>
       </Link>
     
 
@@ -35,12 +35,7 @@ const Feeding = () => {
       </div>
 
 
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-<br></br>
+
         </>
     );}
 export default Feeding;
