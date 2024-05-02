@@ -40,7 +40,6 @@ const SignUp = () => {
 
   return (
     <>
-      <Header />
       <br />
       <section className="sign">
         <div className="SignUp">

@@ -31,11 +31,9 @@ function AddIssue() {
 
           <div className="mb-2">
             <label htmlFor="from" className="ee">
-              Title
+              Name
             </label>
             <input
-            
-              placeholder="Enter from"
               className="form-controlDes"
               value={name}
               onChange={(e) => setName(e.target.value)}

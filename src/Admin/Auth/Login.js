@@ -71,13 +71,14 @@ const Login = () => {
 <br></br>
           <div className="register-link">
             <p className="pp">Don't have an account?</p>
-            <Link to="/SignAdmin">
+            <Link to="/SignUp">
               <button className="signadmin"> Sign Up</button>
             </Link>
           </div>
           
         </div>
       </div>
+      <br></br><br></br>
     </>
   );
 };

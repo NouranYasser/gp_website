@@ -81,6 +81,8 @@ const ShowDetails = () => {
                   </tr>
                 ))}
               </tbody>
+              <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+              <br></br><br></br>
             </table>
           </div>
         )}

@@ -85,6 +85,7 @@ const WeaningMonth12 = () => {
                   </tr>
                 ))}
               </tbody>
+              <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
             </table>
           </div>
         )}

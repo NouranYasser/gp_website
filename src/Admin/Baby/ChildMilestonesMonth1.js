@@ -43,6 +43,17 @@ const ChildMilestonesMonth1 = () => {
       });
   };
 
+  const arabicChildMilestones = (id) => {
+    axios
+      .delete(`https://gradhub.hwnix.com/api/get_ChildGrowth/3`)
+      .then((resp) => {
+        setTips({ ...tips, reload: tips.reload + 1 });
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
   return (
     <>
       <div>
@@ -59,6 +70,7 @@ const ChildMilestonesMonth1 = () => {
               
                   <th></th>
                  
+                  <th></th>
                   <th></th>
                 </tr>
               </thead>
@@ -83,12 +95,22 @@ const ChildMilestonesMonth1 = () => {
                       >
                         Delete
                       </button>
+                      
                     </td>
+                    
                   </tr>
                 ))}
               </tbody>
+              
             </table>
+            <td>
+                    <Link to={"/ArabicChildMilestonesMonth1"}>
+                        <button className="btnUpdate">arabic</button>
+                    </Link>
+                    </td>
+            
           </div>
+          
         )}
       </div>
     </>

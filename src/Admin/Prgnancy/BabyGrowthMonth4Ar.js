@@ -2,8 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import "../../style/babygrowthMonth.css";
-
-const BabyGrowthMonth6 = () => {
+const BabyGrowthMonth4Ar = () => {
   const [babygrowths, setBabygrowths] = useState({
     loading: true,
     results: {},
@@ -14,7 +13,7 @@ const BabyGrowthMonth6 = () => {
   useEffect(() => {
     setBabygrowths({ ...babygrowths, loading: true });
     axios
-      .get("https://gradhub.hwnix.com/api/get_babyGrowth_6/en")
+      .get(`https://gradhub.hwnix.com/api/get_babyGrowth_4/ar`)
       .then((resp) => {
         setBabygrowths({
           ...babygrowths,
@@ -46,68 +45,65 @@ const BabyGrowthMonth6 = () => {
 
   return (
     <>
-      <div  className="bmo">
+      <div className="bmo">
         {babygrowths.err && <p>{babygrowths.err}</p>}
         {babygrowths.loading ? (
           <p>Loading...</p>
         ) : (
-           <div className="div-container">
-            <table className="table-content">
+         <div className="div-container"> 
+         <table className="table-content">
             <thead>
               <tr>
-                <th>Title</th>
-                <th>Description</th>
-                <th>Month</th>
-                <th>Image</th>
-                <th></th>
-                <th></th>
+              <th></th>
+                <th></th>  
+                <th>الصورة</th>             
+                <th>الشهر</th>              
+                <th>الوصف</th>
+                <th>العنوان</th>    
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>{babygrowths.results.title}</td>
-                <td>{babygrowths.results.description}</td>
-                <td>{babygrowths.results.month}</td>
-                <td>
-                  {babygrowths.results.FullSrc ? (
-                    <img
-                      src={babygrowths.results.FullSrc}
-                      alt="Baby Image"
-                      style={{ maxWidth: '10%', maxHeight: '10%' }}
-                    />
-                  ) : (
-                    <span>No image available</span>
-                  )}
-                </td>
-                <td>
-                  
-                  <Link to={"/UpdateBabygrowth/" + babygrowths.results.id}>
-                    <button className="btnUpdate">Update</button>
-                  </Link>
-                  </td>
-                  <td>
-                  </td>
-                  <td>
+              <td>
                   <button
                     className="btnDelete"
                     onClick={(e) => {
                       deleteBabygrowth(babygrowths.results.id);
                     }}
                   >
-                    Delete
+                    إزالة
                   </button>
                 </td>
+                <td>
+                  
+                  <Link to={"/UpdateBabygrowth/" + babygrowths.results.id}>
+                    <button className="btnUpdate">تعديل</button>
+                  </Link>
+                  </td>
+                  
+               
+                <td>
+                  {babygrowths.results.FullSrc ? (
+                    <img
+                      src={babygrowths.results.FullSrc}
+                      alt="Baby Image"
+                      style={{ maxWidth: '80%', maxHeight: '80%' }}
+                    />
+                  ) : (
+                    <span>No image available</span>
+                  )}
+                </td>
+                <td>{babygrowths.results.month}</td>
+                <td>{babygrowths.results.description}</td>
+                <td>{babygrowths.results.title}</td>
               </tr>
             </tbody>
           </table>
           </div>
         )}
-        <Link to={"/BabyGrowthMonth6Ar"}>
-                    <button className="btnArabic">Arabic</button>
-                  </Link>
       </div>
     </>
   );
 };
 
-export default BabyGrowthMonth6;
+export default BabyGrowthMonth4Ar;

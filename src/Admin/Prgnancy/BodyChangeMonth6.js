@@ -14,7 +14,7 @@ const BodychangeMonth6 = () => {
   useEffect(() => {
     setBodychanges({ ...bodychanges, loading: true });
     axios
-      .get("https://gradhub.hwnix.com/api/get_bodyChange_6")
+      .get("https://gradhub.hwnix.com/api/get_bodyChange_6/en")
       .then((resp) => {
         setBodychanges({
           ...bodychanges,
@@ -99,9 +99,14 @@ const BodychangeMonth6 = () => {
               </tr>
             </tbody>
           </table>
-          </div>
-        )}
+          <Link to={"/BodaychangeMonth1Ar"}>
+                    <button className="btnUpdate">Arabic</button>
+                  </Link>
 
+          </div>
+          
+        )}
+        
       </div>
      </>
   );

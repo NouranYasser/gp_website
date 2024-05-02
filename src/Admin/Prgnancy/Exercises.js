@@ -15,7 +15,7 @@ const Exercises = () => {
   useEffect(() => {
     setExercises({ ...exercises, loading: true });
     axios
-      .get("https://gradhub.hwnix.com/api/get_exercises")
+      .get("https://gradhub.hwnix.com/api/get_exercises/en")
       .then((resp) => {
         setExercises({
           ...exercises,
@@ -48,7 +48,7 @@ const Exercises = () => {
     <>
       <div>
         <Link to="/AddExercises">
-          <button className="btn-addBCh"> Add Data in Exercises</button>
+          <button className="btn-addBCh"> Add  Exercise</button>
          </Link>
         {exercises.err && <p>{exercises.err}</p>}
         {exercises.loading ? (

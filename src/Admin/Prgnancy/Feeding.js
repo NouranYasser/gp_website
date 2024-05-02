@@ -12,7 +12,7 @@ const Feeding = () => {
     <> 
     <br></br><br></br><br></br><br></br>
     <Link to="/AddFeeding">
-        <button className="btn-addBF"> Add Data in Feeding</button>
+        <button className="btn-addBF"> Add  Feeding</button>
       </Link>
     
 
@@ -34,7 +34,7 @@ const Feeding = () => {
         </div>
       </div>
 
-
+       <br></br><br></br><br></br><br></br><br></br>
 
         </>
     );}

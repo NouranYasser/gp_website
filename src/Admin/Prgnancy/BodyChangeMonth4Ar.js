@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import "../../style/babygrowthMonth.css";
 
-const BodychangeMonth9 = () => {
+const BodyChangeMonth4Ar = () => {
   const [bodychanges, setBodychanges] = useState({
     loading: true,
     results: {},
@@ -14,7 +14,8 @@ const BodychangeMonth9 = () => {
   useEffect(() => {
     setBodychanges({ ...bodychanges, loading: true });
     axios
-      .get("https://gradhub.hwnix.com/api/get_bodyChange_9/en")
+      .get("https://gradhub.hwnix.com/api/get_bodyChange_4/ar")
+
       .then((resp) => {
         setBodychanges({
           ...bodychanges,
@@ -43,7 +44,6 @@ const BodychangeMonth9 = () => {
       });
   };
 
-
   return (
     <>
       <div className="bmo">
@@ -51,41 +51,20 @@ const BodychangeMonth9 = () => {
         {bodychanges.loading ? (
           <p>Loading...</p>
         ) : (
-          <div className="div-container">
+          <div className="div-container"> 
           <table  className="table-content">
             <thead>
               <tr>
-                <th>Title</th>
-                <th>Description</th>
-                <th>Month</th>
-                <th>Image</th>
                 <th></th>
-                <th></th>
+                <th></th>  
+                <th>الصورة</th>             
+                <th>الشهر</th>              
+                <th>الوصف</th>
+                <th>العنوان</th>             
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>{bodychanges.results.title}</td>
-                <td>{bodychanges.results.description}</td>
-                <td>{bodychanges.results.month}</td>
-                <td>
-                  {bodychanges.results.FullSrc ? (
-                    <img
-                      src={bodychanges.results.FullSrc}
-                      alt="Baby Image"
-                      style={{ maxWidth: '10%', maxHeight: '10%' }}
-                    />
-                  ) : (
-                    <span>No image available</span>
-                  )}
-                </td>
-                <td>
-                 
-                  <Link to={"/UpdateBodyChange/" + bodychanges.results.id}>
-                    <button className="btnUpdate">Update</button>
-                  </Link>
-
-                  </td>
                   <td>
                   <button
                     className="btnDelete"
@@ -93,21 +72,40 @@ const BodychangeMonth9 = () => {
                       deleteBodychange(bodychanges.results.id);
                     }}
                   >
-                    Delete
+                    إزالة
                   </button>
+                  
+                  </td>
+                  <td>
+                <Link to={"/UpdateBodyChange/" + bodychanges.results.id}>
+                    <button className="btnUpdate">تعديل</button>
+                  </Link>
+                  </td>
+                
+                <td>
+                  {bodychanges.results.FullSrc ? (
+                    <img
+                      src={bodychanges.results.FullSrc}
+                      alt="Baby Image"
+                      style={{ maxWidth: '1000px', maxHeight: '100px' }}
+                    />
+                  ) : (
+                    <span>No image available</span>
+                  )}
                 </td>
+                <td>{bodychanges.results.month}</td>
+                <td>{bodychanges.results.description_ar}</td>
+                <td>{bodychanges.results.title_ar}</td>
+                
               </tr>
             </tbody>
           </table>
-          <Link to={"/BodaychangeMonth9Ar"}>
-                    <button className="btnUpdate">Arabic</button>
-                  </Link>
           </div>
         )}
-             
+
       </div>
     </>
   );
 };
 
-export default BodychangeMonth9;
+export default BodyChangeMonth4Ar;

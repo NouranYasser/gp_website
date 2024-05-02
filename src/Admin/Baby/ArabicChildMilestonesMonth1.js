@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import "../../style/babygrowthMonth.css";
 
-const WeaningMonth1 = () => {
+const ArabicChildMilestonesMonth1 = () => {
   const [tips, setTips] = useState({
     loading: true,
     results: [],
@@ -14,7 +14,7 @@ const WeaningMonth1 = () => {
   useEffect(() => {
     setTips({ ...tips, loading: true });
     axios
-      .get(`https://gradhub.hwnix.com/api/get_weaning/1`)
+      .get(`https://gradhub.hwnix.com/api/get_ChildGrowth/6`)
       .then((resp) => {
         setTips({
           ...tips,
@@ -54,9 +54,8 @@ const WeaningMonth1 = () => {
             <table className="table-content">
               <thead>
                 <tr>
-                  <th>Title</th>
-                  <th>Description</th>
-               
+                  <th>العنوان</th>
+                  <th>الشرح</th>
                   <th></th>
                   <th></th>
                 </tr>
@@ -66,10 +65,10 @@ const WeaningMonth1 = () => {
                   <tr key={result.id}>
                     <td>{result.title}</td>
                     <td>{result.description}</td>
-                          
+                  
                     <td>
                       <Link to={"/Update/" + result.id}>
-                        <button className="btnUpdate">Update</button>
+                        <button className="btnUpdate">تعديل</button>
                       </Link>
                     </td>
                     <td>
@@ -79,15 +78,13 @@ const WeaningMonth1 = () => {
                           deleteBabygrowth(result.id);
                         }}
                       >
-                        Delete
+                        إزالة
                       </button>
                     </td>
                   </tr>
                 ))}
               </tbody>
-              <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
             </table>
-            <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
           </div>
         )}
       </div>
@@ -95,4 +92,7 @@ const WeaningMonth1 = () => {
   );
 };
 
-export default WeaningMonth1;
+export default ArabicChildMilestonesMonth1;
+
+
+

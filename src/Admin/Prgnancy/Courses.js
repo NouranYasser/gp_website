@@ -17,7 +17,7 @@ const Courses = () => {
   useEffect(() => {
     setCourses({ ...courses, loading: true });
     axios
-      .get("https://gradhub.hwnix.com/api/get_courses")
+      .get("https://gradhub.hwnix.com/api/get_courses/en")
       .then((resp) => {
         setCourses({
           ...courses,
