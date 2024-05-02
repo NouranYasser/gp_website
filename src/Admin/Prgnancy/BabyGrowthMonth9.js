@@ -100,7 +100,7 @@ const BabyGrowthMonth9 = () => {
             </tbody>
           </table>
           <Link to={"/BabyGrowthMonth9Ar"}>
-                    <button className="btnUpdate">Arabic</button>
+                    <button className="btnArabic">Arabic</button>
                   </Link>
           </div>
         )}

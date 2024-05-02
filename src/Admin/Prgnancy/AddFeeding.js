@@ -79,12 +79,8 @@ function AddFeeding() {
         </form>
         {message && <p>{message}</p>}
       </div>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br> 
-      <br></br>
-      <br></br> 
+      
+
       
     </>
   );

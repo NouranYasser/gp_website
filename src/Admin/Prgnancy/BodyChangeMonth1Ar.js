@@ -99,6 +99,9 @@ const BodychangeMonth1Ar = () => {
               </tr>
             </tbody>
           </table>
+          <Link to={"/BodyChangeMonth1"}>
+             <button className="btnArabic">English</button>
+          </Link>
           </div>
         )}
 

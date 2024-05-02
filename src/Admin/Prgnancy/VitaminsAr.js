@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import "../../style/Vitamins.css";
+import"../../style/Vitamins.css";
 
 const Vitamins = () => {
   const [vitamines, setVitamines] = useState({
@@ -14,7 +14,7 @@ const Vitamins = () => {
   useEffect(() => {
     setVitamines({ ...vitamines, loading: true });
     axios
-      .get("https://gradhub.hwnix.com/api/get_vitamins/en")
+      .get("https://gradhub.hwnix.com/api/get_vitamins/ar")
       .then((resp) => {
         setVitamines({
           ...vitamines,
@@ -47,63 +47,66 @@ const Vitamins = () => {
     <>
       <div>
         <br></br>
-        <Link to="/AddVitamin">
-          <button className="btn-addBCh"> Add Data in Vitamins</button>
-        </Link>
+
+         <Link to="/Vitamins">
+          <button className=""> English</button>
+         </Link>
 
         {vitamines.err && <p>{vitamines.err}</p>}
         {vitamines.loading ? (
           <p>Loading...</p>
         ) : (
+          
           <div className="div-container-v">
-            <table className="table-content-v">
-              <thead>
-                <tr>
-                  <th>Title</th>
-                  <th>Description</th>
-                  <th>Image</th>
-                  <th></th>
-                  <th></th>
-                </tr>
-              </thead>
-              <tbody>
-                {vitamines.results.map((vitamine) => (
-                  <tr key={vitamine.id}>
-                    <td>{vitamine.title}</td>
-                    <td>{vitamine.description}</td>
+           
+          <table className="table-content-v">
+            <thead>
+              <tr>
+              <th></th>
+                <th></th>
+                <th>الصورة</th>
+                <th>الوصف</th>
+                <th>العنوان</th>
+                
+
+              </tr>
+            </thead>
+            <tbody>
+              {vitamines.results.map((vitamine) => (
+                <tr key={vitamine.id}>
+                                    <td>
+                    <button
+                      className="btnDelete-v"
+                      onClick={() => deleteVitamines(vitamine.id)}
+                    >
+                      إزالة
+                    </button>
+                    
+                  
+                    </td>
                     <td>
+                    <Link to={"/UpdateVitamins/" + vitamine.id}>
+                      <button className="btnUpdate-v">تعديل</button>
+                    </Link>
+                  </td>
+                  <td>
                       {vitamine.FullSrc ? (
                         <img
                           src={vitamine.FullSrc}
                           alt="Vitamin Image"
-                          style={{ maxWidth: "80%", maxHeight: "80%" }}
+                          style={{ maxWidth: "80px", maxHeight: "80px" }}
                         />
                       ) : (
                         <span>No image available</span>
                       )}
                     </td>
 
-                    <td>
-                      <Link to={"/UpdateVitamins/" + vitamine.id}>
-                        <button className="btnUpdate-v">Update</button>
-                      </Link>
-                    </td>
-
-                    <td>
-                      <button
-                        className="btnDelete-v"
-                        onClick={() => deleteVitamines(vitamine.id)}
-                      >
-                        Delete
-                      </button>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-            <Link to="/VitaminsAr">
-          <button className="btnArabic"> Arabic</button>
-        </Link>
+                    <td>{vitamine.description_ar}</td>
+                    <td>{vitamine.title_ar}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
           </div>
         )}
         <div>

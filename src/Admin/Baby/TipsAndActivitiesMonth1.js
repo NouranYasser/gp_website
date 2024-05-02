@@ -84,6 +84,9 @@ const TipsAndActivitiesMonth1 = () => {
                 ))}
               </tbody>
             </table>
+            <Link to="/TipsAndActivitiesMonth1Ar">
+          <button className=""> Arabic</button>
+        </Link>
           </div>
         )}
       </div>

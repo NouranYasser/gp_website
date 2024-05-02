@@ -8,6 +8,8 @@ function AddBodyChange() {
   const [description, setDescription] = useState('');
   const [month, setMonth] = useState('');
   const [image, setImage] = useState(null);
+  const [title_ar, setTitleAr] = useState('');
+  const [description_ar, setDescriptionAr] = useState('');
   const [message, setMessage] = useState('');
   const navigate = useNavigate();
 
@@ -19,6 +21,8 @@ function AddBodyChange() {
     formData.append('description', description);
     formData.append('month', month);
     formData.append('image', image);
+    formData.append('title_ar', title_ar);
+    formData.append('description_ar', description_ar);
 
     try {
       const response = await axios.post(`https://gradhub.hwnix.com/api/add_DESC/1`, formData, {
@@ -71,7 +75,7 @@ function AddBodyChange() {
           <option value="8">8</option>
           <option value="9">9</option>
           </select>
-
+          <br></br> <br></br>
           <label htmlFor="image" className='label-CH'>Image:</label>
           <input
             type="file"
@@ -79,6 +83,22 @@ function AddBodyChange() {
             onChange={(e) => setImage(e.target.files[0])}
           />
           <br /><br />
+          <label htmlFor="title" className='CH'>Title In Arabic:</label>
+          <input
+            className='outbox'
+            type="text"
+            id="title"
+            value={title_ar}
+            onChange={(e) => setTitleAr(e.target.value)}
+          />
+          <br></br>
+          <label htmlFor="description" className='label-CH'>Description In Arabic:</label><br />
+          <textarea
+            id="description"
+            value={description_ar}
+            onChange={(e) => setDescriptionAr(e.target.value)}
+          />
+          <br />
           <button type="submit" className='b-Change'>Submit</button>
         </form>
         {message && <p>{message}</p>}

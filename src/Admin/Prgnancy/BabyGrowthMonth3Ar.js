@@ -87,18 +87,21 @@ const BabyGrowthMonth3Ar = () => {
                     <img
                       src={babygrowths.results.FullSrc}
                       alt="Baby Image"
-                      style={{ maxWidth: '80%', maxHeight: '80%' }}
+                      style={{ maxWidth: '80px', maxHeight: '80px' }}
                     />
                   ) : (
                     <span>No image available</span>
                   )}
                 </td>
                 <td>{babygrowths.results.month}</td>
-                <td>{babygrowths.results.description}</td>
-                <td>{babygrowths.results.title}</td>
+                <td>{babygrowths.results.description_ar}</td>
+                <td>{babygrowths.results.title_ar}</td>
               </tr>
             </tbody>
           </table>
+          <Link to={"/BabyGrowthMonth3"}>
+                    <button className="btnArabic">English</button>
+                  </Link>
           </div>
         )}
       </div>
