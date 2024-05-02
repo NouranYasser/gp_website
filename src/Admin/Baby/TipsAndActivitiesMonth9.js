@@ -14,7 +14,7 @@ const TipsAndActivitiesMonth9 = () => {
   useEffect(() => {
     setTips({ ...tips, loading: true });
     axios
-      .get(`https://gradhub.hwnix.com/api/get_tips/9`)
+      .get(`https://gradhub.hwnix.com/api/get_tip/9/en`)
       .then((resp) => {
         setTips({
           ...tips,

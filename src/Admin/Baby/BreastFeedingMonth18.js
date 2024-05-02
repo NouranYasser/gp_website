@@ -14,7 +14,7 @@ const BreastFeedingMonth18 = () => {
   useEffect(() => {
     setTips({ ...tips, loading: true });
     axios
-      .get(`https://gradhub.hwnix.com/api/get_BreastFeeding/18`)
+      .get(`https://gradhub.hwnix.com/api/get_BreastFeeding/18/en`)
       .then((resp) => {
         setTips({
           ...tips,

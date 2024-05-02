@@ -14,7 +14,7 @@ const ChildGrowthMonth12 = () => {
   useEffect(() => {
     setTips({ ...tips, loading: true });
     axios
-      .get(`https://gradhub.hwnix.com/api/get_ChildGrowth/12`)
+      .get(`https://gradhub.hwnix.com/api/get_ChildGrowth/12/en`)
       .then((resp) => {
         setTips({
           ...tips,

@@ -94,7 +94,7 @@ function AddChildGrowth() {
     formData.append('month', month);
  
     try {
-      const response = await axios.post(`https://gradhub.hwnix.com/api/add_DESC/8`, formData, {
+      const response = await axios.post(`https://gradhub.hwnix.com/api/add_DESC/8/en`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },

@@ -14,7 +14,7 @@ const ArtificalFeedingMonth1 = () => {
   useEffect(() => {
     setTips({ ...tips, loading: true });
     axios
-      .get(`https://gradhub.hwnix.com/api/get_BottleFeeding/1`)
+      .get(`https://gradhub.hwnix.com/api/get_BottleFeeding/1/en`)
       .then((resp) => {
         setTips({
           ...tips,

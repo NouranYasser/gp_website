@@ -100,7 +100,7 @@ function AddTipsAndActivities() {
     formData.append('month', month);
 
     try {
-      const response = await axios.post(`https://gradhub.hwnix.com/api/add_DESC/7`, formData, {
+      const response = await axios.post(`https://gradhub.hwnix.com/api/add_DESC/7/en`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },

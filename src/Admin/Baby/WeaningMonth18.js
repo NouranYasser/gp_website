@@ -14,7 +14,7 @@ const WeaningMonth18 = () => {
   useEffect(() => {
     setTips({ ...tips, loading: true });
     axios
-      .get(`https://gradhub.hwnix.com/api/get_weaning/18`)
+      .get(`https://gradhub.hwnix.com/api/get_weaning/18/en`)
       .then((resp) => {
         setTips({
           ...tips,

@@ -99,7 +99,7 @@ function AddIssue() {
   function handleSubmit(event) {
     event.preventDefault();
     axios
-      .post("https://gradhub.hwnix.com/api/add_issue", {
+      .post("https://gradhub.hwnix.com/api/add_issue/en", {
         title,
         description,
         issueId,

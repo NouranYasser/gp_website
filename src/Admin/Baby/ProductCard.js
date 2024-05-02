@@ -8,7 +8,7 @@ function ProductCard() {
 
   useEffect(() => {
     axios
-      .get("https://gradhub.hwnix.com/api/get_issues")
+      .get("https://gradhub.hwnix.com/api/get_issues/en")
       .then((res) => {
         setIssues(res.data);
       })
