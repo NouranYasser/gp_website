@@ -5,9 +5,13 @@ import "../../style/Babygrowth.css";
 const Babygrowth = () => {
   return (
     <>
-      <br></br>
-      <div className="container-g">
-        <div>
+       <div className="ch_foot">
+     
+         <div className="add_g"><Link to="/AddBabyGrowth">
+          <button className="btn-addBG"> Add Data in Baby Growth</button>
+         </Link></div>
+         <div className="container-g">
+        <div className="last-div-g">
           <Link to="/BabyGrowthMonth1">
             <button className="bt-MG"> Month 1</button>
           </Link>
@@ -20,7 +24,7 @@ const Babygrowth = () => {
             <button className="bt-MG"> Month 7</button>
           </Link>
         </div>
-        <div>
+        <div className="last-div-g">
           <Link to="/BabyGrowthMonth2">
             <button className="bt-MG"> Month 2</button>
           </Link>
@@ -33,7 +37,7 @@ const Babygrowth = () => {
             <button className="bt-MG"> Month 8</button>
           </Link>
         </div>
-        <div className="last-divG"> 
+        <div className="last-div-g"> 
           <Link to="/BabyGrowthMonth3">
             <button className="bt-MG"> Month 3</button>
           </Link>
@@ -46,6 +50,7 @@ const Babygrowth = () => {
             <button className="bt-MG"> Month 9</button>
           </Link>
         </div>
+      </div>
       </div>
     </>
   );

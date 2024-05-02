@@ -45,7 +45,7 @@ const FoodMonth3 = () => {
 
   return (
     <>
-     <div>
+     <div className="fo-m_foot">
         {foods.err && <p>{foods.err}</p>}
         {foods.loading ? (
           <p>Loading...</p>
@@ -57,7 +57,6 @@ const FoodMonth3 = () => {
               <tr>
                 <th>Title</th>
                 <th>Description</th>
-                <th>Month</th>
                 <th>Image</th>
                 <th></th>
                 <td></td>
@@ -68,13 +67,12 @@ const FoodMonth3 = () => {
               <tr>
                 <td>{foods.results.title}</td>
                 <td>{foods.results.description}</td>
-                <td>{foods.results.month}</td>
                 <td>
                   {foods.results.FullSrc ? (
                     <img
                       src={foods.results.FullSrc}
                       alt="Baby Image"
-                      style={{ maxWidth: '10%', maxHeight: '10%' }}
+                      style={{ maxWidth: '150px', maxHeight: '150px' }}
                     />
                   ) : (
                     <span>No image available</span>

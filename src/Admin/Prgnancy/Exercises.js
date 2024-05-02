@@ -35,7 +35,7 @@ const Exercises = () => {
 
   const deleteExercise = (id) => {
     axios
-      .delete(`http://localhost:8000/api/delete/${id}`)
+      .delete(`https://gradhub.hwnix.com/api/delete/${id}`)
       .then((resp) => {
         setExercises({ ...exercises, reload: exercises.reload + 1 });
       })
@@ -46,11 +46,10 @@ const Exercises = () => {
 
   return (
     <>
-    <Link to={"/AddExercises/"}>
-                      <button className="">AddExercise</button>
-                    </Link> 
-
       <div>
+        <Link to="/AddExercises">
+          <button className="btn-addBCh"> Add Data in Exercises</button>
+         </Link>
         {exercises.err && <p>{exercises.err}</p>}
         {exercises.loading ? (
           <p>Loading...</p>

@@ -34,7 +34,7 @@ const TipsAndActivitiesMonth21 = () => {
 
   const deleteBabygrowth = (id) => {
     axios
-      .delete(`http://localhost:8000/api/delete/${id}`)
+      .delete(`https://gradhub.hwnix.com/api/delete_desc/${id}`)
       .then((resp) => {
         setTips({ ...tips, reload: tips.reload + 1 });
       })
@@ -45,7 +45,7 @@ const TipsAndActivitiesMonth21 = () => {
 
   return (
     <>
-      <div>
+      <div className="bmo">
         {tips.err && <p>{tips.err}</p>}
         {tips.loading ? (
           <p>Loading...</p>

@@ -6,41 +6,41 @@ import "../../style/Pregnancy.css";
 import { removeAuthUser } from "../../helper/Storage";
 
 function AddData() {
-  const [category_id, setCategoryId] = useState('');
-  const [title, setTitle] = useState('');
-  const [description, setDescription] = useState('');
-  const [month, setMonth] = useState('');
-  const [image, setImage] = useState(null);
-  const [message, setMessage] = useState('');
-  const navigate = useNavigate();
+  // const [category_id, setCategoryId] = useState('');
+  // const [title, setTitle] = useState('');
+  // const [description, setDescription] = useState('');
+  // const [month, setMonth] = useState('');
+  // const [image, setImage] = useState(null);
+  // const [message, setMessage] = useState('');
+  // const navigate = useNavigate();
   const handleLogout = () => {
     removeAuthUser();
     // Navigate to the login page or homepage
     // For example:
     window.location.href = '/';
   }
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
 
-    const formData = new FormData();
-    formData.append('category_id', category_id);
-    formData.append('title', title);
-    formData.append('description', description);
-    formData.append('month', month);
-    formData.append('image', image);
+  //   const formData = new FormData();
+  //   formData.append('category_id', category_id);
+  //   formData.append('title', title);
+  //   formData.append('description', description);
+  //   formData.append('month', month);
+  //   formData.append('image', image);
 
-    try {
-      const response = await axios.post(`https://gradhub.hwnix.com/api/add_description`, formData, {
-        headers: {
-          'Content-Type': 'multipart/form-data',
-        },
-      });
-      setMessage(response.data.Result);
-      navigate("/Pregnancy");
-    } catch (error) {
-      setMessage('There is something wrong');
-    }
-  };
+  //   try {
+  //     const response = await axios.post(`https://gradhub.hwnix.com/api/add_description`, formData, {
+  //       headers: {
+  //         'Content-Type': 'multipart/form-data',
+  //       },
+  //     });
+  //     setMessage(response.data.Result);
+  //     navigate("/Pregnancy");
+  //   } catch (error) {
+  //     setMessage('There is something wrong');
+  //   }
+  // };
 
   return (
     <>
@@ -49,7 +49,13 @@ function AddData() {
            Logout
       </div>
          
-      <div className='main-divp'>
+
+         <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+         <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+         <br></br><br></br><br></br><br></br>
+         
+      
+      {/* <div className='main-divp'>
         <form className="form-p" onSubmit={handleSubmit}>
           <label htmlFor="category_id" className='label-pregnancy'>Category ID:</label>
           <input className='outbox'
@@ -96,9 +102,9 @@ function AddData() {
           <br></br><br></br>
           <button type="submit" className='b-pregnancy'>Submit</button>
         </form>
-        {message && <p>{message}</p>}
-      </div>
-      {/* <br></br>
+        {message && <p>{message}</p>} */}
+
+      {/* /* <br></br>
       <br></br>
       <br></br>
       <br></br> */}
@@ -107,4 +113,4 @@ function AddData() {
   );
 
 }
-export default AddData;
+export default AddData; 

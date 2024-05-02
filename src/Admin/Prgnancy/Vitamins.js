@@ -34,7 +34,7 @@ const Vitamins = () => {
 
   const deleteVitamines = (id) => {
     axios
-      .delete(`http://localhost:8000/api/delete/${id}`)
+      .delete(`https://gradhub.hwnix.com/api/delete_desc/${id}`)
       .then((resp) => {
         setVitamines({ ...vitamines, reload: vitamines.reload + 1 });
       })
@@ -46,17 +46,22 @@ const Vitamins = () => {
   return (
     <>
       <div>
+        <br></br>
+      <Link to="/AddVitamin">
+          <button className="btn-addBCh"> Add Data in Vitamins</button>
+         </Link>
         {vitamines.err && <p>{vitamines.err}</p>}
         {vitamines.loading ? (
           <p>Loading...</p>
         ) : (
+          
           <div className="div-container-v">
+           
           <table className="table-content-v">
             <thead>
               <tr>
                 <th>Title</th>
                 <th>Description</th>
-                <th>Month</th>
                 <th>Image</th>
                 <th></th>
                 <th></th>
@@ -68,7 +73,6 @@ const Vitamins = () => {
                 <tr key={vitamine.id}>
                   <td>{vitamine.title}</td>
                   <td>{vitamine.description}</td>
-                  <td>{vitamine.month}</td>
                   <td>
                     {vitamine.results ? (
                       <td>

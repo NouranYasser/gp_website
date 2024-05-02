@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import "../../style/FoodMonth.css";
 
-const FoodMonth6 = () => {
+const FoodMonth1 = () => {
   const [foods, setFoods] = useState({
     loading: true,
     results: {},
@@ -14,7 +14,7 @@ const FoodMonth6 = () => {
   useEffect(() => {
     setFoods({ ...foods, loading: true });
     axios
-      .get("https://gradhub.hwnix.com/api/get_Food_6")
+      .get("https://gradhub.hwnix.com/api/get_Food_1")
       .then((resp) => {
         setFoods({
           ...foods,
@@ -46,7 +46,7 @@ const FoodMonth6 = () => {
 
   return (
     <>
- <div>
+     <div className="fo-m_foot">
         {foods.err && <p>{foods.err}</p>}
         {foods.loading ? (
           <p>Loading...</p>
@@ -68,13 +68,12 @@ const FoodMonth6 = () => {
               <tr>
                 <td>{foods.results.title}</td>
                 <td>{foods.results.description}</td>
-                <td>{foods.results.month}</td>
                 <td>
                   {foods.results.FullSrc ? (
                     <img
                       src={foods.results.FullSrc}
                       alt="Baby Image"
-                      style={{ maxWidth: '10%', maxHeight: '10%' }}
+                      style={{ maxWidth: '200px', maxHeight: '200px' }}
                     />
                   ) : (
                     <span>No image available</span>
@@ -84,19 +83,19 @@ const FoodMonth6 = () => {
 
                 <Link to={"/UpdateFood/" + foods.results.id}>
                     <button className="btnUpdate-fm">Update</button>
-                  </Link>
-                  
+                </Link>              
                   </td>
-                  <td>
-                  <button
+                    <td>
+                    <button
                     className="btnDelete-fm"
                     onClick={(e) => {
                       deleteFood(foods.results.id);
                     }}
                   >
                     Delete
+                    
                   </button>
-                 
+                  
                 </td>
               </tr>
             </tbody>
@@ -106,8 +105,8 @@ const FoodMonth6 = () => {
 
       </div>
     
-    </>
+        </>
   );
 };
 
-export default FoodMonth6;
+export default FoodMonth1;

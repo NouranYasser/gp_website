@@ -1,0 +1,42 @@
+.Destination-a {
+    text-align: center;
+    min-height: calc(100vh - 220px);
+  }
+  .divv {
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(105, 47, 47, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+  }
+  .fas{
+    width: 50%;
+    margin-top: 100px;
+    /* background-color: rgb(112, 109, 153); */
+    margin-left: 180px;
+    
+  }
+  .ee{
+    font-size: x-large;
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+  }
+  .form-controlDes{
+    width: 60%;
+    height: 40px;
+  }
+  .succ{
+    font-size: large;
+    width: 60%;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    background-color: rgb(83, 78, 158); 
+    color: white;
+    margin-top: 30px; 
+    cursor: pointer; 
+    margin-left: 30px;
+    margin-bottom: 5px;
+  }
+  .h2{
+    font-size: x-large;
+  }

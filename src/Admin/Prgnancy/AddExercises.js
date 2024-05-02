@@ -6,7 +6,7 @@ import "../../style/addBodyChange.css";
 function AddExercises() {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
-  const [Video, setVideo] = useState('');
+  const [video_url, setvideo_url] = useState('');
   const [message, setMessage] = useState('');
   const navigate = useNavigate();
 
@@ -16,7 +16,7 @@ function AddExercises() {
     const formData = new FormData();
     formData.append('title', title);
     formData.append('description', description);
-    formData.append('Video', Video);
+    formData.append('video_url', video_url);
 
     try {
       const response = await axios.post(`https://gradhub.hwnix.com/api/add_exercise`, formData, {
@@ -52,11 +52,11 @@ function AddExercises() {
           />
           <br />
          
-          <label htmlFor="Video" className='label-CH'>Video:</label><br />
+          <label htmlFor="VideoUrl" className='label-CH'>Video Url:</label><br />
           <textarea
-            id="Video"
-            value={Video}
-            onChange={(e) => setVideo(e.target.value)}
+            id="VideoUrl"
+            value={video_url}
+            onChange={(e) => setvideo_url(e.target.value)}
           />
           <br />
 

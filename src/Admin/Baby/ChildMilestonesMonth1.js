@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import "../../style/babygrowthMonth.css";
 
-const ChildGrowthMonth1 = () => {
+const ChildMilestonesMonth1 = () => {
   const [tips, setTips] = useState({
     loading: true,
     results: [],
@@ -32,7 +32,7 @@ const ChildGrowthMonth1 = () => {
       });
   }, [tips.reload]);
 
-  const deleteBabygrowth = (id) => {
+  const deleteChildMilestones = (id) => {
     axios
       .delete(`https://gradhub.hwnix.com/api/delete_desc/${id}`)
       .then((resp) => {
@@ -78,7 +78,7 @@ const ChildGrowthMonth1 = () => {
                       <button
                         className="btnDelete"
                         onClick={() => {
-                          deleteBabygrowth(result.id);
+                          deleteChildMilestones(result.id);
                         }}
                       >
                         Delete
@@ -95,6 +95,6 @@ const ChildGrowthMonth1 = () => {
   );
 };
 
-export default ChildGrowthMonth1;
+export default ChildMilestonesMonth1;
 
 

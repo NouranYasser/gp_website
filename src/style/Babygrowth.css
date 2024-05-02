@@ -1,3 +1,6 @@
+.g_foot{
+  min-height: calc(100vh - 220px);
+}
 .container-g{
   font-family: arial;
   padding-top: 40px;
@@ -16,6 +19,7 @@
   background-color: rgb(83, 78, 158);
   color: white;
   margin-left: 600px;
+  margin-top: 20px;
   cursor: pointer;
 }
 

@@ -33,7 +33,7 @@ const BabyGrowthMonth1 = () => {
 
   const deleteBabygrowth = (id) => {
     axios
-      .delete(`http://localhost:8000/api/delete/${id}`)
+      .delete(`https://gradhub.hwnix.com/api/delete_desc/${id}`)
       .then((resp) => {
         setBabygrowths({ ...babygrowths, reload: babygrowths.reload + 1 });
       })
@@ -45,7 +45,7 @@ const BabyGrowthMonth1 = () => {
 
   return (
     <>
-      <div  >
+      <div className="bmo">
         {babygrowths.err && <p>{babygrowths.err}</p>}
         {babygrowths.loading ? (
           <p>Loading...</p>

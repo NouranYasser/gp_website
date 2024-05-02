@@ -9,8 +9,10 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    min-height: calc(100vh - 220px);
+}
   
-  } 
+  
   
   .form-CH{
     width: 40%;

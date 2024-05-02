@@ -5,7 +5,7 @@
  import "../../style/tips.css";
 
 
-const ChildGrowth = () => {
+const ChildMilestones = () => {
  
     return (
       <>  
@@ -13,7 +13,7 @@ const ChildGrowth = () => {
 <br></br>  <br></br>
 <Link to="/AddChildGrowth">
         <button className="btn-addBCh">
-          Add Data in Child Growth
+          Add Data in Child Milestones
         </button>
       </Link>
 
@@ -23,35 +23,35 @@ const ChildGrowth = () => {
 <br></br> 
 <div className="fo-container">
       <div>
-      <Link to="/ChildGrowthMonth1">
+      <Link to="/ChildMilestonesMonth1">
         <button className="fo-b"> Month 1-3</button>
       </Link> 
        
-      <Link to="/ChildGrowthMonth9">
+      <Link to="/ChildMilestonesMonth9">
         <button className="fo-b"> Month 9-12</button>
       </Link> 
-      <Link to="/ChildGrowthMonth18">
+      <Link to="/ChildMilestonesMonth18">
         <button className="fo-b"> Month 18-21</button>
       </Link>    
       </div>
       <div>
-        <Link to="/ChildGrowthMonth3">
+        <Link to="/ChildMilestonesMonth3">
         <button className="fo-b"> Month 3-6</button>
       </Link>  
       
-      <Link to="/ChildGrowthMonth12">
+      <Link to="/ChildMilestonesMonth12">
         <button className="fo-b"> Month 12-15</button>
       </Link> 
-      <Link to="/ChildGrowthMonth21">
+      <Link to="/ChildMilestonesMonth21">
         <button className="fo-b"> Month 21-24</button>
       </Link> 
        
       </div>
       <div className="last">
-      <Link to="/ChildGrowthMonth6">
+      <Link to="/ChildMilestonesMonth6">
         <button className="fo-b"> Month 6-9</button>
         </Link> 
-        <Link to="/ChildGrowthMonth15">
+        <Link to="/ChildMilestonesMonth15">
         <button className="fo-b"> Month 15-18</button>
       </Link> 
 
@@ -72,4 +72,4 @@ const ChildGrowth = () => {
         </>
     );
   };
-  export default ChildGrowth;
+  export default ChildMilestones;

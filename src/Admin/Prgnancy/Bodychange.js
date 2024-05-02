@@ -1,20 +1,20 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../../style/BodyChange.css";
+import Footer from "../../shared/Footer";
 
 const Bodychange = () => {
   return (
     <>
-      <br></br>
-      <br></br>
+      <div className="ch_foot">
+        
       <Link to="/AddBodyChange">
         <button className="btn-addBCh"> Add Data in Body change </button>
       </Link>
-      <br></br>
-      <br></br>
-       <br></br>
+      
       <div className="containerBCH">
         <div className="last-div">
+          
           <Link to="/BodyChangeMonth1">
             <button className="btn-M"> Month 1</button>
           </Link>
@@ -53,6 +53,7 @@ const Bodychange = () => {
             <button className="btn-M"> Month 9</button>
           </Link>
         </div>
+      </div>
       </div>
     </>
   );

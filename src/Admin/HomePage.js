@@ -2,8 +2,10 @@ import React from "react";
 import Header from "../components/Headerlogout";
 import "../style/UserHome.css";
 import { Link } from "react-router-dom";
-import Image from "../images/logo.png"
-import myImage from '../images/images logo.png';
+// import Image from "../images/logo.png"
+// import myImage from '../images/images logo.png';
+import Image from "../images/pr2.png"
+import myImage from "../images/Baby.jpg";
 import "./Baby/Sidebar";
 import "./Baby/BabyHome";
 //import { useState } from "react";
@@ -19,7 +21,7 @@ const UserHome = () => {
        <img src={myImage} alt="My Image" class="image"  width="300px" height="300px"/>
       <br></br>
       <Link to="/BabyHome">
-        <button className="signadmin"> New Born</button>
+        <button className="Newborn"> New Born</button>
       </Link>     
       </div>
       <div className="b-div">
@@ -27,7 +29,7 @@ const UserHome = () => {
       <img src={Image} alt="My Image" class="image"  width="50px" height="300px"/>
       <br></br>
        <Link to="/Pregnancy">
-        <button className="signadmin"> pregnancy</button>
+        <button className="Newborn"> pregnancy</button>
       </Link>
       </div>
 

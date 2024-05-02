@@ -1,3 +1,6 @@
+.ch_foot{
+    min-height: calc(100vh - 220px);
+}
 .btn-addBCh{
     font-size: large;
     width: 20%;
@@ -7,6 +10,7 @@
     background-color: rgb(83, 78, 158);
     color: white;
     margin-left: 600px;
+    margin-top: 40px;
     cursor: pointer;
 }
 
@@ -28,7 +32,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 50px;
+    
 }
-.last-div{
-    margin-left: 150px;
+.last-div-ch{
+    /* margin-right: 150px; */
 }

@@ -1,3 +1,6 @@
+.pfot{
+  min-height: calc(100vh - 220px - 10px);
+}
 
 .main-divp{
   /* background-image: url("../R.png"); */
@@ -9,6 +12,8 @@
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  min-height: calc(100vh - 220px - 10px);
+  
 
 } 
 

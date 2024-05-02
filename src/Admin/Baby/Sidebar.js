@@ -23,8 +23,8 @@ const Sidebar  = ({children}) => {
         },
              
         {
-            path:"/ChildGrowth",
-            name:"Child growth",
+            path:"/ChildMilestones",
+            name:"Child Milestones",
             icon:<PiBabyLight />
         },
       

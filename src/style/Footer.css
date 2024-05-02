@@ -4,15 +4,15 @@
   background-color: rgb(83, 78, 158);
   color: rgb(255, 252, 252);
   text-align: center;
-  position:fixed;
-  bottom: 0;
+  position:relative;
+  bottom: 0px;
   /* width: 100%;  */
 }
 
-.style{
+/* .style{
 
   position:fixed;
-} 
+}  */
 
     
     .box-container {

@@ -7,8 +7,7 @@ import "../../style/updateExercises.css";
 function UpdateExercise() {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
-  const [month, setMonth] = useState('');
-  const [image, setImage] = useState(null);
+  const [video, setVideo] = useState(null);
   const [message, setMessage] = useState('');
   const navigate = useNavigate();
   const { id } = useParams(); 
@@ -19,17 +18,16 @@ function UpdateExercise() {
     const formData = new FormData();
     if (title !== '') formData.append('title', title);
     if (description !== '') formData.append('description', description);
-    if (month !== '') formData.append('month', month);
-    if (image !== null) formData.append('image', image);
+    if (video !== null) formData.append('video', video);
 
     try {
-      const response = await axios.post(`https://gradhub.hwnix.com/api/update_one/${id}`, formData, {
+      const response = await axios.post(`https://gradhub.hwnix.com/api/update/${id}`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
       });
       setMessage(response.data.Result);
-      navigate("/Exercise")
+      navigate("/Exercises")
     } catch (error) {
       setMessage('There is something wrong');
     }
@@ -62,28 +60,15 @@ function UpdateExercise() {
           onChange={(e) => setDescription(e.target.value)}
         /></div>
         </div>
-        <div className='row-EX'>
-      <div className=' clo-25-EX'>
+
+        <div className=' clo-25-EX'>
+        <label htmlFor="description"className='label-u-EX'>Video URL:</label></div>
+        <div>
+        <textarea
+          value={video}
+          onChange={(e) => setVideo(e.target.value)}
+        /></div>
       
-        <label htmlFor="month"className='label-u-EX'>Month:</label></div>
-        <div>
-        <input
-          type="text"
-          id="month"
-          value={month}
-          onChange={(e) => setMonth(e.target.value)}
-        /></div>
-        </div>
-        <div className='row-EX'>
-      <div className=' clo-25-EX'>
-        <label htmlFor="image"className='label-u-EX'>Image:</label></div>
-        <div>
-        <input
-          type="file"
-          id="image"
-          onChange={(e) => setImage(e.target.files[0])}
-        /></div>
-        </div>
         <div class="row-EX">
         <button type="submit"className='b-u-EX'>Submit</button></div>
       </form>
