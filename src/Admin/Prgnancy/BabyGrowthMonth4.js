@@ -98,11 +98,12 @@ const BabyGrowthMonth4 = () => {
               </tr>
             </tbody>
           </table>
-          </div>
-        )}
-        <Link to={"/BabyGrowthMonth4Ar"}>
+          <Link to={"/BabyGrowthMonth4Ar"}>
                     <button className="btnArabic">Arabic</button>
                   </Link>
+          </div>
+        )}
+       
       </div>
     </>
   );
