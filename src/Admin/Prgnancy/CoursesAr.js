@@ -2,11 +2,10 @@ import React from "react";
 import  { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
-// import {DefaultPlayer as video } from 'react-html5video';
 import "../../style/Courses.css";
-// import Footer from "../../shared/Footer";
 
-const Courses = () => { 
+
+const CoursesAr = () => { 
   const [courses, setCourses] = useState({
     loading: true,
     results: [],
@@ -17,7 +16,7 @@ const Courses = () => {
   useEffect(() => {
     setCourses({ ...courses, loading: true });
     axios
-      .get("https://gradhub.hwnix.com/api/get_courses/en")
+      .get("https://gradhub.hwnix.com/api/get_courses/ar")
       .then((resp) => {
         setCourses({
           ...courses,
@@ -48,11 +47,7 @@ const Courses = () => {
 
   return (
     <>
-     <div className="bho">
-     <Link to={"/AddCourses"}>
-            <button className="btn-addBCh">Add Course</button>
-     </Link>      
-     
+     <div className="bho">    
       
         {courses.err && <p>{courses.err}</p>}
         {courses.loading ? (
@@ -62,18 +57,31 @@ const Courses = () => {
           <table className="table-content-C">
             <thead>
               <tr>
-                <th>Title</th>
-                <th>Description</th>
-                <th>Video</th>
                 <th></th>
-                <th></th>                
+                <th></th>  
+                <th>الڤيديو</th>
+                <th>الوصف</th>
+                <th>العنوان</th>
+                             
               </tr>
             </thead>
             <tbody>
               {courses.results.map((course) => (
                 <tr key={course.id}>
-                  <td>{course.title}</td>
-                  <td>{course.description}</td>
+                   <td>
+                    <button
+                      className="btnDelete-C"
+                      onClick={() => deleteCourse(course.id)}
+                    >
+                      إزالة
+                    </button>
+                    </td> 
+                    <td>
+                    <Link to={'/UpdateCourses/'+ course.id}>
+                      <button className="btnUpdate-C">تعديل</button>
+                    </Link>             
+
+                  </td>
                   <td>
                     {course.video ? (
                       <iframe
@@ -86,45 +94,27 @@ const Courses = () => {
                     ) : (
                       <span>No video available</span>
                     )}
-                  </td>
-                 
-                    <td>
-                    <Link to={'/UpdateCourses/'+ course.id}>
-                      <button className="btnUpdate-C">Update</button>
-                    </Link>             
-
-                  </td>
-                  <td>
-                    <button
-                      className="btnDelete-C"
-                      onClick={() => deleteCourse(course.id)}
-                    >
-                      Delete
-                    </button>
-                    </td>
+                  </td>          
+                    
+                  <td>{course.description_ar}</td>
+                   <td>{course.title_ar}</td>
                 </tr>
               ))}
             </tbody>
           </table>
-          <Link to={"/CoursesAr"}>
-                    <button className="btnArabic">Arabic</button>
+          <Link to={"/Courses"}>
+                    <button className="btnArabic">English</button>
                   </Link>
           </div>
           
         )}
         
            <div>
-        {/* <iframe
-          src={babygrowth.fullSrc}
-          width="640"
-          height="360"
-          frameborder="0"
-          allowfullscreen
-        ></iframe> */}
+
       </div>
       </div>
       
     </>
   );
 };
-export default Courses;
+export default CoursesAr;

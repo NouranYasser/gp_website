@@ -2,8 +2,9 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import ProductCard from "./ProductCard";
 import "../../style/productList.css";
+import ProductCardAr from "./ProductCardAr";
 
-function ProductList() {
+function ProductListAr() {
   const [issues, setIssues] = useState({
     loading: true,
     results: [],
@@ -14,7 +15,7 @@ function ProductList() {
   useEffect(() => {
     setIssues({ ...issues, loading: true });
     axios
-      .get("https://gradhub.hwnix.com/api/get_issues/en")
+      .get("https://gradhub.hwnix.com/api/get_issues/ar")
       .then((resp) => {
         setIssues({
           ...issues,
@@ -39,10 +40,10 @@ function ProductList() {
       ) : issues.err ? (
         <p>{issues.err}</p>
       ) : (
-        <ProductCard/>
+        <ProductCardAr/>
       )}
     </div>
   );
 }
 
-export default ProductList;
+export default ProductListAr;

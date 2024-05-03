@@ -72,7 +72,7 @@ const BodychangeMonth3 = () => {
                       <img
                         src={bodychanges.results.FullSrc}
                         alt="Baby Image"
-                        style={{ maxWidth: "300px", maxHeight: "300px" }}
+                        style={{ maxWidth: "200px", maxHeight: "200px" }}
                       />
                     ) : (
                       <span>No image available</span>

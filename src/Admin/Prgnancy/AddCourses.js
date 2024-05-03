@@ -6,6 +6,8 @@ import "../../style/addBodyChange.css";
 function AddCourses() {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
+  const [title_ar, setTitleAr] = useState('');
+  const [description_ar, setDescriptionAr] = useState('');
   const [video_url, setvideo_url] = useState('');
   const [message, setMessage] = useState('');
   const navigate = useNavigate();
@@ -16,6 +18,8 @@ function AddCourses() {
     const formData = new FormData();
     formData.append('title', title);
     formData.append('description', description);
+    formData.append('title_ar', title_ar);
+    formData.append('description_ar', description_ar);
     formData.append('video_url', video_url);
 
     try {
@@ -49,6 +53,23 @@ function AddCourses() {
             id="description"
             value={description}
             onChange={(e) => setDescription(e.target.value)}
+          />
+          <br />
+
+          <label htmlFor="title" className='CH'>  Title In Arabic:</label>
+          <input
+            className='outbox'
+            type="text"
+            id="title"
+            value={title_ar}
+            onChange={(e) => setTitleAr(e.target.value)}
+          />
+
+          <label htmlFor="description" className='label-CH'>Description In Arabic:</label><br />
+          <textarea
+            id="description"
+            value={description_ar}
+            onChange={(e) => setDescriptionAr(e.target.value)}
           />
           <br />
          

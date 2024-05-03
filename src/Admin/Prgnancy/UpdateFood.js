@@ -127,6 +127,8 @@ import "../../style/updateFood.css";
 function UpdateFood() {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
+  const [title_ar, setTitleAr] = useState('');
+  const [description_ar, setDescriptionAr] = useState('');
   const [month, setMonth] = useState('');
   const [image, setImage] = useState(null);
   const [message, setMessage] = useState('');
@@ -139,6 +141,8 @@ function UpdateFood() {
     const formData = new FormData();
     formData.append('title', title);
     formData.append('description', description);
+    formData.append('title_ar', title_ar);
+    formData.append('description_ar', description_ar);
     formData.append('month', month);
     formData.append('image', image);
 
@@ -178,6 +182,28 @@ function UpdateFood() {
             id="description-u"
             value={description}
             onChange={(e) => setDescription(e.target.value)}
+          /></div>
+          </div>
+
+          <div className='row-FO'>
+      <div className=' clo-25-FO'>
+
+          <label htmlFor="title"className='label-u-FO'>Title In Arabic:</label></div>
+        <div>
+          <input
+            type="text"
+            id="title"
+            value={title_ar}
+            onChange={(e) => setTitleAr(e.target.value)}
+          /></div>
+          </div>
+         <div className='row-FO'>
+         <div className=' clo-25-FO'>
+          <label htmlFor="description" className='label-u-FO'>Description In Arabic:</label>
+          <textarea
+            id="description-u"
+            value={description_ar}
+            onChange={(e) => setDescriptionAr(e.target.value)}
           /></div>
           </div>
         

@@ -7,6 +7,8 @@ import "../../style/updateBodychange.css";
 function UpdateBodyChanges() {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
+  const [title_ar, setTitleAr] = useState('');
+  const [description_ar, setDescriptionAr] = useState('');
   const [month, setMonth] = useState('');
   const [image, setImage] = useState(null);
   const [message, setMessage] = useState('');
@@ -19,6 +21,8 @@ function UpdateBodyChanges() {
     const formData = new FormData();
     if (title !== '') formData.append('title', title);
     if (description !== '') formData.append('description', description);
+    if (title_ar !== '') formData.append('title_ar', title_ar);
+    if (description_ar !== '') formData.append('description_ar', description_ar);
     if (month !== '') formData.append('month', month);
     if (image !== null) formData.append('image', image);
 
@@ -58,6 +62,28 @@ function UpdateBodyChanges() {
           id="description-u-CH"
           value={description}
           onChange={(e) => setDescription(e.target.value)}
+        /></div>
+        </div>
+
+        <div className='row-CH'>
+      <div className=' clo-25-CH'>
+
+        <label htmlFor="title" className='label-u-CH'>Title In Arabic:</label></div>
+        <div><input
+          type="text"
+          id="title"
+          value={title_ar}
+          onChange={(e) => setTitleAr(e.target.value)}
+        /></div>
+         </div>
+        <div className='row-CH'>
+        <div className=' clo-25-CH'>
+        <label htmlFor="description" className='label-u-CH'>Description In Arabic:</label></div>
+        <div>
+        <textarea
+          id="description-u-CH"
+          value={description_ar}
+          onChange={(e) => setDescriptionAr(e.target.value)}
         /></div>
         </div>
       

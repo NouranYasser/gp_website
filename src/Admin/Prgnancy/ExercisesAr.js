@@ -4,7 +4,7 @@ import axios from "axios";
 // import {DefaultPlayer as video } from 'react-html5video';
 import "../../style/Exercises.css";
 
-const Exercises = () => {
+const ExercisesAr = () => {
   const [exercises, setExercises] = useState({
     loading: true,
     results: [],
@@ -15,7 +15,7 @@ const Exercises = () => {
   useEffect(() => {
     setExercises({ ...exercises, loading: true });
     axios
-      .get("https://gradhub.hwnix.com/api/get_exercises/en")
+      .get("https://gradhub.hwnix.com/api/get_exercises/ar")
       .then((resp) => {
         setExercises({
           ...exercises,
@@ -47,9 +47,6 @@ const Exercises = () => {
   return (
     <>
       <div>
-        <Link to="/AddExercises">
-          <button className="btn-addBCh"> Add  Exercise</button>
-         </Link>
         {exercises.err && <p>{exercises.err}</p>}
         {exercises.loading ? (
           <p>Loading...</p>
@@ -58,19 +55,31 @@ const Exercises = () => {
           <table className="table-content-E">
             <thead>
               <tr>
-                <th>Title</th>
-                <th>Description</th>
-                <th>Video</th>
                 <th></th>
                 <th></th>
+                <th>الڤيديو</th>
+                <th>الوصف</th>          
                 
               </tr>
             </thead>
             <tbody>
               {exercises.results.map((exercise) => (
                 <tr key={exercise.id}>
-                  <td>{exercise.title}</td>
-                  <td>{exercise.description}</td>
+                  
+                  <td>
+                    <button
+                      className="btnDelete-E"
+                      onClick={() => deleteExercise(exercise.id)}
+                    >
+                      إزالة
+                    </button>
+                    </td>
+                    <td>
+                    <Link to={"/UpdateExercise/" + exercise.id}>
+                      <button className="btnUpdate-E">تعديل</button>
+                    </Link>             
+                  </td>
+                 
                   <td>
                     {exercise.video ? (
                       <iframe
@@ -85,39 +94,21 @@ const Exercises = () => {
                     )}
                   </td>
                  
-                  <td>
-                    <Link to={"/UpdateExercise/" + exercise.id}>
-                      <button className="btnUpdate-E">Update</button>
-                    </Link>             
-                  </td>
-                  <td>
-                    <button
-                      className="btnDelete-E"
-                      onClick={() => deleteExercise(exercise.id)}
-                    >
-                      Delete
-                    </button>
-                    </td>
+                 
+                    <td>{exercise.description_ar}</td>
                 </tr>
               ))}
             </tbody>
           </table>
-          <Link to={"/ExercisesAr"}>
-                    <button className="btnArabic">Arabic</button>
+          <Link to={"/Exercises"}>
+                    <button className="btnArabic">English</button>
                   </Link>
           </div>
         )}
            <div>
-        {/* <iframe
-          src={babygrowth.fullSrc}
-          width="640"
-          height="360"
-          frameborder="0"
-          allowfullscreen
-        ></iframe> */}
       </div>
       </div>
     </>
   );
 };
-export default Exercises;
+export default ExercisesAr;
