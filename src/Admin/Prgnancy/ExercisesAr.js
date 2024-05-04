@@ -46,7 +46,11 @@ const ExercisesAr = () => {
 
   return (
     <>
-      <div>
+      <div className="exf">
+      <div className="b_conV">
+      <Link to={"/Exercises"}>
+                    <button className="btnArabic-c">English</button>
+                  </Link></div>
         {exercises.err && <p>{exercises.err}</p>}
         {exercises.loading ? (
           <p>Loading...</p>
@@ -102,9 +106,7 @@ const ExercisesAr = () => {
               ))}
             </tbody>
           </table>
-          <Link to={"/Exercises"}>
-                    <button className="btnArabic">English</button>
-                  </Link>
+          
           </div>
         )}
            <div>

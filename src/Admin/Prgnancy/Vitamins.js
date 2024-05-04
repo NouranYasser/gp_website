@@ -47,9 +47,10 @@ const Vitamins = () => {
     <>
       <div className='v_foot'>
         <div className="b_conV">
-        <Link to="/AddVitamin">
+        <div><Link to="/AddVitamin">
           <button className="btn-addV"> Add Data in Vitamins</button>
-        </Link>
+        </Link></div>
+        <div></div>
         <Link to="/VitaminsAr">
           <button className="btn-addV"> Arabic</button>
         </Link>

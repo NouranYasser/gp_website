@@ -48,7 +48,11 @@ const CoursesAr = () => {
   return (
     <>
      <div className="bho">    
-      
+     <div className="b_conV">
+     <Link to={"/Courses"}>
+                    <button className="btnArabic-c">English</button>
+                  </Link>
+     </div>
         {courses.err && <p>{courses.err}</p>}
         {courses.loading ? (
           <p>Loading...</p>
@@ -101,9 +105,7 @@ const CoursesAr = () => {
               ))}
             </tbody>
           </table>
-          <Link to={"/Courses"}>
-                    <button className="btnArabic">English</button>
-                  </Link>
+         
           </div>
           
         )}

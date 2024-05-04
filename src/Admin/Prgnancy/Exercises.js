@@ -46,10 +46,15 @@ const Exercises = () => {
 
   return (
     <>
-      <div>
+      <div className="exf">
+      <div className="b_conV">
         <Link to="/AddExercises">
-          <button className="btn-addBCh"> Add  Exercise</button>
+          <button className="btn-addV"> Add  Exercise</button>
          </Link>
+         <Link to={"/ExercisesAr"}>
+                    <button className="btn-addV">Arabic</button>
+                  </Link>
+                  </div>
         {exercises.err && <p>{exercises.err}</p>}
         {exercises.loading ? (
           <p>Loading...</p>
@@ -102,9 +107,7 @@ const Exercises = () => {
               ))}
             </tbody>
           </table>
-          <Link to={"/ExercisesAr"}>
-                    <button className="btnArabic">Arabic</button>
-                  </Link>
+         
           </div>
         )}
            <div>
