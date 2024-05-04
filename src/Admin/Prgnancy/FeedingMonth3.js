@@ -46,6 +46,11 @@ const FoodMonth3 = () => {
   return (
     <>
      <div className="fo-m_foot">
+     <div className="b-con">
+     <Link to={"/FeedingMonth3Ar"}>
+                    <button className="btnArabic-c">Arabic</button>
+                  </Link>
+      </div>
         {foods.err && <p>{foods.err}</p>}
         {foods.loading ? (
           <p>Loading...</p>
@@ -98,9 +103,7 @@ const FoodMonth3 = () => {
               </tr>
             </tbody>
           </table>
-          <Link to={"/FeedingMonth3Ar"}>
-                    <button className="btnArabic">Arabic</button>
-                  </Link>
+          
           </div>
         )}
 

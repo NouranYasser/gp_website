@@ -55,11 +55,11 @@
   }
    */
   .container-u-G {
-    background-color: rgb(112, 109, 156) ;
+    background-color:rgb(233, 231, 234) ;
     width: 50%;
     height: 50%;
-    border-radius: 5px;
-    color:white;
+    border-radius: 10px;
+    color:rgb(3, 0, 0);
     padding:0  20px ;
     padding-bottom: 20PX;
   }
@@ -83,7 +83,7 @@
     clear: both;
   }
   .b-uG{
-    font-size: large;
+    font-size: larger;
     width: 80%;
     height: 40px;
     border-radius: 20px;
