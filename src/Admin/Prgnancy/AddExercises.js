@@ -16,9 +16,7 @@ function AddExercises() {
     e.preventDefault();
 
     const formData = new FormData();
-    formData.append('title', title);
     formData.append('description', description);
-    formData.append('title_ar', title_ar);
     formData.append('description_ar', description_ar);
     formData.append('video_url', video_url);
 
@@ -39,14 +37,7 @@ function AddExercises() {
     <>
       <div className='main-divCH'>
         <form className="form-p" onSubmit={handleSubmit}>
-          <label htmlFor="title" className='label-CH'>Title:</label>
-          <input
-            className='outbox'
-            type="text"
-            id="title"
-            value={title}
-            onChange={(e) => setTitle(e.target.value)}
-          />
+          
 
           <label htmlFor="description" className='label-CH'>Description:</label><br />
           <textarea
@@ -55,14 +46,6 @@ function AddExercises() {
             onChange={(e) => setDescription(e.target.value)}
           />
           <br />
-          <label htmlFor="title" className='label-CH'>Title In Arabic:</label>
-          <input
-            className='outbox'
-            type="text"
-            id="title"
-            value={title_ar}
-            onChange={(e) => setTitleAr(e.target.value)}
-          />
 
           <label htmlFor="description" className='label-CH'>Description In Arabic:</label><br />
           <textarea

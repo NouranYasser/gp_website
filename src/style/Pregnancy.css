@@ -1,5 +1,6 @@
 .pfot{
   min-height: calc(100vh - 220px - 10px);
+  background-image: url("../images/back3.jpeg");;
 }
 
 .main-divp{

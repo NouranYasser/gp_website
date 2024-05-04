@@ -58,7 +58,8 @@ const ExercisesAr = () => {
                 <th></th>
                 <th></th>
                 <th>الڤيديو</th>
-                <th>الوصف</th>          
+                <th>الوصف</th>       
+              
                 
               </tr>
             </thead>
@@ -96,6 +97,7 @@ const ExercisesAr = () => {
                  
                  
                     <td>{exercise.description_ar}</td>
+                   
                 </tr>
               ))}
             </tbody>
