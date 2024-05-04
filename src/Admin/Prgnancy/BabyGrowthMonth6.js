@@ -46,6 +46,11 @@ const BabyGrowthMonth6 = () => {
   return (
     <>
       <div className="bmo">
+      <div className="b-con">
+            <Link to={"/BabyGrowthMonth6Ar"}>
+              <button className="btnArabic-c">Arabic</button>
+            </Link>
+            </div>
         {babygrowths.err && <p>{babygrowths.err}</p>}
         {babygrowths.loading ? (
           <p>Loading...</p>
@@ -97,9 +102,7 @@ const BabyGrowthMonth6 = () => {
                 </tr>
               </tbody>
             </table>
-            <Link to={"/BabyGrowthMonth6Ar"}>
-              <button className="btnArabic">Arabic</button>
-            </Link>
+            
           </div>
         )}
       </div>

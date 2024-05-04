@@ -55,20 +55,17 @@ function UpdateBodyChanges() {
               </label>
             </div>
             <div>
-              <input
-                type="text"
-                id="title"
-                value={title}
-                onChange={(e) => setTitle(e.target.value)}
-              />
-            </div>
-          </div>
-          <div className="row-CH">
-            <div className=" clo-25-CH">
-              <label htmlFor="description" className="label-u-CH">
-                Description:
-              </label>
-            </div>
+        <input
+          type="text"
+          id="month"
+          value={month}
+          onChange={(e) => setMonth(e.target.value)}
+        /></div>
+        </div>
+      
+        <div className='row-CH'>
+            <div className=' clo-25-CH'>
+        <label htmlFor="image" className='label-u-CH'>Image:</label></div>
             <div>
               <textarea
                 id="description-u-CH"

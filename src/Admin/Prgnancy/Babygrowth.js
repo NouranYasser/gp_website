@@ -7,10 +7,10 @@ const Babygrowth = () => {
     <>
        <div className="ch_foot">
      
-         <div className="add_g"><Link to="/AddBabyGrowth">
+         <Link to="/AddBabyGrowth">
           <button className="btn-addBG"> Add Data in Baby Growth</button>
-         </Link></div>
-         <div className="container-g">
+         </Link>
+         <div className="containerBG">
         <div className="last-div-g">
           <Link to="/BabyGrowthMonth1">
             <button className="bt-MG"> Month 1</button>
