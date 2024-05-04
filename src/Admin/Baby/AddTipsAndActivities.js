@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import"../../style/addBabyGrowth.css";
 
 function AddTipsAndActivities() {
   const [title, setTitle] = useState('');
@@ -39,14 +40,14 @@ function AddTipsAndActivities() {
     <>
       <div className='main-divp'>
         <form className="form-p" onSubmit={handleSubmit}>
-          <label htmlFor="title" className='label-pregnancy'>Title:</label>
+          <label htmlFor="title" className='label-G'>Title:</label>
           <input className='outbox'
             type="text"
             id="title"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
           />
-          <label htmlFor="description" className='label-pregnancy'>Description:</label><br />
+          <label htmlFor="description" className='label-G'>Description:</label><br />
           <textarea
             id="description"
             value={description}
@@ -54,7 +55,7 @@ function AddTipsAndActivities() {
           />
           <br />
           <div className="mb-2">
-            <label htmlFor="month" className='label-pregnancy'>
+            <label htmlFor="month" className='label-G'>
               Month
             </label>
             <select
@@ -75,7 +76,7 @@ function AddTipsAndActivities() {
 
             </select>
             <br></br> <br></br>
-          <label htmlFor="title" className='CH'> Title In Arabic:</label>
+          <label htmlFor="title" className='label-G'> Title In Arabic:</label>
           <input
             className='outbox'
             type="text"
@@ -84,7 +85,7 @@ function AddTipsAndActivities() {
             onChange={(e) => setTitleAr(e.target.value)}
           />
           <br></br>
-          <label htmlFor="description" className='label-CH'>Description In Arabic:</label><br />
+          <label htmlFor="description" className='label-G'>Description In Arabic:</label><br />
           <textarea
             id="description"
             value={description_ar}
@@ -93,7 +94,7 @@ function AddTipsAndActivities() {
           <br />
           </div>
           <br />
-          <button type="submit" className='b-pregnancy'>Submit</button>
+          <button type="submit" className='b-Growth'>Submit</button>
         </form>
         {message && <p>{message}</p>}
       </div>
