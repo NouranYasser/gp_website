@@ -19,7 +19,7 @@
   background-color: rgb(83, 78, 158);
   color: white;
   margin-left: 600px;
-  margin-top: 20px;
+  margin-top: 40px;
   cursor: pointer;
 }
 
@@ -35,12 +35,13 @@
   cursor: pointer;
 }
 .containerBG{
-  font-family: arial;
-  padding-top: 20px;
-  width: 90%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+   font-family: arial;
+    padding-top: 20px;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
 }
 .last-div-g{
   margin-left: 150px;

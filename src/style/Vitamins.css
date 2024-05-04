@@ -1,6 +1,9 @@
 .v_foot{
   min-height: calc(100vh - 220px);
 }
+.b_con{
+
+}
 .div-container-v{
     margin-top: 15px;
     display: flex;
@@ -54,4 +57,16 @@
       background-color: rgb(83, 78, 158); 
       color: rgb(251, 250, 252);
       /* margin: 30px; */
+  }
+  .btn-addV{
+    font-size: large;
+    width: 20%;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    background-color: rgb(83, 78, 158);
+    color: white;
+    /* margin-left: 600px;
+    margin-top: 40px; */
+    cursor: pointer;
   }

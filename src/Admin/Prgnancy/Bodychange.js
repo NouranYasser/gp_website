@@ -13,7 +13,7 @@ const Bodychange = () => {
       </Link>
       
       <div className="containerBCH">
-        <div className="last-div">
+        <div className="last-div-ch">
           
           <Link to="/BodyChangeMonth1">
             <button className="btn-M"> Month 1</button>
@@ -27,7 +27,7 @@ const Bodychange = () => {
             <button className="btn-M"> Month 7</button>
           </Link>
         </div>
-        <div className="last-div">
+        <div className="last-div-ch">
           <Link to="/BodyChangeMonth2">
             <button className="btn-M"> Month 2</button>
           </Link>
@@ -40,7 +40,7 @@ const Bodychange = () => {
             <button className="btn-M"> Month 8</button>
           </Link>
         </div>
-        <div className="last-div">
+        <div className="last-div-ch">
           <Link to="/BodyChangeMonth3">
             <button className="btn-M"> Month 3</button>
           </Link>

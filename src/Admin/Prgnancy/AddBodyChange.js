@@ -41,25 +41,25 @@ function AddBodyChange() {
     <>
       <div className='main-divCH'>
         <form className="form-p" onSubmit={handleSubmit}>
-          <label htmlFor="title" className='CH'>Title:</label>
+          <label htmlFor="title" className='label-CH'>Title:</label>
           <input
-            className='outbox'
+            className='outboxCH'
             type="text"
             id="title"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
           />
 
-          <label htmlFor="description" className='label-CH'>Description:</label><br />
+          <label htmlFor="descriptionch" className='label-CH'>Description:</label><br />
           <textarea
-            id="description"
+            id="descriptionch"
             value={description}
             onChange={(e) => setDescription(e.target.value)}
           />
-          <br />
+      <br></br>
           <label htmlFor="month" className='label-CH'>Month:</label><br />
           <select
-
+            className='Select-ch'
             id="month"
             value={month}
             onChange={(e) => setMonth(e.target.value)}
@@ -75,30 +75,31 @@ function AddBodyChange() {
           <option value="8">8</option>
           <option value="9">9</option>
           </select>
-          <br></br> <br></br>
-          <label htmlFor="image" className='label-CH'>Image:</label>
+          
+          <label htmlFor="image" className='label-CH'>Image:</label><br/>
           <input
+          className="img-ch"
             type="file"
             id="image"
             onChange={(e) => setImage(e.target.files[0])}
           />
-          <br /><br />
-          <label htmlFor="title" className='CH'>Title In Arabic:</label>
+          <br />
+          <label htmlFor="title" className='label-CH'>Title In Arabic:</label><br />
           <input
-            className='outbox'
+            className='outboxCH'
             type="text"
             id="title"
             value={title_ar}
             onChange={(e) => setTitleAr(e.target.value)}
           />
-          <br></br>
-          <label htmlFor="description" className='label-CH'>Description In Arabic:</label><br />
+          
+          <label htmlFor="descriptionch" className='label-CH'>Description In Arabic:</label><br />
           <textarea
-            id="description"
+            id="descriptionch"
             value={description_ar}
             onChange={(e) => setDescriptionAr(e.target.value)}
           />
-          <br />
+          
           <button type="submit" className='b-Change'>Submit</button>
         </form>
         {message && <p>{message}</p>}

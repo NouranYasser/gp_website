@@ -75,7 +75,7 @@ function UpdateBodyChanges() {
       
         <div className='row-CH'>
             <div className=' clo-25-CH'>
-        <label htmlFor="image">Image:</label></div>
+        <label htmlFor="image" className='label-u-CH'>Image:</label></div>
             <div>
         <input
          className='file-upload-CH'

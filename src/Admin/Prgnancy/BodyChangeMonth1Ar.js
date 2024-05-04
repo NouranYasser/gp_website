@@ -47,6 +47,11 @@ const BodychangeMonth1Ar = () => {
   return (
     <>
       <div className="bmo">
+      <div className="b-con">
+          <Link to={"/BodyChangeMonth1"}>
+                    <button className="btnArabic-c">English</button>
+        </Link>
+        </div>
         {bodychanges.err && <p>{bodychanges.err}</p>}
         {bodychanges.loading ? (
           <p>Loading...</p>
@@ -99,9 +104,7 @@ const BodychangeMonth1Ar = () => {
               </tr>
             </tbody>
           </table>
-          <Link to={"/BodyChangeMonth1"}>
-             <button className="btnArabic">English</button>
-          </Link>
+          
           </div>
         )}
 

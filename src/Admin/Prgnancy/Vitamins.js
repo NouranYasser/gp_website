@@ -45,16 +45,18 @@ const Vitamins = () => {
 
   return (
     <>
-      <div>
-        <br></br>
+      <div className='v_foot'>
+        <div className="b_con">
         <Link to="/AddVitamin">
-          <button className="btn-addBCh"> Add Data in Vitamins</button>
+          <button className="btn-addV"> Add Data in Vitamins</button>
         </Link>
-
+        
+        </div>
         {vitamines.err && <p>{vitamines.err}</p>}
         {vitamines.loading ? (
           <p>Loading...</p>
         ) : (
+
           <div className="div-container-v">
             <table className="table-content-v">
               <thead>
@@ -106,15 +108,15 @@ const Vitamins = () => {
         </Link>
           </div>
         )}
-        <div>
-          {/* <iframe
+        {/* <div>
+          <iframe
           src={babygrowth.fullSrc}
           width="640"
           height="360"
           frameborder="0"
           allowfullscreen
-        ></iframe> */}
-        </div>
+        ></iframe>
+        </div> */}
       </div>
     </>
   );
