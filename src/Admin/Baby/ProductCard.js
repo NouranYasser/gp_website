@@ -33,7 +33,12 @@ function ProductCard() {
   };
 
   return (
+    <>
+    <Link to="/ProductListAr">
+          <button className=""> Arabic</button>
+        </Link>
     <div>
+      
       {issues.map((item) => (
         <div key={item.id} className="product-Card">
           <div className="card-top"></div>
@@ -49,6 +54,7 @@ function ProductCard() {
         
       ))}
     </div>
+    </>
   );
 }
 

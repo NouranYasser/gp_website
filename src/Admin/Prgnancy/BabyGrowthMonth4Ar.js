@@ -46,6 +46,11 @@ const BabyGrowthMonth4Ar = () => {
   return (
     <>
       <div className="bmo">
+      <div className="b-con">
+          <Link to={"/BabyGrowthMonth4"}>
+                    <button className="btnArabic-c">English</button>
+        </Link>
+        </div>
         {babygrowths.err && <p>{babygrowths.err}</p>}
         {babygrowths.loading ? (
           <p>Loading...</p>
@@ -87,18 +92,19 @@ const BabyGrowthMonth4Ar = () => {
                     <img
                       src={babygrowths.results.FullSrc}
                       alt="Baby Image"
-                      style={{ maxWidth: '80%', maxHeight: '80%' }}
+                      style={{ maxWidth: '80px', maxHeight: '80px' }}
                     />
                   ) : (
                     <span>No image available</span>
                   )}
                 </td>
                 <td>{babygrowths.results.month}</td>
-                <td>{babygrowths.results.description}</td>
-                <td>{babygrowths.results.title}</td>
+                <td>{babygrowths.results.description_ar}</td>
+                <td>{babygrowths.results.title_ar}</td>
               </tr>
             </tbody>
           </table>
+         
           </div>
         )}
       </div>

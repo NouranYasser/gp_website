@@ -43,67 +43,66 @@ const BodychangeMonth3 = () => {
       });
   };
 
-
   return (
     <>
       <div className="bmo">
+      <div className="b-con">
+      <Link to={"/BodaychangeMonth3Ar"}>
+              <button className="btnArabic-c">Arabic</button>
+            </Link></div>
         {bodychanges.err && <p>{bodychanges.err}</p>}
         {bodychanges.loading ? (
           <p>Loading...</p>
         ) : (
-          <div className="div-container"> 
-          <table  className="table-content">
-            <thead>
-              <tr>
-                <th>Title</th>
-                <th>Description</th>
-                <th>Month</th>
-                <th>Image</th>
-                <th></th>
-                <th></th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>{bodychanges.results.title}</td>
-                <td>{bodychanges.results.description}</td>
-                <td>{bodychanges.results.month}</td>
-                <td>
-                  {bodychanges.results.FullSrc ? (
-                    <img
-                      src={bodychanges.results.FullSrc}
-                      alt="Baby Image"
-                      style={{ maxWidth: '300px', maxHeight: '300px' }}
-                    />
-                  ) : (
-                    <span>No image available</span>
-                  )}
-                </td>
-                <td>
-
-                  <Link to={"/UpdateBodyChange/" + bodychanges.results.id}>
-                    <button className="btnUpdate">Update</button>
-                  </Link>
+          <div className="div-container">
+            <table className="table-content">
+              <thead>
+                <tr>
+                  <th>Title</th>
+                  <th>Description</th>
+                  <th>Month</th>
+                  <th>Image</th>
+                  <th></th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>{bodychanges.results.title}</td>
+                  <td>{bodychanges.results.description}</td>
+                  <td>{bodychanges.results.month}</td>
+                  <td>
+                    {bodychanges.results.FullSrc ? (
+                      <img
+                        src={bodychanges.results.FullSrc}
+                        alt="Baby Image"
+                        style={{ maxWidth: "200px", maxHeight: "200px" }}
+                      />
+                    ) : (
+                      <span>No image available</span>
+                    )}
                   </td>
                   <td>
-                  <button
-                    className="btnDelete"
-                    onClick={(e) => {
-                      deleteBodychange(bodychanges.results.id);
-                    }}
-                  >
-                    Delete
-                  </button>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <Link to={"/BodaychangeMonth3Ar"}>
-                    <button className="btnArabic">Arabic</button>
-                  </Link>
+                    <Link to={"/UpdateBodyChange/" + bodychanges.results.id}>
+                      <button className="btnUpdate">Update</button>
+                    </Link>
+                  </td>
+                  <td>
+                    <button
+                      className="btnDelete"
+                      onClick={(e) => {
+                        deleteBodychange(bodychanges.results.id);
+                      }}
+                    >
+                      Delete
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+           
           </div>
         )}
-       
       </div>
     </>
   );

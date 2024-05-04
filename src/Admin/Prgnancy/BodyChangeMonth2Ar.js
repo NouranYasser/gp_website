@@ -47,65 +47,66 @@ const BodyChangeMonth2Ar = () => {
   return (
     <>
       <div className="bmo">
+      <div className="b-con">
+          <Link to={"/BodyChangeMonth2"}>
+                    <button className="btnArabic-c">English</button>
+        </Link>
+        </div>
         {bodychanges.err && <p>{bodychanges.err}</p>}
         {bodychanges.loading ? (
           <p>Loading...</p>
         ) : (
-          <div className="div-container"> 
-          <table  className="table-content">
-            <thead>
-              <tr>
-                <th></th>
-                <th></th>  
-                <th>الصورة</th>             
-                <th>الشهر</th>              
-                <th>الوصف</th>
-                <th>العنوان</th>             
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
+          <div className="div-container">
+            <table className="table-content">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th></th>
+                  <th>الصورة</th>
+                  <th>الشهر</th>
+                  <th>الوصف</th>
+                  <th>العنوان</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
                   <td>
-                  <button
-                    className="btnDelete"
-                    onClick={(e) => {
-                      deleteBodychange(bodychanges.results.id);
-                    }}
-                  >
-                    إزالة
-                  </button>
-                  
+                    <button
+                      className="btnDelete"
+                      onClick={(e) => {
+                        deleteBodychange(bodychanges.results.id);
+                      }}
+                    >
+                      إزالة
+                    </button>
                   </td>
                   <td>
-                <Link to={"/UpdateBodyChange/" + bodychanges.results.id}>
-                    <button className="btnUpdate">تعديل</button>
-                  </Link>
+                    <Link to={"/UpdateBodyChange/" + bodychanges.results.id}>
+                      <button className="btnUpdate">تعديل</button>
+                    </Link>
                   </td>
-                
-                <td>
-                  {bodychanges.results.FullSrc ? (
-                    <img
-                      src={bodychanges.results.FullSrc}
-                      alt="Baby Image"
-                      style={{ maxWidth: '1000px', maxHeight: '100px' }}
-                    />
-                  ) : (
-                    <span>No image available</span>
-                  )}
-                </td>
-                <td>{bodychanges.results.month}</td>
-                <td>{bodychanges.results.description_ar}</td>
-                <td>{bodychanges.results.title_ar}</td>
-                
-              </tr>
-            </tbody>
-          </table>
+
+                  <td>
+                    {bodychanges.results.FullSrc ? (
+                      <img
+                        src={bodychanges.results.FullSrc}
+                        alt="Baby Image"
+                        style={{ maxWidth: "200px", maxHeight: "200px" }}
+                      />
+                    ) : (
+                      <span>No image available</span>
+                    )}
+                  </td>
+                  <td>{bodychanges.results.month}</td>
+                  <td>{bodychanges.results.description_ar}</td>
+                  <td>{bodychanges.results.title_ar}</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         )}
-
       </div>
     </>
   );
 };
-
 export default BodyChangeMonth2Ar;

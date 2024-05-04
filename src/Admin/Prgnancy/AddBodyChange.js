@@ -8,6 +8,8 @@ function AddBodyChange() {
   const [description, setDescription] = useState('');
   const [month, setMonth] = useState('');
   const [image, setImage] = useState(null);
+  const [title_ar, setTitleAr] = useState('');
+  const [description_ar, setDescriptionAr] = useState('');
   const [message, setMessage] = useState('');
   const navigate = useNavigate();
 
@@ -19,6 +21,8 @@ function AddBodyChange() {
     formData.append('description', description);
     formData.append('month', month);
     formData.append('image', image);
+    formData.append('title_ar', title_ar);
+    formData.append('description_ar', description_ar);
 
     try {
       const response = await axios.post(`https://gradhub.hwnix.com/api/add_DESC/1`, formData, {
@@ -37,25 +41,25 @@ function AddBodyChange() {
     <>
       <div className='main-divCH'>
         <form className="form-p" onSubmit={handleSubmit}>
-          <label htmlFor="title" className='CH'>Title:</label>
+          <label htmlFor="title" className='label-CH'>Title:</label>
           <input
-            className='outbox'
+            className='outboxCH'
             type="text"
             id="title"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
           />
 
-          <label htmlFor="description" className='label-CH'>Description:</label><br />
+          <label htmlFor="descriptionch" className='label-CH'>Description:</label><br />
           <textarea
-            id="description"
+            id="descriptionch"
             value={description}
             onChange={(e) => setDescription(e.target.value)}
           />
-          <br />
+      <br></br>
           <label htmlFor="month" className='label-CH'>Month:</label><br />
           <select
-
+            className='Select-ch'
             id="month"
             value={month}
             onChange={(e) => setMonth(e.target.value)}
@@ -71,14 +75,31 @@ function AddBodyChange() {
           <option value="8">8</option>
           <option value="9">9</option>
           </select>
-
-          <label htmlFor="image" className='label-CH'>Image:</label>
+          
+          <label htmlFor="image" className='label-CH'>Image:</label><br/>
           <input
+          className="img-ch"
             type="file"
             id="image"
             onChange={(e) => setImage(e.target.files[0])}
           />
-          <br /><br />
+          <br />
+          <label htmlFor="title" className='label-CH'>Title In Arabic:</label><br />
+          <input
+            className='outboxCH'
+            type="text"
+            id="title"
+            value={title_ar}
+            onChange={(e) => setTitleAr(e.target.value)}
+          />
+          
+          <label htmlFor="descriptionch" className='label-CH'>Description In Arabic:</label><br />
+          <textarea
+            id="descriptionch"
+            value={description_ar}
+            onChange={(e) => setDescriptionAr(e.target.value)}
+          />
+          
           <button type="submit" className='b-Change'>Submit</button>
         </form>
         {message && <p>{message}</p>}

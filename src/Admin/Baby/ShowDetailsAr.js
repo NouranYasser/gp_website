@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import "../../style/babygrowthMonth.css";
 import { useParams } from "react-router-dom";
-const ShowDetails = () => {
+const ShowDetailsAr = () => {
   const [details, setDetails] = useState({
     loading: true,
     results: [],
@@ -14,10 +14,7 @@ const ShowDetails = () => {
   useEffect(() => {
     setDetails({ ...details, loading: true });
     axios
-
-      .get(`https://gradhub.hwnix.com/api/get_issue/1`)
-
-      .get(`https://gradhub.hwnix.com/api/get_issue/${id}/en`)
+      .get(`https://gradhub.hwnix.com/api/get_issue/${id}/ar`)
       .then((resp) => {
         setDetails((prevDetails) => ({
           ...prevDetails,
@@ -55,22 +52,17 @@ const ShowDetails = () => {
             <table className="table-content">
               <thead>
                 <tr>
-                  <th>Title</th>
-                  <th>Description</th>
                   <th></th>
                   <th></th>
+                  <th>الوصف</th>
+                  <th>العنوان</th>
+                  
                 </tr>
               </thead>
               <tbody>
                 {details.results.map((result) => (
                   <tr key={result.id}>
-                    <td>{result.title}</td>
-                    <td>{result.description}</td>                
-                     <td>
-                      <Link to={"/Update/" + result.id}>
-                        <button className="btnUpdate">Update</button>
-                      </Link>
-                    </td>
+
                     <td>
                       <button
                         className="btnDelete"
@@ -78,16 +70,24 @@ const ShowDetails = () => {
                           deleteBabygrowth(result.id);
                         }}
                       >
-                        Delete
+                        إزالة
                       </button>
+                      <td>
+                      <Link to={"/Update/" + result.id}>
+                        <button className="btnUpdate">تعديل</button>
+                      </Link>
                     </td>
+                    </td>
+                    <td>{result.description_ar}</td>     
+                    <td>{result.title_ar}</td>           
+                     
+                   
                   </tr>
                 ))}
               </tbody>
               <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
               <br></br><br></br>
             </table>
-    
           </div>
         )}
       </div>
@@ -95,4 +95,6 @@ const ShowDetails = () => {
   );
 };
 
-export default ShowDetails;
+export default ShowDetailsAr;
+
+

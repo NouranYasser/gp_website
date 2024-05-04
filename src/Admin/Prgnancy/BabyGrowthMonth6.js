@@ -43,69 +43,68 @@ const BabyGrowthMonth6 = () => {
       });
   };
 
-
   return (
     <>
-      <div  className="bmo">
+      <div className="bmo">
+      <div className="b-con">
+            <Link to={"/BabyGrowthMonth6Ar"}>
+              <button className="btnArabic-c">Arabic</button>
+            </Link>
+            </div>
         {babygrowths.err && <p>{babygrowths.err}</p>}
         {babygrowths.loading ? (
           <p>Loading...</p>
         ) : (
-           <div className="div-container">
+          <div className="div-container">
             <table className="table-content">
-            <thead>
-              <tr>
-                <th>Title</th>
-                <th>Description</th>
-                <th>Month</th>
-                <th>Image</th>
-                <th></th>
-                <th></th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>{babygrowths.results.title}</td>
-                <td>{babygrowths.results.description}</td>
-                <td>{babygrowths.results.month}</td>
-                <td>
-                  {babygrowths.results.FullSrc ? (
-                    <img
-                      src={babygrowths.results.FullSrc}
-                      alt="Baby Image"
-                      style={{ maxWidth: '10%', maxHeight: '10%' }}
-                    />
-                  ) : (
-                    <span>No image available</span>
-                  )}
-                </td>
-                <td>
-                  
-                  <Link to={"/UpdateBabygrowth/" + babygrowths.results.id}>
-                    <button className="btnUpdate">Update</button>
-                  </Link>
+              <thead>
+                <tr>
+                  <th>Title</th>
+                  <th>Description</th>
+                  <th>Month</th>
+                  <th>Image</th>
+                  <th></th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>{babygrowths.results.title}</td>
+                  <td>{babygrowths.results.description}</td>
+                  <td>{babygrowths.results.month}</td>
+                  <td>
+                    {babygrowths.results.FullSrc ? (
+                      <img
+                        src={babygrowths.results.FullSrc}
+                        alt="Baby Image"
+                        style={{ maxWidth: "10%", maxHeight: "10%" }}
+                      />
+                    ) : (
+                      <span>No image available</span>
+                    )}
                   </td>
                   <td>
+                    <Link to={"/UpdateBabygrowth/" + babygrowths.results.id}>
+                      <button className="btnUpdate">Update</button>
+                    </Link>
                   </td>
+                
                   <td>
-                  <button
-                    className="btnDelete"
-                    onClick={(e) => {
-                      deleteBabygrowth(babygrowths.results.id);
-                    }}
-                  >
-                    Delete
-                  </button>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <Link to={"/BabyGrowthMonth6Ar"}>
-                    <button className="btnArabic">Arabic</button>
-                  </Link>
+                    <button
+                      className="btnDelete"
+                      onClick={(e) => {
+                        deleteBabygrowth(babygrowths.results.id);
+                      }}
+                    >
+                      Delete
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            
           </div>
         )}
-        
       </div>
     </>
   );

@@ -9,7 +9,7 @@
 }
 .table-content{
   border-collapse: collapse;
-  margin: 25px 0;
+  margin: 0px 0;
   font-size:0.6cm;
   /* max-width: 400px; */
   border-radius: 5px 5px 0 0;
@@ -55,7 +55,11 @@
     color: rgb(251, 250, 252);
     /* margin: 30px; */
 }
-.btnArabic{
+.b-con{
+  display: flex;
+  justify-content: center;
+}
+.btnArabic-c{
   font-size: large;
     width: 100px;
     height: 30px;
@@ -63,6 +67,6 @@
     border: none;
     background-color: rgb(83, 78, 158); 
     color: rgb(251, 250, 252);
-    margin-top: 320px;
-    margin-left: -70px;  
+    margin-top: 20px;
+    margin-left: 100px;  
 }

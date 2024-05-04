@@ -12,6 +12,8 @@ function AddBabyGrowth() {
   const [month, setMonth] = useState('');
   const [image, setImage] = useState(null);
   const [message, setMessage] = useState('');
+  const [title_ar, setTitle_ar] = useState('');
+  const [description_ar, setDescription_ar] = useState('');
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
@@ -22,6 +24,8 @@ function AddBabyGrowth() {
     formData.append('description', description);
     formData.append('month', month);
     formData.append('image', image);
+    formData.append('title_ar', title_ar);
+    formData.append('description_ar', description_ar);
 
     try {
       const response = await axios.post(`https://gradhub.hwnix.com/api/add_DESC/2`, formData, {
@@ -74,6 +78,26 @@ function AddBabyGrowth() {
             id="image"
             onChange={(e) => setImage(e.target.files[0])}
           />
+          <br></br> <br></br>
+
+        <label htmlFor="title"  className='label-G'> Title In Arabic:</label>
+          <input className='outbox'
+            type="text"
+            id="title"
+            value={title_ar}
+            onChange={(e) => setTitle_ar(e.target.value)}
+          />
+
+          <label htmlFor="description"  className='label-G'>Description In Arabic:</label><br></br>
+
+          <textarea
+
+            id="description"
+            value={description_ar}
+            onChange={(e) => setDescription_ar(e.target.value)}
+          />
+
+          <br></br>
           <br></br><br></br>
           <button type="submit" className='b-Growth'>Submit</button>
         </form>

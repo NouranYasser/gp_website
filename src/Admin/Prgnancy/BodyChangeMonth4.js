@@ -47,6 +47,10 @@ const BodychangeMonth4 = () => {
   return (
     <>
        <div className="bmo">
+       <div className="b-con">
+      <Link to={"/BodaychangeMonth4Ar"}>
+              <button className="btnArabic-c">Arabic</button>
+            </Link></div>
         {bodychanges.err && <p>{bodychanges.err}</p>}
         {bodychanges.loading ? (
           <p>Loading...</p>
@@ -74,7 +78,7 @@ const BodychangeMonth4 = () => {
                     <img
                       src={bodychanges.results.FullSrc}
                       alt="Baby Image"
-                      style={{ maxWidth: '10%', maxHeight: '10%' }}
+                      style={{ maxWidth: '200px', maxHeight: '200px%' }}
                     />
                   ) : (
                     <span>No image available</span>
@@ -102,9 +106,7 @@ const BodychangeMonth4 = () => {
               </tr>
             </tbody>
           </table>
-          <Link to={"/BodaychangeMonth4Ar"}>
-                    <button className="btnArabic">Arabic</button>
-                  </Link>
+          
           </div>
         )}
        
