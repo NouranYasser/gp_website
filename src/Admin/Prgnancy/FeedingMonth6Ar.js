@@ -47,6 +47,10 @@ const FoodMonth6Ar = () => {
   return (
     <>
      <div className="fo-m_foot">
+     <div className="b-con">
+     <Link to={"/FeedingMonth6"}>
+                    <button className="btnArabic-c">English</button>
+                  </Link></div>
         {foods.err && <p>{foods.err}</p>}
         {foods.loading ? (
           <p>Loading...</p>
@@ -103,9 +107,7 @@ const FoodMonth6Ar = () => {
               </tr>
             </tbody>
           </table>
-          <Link to={"/FeedingMonth6"}>
-                    <button className="">English</button>
-                  </Link>
+          
           </div>
         )}
 
