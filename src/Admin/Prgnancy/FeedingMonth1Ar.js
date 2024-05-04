@@ -43,73 +43,66 @@ const FoodMonth1Ar = () => {
       });
   };
 
-
   return (
     <>
-     <div className="fo-m_foot">
+      <div className="fo-m_foot">
         {foods.err && <p>{foods.err}</p>}
         {foods.loading ? (
           <p>Loading...</p>
         ) : (
           <div className="div-container-fm">
-          <table className="table-content-fm"> 
-            <thead>
-              <tr>
-                <th></th>
-                <th></th>
-                <th>الصورة</th>
-                <th>الشهر</th>
-                <th>الوصف</th>
-                <th>العنوان</th>            
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-
-              <td>
+            <table className="table-content-fm">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th></th>
+                  <th>الصورة</th>
+                  <th>الشهر</th>
+                  <th>الوصف</th>
+                  <th>العنوان</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
                     <button
-                    className="btnDelete-fm"
-                    onClick={(e) => {
-                      deleteFood(foods.results.id);
-                    }}
-                  >
-                    إزالة
-                    
-                  </button>
-                  
-                </td>   
-                <td>
+                      className="btnDelete-fm"
+                      onClick={(e) => {
+                        deleteFood(foods.results.id);
+                      }}
+                    >
+                      إزالة
+                    </button>
+                  </td>
+                  <td>
+                    <Link to={"/UpdateFood/" + foods.results.id}>
+                      <button className="btnUpdate-fm">تعديل</button>
+                    </Link>
+                  </td>
 
-                <Link to={"/UpdateFood/" + foods.results.id}>
-                    <button className="btnUpdate-fm">تعديل</button>
-                </Link>              
-                  </td> 
-               
-                <td>
-                  {foods.results.FullSrc ? (
-                    <img
-                      src={foods.results.FullSrc}
-                      alt="Baby Image"
-                      style={{ maxWidth: '200px', maxHeight: '200px' }}
-                    />
-                  ) : (
-                    <span>No image available</span>
-                  )}
-                </td>               
-                <td>{foods.results.description_ar}</td>
-                <td>{foods.results.title_ar}</td>
-              </tr>
-            </tbody>
-          </table>
-          <Link to={"/FeedingMonth1"}>
-                    <button className="">English</button>
-                  </Link>
+                  <td>
+                    {foods.results.FullSrc ? (
+                      <img
+                        src={foods.results.FullSrc}
+                        alt="Baby Image"
+                        style={{ maxWidth: "200px", maxHeight: "200px" }}
+                      />
+                    ) : (
+                      <span>No image available</span>
+                    )}
+                  </td>
+                  <td>{foods.results.description_ar}</td>
+                  <td>{foods.results.title_ar}</td>
+                </tr>
+              </tbody>
+            </table>
+            <Link to={"/FeedingMonth1"}>
+              <button className="">English</button>
+            </Link>
           </div>
         )}
-
       </div>
-    
-        </>
+    </>
   );
 };
 

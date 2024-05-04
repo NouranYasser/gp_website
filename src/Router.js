@@ -1,16 +1,15 @@
 import HomePage from "./Admin/HomePage.js";
-import ProductListAr from "./Admin/Baby/ProductListAr"
-import ShowDetailsAr from "./Admin/Baby/ShowDetailsAr"
+import ShowDetailsAr from "./Admin/Baby/ShowDetailsAr";
 import SignUp from "./Admin/Auth/SignUp.js";
 import Login from "./Admin/Auth/Login.js";
 import App from "./App";
 import Pregnancy from "./Admin/Prgnancy/Pregnancy.js";
 import Babygrowth from "./Admin/Prgnancy/Babygrowth.js";
 import AddIssue from "./Admin/Baby/AddIssue.js";
-import AddBodyChange from "./Admin/Prgnancy/AddBodyChange.js"
+import AddBodyChange from "./Admin/Prgnancy/AddBodyChange.js";
 import Bodychange from "./Admin/Prgnancy/Bodychange.js";
 import BodychangeMonth1 from "./Admin/Prgnancy/BodyChangeMonth1.js";
-import BodayChangeMonth1Ar from "./Admin/Prgnancy/BodyChangeMonth1Ar.js"
+import BodayChangeMonth1Ar from "./Admin/Prgnancy/BodyChangeMonth1Ar.js";
 import BodychangeMonth2 from "./Admin/Prgnancy/BodyChangeMonth2.js";
 import BodyChangeMonth2Ar from "./Admin/Prgnancy/BodyChangeMonth2Ar.js";
 import BodychangeMonth3 from "./Admin/Prgnancy/BodyChangeMonth3.js";
@@ -31,23 +30,18 @@ import UpdateBodyChange from "./Admin/Prgnancy/UpdateBodyChange.js";
 import UpdateBabygrowth from "./Admin/Prgnancy/UpdateBabygrowth.js";
 import UpdateFood from "./Admin/Prgnancy/UpdateFood.js";
 import UpdateVitamins from "./Admin/Prgnancy/UpdateVitamins.js";
-
 import UpdateTipsAndActivities from "./Admin/Baby/UpdateTipsAndActivities.js";
 import UpdateChildMilestones from "./Admin/Baby/UpdateChildMilestones.js";
 import UpdateWeaning from "./Admin/Baby/UpdateWeaning.js";
-
-
 import UpdateBreastFeeding from "./Admin/Baby/UpdateBreastFeeding.js";
 import UpdateArtificalFeeding from "./Admin/Baby/UpdateArtificalFeeding.js";
-
-
 import Feeding from "./Admin/Prgnancy/Feeding.js";
 import Vitamins from "./Admin/Prgnancy/Vitamins.js";
 import VitaminsAr from "./Admin/Prgnancy/VitaminsAr.js";
 import Exercises from "./Admin/Prgnancy/Exercises.js";
 import ExercisesAr from "./Admin/Prgnancy/ExercisesAr.js";
 import Courses from "./Admin/Prgnancy/Courses.js";
-import CoursesAr from "./Admin/Prgnancy/CoursesAr.js"
+import CoursesAr from "./Admin/Prgnancy/CoursesAr.js";
 import BabyGrowthMonth1 from "./Admin/Prgnancy/BabyGrowthMonth1.js";
 import BabyGrowthMonth1Ar from "./Admin/Prgnancy/BabyGrowthMonth1Ar.js";
 import BabyGrowthMonth2 from "./Admin/Prgnancy/BabyGrowthMonth2.js";
@@ -76,8 +70,6 @@ import Guest from "../src/middleware/Guest.js";
 import UpdateExercise from "./Admin/Prgnancy/UpdateExercise.js";
 import BabyHome from "./Admin/Baby/BabyHome.js";
 import TipsAndActivities from "./Admin/Baby/TipsAndActivities.js";
-
-
 import TipsAndActivitiesMonth1 from "../src/Admin/Baby/TipsAndActivitiesMonth1.js";
 import TipsAndActivitiesMonth3 from "../src/Admin/Baby/TipsAndActivitiesMonth3.js";
 import TipsAndActivitiesMonth6 from "../src/Admin/Baby/TipsAndActivitiesMonth6.js";
@@ -95,46 +87,40 @@ import TipsAndActivitiesMonth12Ar from "../src/Admin/Baby/TipsAndActivitiesMonth
 import TipsAndActivitiesMonth15Ar from "../src/Admin/Baby/TipsAndActivitiesMonth15Ar.js";
 import TipsAndActivitiesMonth18Ar from "../src/Admin/Baby/TipsAndActivitiesMonth18Ar.js";
 import TipsAndActivitiesMonth21Ar from "./Admin/Baby/TipsAndActivitiesMonth21.js";
-
-
-
-import {createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter } from "react-router-dom";
 import ChildMilestones from "./Admin/Baby/ChildMilestones.js";
-import ChildMilestonesMonth1 from "./Admin/Baby/ChildMilestonesMonth1.js"
-import ChildMilestonesMonth3 from "./Admin/Baby/ChildMilestonesMonth3.js"
-import ChildMilestonesMonth6 from "./Admin/Baby/ChildMilestonesMonth6.js"
-import ChildMilestonesMonth9 from "./Admin/Baby/ChildMilestonesMonth9.js"
-import ChildMilestonesMonth12 from "./Admin/Baby/ChildMilestonesMonth12.js"
-import ChildMilestonesMonth15 from "../src/Admin/Baby/ChildMilestonesMonth15.js"
-import ChildMilestonesMonth18 from "../src/Admin/Baby/ChildMilestonesMonth18.js"
-import ChildMilestonesMonth21 from "../src/Admin/Baby/ChildMilestonesMonth21.js"
-
-import ChildMilestonesMonth1Ar from "./Admin/Baby/ChildMilestonesMonth1Ar.js"
-import ChildMilestonesMonth3Ar from "./Admin/Baby/ChildMilestonesMonth3Ar.js"
-import ChildMilestonesMonth6Ar from "./Admin/Baby/ChildMilestonesMonth6Ar.js"
-import ChildMilestonesMonth9Ar from "./Admin/Baby/ChildMilestonesMonth9Ar.js"
-import ChildMilestonesMonth12Ar from "./Admin/Baby/ChildMilestonesMonth12Ar.js"
-import ChildMilestonesMonth15Ar from "./Admin/Baby/ChildMilestonesMonth15Ar.js"
-import ChildMilestonesMonth18Ar from "./Admin/Baby/ChildMilestonesMonth18Ar.js"
-import ChildMilestonesMonth21Ar from "./Admin/Baby/ChildMilestonesMonth21Ar.js"
-
-import Nutrition from "../src/Admin/Baby/Nutrition.js"
-import Weaning from "./Admin/Baby/Weaning.js"
+import ChildMilestonesMonth1 from "./Admin/Baby/ChildMilestonesMonth1.js";
+import ChildMilestonesMonth3 from "./Admin/Baby/ChildMilestonesMonth3.js";
+import ChildMilestonesMonth6 from "./Admin/Baby/ChildMilestonesMonth6.js";
+import ChildMilestonesMonth9 from "./Admin/Baby/ChildMilestonesMonth9.js";
+import ChildMilestonesMonth12 from "./Admin/Baby/ChildMilestonesMonth12.js";
+import ChildMilestonesMonth15 from "../src/Admin/Baby/ChildMilestonesMonth15.js";
+import ChildMilestonesMonth18 from "../src/Admin/Baby/ChildMilestonesMonth18.js";
+import ChildMilestonesMonth21 from "../src/Admin/Baby/ChildMilestonesMonth21.js";
+import ChildMilestonesMonth1Ar from "./Admin/Baby/ChildMilestonesMonth1Ar.js";
+import ChildMilestonesMonth3Ar from "./Admin/Baby/ChildMilestonesMonth3Ar.js";
+import ChildMilestonesMonth6Ar from "./Admin/Baby/ChildMilestonesMonth6Ar.js";
+import ChildMilestonesMonth9Ar from "./Admin/Baby/ChildMilestonesMonth9Ar.js";
+import ChildMilestonesMonth12Ar from "./Admin/Baby/ChildMilestonesMonth12Ar.js";
+import ChildMilestonesMonth15Ar from "./Admin/Baby/ChildMilestonesMonth15Ar.js";
+import ChildMilestonesMonth18Ar from "./Admin/Baby/ChildMilestonesMonth18Ar.js";
+import ChildMilestonesMonth21Ar from "./Admin/Baby/ChildMilestonesMonth21Ar.js";
+import Nutrition from "../src/Admin/Baby/Nutrition.js";
+import Weaning from "./Admin/Baby/Weaning.js";
 import AddWeaning from "./Admin/Baby/AddWeaning.js";
-import WeaningMonth1 from "./Admin/Baby/WeaningMonth1"
-import WeaningMonth6 from "./Admin/Baby/WeaningMonth6"
+import WeaningMonth1 from "./Admin/Baby/WeaningMonth1";
+import WeaningMonth6 from "./Admin/Baby/WeaningMonth6";
 import WeaningMonth12 from "./Admin/Baby/WeaningMonth12.js";
 import WeaningMonth18 from "./Admin/Baby/WeaningMonth18.js";
-import WeaningMonth1Ar from "./Admin/Baby/WeaningMonth1Ar"
-import WeaningMonth6Ar from "./Admin/Baby/WeaningMonth6Ar"
-import WeaningMonth12Ar from "./Admin/Baby/WeaningMonth12Ar"
-import WeaningMonth18Ar from "./Admin/Baby/WeaningMonth18Ar"
+import WeaningMonth1Ar from "./Admin/Baby/WeaningMonth1Ar";
+import WeaningMonth6Ar from "./Admin/Baby/WeaningMonth6Ar";
+import WeaningMonth12Ar from "./Admin/Baby/WeaningMonth12Ar";
+import WeaningMonth18Ar from "./Admin/Baby/WeaningMonth18Ar";
 
-
-import BreastFeeding from "./Admin/Baby/BreastFeeding.js"
-import ArtificalFeeding from "./Admin/Baby/ArtificalFeeding.js"
-import CommonIssues from "./Admin/Baby/CommonIssues.js"
-import ShowDetails from "./Admin/Baby/ShowDetails.js"
+import BreastFeeding from "./Admin/Baby/BreastFeeding.js";
+import ArtificalFeeding from "./Admin/Baby/ArtificalFeeding.js";
+import CommonIssues from "./Admin/Baby/CommonIssues.js";
+import ShowDetails from "./Admin/Baby/ShowDetails.js";
 
 import NotFound from "./shared/NotFound.js";
 import AddTipsAndActivities from "./Admin/Baby/AddTipsAndActivities.js";
@@ -143,25 +129,25 @@ import AddBabyGrowth from "./Admin/Prgnancy/AddBabyGrowth.js";
 import AddChildMilestones from "./Admin/Baby/AddChildMilestones.js";
 
 import UpdateCourses from "./Admin/Prgnancy/UpdateCourses.js";
-import BreastFeedingMonth1 from "./Admin/Baby/BreastFeedingMonth1"
-import BreastFeedingMonth6 from "./Admin/Baby/BreastFeedingMonth6"
-import BreastFeedingMonth12 from "./Admin/Baby/BreastFeedingMonth12"
-import BreastFeedingMonth18 from "./Admin/Baby/BreastFeedingMonth18"
+import BreastFeedingMonth1 from "./Admin/Baby/BreastFeedingMonth1";
+import BreastFeedingMonth6 from "./Admin/Baby/BreastFeedingMonth6";
+import BreastFeedingMonth12 from "./Admin/Baby/BreastFeedingMonth12";
+import BreastFeedingMonth18 from "./Admin/Baby/BreastFeedingMonth18";
 
-import BreastFeedingMonth1Ar from "./Admin/Baby/BreastFeedingMonth1Ar"
-import BreastFeedingMonth6Ar from "./Admin/Baby/BreastFeedingMonth6Ar"
-import BreastFeedingMonth12Ar from "./Admin/Baby/BreastFeedingMonth12Ar"
-import BreastFeedingMonth18Ar from "./Admin/Baby/BreastFeedingMonth18Ar"
-import ArtificalFeedingMonth1 from "./Admin/Baby/ArtificalFeedingMonth1"
-import ArtificalFeedingMonth6 from "./Admin/Baby/ArtificalFeedingMonth6"
-import ArtificalFeedingMonth12 from "./Admin/Baby/ArtificalFeedingMonth12"
-import ArtificalFeedingMonth18 from "./Admin/Baby/ArtificalFeedingMonth18"
-import ArtificalFeedingMonth1Ar from "./Admin/Baby/ArtificalFeedingMonth1Ar"
-import ArtificalFeedingMonth6Ar from "./Admin/Baby/ArtificalFeedingMonth6Ar"
-import ArtificalFeedingMonth12Ar from "./Admin/Baby/ArtificalFeedingMonth12Ar"
-import ArtificalFeedingMonth18Ar from "./Admin/Baby/ArtificalFeedingMonth18Ar"
-import AddBreastFeeding from "./Admin/Baby/AddBreastFeeding"
-import AddArtificalFeeding from "./Admin/Baby/AddArtificalFeeding"
+import BreastFeedingMonth1Ar from "./Admin/Baby/BreastFeedingMonth1Ar";
+import BreastFeedingMonth6Ar from "./Admin/Baby/BreastFeedingMonth6Ar";
+import BreastFeedingMonth12Ar from "./Admin/Baby/BreastFeedingMonth12Ar";
+import BreastFeedingMonth18Ar from "./Admin/Baby/BreastFeedingMonth18Ar";
+import ArtificalFeedingMonth1 from "./Admin/Baby/ArtificalFeedingMonth1";
+import ArtificalFeedingMonth6 from "./Admin/Baby/ArtificalFeedingMonth6";
+import ArtificalFeedingMonth12 from "./Admin/Baby/ArtificalFeedingMonth12";
+import ArtificalFeedingMonth18 from "./Admin/Baby/ArtificalFeedingMonth18";
+import ArtificalFeedingMonth1Ar from "./Admin/Baby/ArtificalFeedingMonth1Ar";
+import ArtificalFeedingMonth6Ar from "./Admin/Baby/ArtificalFeedingMonth6Ar";
+import ArtificalFeedingMonth12Ar from "./Admin/Baby/ArtificalFeedingMonth12Ar";
+import ArtificalFeedingMonth18Ar from "./Admin/Baby/ArtificalFeedingMonth18Ar";
+import AddBreastFeeding from "./Admin/Baby/AddBreastFeeding";
+import AddArtificalFeeding from "./Admin/Baby/AddArtificalFeeding";
 import AddFeeding from "./Admin/Prgnancy/AddFeeding.js";
 import AddVitamin from "./Admin/Prgnancy/AddVitamin.js";
 import AddExercises from "./Admin/Prgnancy/AddExercises.js";
@@ -169,16 +155,16 @@ import AddCourses from "./Admin/Prgnancy/AddCourses.js";
 export const router = createBrowserRouter([
   {
     path: "/",
-    element: <App/>,
+    element: <App />,
     children: [
       {
         path: "/Login",
         element: <Login />,
       },
-      
+
       {
         path: "/SignUp",
-        element: <SignUp/>,
+        element: <SignUp />,
       },
 
       {
@@ -192,7 +178,7 @@ export const router = createBrowserRouter([
             path: "/ProductCardAr",
             element: <ProductCardAr />,
           },
-          
+
           {
             path: "/AddExercises",
             element: <AddExercises />,
@@ -213,13 +199,13 @@ export const router = createBrowserRouter([
           },
           {
             path: "/AddTipsAndActivities",
-            element: <AddTipsAndActivities/>,
+            element: <AddTipsAndActivities />,
           },
           {
             path: "/AddChildMilestones",
-            element: <AddChildMilestones/>,
+            element: <AddChildMilestones />,
           },
-          
+
           {
             path: "/AddBodyChange",
             element: <AddBodyChange />,
@@ -234,12 +220,12 @@ export const router = createBrowserRouter([
             path: "/TipsAndActivitiesMonth1",
             element: <TipsAndActivitiesMonth1 />,
           },
-        
+
           {
             path: "/TipsAndActivitiesMonth1Ar",
             element: <TipsAndActivitiesMonth1Ar />,
           },
-        
+
           {
             path: "/TipsAndActivitiesMonth3Ar",
             element: <TipsAndActivitiesMonth3Ar />,
@@ -275,7 +261,6 @@ export const router = createBrowserRouter([
             element: <TipsAndActivitiesMonth21Ar />,
           },
 
-          
           {
             path: "/TipsAndActivitiesMonth3",
             element: <TipsAndActivitiesMonth3 />,
@@ -292,12 +277,12 @@ export const router = createBrowserRouter([
 
           {
             path: "/TipsAndActivitiesMonth12",
-            element: <TipsAndActivitiesMonth12/>,
+            element: <TipsAndActivitiesMonth12 />,
           },
 
           {
             path: "/TipsAndActivitiesMonth15",
-            element: <TipsAndActivitiesMonth15/>,
+            element: <TipsAndActivitiesMonth15 />,
           },
 
           {
@@ -306,25 +291,24 @@ export const router = createBrowserRouter([
           },
           {
             path: "/TipsAndActivitiesMonth21",
-            element: <TipsAndActivitiesMonth21/>,
+            element: <TipsAndActivitiesMonth21 />,
           },
-
 
           {
             path: "/UpdateTipsAndActivities/:id",
             element: <UpdateTipsAndActivities />,
           },
-          
+
           {
             path: "/UpdateChildMilestones/:id",
             element: <UpdateChildMilestones />,
           },
-          
+
           {
             path: "/UpdateWeaning/:id",
             element: <UpdateWeaning />,
           },
-        
+
           {
             path: "/UpdateBreastFeeding/:id",
             element: <UpdateBreastFeeding />,
@@ -332,7 +316,7 @@ export const router = createBrowserRouter([
 
           {
             path: "/UpdateArtificalFeeding/:id",
-            element: <UpdateArtificalFeeding/>,
+            element: <UpdateArtificalFeeding />,
           },
 
           {
@@ -355,12 +339,12 @@ export const router = createBrowserRouter([
             path: "/WeaningMonth18",
             element: <WeaningMonth18 />,
           },
-                   
+
           {
             path: "/WeaningMonth1Ar",
             element: <WeaningMonth1Ar />,
           },
-        
+
           {
             path: "/WeaningMonth6Ar",
             element: <WeaningMonth6Ar />,
@@ -373,7 +357,7 @@ export const router = createBrowserRouter([
             path: "/WeaningMonth18Ar",
             element: <WeaningMonth18Ar />,
           },
-        
+
           {
             path: "/BreastFeedingMonth1",
             element: <BreastFeedingMonth1 />,
@@ -388,12 +372,12 @@ export const router = createBrowserRouter([
             path: "/BreastFeedingMonth12",
             element: <BreastFeedingMonth12 />,
           },
-         
+
           {
             path: "/BreastFeedingMonth18",
             element: <BreastFeedingMonth18 />,
           },
-        
+
           {
             path: "/BreastFeedingMonth1Ar",
             element: <BreastFeedingMonth1Ar />,
@@ -408,7 +392,6 @@ export const router = createBrowserRouter([
             path: "/BreastFeedingMonth12Ar",
             element: <BreastFeedingMonth12Ar />,
           },
-
 
           {
             path: "/BreastFeedingMonth18Ar",
@@ -457,7 +440,7 @@ export const router = createBrowserRouter([
             path: "/AddBreastFeeding",
             element: <AddBreastFeeding />,
           },
-          
+
           {
             path: "/AddArtificalFeeding",
             element: <AddArtificalFeeding />,
@@ -478,10 +461,10 @@ export const router = createBrowserRouter([
           },
 
           {
-            path : "*",
-            element : <NotFound />,
+            path: "*",
+            element: <NotFound />,
           },
-          
+
           {
             path: "/ChildMilestonesMonth6",
             element: <ChildMilestonesMonth6 />,
@@ -501,7 +484,7 @@ export const router = createBrowserRouter([
             path: "/ChildMilestonesMonth15",
             element: <ChildMilestonesMonth15 />,
           },
-          
+
           {
             path: "/ChildMilestonesMonth18",
             element: <ChildMilestonesMonth18 />,
@@ -511,7 +494,7 @@ export const router = createBrowserRouter([
             path: "/ChildMilestonesMonth21",
             element: <ChildMilestonesMonth21 />,
           },
-         
+
           {
             path: "/ChildMilestonesMonth1Ar",
             element: <ChildMilestonesMonth1Ar />,
@@ -537,7 +520,6 @@ export const router = createBrowserRouter([
             element: <ChildMilestonesMonth12Ar />,
           },
 
-
           {
             path: "/ChildMilestonesMonth15Ar",
             element: <ChildMilestonesMonth15Ar />,
@@ -553,7 +535,6 @@ export const router = createBrowserRouter([
             element: <ChildMilestonesMonth21Ar />,
           },
 
-
           {
             path: "/Nutrition",
             element: <Nutrition />,
@@ -561,46 +542,43 @@ export const router = createBrowserRouter([
 
           {
             path: "/Weaning",
-            element: <Weaning/>,
+            element: <Weaning />,
           },
-
 
           {
             path: "/BreastFeeding",
-            element: <BreastFeeding/>,
+            element: <BreastFeeding />,
           },
 
           {
             path: "/ArtificalFeeding",
-            element: <ArtificalFeeding/>,
+            element: <ArtificalFeeding />,
           },
 
           {
             path: "/CommonIssues",
-            element: <CommonIssues/>,
+            element: <CommonIssues />,
           },
-         
-         
+
           {
             path: "/AddIssue",
-            element: <AddIssue/>,
+            element: <AddIssue />,
           },
-     
+
           {
             path: "/ShowDetails/:id",
-            element: <ShowDetails/>,
+            element: <ShowDetails />,
           },
           {
             path: "/ShowDetailsAr/:id",
-            element: <ShowDetailsAr/>,
+            element: <ShowDetailsAr />,
           },
-
 
           {
             path: "/BabyHome",
             element: <BabyHome />,
           },
-          
+
           {
             path: "/Babygrowth",
             element: <Babygrowth />,
@@ -617,40 +595,40 @@ export const router = createBrowserRouter([
           },
           {
             path: "/BodaychangeMonth1Ar",
-            element: <BodayChangeMonth1Ar/>,
+            element: <BodayChangeMonth1Ar />,
           },
           {
             path: "/BodaychangeMonth2Ar",
-            element: <BodyChangeMonth2Ar/>,
+            element: <BodyChangeMonth2Ar />,
           },
           {
             path: "/BodaychangeMonth3Ar",
-            element: <BodyChangeMonth3Ar/>,
+            element: <BodyChangeMonth3Ar />,
           },
           {
             path: "/BodaychangeMonth4Ar",
-            element: <BodyChangeMonth4Ar/>,
+            element: <BodyChangeMonth4Ar />,
           },
           {
             path: "/BodaychangeMonth5Ar",
-            element: <BodyChangeMonth5Ar/>,
+            element: <BodyChangeMonth5Ar />,
           },
           {
             path: "/BodaychangeMonth6Ar",
-            element: <BodyChangeMonth6Ar/>,
+            element: <BodyChangeMonth6Ar />,
           },
           {
             path: "/BodaychangeMonth7Ar",
-            element: <BodyChangeMonth7Ar/>,
+            element: <BodyChangeMonth7Ar />,
           },
 
           {
             path: "/BodaychangeMonth8Ar",
-            element: <BodyChangeMonth8Ar/>,
+            element: <BodyChangeMonth8Ar />,
           },
           {
             path: "/BodaychangeMonth9Ar",
-            element: <BodyChangeMonth9Ar/>,
+            element: <BodyChangeMonth9Ar />,
           },
 
           {
@@ -670,44 +648,44 @@ export const router = createBrowserRouter([
 
           {
             path: "/BodychangeMonth4",
-            element: <BodychangeMonth4/>,
+            element: <BodychangeMonth4 />,
           },
 
           {
             path: "/BodychangeMonth5",
-            element: <BodychangeMonth5/>,
+            element: <BodychangeMonth5 />,
           },
 
           {
             path: "/BodychangeMonth6",
-            element: <BodychangeMonth6/>,
+            element: <BodychangeMonth6 />,
           },
 
           {
             path: "/BodychangeMonth7",
-            element: <BodychangeMonth7/>,
+            element: <BodychangeMonth7 />,
           },
 
           {
             path: "/BodychangeMonth8",
-            element: <BodychangeMonth8/>,
+            element: <BodychangeMonth8 />,
           },
 
           {
             path: "/BodychangeMonth9",
-            element: <BodychangeMonth9/>,
+            element: <BodychangeMonth9 />,
           },
 
           {
             path: "/UpdateBodyChange/:id",
             element: <UpdateBodyChange />,
           },
-          
+
           {
             path: "/UpdateBabygrowth/:id",
             element: <UpdateBabygrowth />,
           },
-          
+
           {
             path: "/Feeding",
             element: <Feeding />,
@@ -716,12 +694,12 @@ export const router = createBrowserRouter([
             path: "/AddFeeding",
             element: <AddFeeding />,
           },
-          
+
           {
             path: "/UpdateFood/:id",
             element: <UpdateFood />,
           },
-          
+
           {
             path: "/FeedingMonth1",
             element: <FeedingMonth1 />,
@@ -730,7 +708,7 @@ export const router = createBrowserRouter([
             path: "/FeedingMonth1Ar",
             element: <FeedingMonth1Ar />,
           },
-          
+
           {
             path: "/FeedingMonth3Ar",
             element: <FeedingMonth3Ar />,
@@ -739,17 +717,17 @@ export const router = createBrowserRouter([
             path: "/FeedingMonth6Ar",
             element: <FeedingMonth6Ar />,
           },
-          
+
           {
             path: "/FeedingMonth3",
             element: <FeedingMonth3 />,
           },
-          
+
           {
             path: "/FeedingMonth6",
             element: <FeedingMonth6 />,
           },
-         
+
           {
             path: "/Vitamins",
             element: <Vitamins />,
@@ -775,7 +753,7 @@ export const router = createBrowserRouter([
             path: "/ExercisesAr",
             element: <ExercisesAr />,
           },
-        
+
           {
             path: "/UpdateExercise/:id",
             element: <UpdateExercise />,
@@ -789,7 +767,7 @@ export const router = createBrowserRouter([
             path: "/CoursesAr",
             element: <CoursesAr />,
           },
-          
+
           {
             path: "/UpdateCourses/:id",
             element: <UpdateCourses />,
@@ -803,7 +781,7 @@ export const router = createBrowserRouter([
             path: "/BabyGrowthMonth1Ar",
             element: <BabyGrowthMonth1Ar />,
           },
-          
+
           {
             path: "/BabyGrowthMonth2",
             element: <BabyGrowthMonth2 />,
@@ -812,7 +790,7 @@ export const router = createBrowserRouter([
             path: "/BabyGrowthMonth2Ar",
             element: <BabyGrowthMonth2Ar />,
           },
-          
+
           {
             path: "/BabyGrowthMonth3",
             element: <BabyGrowthMonth3 />,
@@ -821,7 +799,7 @@ export const router = createBrowserRouter([
             path: "/BabyGrowthMonth3Ar",
             element: <BabyGrowthMonth3Ar />,
           },
-          
+
           {
             path: "/BabyGrowthMonth4",
             element: <BabyGrowthMonth4 />,
@@ -830,16 +808,16 @@ export const router = createBrowserRouter([
             path: "/BabyGrowthMonth4Ar",
             element: <BabyGrowthMonth4Ar />,
           },
-          
+
           {
             path: "/BabyGrowthMonth5",
-            element: <BabyGrowthMonth5/>,
+            element: <BabyGrowthMonth5 />,
           },
           {
             path: "/BabyGrowthMonth5Ar",
-            element: <BabyGrowthMonth5Ar/>,
+            element: <BabyGrowthMonth5Ar />,
           },
-          
+
           {
             path: "/BabyGrowthMonth6",
             element: <BabyGrowthMonth6 />,
@@ -848,7 +826,7 @@ export const router = createBrowserRouter([
             path: "/BabyGrowthMonth6Ar",
             element: <BabyGrowthMonth6Ar />,
           },
-          
+
           {
             path: "/BabyGrowthMonth7",
             element: <BabyGrowthMonth7 />,
@@ -858,7 +836,7 @@ export const router = createBrowserRouter([
             path: "/BabyGrowthMonth7Ar",
             element: <BabyGrowthMonth7Ar />,
           },
-          
+
           {
             path: "/BabyGrowthMonth8",
             element: <BabyGrowthMonth8 />,
@@ -867,7 +845,7 @@ export const router = createBrowserRouter([
             path: "/BabyGrowthMonth8Ar",
             element: <BabyGrowthMonth8Ar />,
           },
-          
+
           {
             path: "/BabyGrowthMonth9",
             element: <BabyGrowthMonth9 />,
@@ -880,5 +858,4 @@ export const router = createBrowserRouter([
       },
     ],
   },
-]
-);
+]);

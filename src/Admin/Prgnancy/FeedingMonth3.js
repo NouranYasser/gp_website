@@ -42,73 +42,65 @@ const FoodMonth3 = () => {
       });
   };
 
-
   return (
     <>
-     <div className="fo-m_foot">
-     <div className="b-con">
-     <Link to={"/FeedingMonth3Ar"}>
-                    <button className="btnArabic-c">Arabic</button>
-                  </Link>
-      </div>
+      <div className="fo-m_foot">
+        <div className="b-con">
+          <Link to={"/FeedingMonth3Ar"}>
+            <button className="btnArabic-c">Arabic</button>
+          </Link>
+        </div>
         {foods.err && <p>{foods.err}</p>}
         {foods.loading ? (
           <p>Loading...</p>
         ) : (
           <div className="div-container-fm">
-          <table className="table-content-fm"> 
-          
-            <thead>
-              <tr>
-                <th>Title</th>
-                <th>Description</th>
-                <th>Image</th>
-                <th></th>
-                <td></td>
-              
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>{foods.results.title}</td>
-                <td>{foods.results.description}</td>
-                <td>
-                  {foods.results.FullSrc ? (
-                    <img
-                      src={foods.results.FullSrc}
-                      alt="Baby Image"
-                      style={{ maxWidth: '150px', maxHeight: '150px' }}
-                    />
-                  ) : (
-                    <span>No image available</span>
-                  )}
-                </td>
-                <td>
-                <Link to={"/UpdateFood/" + foods.results.id}>
-                    <button className="btnUpdate-fm">Update</button>
-                  </Link>
-                  
+            <table className="table-content-fm">
+              <thead>
+                <tr>
+                  <th>Title</th>
+                  <th>Description</th>
+                  <th>Image</th>
+                  <th></th>
+                  <td></td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>{foods.results.title}</td>
+                  <td>{foods.results.description}</td>
+                  <td>
+                    {foods.results.FullSrc ? (
+                      <img
+                        src={foods.results.FullSrc}
+                        alt="Baby Image"
+                        style={{ maxWidth: "150px", maxHeight: "150px" }}
+                      />
+                    ) : (
+                      <span>No image available</span>
+                    )}
                   </td>
                   <td>
-                  <button
-                    className="btnDelete-fm"
-                    onClick={(e) => {
-                      deleteFood(foods.results.id);
-                    }}
-                  >
-                    Delete
-                  </button>
-                 
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          
+                    <Link to={"/UpdateFood/" + foods.results.id}>
+                      <button className="btnUpdate-fm">Update</button>
+                    </Link>
+                  </td>
+                  <td>
+                    <button
+                      className="btnDelete-fm"
+                      onClick={(e) => {
+                        deleteFood(foods.results.id);
+                      }}
+                    >
+                      Delete
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         )}
-
       </div>
-    
     </>
   );
 };
