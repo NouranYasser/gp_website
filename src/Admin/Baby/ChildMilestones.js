@@ -11,7 +11,7 @@ const ChildMilestones = () => {
       <>  
 
 <br></br>  <br></br>
-<Link to="/AddChildGrowth">
+<Link to="/AddChildMilestones">
         <button className="btn-addBCh">
           Add Data in Child Milestones
         </button>
@@ -20,7 +20,7 @@ const ChildMilestones = () => {
 <br></br>
 <br></br>
 <br></br>
-<br></br> 
+
 <div className="fo-container">
       <div>
       <Link to="/ChildMilestonesMonth1">

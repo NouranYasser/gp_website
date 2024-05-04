@@ -14,7 +14,7 @@ const Vitamins = () => {
   useEffect(() => {
     setVitamines({ ...vitamines, loading: true });
     axios
-      .get("https://gradhub.hwnix.com/api/get_vitamins")
+      .get("https://gradhub.hwnix.com/api/get_vitamins/en")
       .then((resp) => {
         setVitamines({
           ...vitamines,

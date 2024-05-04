@@ -44,7 +44,9 @@ function ProductCard() {
               <button className="btnShow">Show Details</button>
             </Link>
           </div>
+        
         </div>
+        
       ))}
     </div>
   );

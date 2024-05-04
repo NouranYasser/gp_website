@@ -67,7 +67,7 @@ const WeaningMonth18 = () => {
                     <td>{result.title}</td>
                     <td>{result.description}</td>
                     <td>
-                      <Link to={"/Update/" + result.id}>
+                      <Link to={"/UpdateWeaning/" + result.id}>
                         <button className="btnUpdate">Update</button>
                       </Link>
                     </td>
@@ -84,7 +84,13 @@ const WeaningMonth18 = () => {
                   </tr>
                 ))}
               </tbody>
+              <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
             </table>
+         
+            <Link to={"/WeaningMonth18Ar"}>
+                    <button className="btnArabic">Arabic</button>
+        </Link>
+         
           </div>
         )}
       </div>

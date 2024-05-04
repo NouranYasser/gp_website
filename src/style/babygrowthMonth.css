@@ -55,3 +55,14 @@
     color: rgb(251, 250, 252);
     /* margin: 30px; */
 }
+.btnArabic{
+  font-size: large;
+    width: 100px;
+    height: 30px;
+    border-radius: 20px;
+    border: none;
+    background-color: rgb(83, 78, 158); 
+    color: rgb(251, 250, 252);
+    margin-top: 320px;
+    margin-left: -70px;  
+}

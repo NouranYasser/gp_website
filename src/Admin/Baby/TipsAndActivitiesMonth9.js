@@ -66,7 +66,7 @@ const TipsAndActivitiesMonth9 = () => {
                     <td>{result.title}</td>
                     <td>{result.description}</td>
                     <td>
-                      <Link to={"/Update/" + result.id}>
+                      <Link to={"/UpdateTipsAndActivities/" + result.id}>
                         <button className="btnUpdate">Update</button>
                       </Link>
                     </td>
@@ -84,6 +84,11 @@ const TipsAndActivitiesMonth9 = () => {
                 ))}
               </tbody>
             </table>
+            
+            <Link to={"/TipsAndActivitiesMonth9Ar"}>
+                    <button className="btnArabic">Arabic</button>
+        </Link>
+
           </div>
         )}
       </div>

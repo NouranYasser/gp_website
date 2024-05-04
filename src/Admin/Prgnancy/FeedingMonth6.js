@@ -14,7 +14,7 @@ const FoodMonth6 = () => {
   useEffect(() => {
     setFoods({ ...foods, loading: true });
     axios
-      .get("https://gradhub.hwnix.com/api/get_Food_6")
+      .get("https://gradhub.hwnix.com/api/get_Food_6/en")
       .then((resp) => {
         setFoods({
           ...foods,

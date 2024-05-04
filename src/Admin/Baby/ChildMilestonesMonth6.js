@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import "../../style/babygrowthMonth.css";
 
-const ChildGrowthMonth6 = () => {
+const ChildMilestonesMonth6 = () => {
   const [tips, setTips] = useState({
     loading: true,
     results: [],
@@ -71,7 +71,7 @@ const ChildGrowthMonth6 = () => {
                    
 
                     <td>
-                      <Link to={"/Update/" + result.id}>
+                      <Link to={"/UpdateChildMilestones/" + result.id}>
                         <button className="btnUpdate">Update</button>
                       </Link>
                     </td>
@@ -89,6 +89,11 @@ const ChildGrowthMonth6 = () => {
                 ))}
               </tbody>
             </table>
+        
+            <Link to={"/ChildMilestonesMonth6Ar"}>
+                    <button className="btnArabic">Arabic</button>
+        </Link>
+        
           </div>
         )}
       </div>
@@ -96,6 +101,6 @@ const ChildGrowthMonth6 = () => {
   );
 };
 
-export default ChildGrowthMonth6;
+export default ChildMilestonesMonth6;
 
 

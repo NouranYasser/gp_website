@@ -71,7 +71,7 @@ const ArtificalFeedingMonth18 = () => {
                    
 
                     <td>
-                      <Link to={"/Update/" + result.id}>
+                      <Link to={"/UpdateArtificalFeeding/" + result.id}>
                         <button className="btnUpdate">Update</button>
                       </Link>
                     </td>
@@ -89,6 +89,10 @@ const ArtificalFeedingMonth18 = () => {
                 ))}
               </tbody>
             </table>
+            <Link to={"/ArtificalFeedingMonth18Ar"}>
+                    <button className="btnArabic">Arabic</button>
+        </Link>
+         
           </div>
         )}
       </div>

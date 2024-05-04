@@ -13,7 +13,7 @@ const BabyGrowthMonth1 = () => {
   useEffect(() => {
     setBabygrowths({ ...babygrowths, loading: true });
     axios
-      .get(`https://gradhub.hwnix.com/api/get_babyGrowth_1`)
+      .get(`https://gradhub.hwnix.com/api/get_babyGrowth_1/en`)
       .then((resp) => {
         setBabygrowths({
           ...babygrowths,
@@ -96,8 +96,14 @@ const BabyGrowthMonth1 = () => {
                 </td>
               </tr>
             </tbody>
-          </table></div>
+          </table>
+          <Link to={"/BabyGrowthMonth1Ar"}>
+                    <button className="btnArabic">Arabic</button>
+        </Link>
+          
+                  </div>
         )}
+        
       </div>
     </>
   );

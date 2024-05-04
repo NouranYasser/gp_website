@@ -70,7 +70,7 @@ const ArtificalFeedingMonth6 = () => {
                     
 
                     <td>
-                      <Link to={"/Update/" + result.id}>
+                      <Link to={"/UpdateArtificalFeeding/" + result.id}>
                         <button className="btnUpdate">Update</button>
                       </Link>
                     </td>
@@ -88,6 +88,10 @@ const ArtificalFeedingMonth6 = () => {
                 ))}
               </tbody>
             </table>
+            <Link to={"/ArtificalFeedingMonth6Ar"}>
+                    <button className="btnArabic">Arabic</button>
+        </Link>
+         
           </div>
         )}
       </div>

@@ -7,6 +7,8 @@ function AddArtificalFeeding() {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [month, setMonth] = useState('');
+  const [title_ar, setTitleAr] = useState('');
+  const [description_ar, setDescriptionAr] = useState('');
   const [message, setMessage] = useState('');
   const navigate = useNavigate();
 
@@ -17,10 +19,11 @@ function AddArtificalFeeding() {
     formData.append('title', title);
     formData.append('description', description);
     formData.append('month', month);
-    
+    formData.append('title_ar', title_ar);
+    formData.append('description_ar', description_ar);
 
     try {
-      const response = await axios.post(`https://gradhub.hwnix.com/api/add_DESC/10/en`, formData, {
+      const response = await axios.post(`https://gradhub.hwnix.com/api/add_DESC/11`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
@@ -66,6 +69,25 @@ function AddArtificalFeeding() {
          
         </select>
         <br /><br />
+
+        <label htmlFor="title" className='CH'> Title In Arabic:</label>
+          <input
+            className='outbox'
+            type="text"
+            id="title"
+            value={title_ar}
+            onChange={(e) => setTitleAr(e.target.value)}
+          />
+          <br></br>
+          <label htmlFor="description" className='label-CH'>Description In Arabic:</label><br />
+          <textarea
+            id="description"
+            value={description_ar}
+            onChange={(e) => setDescriptionAr(e.target.value)}
+          />
+          <br />
+          <br /><br />
+
         <button type="submit" className='b-pregnancy'>Submit</button>
       </form>
       {message && <p>{message}</p>}

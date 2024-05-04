@@ -13,7 +13,7 @@ const FoodMonth3 = () => {
   useEffect(() => {
     setFoods({ ...foods, loading: true });
     axios
-      .get("https://gradhub.hwnix.com/api/get_Food_3")
+      .get("https://gradhub.hwnix.com/api/get_Food_3/en")
       .then((resp) => {
         setFoods({
           ...foods,
