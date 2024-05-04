@@ -7,6 +7,8 @@ import "../../style/updateVitamins.css";
 function UpdateVitamin() {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
+  const [title_ar, setTitleAr] = useState('');
+  const [description_ar, setDescriptionAr] = useState('');
   const [image, setImage] = useState(null);
   const [message, setMessage] = useState('');
   const navigate = useNavigate();
@@ -18,6 +20,8 @@ function UpdateVitamin() {
     const formData = new FormData();
     if (title !== '') formData.append('title', title);
     if (description !== '') formData.append('description', description);
+    if (title_ar !== '') formData.append('title_ar', title_ar);
+    if (description_ar !== '') formData.append('description_ar', description_ar);
     if (image !== null) formData.append('image', image);
 
     try {
@@ -57,6 +61,30 @@ function UpdateVitamin() {
           id="description-V"
           value={description}
           onChange={(e) => setDescription(e.target.value)}
+        />
+      </div>
+        </div>
+
+        <div className='row-V'>
+      <div className=' clo-25-V'>
+        <label htmlFor="title"className='label-u-V'>Title In Arabic:</label></div>
+        <div>
+        <input
+          type="text"
+          id="title"
+          value={title_ar}
+          onChange={(e) => setTitleAr(e.target.value)}
+        /></div>
+        </div>
+        <div className='row-V'>
+      <div className=' clo-25-V'>
+     
+  <label htmlFor="description"className='label-u-V'>Description In Arabic:</label></div>
+        <div>
+        <textarea
+          id="description-V"
+          value={description_ar}
+          onChange={(e) => setDescriptionAr(e.target.value)}
         />
       </div>
         </div>

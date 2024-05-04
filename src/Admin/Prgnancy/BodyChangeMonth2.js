@@ -77,7 +77,7 @@ const BodychangeMonth2 = () => {
                     <img
                       src={bodychanges.results.FullSrc}
                       alt="Baby Image"
-                      style={{ maxWidth: '300px', maxHeight: '200px' }}
+                      style={{ maxWidth: '200px', maxHeight: '200px' }}
                     />
                   ) : (
                     <span>No image available</span>
@@ -102,7 +102,13 @@ const BodychangeMonth2 = () => {
               </tr>
             </tbody>
           </table>
+<<<<<<< HEAD
           
+=======
+          <Link to={"/BodaychangeMonth2Ar"}>
+                    <button className="btnArabic">Arabic</button>
+                  </Link>
+>>>>>>> 995dc6bad1f3c8c92983407a94a1d1e065a22f66
           </div>
         )}
       </div>

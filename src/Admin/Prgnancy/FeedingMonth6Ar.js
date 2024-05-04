@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import "../../style/FoodMonth.css";
 
-const FoodMonth1 = () => {
+const FoodMonth6Ar = () => {
   const [foods, setFoods] = useState({
     loading: true,
     results: {},
@@ -14,7 +14,7 @@ const FoodMonth1 = () => {
   useEffect(() => {
     setFoods({ ...foods, loading: true });
     axios
-      .get("https://gradhub.hwnix.com/api/get_Food_1/en")
+      .get("https://gradhub.hwnix.com/api/get_Food_6/ar")
       .then((resp) => {
         setFoods({
           ...foods,
@@ -55,19 +55,36 @@ const FoodMonth1 = () => {
           <table className="table-content-fm"> 
             <thead>
               <tr>
-                <th>Title</th>
-                <th>Description</th>
-                <th>Month</th>
-                <th>Image</th>
                 <th></th>
                 <th></th>
-              
+                <th>الصورة</th>
+                <th>الشهر</th>
+                <th>الوصف</th>
+                <th>العنوان</th>            
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>{foods.results.title}</td>
-                <td>{foods.results.description}</td>
+
+              <td>
+                    <button
+                    className="btnDelete-fm"
+                    onClick={(e) => {
+                      deleteFood(foods.results.id);
+                    }}
+                  >
+                    إزالة
+                    
+                  </button>
+                  
+                </td>   
+                <td>
+
+                <Link to={"/UpdateFood/" + foods.results.id}>
+                    <button className="btnUpdate-fm">تعديل</button>
+                </Link>              
+                  </td> 
+               
                 <td>
                   {foods.results.FullSrc ? (
                     <img
@@ -79,30 +96,13 @@ const FoodMonth1 = () => {
                     <span>No image available</span>
                   )}
                 </td>
-                <td>
-
-                <Link to={"/UpdateFood/" + foods.results.id}>
-                    <button className="btnUpdate-fm">Update</button>
-                </Link>              
-                  </td>
-                    <td>
-                    <button
-                    className="btnDelete-fm"
-                    onClick={(e) => {
-                      deleteFood(foods.results.id);
-                    }}
-                  >
-                    Delete
-                    
-                  </button>
-                  
-                </td>
+                
+                      
+                <td>{foods.results.description_ar}</td>
+                <td>{foods.results.title_ar}</td>
               </tr>
             </tbody>
           </table>
-          <Link to={"/FeedingMonth1Ar"}>
-                    <button className="btnArabic">Arabic</button>
-                  </Link>
           </div>
         )}
 
@@ -112,4 +112,4 @@ const FoodMonth1 = () => {
   );
 };
 
-export default FoodMonth1;
+export default FoodMonth6Ar;
