@@ -107,11 +107,6 @@ const BodychangeMonth2 = () => {
           {/* <Link to={"/BodaychangeMonth2Ar"}>
                     <button className="btnArabic">Arabic</button>
                   </Link> */}
-=======
-
-          <Link to={"/BodaychangeMonth2Ar"}>
-                    <button className="btnArabic">Arabic</button>
-                  </Link>
 
           </div>
         )}
