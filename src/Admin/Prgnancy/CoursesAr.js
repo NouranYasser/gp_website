@@ -61,7 +61,6 @@ const CoursesAr = () => {
                 <th></th>  
                 <th>الڤيديو</th>
                 <th>الوصف</th>
-                <th>العنوان</th>
                              
               </tr>
             </thead>
@@ -97,7 +96,7 @@ const CoursesAr = () => {
                   </td>          
                     
                   <td>{course.description_ar}</td>
-                   <td>{course.title_ar}</td>
+                   {/* <td>{course.title_ar}</td> */}
                 </tr>
               ))}
             </tbody>

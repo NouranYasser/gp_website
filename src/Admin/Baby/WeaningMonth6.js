@@ -14,7 +14,7 @@ const WeaningMonth6 = () => {
   useEffect(() => {
     setTips({ ...tips, loading: true });
     axios
-      .get(`https://gradhub.hwnix.com/api/get_weaning/6`)
+      .get(`https://gradhub.hwnix.com/api/get_weaning/6/en`)
       .then((resp) => {
         setTips({
           ...tips,
@@ -68,7 +68,7 @@ const WeaningMonth6 = () => {
                     <td>{result.description}</td>
                 
                     <td>
-                      <Link to={"/Update/" + result.id}>
+                      <Link to={"/UpdateWeaning/" + result.id}>
                         <button className="btnUpdate">Update</button>
                       </Link>
                     </td>
@@ -88,6 +88,11 @@ const WeaningMonth6 = () => {
               <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
               
             </table>
+
+            <Link to={"/WeaningMonth6Ar"}>
+                    <button className="btnArabic">Arabic</button>
+        </Link>
+
           </div>
         )}
       </div>

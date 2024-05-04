@@ -14,7 +14,7 @@ const BreastFeedingMonth1 = () => {
   useEffect(() => {
     setTips({ ...tips, loading: true });
     axios
-      .get(`https://gradhub.hwnix.com/api/get_BreastFeeding/1`)
+      .get(`https://gradhub.hwnix.com/api/get_BreastFeeding/1/en`)
       .then((resp) => {
         setTips({
           ...tips,
@@ -71,7 +71,7 @@ const BreastFeedingMonth1 = () => {
                    
 
                     <td>
-                      <Link to={"/Update/" + result.id}>
+                      <Link to={"/UpdateBreastFeeding/" + result.id}>
                         <button className="btnUpdate">Update</button>
                       </Link>
                     </td>
@@ -89,6 +89,10 @@ const BreastFeedingMonth1 = () => {
                 ))}
               </tbody>
             </table>
+            <Link to={"/BreastFeedingMonth1Ar"}>
+                    <button className="btnArabic">Arabic</button>
+        </Link>
+
           </div>
         )}
       </div>

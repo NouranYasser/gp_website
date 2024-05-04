@@ -62,7 +62,7 @@ const Courses = () => {
           <table className="table-content-C">
             <thead>
               <tr>
-                <th>Title</th>
+                
                 <th>Description</th>
                 <th>Video</th>
                 <th></th>
@@ -72,7 +72,6 @@ const Courses = () => {
             <tbody>
               {courses.results.map((course) => (
                 <tr key={course.id}>
-                  <td>{course.title}</td>
                   <td>{course.description}</td>
                   <td>
                     {course.video ? (

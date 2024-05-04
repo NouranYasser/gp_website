@@ -14,7 +14,7 @@ const ArtificalFeedingMonth1 = () => {
   useEffect(() => {
     setTips({ ...tips, loading: true });
     axios
-      .get(`https://gradhub.hwnix.com/api/get_BottleFeeding/1`)
+      .get(`https://gradhub.hwnix.com/api/get_BottleFeeding/1/en`)
       .then((resp) => {
         setTips({
           ...tips,
@@ -70,7 +70,7 @@ const ArtificalFeedingMonth1 = () => {
                    
 
                     <td>
-                      <Link to={"/Update/" + result.id}>
+                      <Link to={"/UpdateArtificalFeeding/" + result.id}>
                         <button className="btnUpdate">Update</button>
                       </Link>
                     </td>
@@ -88,6 +88,11 @@ const ArtificalFeedingMonth1 = () => {
                 ))}
               </tbody>
             </table>
+
+            <Link to={"/ArtificalFeedingMonth1Ar"}>
+                    <button className="btnArabic">Arabic</button>
+        </Link>
+
           </div>
         )}
       </div>

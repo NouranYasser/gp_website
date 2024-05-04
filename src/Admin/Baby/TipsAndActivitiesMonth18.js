@@ -14,7 +14,7 @@ const TipsAndActivitiesMonth18 = () => {
   useEffect(() => {
     setTips({ ...tips, loading: true });
     axios
-      .get(`https://gradhub.hwnix.com/api/get_tips/18`)
+      .get(`https://gradhub.hwnix.com/api/get_tip/18/en`)
       .then((resp) => {
         setTips({
           ...tips,
@@ -66,7 +66,7 @@ const TipsAndActivitiesMonth18 = () => {
                     <td>{tip.title}</td>
                     <td>{tip.description}</td>
                     <td>
-                      <Link to={"/Update/" + tip.id}>
+                      <Link to={"/UpdateTipsAndActivities/" + tip.id}>
                         <button className="btnUpdate">Update</button>
                       </Link>
                     </td>
@@ -84,6 +84,11 @@ const TipsAndActivitiesMonth18 = () => {
                 ))}
               </tbody>
             </table>
+
+            <Link to={"/TipsAndActivitiesMonth18Ar"}>
+                    <button className="btnArabic">Arabic</button>
+        </Link>
+
           </div>
         )}
       </div>

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import "../../style/babygrowthMonth.css";
 
-const ChildGrowthMonth12 = () => {
+const ChildMilestonesMonth12 = () => {
   const [tips, setTips] = useState({
     loading: true,
     results: [],
@@ -14,7 +14,7 @@ const ChildGrowthMonth12 = () => {
   useEffect(() => {
     setTips({ ...tips, loading: true });
     axios
-      .get(`https://gradhub.hwnix.com/api/get_ChildGrowth/12`)
+      .get(`https://gradhub.hwnix.com/api/get_ChildGrowth/12/en`)
       .then((resp) => {
         setTips({
           ...tips,
@@ -70,7 +70,7 @@ const ChildGrowthMonth12 = () => {
                    
 
                     <td>
-                      <Link to={"/Update/" + result.id}>
+                      <Link to={"/UpdateChildMilestones/" + result.id}>
                         <button className="btnUpdate">Update</button>
                       </Link>
                     </td>
@@ -88,6 +88,11 @@ const ChildGrowthMonth12 = () => {
                 ))}
               </tbody>
             </table>
+        
+            <Link to={"/ChildMilestonesMonth12Ar"}>
+                    <button className="btnArabic">Arabic</button>
+        </Link>
+        
           </div>
         )}
       </div>
@@ -95,6 +100,6 @@ const ChildGrowthMonth12 = () => {
   );
 };
 
-export default ChildGrowthMonth12;
+export default ChildMilestonesMonth12;
 
 
