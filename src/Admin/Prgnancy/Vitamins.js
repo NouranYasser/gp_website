@@ -46,11 +46,13 @@ const Vitamins = () => {
   return (
     <>
       <div className='v_foot'>
-        <div className="b_con">
+        <div className="b_conV">
         <Link to="/AddVitamin">
           <button className="btn-addV"> Add Data in Vitamins</button>
         </Link>
-        
+        <Link to="/VitaminsAr">
+          <button className="btn-addV"> Arabic</button>
+        </Link>
         </div>
         {vitamines.err && <p>{vitamines.err}</p>}
         {vitamines.loading ? (
@@ -103,9 +105,7 @@ const Vitamins = () => {
                 ))}
               </tbody>
             </table>
-            <Link to="/VitaminsAr">
-          <button className="btnArabic"> Arabic</button>
-        </Link>
+          
           </div>
         )}
         {/* <div>
