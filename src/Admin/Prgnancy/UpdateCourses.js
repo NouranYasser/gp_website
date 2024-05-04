@@ -39,17 +39,7 @@ function UpdateCourses() {
     <div className='body-u-C'>
     <div className='container-u-C'>
       <form onSubmit={handleSubmit}>
-      <div className='row-C'>
-      <div className=' clo-25-C'>
-        <label htmlFor="title"className='label-u-C'>Title:</label></div>
-        <div>
-        <input
-          type="text"
-          id="title"
-          value={title}
-          onChange={(e) => setTitle(e.target.value)}
-        /></div>
-        </div>
+     
         <div className='row-C'>
       <div className=' clo-25-C'>
         <label htmlFor="description"className='label-u-C'>Description:</label></div>
@@ -61,17 +51,7 @@ function UpdateCourses() {
         /></div>
         </div>
 
-        <div className='row-C'>
-      <div className=' clo-25-C'>
-        <label htmlFor="title"className='label-u-C'>Title In Arabic:</label></div>
-        <div>
-        <input
-          type="text"
-          id="title"
-          value={title_ar}
-          onChange={(e) => setTitleAr(e.target.value)}
-        /></div>
-        </div>
+
         <div className='row-C'>
       <div className=' clo-25-C'>
         <label htmlFor="description"className='label-u-C'>Description In Arabic:</label></div>

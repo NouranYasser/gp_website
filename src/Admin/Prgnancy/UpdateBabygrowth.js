@@ -27,7 +27,7 @@ function UpdateBabygrowth() {
     if (image !== null) formData.append('image', image);
 
     try {
-      const response = await axios.post(`https://gradhub.hwnix.com/api/update_one/${id}`, formData, {
+      const response = await axios.post(`https://gradhub.hwnix.com/api/update_DESC/${id}`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },

@@ -1,8 +1,14 @@
 .v_foot{
   min-height: calc(100vh - 220px);
 }
-.b_con{
-
+.b_conV{
+  margin-top: 10PX;
+  display: flex;
+  justify-content: center; /* Horizontally center the items */
+  align-items: center; 
+  /* display: flex;
+  justify-content: center;
+  width: 100%; */
 }
 .div-container-v{
     margin-top: 15px;
@@ -60,7 +66,7 @@
   }
   .btn-addV{
     font-size: large;
-    width: 20%;
+    width: 100%;
     height: 40px;
     border-radius: 20px;
     border: none;
@@ -69,4 +75,6 @@
     /* margin-left: 600px;
     margin-top: 40px; */
     cursor: pointer;
+    margin-left:10PX;
+    margin-right: 10px;
   }

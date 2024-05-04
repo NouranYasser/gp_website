@@ -1,7 +1,7 @@
 import HomePage from "./Admin/HomePage.js";
-import ProductCardAr from "./Admin/Baby/ProductCardAr"
 import ProductListAr from "./Admin/Baby/ProductListAr"
 import ShowDetailsAr from "./Admin/Baby/ShowDetailsAr"
+
 import SignUp from "./Admin/Auth/SignUp.js";
 import Login from "./Admin/Auth/Login.js";
 import App from "./App";
@@ -87,8 +87,7 @@ import TipsAndActivitiesMonth12 from "../src/Admin/Baby/TipsAndActivitiesMonth12
 import TipsAndActivitiesMonth15 from "./Admin/Baby/TipsAndActivitiesMonth15.js";
 import TipsAndActivitiesMonth18 from "../src/Admin/Baby/TipsAndActivitiesMonth18.js";
 import TipsAndActivitiesMonth21 from "./Admin/Baby/TipsAndActivitiesMonth21.js";
-
-
+import ProductCardAr from "./Admin/Baby/ProductCardAr";
 import TipsAndActivitiesMonth1Ar from "../src/Admin/Baby/TipsAndActivitiesMonth1Ar.js";
 import TipsAndActivitiesMonth3Ar from "../src/Admin/Baby/TipsAndActivitiesMonth3Ar.js";
 import TipsAndActivitiesMonth6Ar from "../src/Admin/Baby/TipsAndActivitiesMonth6Ar.js";
@@ -162,8 +161,6 @@ import ArtificalFeedingMonth1Ar from "./Admin/Baby/ArtificalFeedingMonth1Ar"
 import ArtificalFeedingMonth6Ar from "./Admin/Baby/ArtificalFeedingMonth6Ar"
 import ArtificalFeedingMonth12Ar from "./Admin/Baby/ArtificalFeedingMonth12Ar"
 import ArtificalFeedingMonth18Ar from "./Admin/Baby/ArtificalFeedingMonth18Ar"
-
-
 import AddBreastFeeding from "./Admin/Baby/AddBreastFeeding"
 import AddArtificalFeeding from "./Admin/Baby/AddArtificalFeeding"
 import AddFeeding from "./Admin/Prgnancy/AddFeeding.js";
@@ -191,6 +188,10 @@ export const router = createBrowserRouter([
           {
             path: "/HomePage",
             element: <HomePage />,
+          },
+          {
+            path: "/ProductCardAr",
+            element: <ProductCardAr />,
           },
           
           {
@@ -333,10 +334,8 @@ export const router = createBrowserRouter([
           {
             path: "/UpdateArtificalFeeding/:id",
             element: <UpdateArtificalFeeding />,
+
           },
-
-
-
 
           {
             path: "/AddWeaning",
@@ -592,6 +591,10 @@ export const router = createBrowserRouter([
           {
             path: "/ShowDetails/:id",
             element: <ShowDetails/>,
+          },
+          {
+            path: "/ShowDetailsAr/:id",
+            element: <ShowDetailsAr/>,
           },
 
 

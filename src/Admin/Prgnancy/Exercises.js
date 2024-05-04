@@ -58,7 +58,7 @@ const Exercises = () => {
           <table className="table-content-E">
             <thead>
               <tr>
-                <th>Title</th>
+                
                 <th>Description</th>
                 <th>Video</th>
                 <th></th>
@@ -69,7 +69,7 @@ const Exercises = () => {
             <tbody>
               {exercises.results.map((exercise) => (
                 <tr key={exercise.id}>
-                  <td>{exercise.title}</td>
+                  
                   <td>{exercise.description}</td>
                   <td>
                     {exercise.video ? (

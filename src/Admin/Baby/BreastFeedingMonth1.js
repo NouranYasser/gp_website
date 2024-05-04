@@ -67,9 +67,6 @@ const BreastFeedingMonth1 = () => {
                   <tr key={result.id}>
                     <td>{result.title}</td>
                     <td>{result.description}</td>
-                    
-                   
-
                     <td>
                       <Link to={"/UpdateBreastFeeding/" + result.id}>
                         <button className="btnUpdate">Update</button>

@@ -4,9 +4,9 @@ import { useNavigate } from "react-router-dom";
 import "../../style/addBodyChange.css";
 
 function AddCourses() {
-  const [title, setTitle] = useState('');
+  // const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
-  const [title_ar, setTitleAr] = useState('');
+  // const [title_ar, setTitleAr] = useState('');
   const [description_ar, setDescriptionAr] = useState('');
   const [video_url, setvideo_url] = useState('');
   const [message, setMessage] = useState('');
@@ -16,9 +16,9 @@ function AddCourses() {
     e.preventDefault();
 
     const formData = new FormData();
-    formData.append('title', title);
+    // formData.append('title', title);
     formData.append('description', description);
-    formData.append('title_ar', title_ar);
+    // formData.append('title_ar', title_ar);
     formData.append('description_ar', description_ar);
     formData.append('video_url', video_url);
 
@@ -39,14 +39,6 @@ function AddCourses() {
     <>
       <div className='main-divCH'>
         <form className="form-p" onSubmit={handleSubmit}>
-          <label htmlFor="title" className='CH'>Title:</label>
-          <input
-            className='outbox'
-            type="text"
-            id="title"
-            value={title}
-            onChange={(e) => setTitle(e.target.value)}
-          />
 
           <label htmlFor="description" className='label-CH'>Description:</label><br />
           <textarea
@@ -55,15 +47,6 @@ function AddCourses() {
             onChange={(e) => setDescription(e.target.value)}
           />
           <br />
-
-          <label htmlFor="title" className='CH'>  Title In Arabic:</label>
-          <input
-            className='outbox'
-            type="text"
-            id="title"
-            value={title_ar}
-            onChange={(e) => setTitleAr(e.target.value)}
-          />
 
           <label htmlFor="description" className='label-CH'>Description In Arabic:</label><br />
           <textarea

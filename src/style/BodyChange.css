@@ -1,5 +1,14 @@
 .ch_foot{
     min-height: calc(100vh - 220px);
+    background-image: url("../images/R.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .btn-addBCh{
     font-size: large;
