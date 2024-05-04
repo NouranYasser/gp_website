@@ -1,5 +1,11 @@
 .bmo{
   min-height: calc(100vh - 220px);
+
+  /* background-image: url("../images/R.jpg");
+    background-repeat: round;
+    background-attachment: fixed;
+    height: 100%;
+    width: 100%; */
 }
 .div-container{
   margin-top: 15px;

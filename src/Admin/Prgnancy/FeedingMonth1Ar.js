@@ -95,14 +95,15 @@ const FoodMonth1Ar = () => {
                   ) : (
                     <span>No image available</span>
                   )}
-                </td>
-                
-                      
+                </td>               
                 <td>{foods.results.description_ar}</td>
                 <td>{foods.results.title_ar}</td>
               </tr>
             </tbody>
           </table>
+          <Link to={"/FeedingMonth1"}>
+                    <button className="">English</button>
+                  </Link>
           </div>
         )}
 

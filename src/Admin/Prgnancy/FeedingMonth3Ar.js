@@ -103,6 +103,9 @@ const FoodMonth3Ar = () => {
               </tr>
             </tbody>
           </table>
+          <Link to={"/FeedingMonth3"}>
+                    <button className="">English</button>
+                  </Link>
           </div>
         )}
 
