@@ -15,9 +15,7 @@ const ShowDetails = () => {
     setDetails({ ...details, loading: true });
     axios
 
-      .get(`https://gradhub.hwnix.com/api/get_issue/1`)
-
-      .get(`https://gradhub.hwnix.com/api/get_issue/${id}/en`)
+      .get(`https://gradhub.hwnix.com/api/get_issue/1/en`)
       .then((resp) => {
         setDetails((prevDetails) => ({
           ...prevDetails,

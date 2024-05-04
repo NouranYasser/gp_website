@@ -34,9 +34,7 @@ function ProductCard() {
 
   return (
     <>
-    <Link to="/ProductListAr">
-          <button className=""> Arabic</button>
-        </Link>
+
     <div>
       
       {issues.map((item) => (

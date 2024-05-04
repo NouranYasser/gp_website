@@ -326,13 +326,13 @@ export const router = createBrowserRouter([
           },
         
           {
-            path: "/UpdateBreastFeeding.js/:id",
-            element: <UpdateBreastFeeding.js />,
+            path: "/UpdateBreastFeeding/:id",
+            element: <UpdateBreastFeeding />,
           },
 
           {
-            path: "/UpdateArtificalFeeding.js/:id",
-            element: <UpdateArtificalFeeding.js />,
+            path: "/UpdateArtificalFeeding/:id",
+            element: <UpdateArtificalFeeding />,
           },
 
 
