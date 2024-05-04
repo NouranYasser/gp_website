@@ -2,6 +2,8 @@ import React from 'react';
 import Sidebar from "./Sidebar";
 import "../../style/Pregnancy.css";
 
+
+
 function BabyHome() {
 
   return (
@@ -59,8 +61,11 @@ function BabyHome() {
       </div>
       </div>
       <div></div>
+
     </>
   );
 
 }
 export default BabyHome;
+
+

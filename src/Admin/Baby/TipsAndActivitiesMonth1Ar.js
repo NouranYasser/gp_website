@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import axios from "axios";
 import "../../style/babygrowthMonth.css";
 
-const TipsAndActivitiesMonth1Ar = () => {
+const TipsAndActivitiesMonth3Ar = () => {
   const [tips, setTips] = useState({
     loading: true,
     results: [],
@@ -88,6 +88,11 @@ const TipsAndActivitiesMonth1Ar = () => {
                 ))}
               </tbody>
             </table>
+         
+            <Link to={"/TipsAndActivitiesMonth1"}>
+                    <button className="btnArabic">English</button>
+        </Link>
+         
           </div>
         )}
       </div>
@@ -95,4 +100,4 @@ const TipsAndActivitiesMonth1Ar = () => {
   );
 };
 
-export default TipsAndActivitiesMonth1Ar;
+export default TipsAndActivitiesMonth3Ar;

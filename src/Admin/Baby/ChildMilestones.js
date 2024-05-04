@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+ import React, { useState, useEffect } from "react";
  import { Link } from "react-router-dom";
  import axios from "axios";
  import "../../style/food.css";
@@ -11,7 +11,7 @@ const ChildMilestones = () => {
       <>  
 
 <br></br>  <br></br>
-<Link to="/AddChildGrowth">
+<Link to="/AddChildMilestones">
         <button className="btn-addBCh">
           Add Data in Child Milestones
         </button>

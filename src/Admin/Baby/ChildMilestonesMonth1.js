@@ -14,7 +14,7 @@ const ChildMilestonesMonth1 = () => {
   useEffect(() => {
     setTips({ ...tips, loading: true });
     axios
-      .get(`https://gradhub.hwnix.com/api/get_ChildGrowth/1`)
+      .get(`https://gradhub.hwnix.com/api/get_ChildGrowth/1/en`)
       .then((resp) => {
         setTips({
           ...tips,
@@ -82,7 +82,7 @@ const ChildMilestonesMonth1 = () => {
                     
 
                     <td>
-                      <Link to={"/Update/" + result.id}>
+                      <Link to={"/UpdateChildMilestones/" + result.id}>
                         <button className="btnUpdate">Update</button>
                       </Link>
                     </td>
@@ -103,12 +103,11 @@ const ChildMilestonesMonth1 = () => {
               </tbody>
               
             </table>
-            <td>
-                    <Link to={"/ArabicChildMilestonesMonth1"}>
-                        <button className="btnUpdate">arabic</button>
-                    </Link>
-                    </td>
-            
+
+            <Link to={"/ChildMilestonesMonth1Ar"}>
+                    <button className="btnArabic">Arabic</button>
+        </Link>
+
           </div>
           
         )}

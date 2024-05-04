@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import axios from "axios";
 import "../../style/babygrowthMonth.css";
 
-const ArabicChildMilestonesMonth1 = () => {
+const TipsAndActivitiesMonth9Ar = () => {
   const [tips, setTips] = useState({
     loading: true,
     results: [],
@@ -14,7 +14,7 @@ const ArabicChildMilestonesMonth1 = () => {
   useEffect(() => {
     setTips({ ...tips, loading: true });
     axios
-      .get(`https://gradhub.hwnix.com/api/get_ChildGrowth/6`)
+      .get(`https://gradhub.hwnix.com/api/get_tip/9/ar`)
       .then((resp) => {
         setTips({
           ...tips,
@@ -45,7 +45,7 @@ const ArabicChildMilestonesMonth1 = () => {
 
   return (
     <>
-      <div>
+      <div className="bmo">
         {tips.err && <p>{tips.err}</p>}
         {tips.loading ? (
           <p>Loading...</p>
@@ -54,37 +54,44 @@ const ArabicChildMilestonesMonth1 = () => {
             <table className="table-content">
               <thead>
                 <tr>
+                <th></th>
+                  <th></th>
+                  <th>الوصف</th>
                   <th>العنوان</th>
-                  <th>الشرح</th>
-                  <th></th>
-                  <th></th>
+                 
                 </tr>
               </thead>
               <tbody>
                 {tips.results.map((result) => (
                   <tr key={result.id}>
-                    <td>{result.title}</td>
-                    <td>{result.description}</td>
-                  
-                    <td>
-                      <Link to={"/Update/" + result.id}>
-                        <button className="btnUpdate">تعديل</button>
-                      </Link>
-                    </td>
-                    <td>
+
+                   <td>
                       <button
                         className="btnDelete"
                         onClick={() => {
                           deleteBabygrowth(result.id);
                         }}
                       >
-                        إزالة
+                        ازالة
                       </button>
                     </td>
+                    
+                    <td>
+                      <Link to={"/Update/" + result.id}>
+                        <button className="btnUpdate">تعديل</button>
+                      </Link>
+                    </td>
+                    <td>{result.description_ar}</td>
+                    <td>{result.title_ar}</td>
+                    
                   </tr>
                 ))}
               </tbody>
             </table>
+            <Link to={"/TipsAndActivitiesMonth9"}>
+                    <button className="btnArabic">English</button>
+        </Link>
+          
           </div>
         )}
       </div>
@@ -92,7 +99,4 @@ const ArabicChildMilestonesMonth1 = () => {
   );
 };
 
-export default ArabicChildMilestonesMonth1;
-
-
-
+export default TipsAndActivitiesMonth9Ar;

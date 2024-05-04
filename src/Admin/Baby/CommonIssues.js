@@ -10,7 +10,14 @@ function CommonIssues() {
       <div className="b-iss"><Link to="/AddIssue">
         <button className="bb"> Add Issue </button>
       </Link></div>
+     
+      <Link to={"/CommonIssuesAr/"}>
+            <button className="">Arabic</button>
+        </Link>
+     
       <ProductList/>
+
+
     </div>
   );
 }
