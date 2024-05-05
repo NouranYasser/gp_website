@@ -8,7 +8,7 @@ const ArtificalFeeding = () => {
  
     return (
       <>
-    
+     <div className="f_foot">
    
 <br></br>
 <br></br>
@@ -44,16 +44,8 @@ const ArtificalFeeding = () => {
       </Link>
       </div>
 
-<br></br>
-<br></br>
-<br></br>
 
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-<br></br>
+     </div>
         </>
     );
   };

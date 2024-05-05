@@ -45,7 +45,12 @@ const BreastFeedingMonth18 = () => {
 
   return (
     <>
-      <div>
+      <div className="bmo">
+        <div className="b-con">          
+          <Link to={"/BreastFeedingMonth18Ar"}>
+                    <button className="btnArabic-c">Arabic</button>
+        </Link>
+        </div>
         {tips.err && <p>{tips.err}</p>}
         {tips.loading ? (
           <p>Loading...</p>

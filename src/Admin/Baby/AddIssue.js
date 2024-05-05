@@ -22,8 +22,7 @@ function AddIssue() {
 
   return (
     <section className="Destination-a">
-      <div className="divv">
-
+     
         <form className="fas" onSubmit={handleSubmit}>
           <br />
           <br />
@@ -40,12 +39,12 @@ function AddIssue() {
             />
           </div>
 
-          <br />
+         
           <button type="submit" className="succ">
             <h3>Add</h3>
           </button>
         </form>
-      </div>
+     
     </section>
   );
 }

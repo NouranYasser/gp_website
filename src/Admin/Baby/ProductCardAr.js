@@ -2,6 +2,9 @@ import React, { useState, useEffect } from "react";
 import "../../style/productCard.css";
 import axios from "axios";
 import { Link } from 'react-router-dom';
+import"../../style/commonissues.css";
+import "../../style/babygrowthMonth.css";
+
 
 function ProductCardAr() {
   const [issues, setIssues] = useState([]);
@@ -35,9 +38,11 @@ function ProductCardAr() {
   return (
     
       <>
+      <div className="c_fo">
+      <div className="b-con" >
              <Link to={"/CommonIssues"}>
-                    <button className="btnArabic">English</button>
-        </Link>
+                    <button className="btnArabic-c">English</button>
+        </Link></div>
      <div>
       {issues.map((item) => (
         <div key={item.id} className="product-Card">
@@ -52,6 +57,7 @@ function ProductCardAr() {
         </div>
         
       ))}
+    </div>
     </div>
     </>
   );

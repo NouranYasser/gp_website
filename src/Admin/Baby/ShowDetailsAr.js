@@ -43,7 +43,7 @@ const ShowDetailsAr = () => {
 
   return (
     <>
-      <div>
+      <div className="bmo">
         {details.err && <p>{details.err}</p>}
         {details.loading ? (
           <p>Loading...</p>
@@ -85,8 +85,7 @@ const ShowDetailsAr = () => {
                   </tr>
                 ))}
               </tbody>
-              <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
-              <br></br><br></br>
+             
             </table>
           </div>
         )}

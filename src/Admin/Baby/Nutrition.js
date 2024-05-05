@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from "react";
  import { Link } from "react-router-dom";
  import axios from "axios";
- //import "../../style/food.css"
+ import "../../style/food.css";
 
 
 const Nutrition = () => {
  
     return (
       <>  
+      <div className='f_foot'>
 <h1 className="f-p">Nutrition </h1>
 <br></br>
 <br></br>
@@ -27,7 +28,8 @@ const Nutrition = () => {
         </Link>  
 
         </div>
-        <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+        
+  </div>
       </>
     );
   };

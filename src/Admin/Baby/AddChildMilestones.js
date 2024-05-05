@@ -112,6 +112,7 @@ function AddChildMilestones() {
 
   return (
     <>
+    <div className="pfot">
       <div className='main-divp'>
         <form className="form-p" onSubmit={handleSubmit}>
           <label htmlFor="title" className='label-pregnancy'>Title:</label>
@@ -166,6 +167,7 @@ function AddChildMilestones() {
           <button type="submit" className='b-pregnancy'>Submit</button>
         </form>
         {message && <p>{message}</p>}
+      </div>
       </div>
     </>
   );

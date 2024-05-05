@@ -45,7 +45,12 @@ const ArtificalFeedingMonth18 = () => {
 
   return (
     <>
-      <div>
+      <div className="bmo">
+        <div className="b-con">          
+        <Link to={"/ArtificalFeedingMonth18Ar"}>
+                    <button className="btnArabic-c">Arabic</button>
+        </Link>
+        </div>
         {tips.err && <p>{tips.err}</p>}
         {tips.loading ? (
           <p>Loading...</p>
@@ -89,9 +94,7 @@ const ArtificalFeedingMonth18 = () => {
                 ))}
               </tbody>
             </table>
-            <Link to={"/ArtificalFeedingMonth18Ar"}>
-                    <button className="btnArabic">Arabic</button>
-        </Link>
+            
          
           </div>
         )}
