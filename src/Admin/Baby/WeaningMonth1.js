@@ -45,7 +45,10 @@ const WeaningMonth1 = () => {
 
   return (
     <>
-      <div>
+      <div className="bmo">
+        <div className="b-con"> <Link to={"/WeaningMonth1Ar"}>
+                    <button className="btnArabic-c">Arabic</button>
+        </Link></div>
         {tips.err && <p>{tips.err}</p>}
         {tips.loading ? (
           <p>Loading...</p>
@@ -85,13 +88,11 @@ const WeaningMonth1 = () => {
                   </tr>
                 ))}
               </tbody>
-              <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+              
             </table>
-            <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+           
 
-            <Link to={"/WeaningMonth1Ar"}>
-                    <button className="btnArabic">Arabic</button>
-        </Link>
+           
 
           </div>
         )}

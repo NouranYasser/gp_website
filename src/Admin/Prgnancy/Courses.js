@@ -49,10 +49,13 @@ const Courses = () => {
   return (
     <>
      <div className="bho">
+     <div className="b_conV">
      <Link to={"/AddCourses"}>
-            <button className="btn-addBCh">Add Course</button>
+            <button className="btn-addV">Add Course</button>
      </Link>      
-     
+     <Link to={"/CoursesAr"}>
+                    <button className="btn-addV">Arabic</button>
+                  </Link></div>
       
         {courses.err && <p>{courses.err}</p>}
         {courses.loading ? (
@@ -105,9 +108,7 @@ const Courses = () => {
               ))}
             </tbody>
           </table>
-          <Link to={"/CoursesAr"}>
-                    <button className="btnArabic">Arabic</button>
-                  </Link>
+          
           </div>
           
         )}

@@ -14,7 +14,8 @@ const ShowDetails = () => {
   useEffect(() => {
     setDetails({ ...details, loading: true });
     axios
-      .get(`https://gradhub.hwnix.com/api/get_Isssues/${id}/en`)
+      .get(`https://gradhub.hwnix.com/api/get_issue/${id}/en`)   
+
       .then((resp) => {
         setDetails((prevDetails) => ({
           ...prevDetails,
@@ -43,7 +44,7 @@ const ShowDetails = () => {
 
   return (
     <>
-      <div>
+      <div className="bmo">
         {details.err && <p>{details.err}</p>}
         {details.loading ? (
           <p>Loading...</p>
@@ -81,8 +82,7 @@ const ShowDetails = () => {
                   </tr>
                 ))}
               </tbody>
-              <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
-              <br></br><br></br>
+             
             </table>
     
           </div>

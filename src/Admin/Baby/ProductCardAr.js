@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import "../../style/productCard.css";
 import axios from "axios";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
+import "../../style/commonissues.css";
+import "../../style/babygrowthMonth.css";
 
 function ProductCardAr() {
   const [issues, setIssues] = useState([]);
@@ -12,7 +14,7 @@ function ProductCardAr() {
 
   const fetchIssues = () => {
     axios
-      .get("https://gradhub.hwnix.com/api/get_issues/ar")
+      .get("https://gradhub.hwnix.com/api/get_AllIssues/ar")
       .then((res) => {
         setIssues(res.data);
       })
@@ -34,27 +36,22 @@ function ProductCardAr() {
 
   return (
     <>
-    <Link to={"/ProductCard"}>
-    <button className="">English</button>
-    </Link>
-    <div>
-      
-      {issues.map((item) => (
-        <div key={item.id} className="product-Card">
-          <div className="card-top"></div>
-          <div className="card-info">
-            <h3 className="title">{item.name_ar}</h3>
-            {/* <button onClick={() => deleteIssue(item.id)}>Delete</button> */}
-            <Link to={"/ShowDetailsAr/" + item.id}>
-              <button className="btnShow">عرض التفاصيل</button>
-            </Link>
+      <div>
+        {issues.map((item) => (
+          <div key={item.id} className="product-Card">
+            <div className="card-top"></div>
+            <div className="card-info">
+              <h3 className="title">{item.name_ar}</h3>
+              {/* <button onClick={() => deleteIssue(item.id)}>Delete</button> */}
+              <Link to={"/ShowDetailsAr/" + item.id}>
+                <button className="btnShow">عرض التفاصيل</button>
+              </Link>
+            </div>
           </div>
-        </div>
-      ))}
-    </div>
+        ))}
+      </div>
     </>
   );
 }
 
 export default ProductCardAr;
-

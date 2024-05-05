@@ -45,12 +45,12 @@ const Vitamins = () => {
 
   return (
     <>
-      <div>
-        <br></br>
-
-         <Link to="/Vitamins">
-          <button className=""> English</button>
-         </Link>
+      <div className='v_foot'>
+       
+      <div className="b_conV">
+          <Link to="/Vitamins">
+          <button className="btnArabic-c"> English</button>
+         </Link></div>
 
         {vitamines.err && <p>{vitamines.err}</p>}
         {vitamines.loading ? (
@@ -67,8 +67,6 @@ const Vitamins = () => {
                 <th>الصورة</th>
                 <th>الوصف</th>
                 <th>العنوان</th>
-                
-
               </tr>
             </thead>
             <tbody>

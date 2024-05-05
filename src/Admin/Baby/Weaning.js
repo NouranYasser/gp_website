@@ -1,15 +1,14 @@
 import React, { useState, useEffect } from "react";
  import { Link } from "react-router-dom";
  import axios from "axios";
- import "../../style/food.css"
+ import "../../style/food.css";
 
 
 const Weaning = () => {
  
     return (
       <>
-    
-   
+    <div className="f_foot">
 <br></br>
 <br></br>
 <br></br>
@@ -45,15 +44,8 @@ const Weaning = () => {
       </div>
 
 <br></br>
-<br></br>
-<br></br>
 
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-<br></br>
+</div>
         </>
     );
   };

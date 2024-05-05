@@ -46,6 +46,11 @@ const BreastFeedingMonth12Ar = () => {
   return (
     <>
        <div className="bmo">
+        <div className="b-con">          
+        <Link to={"/BreastFeedingMonth12"}>
+                    <button className="btnArabic-c">English</button>
+        </Link> 
+        </div>
         {tips.err && <p>{tips.err}</p>}
         {tips.loading ? (
           <p>Loading...</p>
@@ -89,9 +94,7 @@ const BreastFeedingMonth12Ar = () => {
               </tbody>
             </table>
         
-            <Link to={"/BreastFeedingMonth12"}>
-                    <button className="btnArabic">English</button>
-        </Link>
+           
         
           </div>
         )}

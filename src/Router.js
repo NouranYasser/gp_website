@@ -1,5 +1,7 @@
 import HomePage from "./Admin/HomePage.js";
-import ShowDetailsAr from "./Admin/Baby/ShowDetailsAr";
+import ProductListAr from "./Admin/Baby/ProductListAr"
+import CommonIssuesAr from "./Admin/Baby/CommonIssuesAr.js";
+import ShowDetailsAr from "./Admin/Baby/ShowDetailsAr"
 import SignUp from "./Admin/Auth/SignUp.js";
 import Login from "./Admin/Auth/Login.js";
 import App from "./App";
@@ -86,8 +88,8 @@ import TipsAndActivitiesMonth9Ar from "../src/Admin/Baby/TipsAndActivitiesMonth9
 import TipsAndActivitiesMonth12Ar from "../src/Admin/Baby/TipsAndActivitiesMonth12Ar.js";
 import TipsAndActivitiesMonth15Ar from "../src/Admin/Baby/TipsAndActivitiesMonth15Ar.js";
 import TipsAndActivitiesMonth18Ar from "../src/Admin/Baby/TipsAndActivitiesMonth18Ar.js";
-import TipsAndActivitiesMonth21Ar from "./Admin/Baby/TipsAndActivitiesMonth21.js";
-import { createBrowserRouter } from "react-router-dom";
+import TipsAndActivitiesMonth21Ar from "./Admin/Baby/TipsAndActivitiesMonth21Ar.js";
+import {createBrowserRouter } from "react-router-dom";
 import ChildMilestones from "./Admin/Baby/ChildMilestones.js";
 import ChildMilestonesMonth1 from "./Admin/Baby/ChildMilestonesMonth1.js";
 import ChildMilestonesMonth3 from "./Admin/Baby/ChildMilestonesMonth3.js";
@@ -174,6 +176,11 @@ export const router = createBrowserRouter([
             path: "/HomePage",
             element: <HomePage />,
           },
+          {
+            path: "/CommonIssuesAr",
+            element: <CommonIssuesAr />,
+          },
+          
           {
             path: "/ProductCardAr",
             element: <ProductCardAr />,
