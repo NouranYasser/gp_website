@@ -1,53 +1,67 @@
-import React, { useState } from "react";
-import axios from "axios";
-import { useNavigate } from "react-router-dom";
-import"../../style/addissue.css";
+ import React, { useState } from "react";
+ import axios from "axios";
+ import { useNavigate } from "react-router-dom";
+ import"../../style/addissue.css";
+
 
 function AddIssue() {
-  const [name, setName] = useState("");
+  
+  const [name, setName] = useState(''); 
+  const [name_ar, setNameAr] = useState('');
+  const [message, setMessage] = useState('');
   const navigate = useNavigate();
 
-  function handleSubmit(event) {
-    event.preventDefault();
-    axios
-      .post("https://gradhub.hwnix.com/api/add_issues", {
-        name,
-      })
-      .then((res) => {
-        console.log(res);
-        navigate("/commonIssues");
-      })
-      .catch((err) => console.log(err));
-  }
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const formData = new FormData();
+    formData.append('name', name);
+    formData.append('name_ar', name_ar);
+
+    try {
+      const response = await axios.post(`https://gradhub.hwnix.com/api/add_issues`, formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data',
+        },
+      });
+      setMessage(response.data.Result);
+      navigate("/CommonIssues");
+    } catch (error) {
+      setMessage('There is something wrong');
+    }
+  };
 
   return (
-    <section className="Destination-a">
-      <div className="divv">
+    <div className='main-divp'>
+      <form className="form-p" onSubmit={handleSubmit}>
+        <label htmlFor="title" className='label-pregnancy'>Name:</label>
+        <input
+          className='outbox'
+          type="text"
+          id="name"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+        />
 
-        <form className="fas" onSubmit={handleSubmit}>
+        <br /><br />      
+        <label htmlFor="title" className='CH'> Name In Arabic:</label>
+          <input
+            className='outbox'
+            type="text"
+            id="name"
+            value={name_ar}
+            onChange={(e) => setNameAr(e.target.value)}
+          />
+     
           <br />
-          <br />
-          <h2  className="h2">Add Issue</h2>
-
-          <div className="mb-2">
-            <label htmlFor="from" className="ee">
-              Name
-            </label>
-            <input
-              className="form-controlDes"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-            />
-          </div>
-
-          <br />
-          <button type="submit" className="succ">
-            <h3>Add</h3>
-          </button>
-        </form>
-      </div>
-    </section>
+          <br /><br />
+      
+        <button type="submit" className='b-pregnancy'>Submit</button>
+      </form>
+      {message && <p>{message}</p>}
+    </div>
   );
 }
 
 export default AddIssue;
+ 

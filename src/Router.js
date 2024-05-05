@@ -1,13 +1,16 @@
 import HomePage from "./Admin/HomePage.js";
 import ProductListAr from "./Admin/Baby/ProductListAr"
 import ShowDetailsAr from "./Admin/Baby/ShowDetailsAr"
-
 import SignUp from "./Admin/Auth/SignUp.js";
 import Login from "./Admin/Auth/Login.js";
 import App from "./App";
 import Pregnancy from "./Admin/Prgnancy/Pregnancy.js";
 import Babygrowth from "./Admin/Prgnancy/Babygrowth.js";
 import AddIssue from "./Admin/Baby/AddIssue.js";
+
+import AddDetails from "./Admin/Baby/AddDetails.js";
+
+
 import AddBodyChange from "./Admin/Prgnancy/AddBodyChange.js"
 import Bodychange from "./Admin/Prgnancy/Bodychange.js";
 import BodychangeMonth1 from "./Admin/Prgnancy/BodyChangeMonth1.js";
@@ -36,10 +39,9 @@ import UpdateVitamins from "./Admin/Prgnancy/UpdateVitamins.js";
 import UpdateTipsAndActivities from "./Admin/Baby/UpdateTipsAndActivities.js";
 import UpdateChildMilestones from "./Admin/Baby/UpdateChildMilestones.js";
 import UpdateWeaning from "./Admin/Baby/UpdateWeaning.js";
-
-
 import UpdateBreastFeeding from "./Admin/Baby/UpdateBreastFeeding.js";
 import UpdateArtificalFeeding from "./Admin/Baby/UpdateArtificalFeeding.js";
+import UpdateIssue from "./Admin/Baby/UpdateIssue.js";
 
 
 import Feeding from "./Admin/Prgnancy/Feeding.js";
@@ -199,6 +201,20 @@ export const router = createBrowserRouter([
             element: <AddExercises />,
           },
 
+
+          
+          
+          {
+            path: "/AddDetails/:id",
+            element: <AddDetails />,
+          },
+
+
+
+
+
+
+
           {
             path: "/AddCourses",
             element: <AddCourses />,
@@ -336,6 +352,13 @@ export const router = createBrowserRouter([
             element: <UpdateArtificalFeeding />,
 
           },
+         
+          {
+            path: "/UpdateIssue/:id",
+            element: <UpdateIssue />,
+
+          },
+
 
           {
             path: "/AddWeaning",

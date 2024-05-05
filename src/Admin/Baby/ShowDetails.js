@@ -15,7 +15,7 @@ const ShowDetails = () => {
     setDetails({ ...details, loading: true });
     axios
 
-      .get(`https://gradhub.hwnix.com/api/get_issue/1/en`)
+      .get(`https://gradhub.hwnix.com/api/get_issue/${id}/en`)
       .then((resp) => {
         setDetails((prevDetails) => ({
           ...prevDetails,
@@ -65,10 +65,13 @@ const ShowDetails = () => {
                     <td>{result.title}</td>
                     <td>{result.description}</td>                
                      <td>
-                      <Link to={"/Update/" + result.id}>
+                      <Link to={"/UpdateIssue/" + result.id}>
                         <button className="btnUpdate">Update</button>
-                      </Link>
+                      </Link>    
+
                     </td>
+                 
+                 
                     <td>
                       <button
                         className="btnDelete"
