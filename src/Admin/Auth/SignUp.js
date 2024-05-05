@@ -87,6 +87,7 @@ const SignUp = () => {
                 <span className="text-danger">{errors.password}</span>
               )}
             </div>
+            
             <label htmlFor="phone">Phone:</label>
             <div className="output-box">
               

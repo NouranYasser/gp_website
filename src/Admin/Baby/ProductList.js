@@ -14,7 +14,7 @@ function ProductList() {
   useEffect(() => {
     setIssues({ ...issues, loading: true });
     axios
-      .get("https://gradhub.hwnix.com/api/get_issues/en")
+      .get("https://gradhub.hwnix.com/api/get_Isssues/en")
       .then((resp) => {
         setIssues({
           ...issues,
