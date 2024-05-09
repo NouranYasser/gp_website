@@ -65,7 +65,7 @@ const Vitamins = () => {
               <thead>
                 <tr>
                   <th>Title</th>
-                  <th>Description</th>
+                  <th >Description</th>
                   <th>Image</th>
                   <th></th>
                   <th></th>
