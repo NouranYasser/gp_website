@@ -15,7 +15,7 @@ function AddIssue() {
   function handleSubmit(event) {
     event.preventDefault();
     axios
-      .post("https://gradhub.hwnix.com/api/create_issue", {
+      .post("https://gradhub.hwnix.com/api/create_Fullissue", {
         name,
         name_ar,
         title,

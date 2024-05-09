@@ -35,9 +35,6 @@ function ProductCard() {
   return (
     <>
 
-    {/* <Link to="/ProductListAr">
-          <button className=""> Arabic</button>
-        </Link> */}
     <div>
       
       {issues.map((item) => (
@@ -45,14 +42,13 @@ function ProductCard() {
           <div className="card-top"></div>
           <div className="card-info">
             <h3 className="title">{item.name}</h3>
-            {/* <button onClick={() => deleteIssue(item.id)}>Delete</button> */}
+            
             <Link to={"/ShowDetails/" + item.id}>
               <button className="btnShow">Show Details</button>
             </Link>
           </div>
         
         </div>
-        
         
       ))}
     </div>

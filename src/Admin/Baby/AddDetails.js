@@ -82,8 +82,7 @@ function AddDetails() {
           onChange={(e) => setDescriptionAr(e.target.value)}
         /></div>
         </div>
-      
-       
+             
          <div class="row-CH">
         <button type="submit" className='b-u-CH'>Submit</button></div>
       </form>

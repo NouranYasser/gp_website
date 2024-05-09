@@ -14,7 +14,7 @@ function ProductCardAr() {
 
   const fetchIssues = () => {
     axios
-      .get("https://gradhub.hwnix.com/api/get_AllIssues/ar")
+      .get("https://gradhub.hwnix.com/api/get_issues/ar")
       .then((res) => {
         setIssues(res.data);
       })

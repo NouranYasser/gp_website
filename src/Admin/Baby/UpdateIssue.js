@@ -28,7 +28,7 @@ function UpdateIssue() {
 
     try {
       const response = await axios.post(
-        `https://gradhub.hwnix.com/api/update_DESC/${id}`,
+        `https://gradhub.hwnix.com/api/update_issue/${id}`,
         formData,
         {
           headers: {
@@ -37,7 +37,7 @@ function UpdateIssue() {
         }
       );
       setMessage(response.data.Result);
-      navigate("/ShowDetails");
+      navigate("/CommonIssues");
     } catch (error) {
       setMessage("There is something wrong");
     }
