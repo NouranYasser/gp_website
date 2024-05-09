@@ -2,8 +2,7 @@ import React, { useState, useEffect } from "react";
 import "../../style/productCard.css";
 import axios from "axios";
 import { Link } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTrash } from '@fortawesome/free-solid-svg-icons';
+
 function ProductCard() {
   const [issues, setIssues] = useState([]);
 
@@ -35,22 +34,24 @@ function ProductCard() {
 
   return (
     <>
+
     <div>
-  {issues.map((item) => (
-    <div key={item.id} className="product-Card">
-      <div className="card-top"></div>
-      <div className="card-info">
-        <h3 className="title">{item.name}</h3>
-        <Link to={"/ShowDetails/" + item.id}>
-          <button className="btnShow">Show Details</button>
-        </Link>
-        <button onClick={() => deleteIssue(item.id)}>
-          <FontAwesomeIcon icon={faTrash} />
-        </button>
-      </div>
+      
+      {issues.map((item) => (
+        <div key={item.id} className="product-Card">
+          <div className="card-top"></div>
+          <div className="card-info">
+            <h3 className="title">{item.name}</h3>
+            
+            <Link to={"/ShowDetails/" + item.id}>
+              <button className="btnShow">Show Details</button>
+            </Link>
+          </div>
+        
+        </div>
+        
+      ))}
     </div>
-  ))}
-</div>
     </>
   );
 }

@@ -37,7 +37,7 @@ function UpdateIssue() {
         }
       );
       setMessage(response.data.Result);
-      navigate("/ShowDetails");
+      navigate("/CommonIssues");
     } catch (error) {
       setMessage("There is something wrong");
     }
