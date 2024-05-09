@@ -80,7 +80,7 @@ const CoursesAr = () => {
                     </button>
                     </td> 
                     <td>
-                    <Link to={'/UpdateCourses/'+ course.id}>
+                    <Link to={'/UpdateCoursesAr/'+ course.id}>
                       <button className="btnUpdate-C">تعديل</button>
                     </Link>             
 

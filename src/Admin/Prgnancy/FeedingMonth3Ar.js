@@ -62,7 +62,6 @@ const FoodMonth3Ar = () => {
                 <th></th>
                 <th></th>
                 <th>الصورة</th>
-                <th>الشهر</th>
                 <th>الوصف</th>
                 <th>العنوان</th>            
               </tr>
@@ -84,7 +83,7 @@ const FoodMonth3Ar = () => {
                 </td>   
                 <td>
 
-                <Link to={"/UpdateFood/" + foods.results.id}>
+                <Link to={"/UpdateFoodAr/" + foods.results.id}>
                     <button className="btnUpdate-fm">تعديل</button>
                 </Link>              
                   </td> 

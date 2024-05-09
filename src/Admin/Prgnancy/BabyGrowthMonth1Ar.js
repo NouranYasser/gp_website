@@ -79,14 +79,11 @@ const BabyGrowthMonth1Ar = () => {
                     إزالة
                   </button>
                 </td>
-                <td>
-                  
-                  <Link to={"/UpdateBabygrowth/" + babygrowths.results.id}>
+                <td> 
+                  <Link to={"/UpdateBabygrowthAr/" + babygrowths.results.id}>
                     <button className="btnUpdate">تعديل</button>
                   </Link>
                   </td>
-                  
-               
                 <td>
                   {babygrowths.results.FullSrc ? (
                     <img
@@ -104,7 +101,6 @@ const BabyGrowthMonth1Ar = () => {
               </tr>
             </tbody>
           </table>
-          
           </div>
         )}
       </div>

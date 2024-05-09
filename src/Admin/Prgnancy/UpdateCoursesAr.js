@@ -3,9 +3,9 @@ import axios from 'axios';
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import"../../style/updatecourses.css";
-function UpdateCourses() {
+function UpdateCoursesAr() {
   const [courses, setCourses] = useState({
-    description: "",
+    description_ar: "",
     video:"",
     err: "",
     loading: false,
@@ -20,7 +20,7 @@ function UpdateCourses() {
     e.preventDefault();
 
     const formData = new FormData();
-    if (courses.description !== '') formData.append('description', courses.description);
+    if (courses.description_ar !== '') formData.append('description_ar', courses.description_ar);
     if (courses.video !== '') formData.append('video', courses.video);
     try {
       const response = await axios.post(`https://gradhub.hwnix.com/api/update/${id}`, formData, {
@@ -29,7 +29,7 @@ function UpdateCourses() {
         },
       });
       setMessage(response.data.Result);
-      navigate("/Courses")
+      navigate("/CoursesAr")
     } catch (error) {
       setMessage('There is something wrong');
     }
@@ -37,11 +37,11 @@ function UpdateCourses() {
 
   useEffect(() => {
     axios
-      .get("https://gradhub.hwnix.com/api/get_vedio/en/" + id)
+      .get("https://gradhub.hwnix.com/api/get_vedio/ar/" + id)
       .then((resp) => {
         setCourses({
           ...courses,
-          description: resp.data.description,
+          description_ar: resp.data.description_ar,
           video : resp.data.video,
         });
       })
@@ -62,19 +62,19 @@ function UpdateCourses() {
      
         <div className='row-C'>
       <div className=' clo-25-C'>
-        <label htmlFor="description"className='label-u-C'>Description:</label></div>
+        <label htmlFor="description"className='label-u-C'>:الوصف</label></div>
         <div>
         <textarea
           id="description-C"
-          value={courses.description}
-          onChange={(e) => setCourses({ ...courses, description: e.target.value })}
+          value={courses.description_ar}
+          onChange={(e) => setCourses({ ...courses, description_ar: e.target.value })}
 
         /></div>
         </div>
       
         <div className='row-C'>
       <div className=' clo-25-C'>
-        <label htmlFor="Video" className='label-u-C'>Video URL:</label></div>
+        <label htmlFor="Video" className='label-u-C'>:لينك الڤيديو</label></div>
         <div>
         <input
           type="text"
@@ -94,4 +94,4 @@ function UpdateCourses() {
   );
 }
 
-export default UpdateCourses;
+export default UpdateCoursesAr;

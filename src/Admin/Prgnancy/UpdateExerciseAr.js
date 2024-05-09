@@ -4,9 +4,9 @@ import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import "../../style/updateExercises.css";
 
-function UpdateExercise() {
+function UpdateExerciseAr() {
   const [exercises, setExercises] = useState({
-    description: "",
+    description_ar: "",
     video:"",
     err: "",
     loading: false,
@@ -21,7 +21,7 @@ function UpdateExercise() {
     e.preventDefault();
 
     const formData = new FormData();
-    if (exercises.description !== '') formData.append('description', exercises.description);
+    if (exercises.description_ar !== '') formData.append('description_ar', exercises.description_ar);
     if (exercises.video !== '') formData.append('video', exercises.video);
 
     try {
@@ -31,7 +31,7 @@ function UpdateExercise() {
         },
       });
       setMessage(response.data.Result);
-      navigate("/Exercises")
+      navigate("/ExercisesAr")
     } catch (error) {
       setMessage('There is something wrong');
     }
@@ -40,11 +40,11 @@ function UpdateExercise() {
   
   useEffect(() => {
     axios
-      .get("https://gradhub.hwnix.com/api/get_vedio/en/" + id)
+      .get("https://gradhub.hwnix.com/api/get_vedio/ar/" + id)
       .then((resp) => {
         setExercises({
           ...exercises,
-          description: resp.data.description,
+          description_ar: resp.data.description_ar,
           video : resp.data.video,
         });
       })
@@ -70,8 +70,8 @@ function UpdateExercise() {
         <div>
         <textarea
           id="description-E"
-          value={exercises.description}
-          onChange={(e) => setExercises({ ...exercises, description: e.target.value })}
+          value={exercises.description_ar}
+          onChange={(e) => setExercises({ ...exercises, description_ar: e.target.value })}
 
         /></div>
         </div>
@@ -97,4 +97,4 @@ function UpdateExercise() {
   );
 }
 
-export default UpdateExercise;
+export default UpdateExerciseAr;

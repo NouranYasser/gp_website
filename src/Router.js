@@ -154,6 +154,12 @@ import AddFeeding from "./Admin/Prgnancy/AddFeeding.js";
 import AddVitamin from "./Admin/Prgnancy/AddVitamin.js";
 import AddExercises from "./Admin/Prgnancy/AddExercises.js";
 import AddCourses from "./Admin/Prgnancy/AddCourses.js";
+import UpdateBodyChangeAr from "./Admin/Prgnancy/UpdateBodyChangeAr.js"
+import UpdateBabygrowthAr from "./Admin/Prgnancy/UpdateBabygrowthAr.js";
+import UpdateCoursesAr from "./Admin/Prgnancy/UpdateCoursesAr.js";
+import UpdateExerciseAr from "./Admin/Prgnancy/UpdateExerciseAr.js";
+import UpdateFoodAr from "./Admin/Prgnancy/UpdateFoodAr.js";
+import UpdateVitaminAr from "./Admin/Prgnancy/UpdateVitaminsAr.js";
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -177,8 +183,36 @@ export const router = createBrowserRouter([
             element: <HomePage />,
           },
           {
+            path: "/UpdateFoodAr/:id",
+            element: <UpdateFoodAr/>,
+          },
+          
+          {
+            path: "/UpdateVitaminsAr/:id",
+            element: <UpdateVitaminAr/>,
+          },
+          
+          {
             path: "/CommonIssuesAr",
             element: <CommonIssuesAr />,
+          },
+          {
+            path: "/UpdateBabygrowthAr/:id",
+            element: <UpdateBabygrowthAr />,
+          },
+          {
+            path: "/UpdateExerciseAr/:id",
+            element: <UpdateExerciseAr />,
+          },
+          {
+            path: "/UpdateCoursesAr/:id",
+            element: <UpdateCoursesAr />,
+          },
+          
+          
+          {
+            path: "/UpdateBodyChangeAr/:id",
+            element: <UpdateBodyChangeAr />,
           },
           
           {

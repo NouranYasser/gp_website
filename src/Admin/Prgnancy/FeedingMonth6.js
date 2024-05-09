@@ -61,7 +61,6 @@ const FoodMonth6 = () => {
                 <tr>
                   <th>Title</th>
                   <th>Description</th>
-                  <th>Month</th>
                   <th>Image</th>
                   <th></th>
                   <th></th>
@@ -71,7 +70,7 @@ const FoodMonth6 = () => {
                 <tr>
                   <td>{foods.results.title}</td>
                   <td>{foods.results.description}</td>
-                  <td>{foods.results.month}</td>
+                  
                   <td>
                     {foods.results.FullSrc ? (
                       <img

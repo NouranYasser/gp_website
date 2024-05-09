@@ -81,7 +81,7 @@ const BabyGrowthMonth2Ar = () => {
                 </td>
                 <td>
                   
-                  <Link to={"/UpdateBabygrowth/" + babygrowths.results.id}>
+                  <Link to={"/UpdateBabygrowthAr/" + babygrowths.results.id}>
                     <button className="btnUpdate">تعديل</button>
                   </Link>
                   </td>
