@@ -34,7 +34,7 @@ const FoodMonth3Ar = () => {
 
   const deleteFood = (id) => {
     axios
-      .delete(`http://localhost:8000/api/delete/${id}`)
+      .delete("http://localhost:8000/api/delete/${id}")
       .then((resp) => {
         setFoods({ ...foods, reload: foods.reload + 1 });
       })
@@ -62,7 +62,6 @@ const FoodMonth3Ar = () => {
                 <th></th>
                 <th></th>
                 <th>الصورة</th>
-                <th>الشهر</th>
                 <th>الوصف</th>
                 <th>العنوان</th>            
               </tr>
@@ -84,7 +83,7 @@ const FoodMonth3Ar = () => {
                 </td>   
                 <td>
 
-                <Link to={"/UpdateFood/" + foods.results.id}>
+                <Link to={"/UpdateFoodAr/" + foods.results.id}>
                     <button className="btnUpdate-fm">تعديل</button>
                 </Link>              
                   </td> 
@@ -117,4 +116,4 @@ const FoodMonth3Ar = () => {
   );
 };
 
-export default FoodMonth3Ar;
+export default FoodMonth3Ar;

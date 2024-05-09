@@ -83,7 +83,7 @@ const Vitamins = () => {
                   
                     </td>
                     <td>
-                    <Link to={"/UpdateVitamins/" + vitamine.id}>
+                    <Link to={"/UpdateVitaminsAr/" + vitamine.id}>
                       <button className="btnUpdate-v">تعديل</button>
                     </Link>
                   </td>

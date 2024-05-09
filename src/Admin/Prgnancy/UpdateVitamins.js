@@ -1,15 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState , useEffect } from 'react';
 import axios from 'axios';
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import "../../style/updateVitamins.css";
 
 function UpdateVitamin() {
-  const [title, setTitle] = useState('');
-  const [description, setDescription] = useState('');
-  const [title_ar, setTitleAr] = useState('');
-  const [description_ar, setDescriptionAr] = useState('');
-  const [image, setImage] = useState(null);
+  const [Vitamin, setVitamin] = useState({
+    title: "",
+    description: "",
+    image:"",
+    err: "",
+    loading: false,
+    reload: false,
+    success: null,
+  });
   const [message, setMessage] = useState('');
   const navigate = useNavigate();
   const { id } = useParams(); 
@@ -18,11 +22,9 @@ function UpdateVitamin() {
     e.preventDefault();
 
     const formData = new FormData();
-    if (title !== '') formData.append('title', title);
-    if (description !== '') formData.append('description', description);
-    if (title_ar !== '') formData.append('title_ar', title_ar);
-    if (description_ar !== '') formData.append('description_ar', description_ar);
-    if (image !== null) formData.append('image', image);
+    if (Vitamin.title !== '') formData.append('title', Vitamin.title);
+    if (Vitamin.description !== '') formData.append('description', Vitamin.description);
+    if (Vitamin.image !== null) formData.append('image', Vitamin.image);
 
     try {
       const response = await axios.post(`https://gradhub.hwnix.com/api/update_DESC/${id}`, formData, {
@@ -37,6 +39,28 @@ function UpdateVitamin() {
     }
   };
 
+  useEffect(() => {
+    axios
+      .get("https://gradhub.hwnix.com/api/get_Byid/en/" + id)
+      .then((resp) => {
+        setVitamin({
+          ...Vitamin,
+          title: resp.data.title,
+          description: resp.data.description,
+          month : resp.data.month,
+          image: resp.data.image,
+        });
+      })
+      .catch((err) => {
+        setVitamin({
+          ...Vitamin,
+          loading: false,
+          success: null,
+          err: "Something went wrong, please try again later !",
+        });
+      });
+  }, [Vitamin.reload]);
+
   return (
     <div className='body-u-V'>
     <div className='container-u-V'>
@@ -48,8 +72,8 @@ function UpdateVitamin() {
         <input
           type="text"
           id="title"
-          value={title}
-          onChange={(e) => setTitle(e.target.value)}
+          value={Vitamin.title}
+          onChange={(e) => setVitamin({ ...Vitamin, title: e.target.value })}
         /></div>
         </div>
         <div className='row-V'>
@@ -59,32 +83,8 @@ function UpdateVitamin() {
         <div>
         <textarea
           id="description-V"
-          value={description}
-          onChange={(e) => setDescription(e.target.value)}
-        />
-      </div>
-        </div>
-
-        <div className='row-V'>
-      <div className=' clo-25-V'>
-        <label htmlFor="title"className='label-u-V'>Title In Arabic:</label></div>
-        <div>
-        <input
-          type="text"
-          id="title"
-          value={title_ar}
-          onChange={(e) => setTitleAr(e.target.value)}
-        /></div>
-        </div>
-        <div className='row-V'>
-      <div className=' clo-25-V'>
-     
-  <label htmlFor="description"className='label-u-V'>Description In Arabic:</label></div>
-        <div>
-        <textarea
-          id="description-V"
-          value={description_ar}
-          onChange={(e) => setDescriptionAr(e.target.value)}
+          value={Vitamin.description}
+          onChange={(e) => setVitamin({ ...Vitamin, description: e.target.value })}
         />
       </div>
         </div>
@@ -96,7 +96,7 @@ function UpdateVitamin() {
         <input
           type="file"
           id="image"
-          onChange={(e) => setImage(e.target.files[0])}
+          onChange={(e) => setVitamin({ ...Vitamin, image: e.target.value })}
         /></div>
         </div>
         <div class="row">

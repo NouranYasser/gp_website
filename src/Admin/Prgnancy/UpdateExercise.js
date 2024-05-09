@@ -1,15 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState , useEffect} from 'react';
 import axios from 'axios';
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import "../../style/updateExercises.css";
 
 function UpdateExercise() {
-  const [title, setTitle] = useState('');
-  const [description, setDescription] = useState('');
-  const [title_ar, setTitleAr] = useState('');
-  const [description_ar, setDescriptionAr] = useState('');
-  const [video, setVideo] = useState(null);
+  const [exercises, setExercises] = useState({
+    description: "",
+    video:"",
+    err: "",
+    loading: false,
+    reload: false,
+    success: null,
+  });
   const [message, setMessage] = useState('');
   const navigate = useNavigate();
   const { id } = useParams(); 
@@ -18,11 +21,8 @@ function UpdateExercise() {
     e.preventDefault();
 
     const formData = new FormData();
-    if (title !== '') formData.append('title', title);
-    if (description !== '') formData.append('description', description);
-    if (title_ar !== '') formData.append('title_ar', title_ar);
-    if (description_ar !== '') formData.append('description_ar', description_ar);
-    if (video !== null) formData.append('video', video);
+    if (exercises.description !== '') formData.append('description', exercises.description);
+    if (exercises.video !== '') formData.append('video', exercises.video);
 
     try {
       const response = await axios.post(`https://gradhub.hwnix.com/api/update/${id}`, formData, {
@@ -37,22 +37,32 @@ function UpdateExercise() {
     }
   };
 
+  
+  useEffect(() => {
+    axios
+      .get("https://gradhub.hwnix.com/api/get_vedio/en/" + id)
+      .then((resp) => {
+        setExercises({
+          ...exercises,
+          description: resp.data.description,
+          video : resp.data.video,
+        });
+      })
+      .catch((err) => {
+        setExercises({
+          ...exercises,
+          loading: false,
+          success: null,
+          err: "Something went wrong, please try again later !",
+        });
+      });
+  }, [exercises.reload]);
+
   return (
     
       <div className='body-u-EX'>
     <div className='container-u-EX'>
       <form onSubmit={handleSubmit}>
-      <div className='row-EX'>
-      <div className=' clo-25-EX'>
-<label htmlFor="title" className='label-u-EX'>Title:</label></div>
-        <div>
-        <input
-          type="text"
-          id="title"
-          value={title}
-          onChange={(e) => setTitle(e.target.value)}
-        /></div>
-        </div>
       
         <div className='row-EX'>
       <div className=' clo-25-EX'>
@@ -60,40 +70,21 @@ function UpdateExercise() {
         <div>
         <textarea
           id="description-E"
-          value={description}
-          onChange={(e) => setDescription(e.target.value)}
+          value={exercises.description}
+          onChange={(e) => setExercises({ ...exercises, description: e.target.value })}
+
         /></div>
         </div>
 
-        <div className='row-EX'>
-      <div className=' clo-25-EX'>
-        <label htmlFor="title" className='label-u-EX'>Title In Arabic:</label></div>
-        <div>
-        <input
-          type="text"
-          id="title"
-          value={title_ar}
-          onChange={(e) => setTitleAr(e.target.value)}
-        /></div>
-        </div>
-      
-      <div className='row-EX'>
-      <div className=' clo-25-EX'>
-        <label htmlFor="description"className='label-u-EX'>Description In Arabic:</label></div>
-        <div>
-        <textarea
-          id="description-E"
-          value={description_ar}
-          onChange={(e) => setDescriptionAr(e.target.value)}
-        /></div>
-        </div>
+        
 
         <div className=' clo-25-EX'>
         <label htmlFor="description"className='label-u-EX'>Video URL:</label></div>
         <div>
         <textarea
-          value={video}
-          onChange={(e) => setVideo(e.target.value)}
+          value={exercises.video}
+          onChange={(e) => setExercises({ ...exercises, video: e.target.value })}
+
         /></div>
       
         <div class="row-EX">

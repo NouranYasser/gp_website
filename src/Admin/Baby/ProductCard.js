@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 import "../../style/productCard.css";
 import axios from "axios";
 import { Link } from 'react-router-dom';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTrash } from '@fortawesome/free-solid-svg-icons';
 function ProductCard() {
   const [issues, setIssues] = useState([]);
 
@@ -34,27 +35,22 @@ function ProductCard() {
 
   return (
     <>
-
-    {/* <Link to="/ProductListAr">
-          <button className=""> Arabic</button>
-        </Link> */}
     <div>
-      
-      {issues.map((item) => (
-        <div key={item.id} className="product-Card">
-          <div className="card-top"></div>
-          <div className="card-info">
-            <h3 className="title">{item.name}</h3>
-            {/* <button onClick={() => deleteIssue(item.id)}>Delete</button> */}
-            <Link to={"/ShowDetails/" + item.id}>
-              <button className="btnShow">Show Details</button>
-            </Link>
-          </div>
-        
-        </div>
-        
-      ))}
+  {issues.map((item) => (
+    <div key={item.id} className="product-Card">
+      <div className="card-top"></div>
+      <div className="card-info">
+        <h3 className="title">{item.name}</h3>
+        <Link to={"/ShowDetails/" + item.id}>
+          <button className="btnShow">Show Details</button>
+        </Link>
+        <button onClick={() => deleteIssue(item.id)}>
+          <FontAwesomeIcon icon={faTrash} />
+        </button>
+      </div>
     </div>
+  ))}
+</div>
     </>
   );
 }

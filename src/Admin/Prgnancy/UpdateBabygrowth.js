@@ -1,16 +1,20 @@
-import React, { useState } from 'react';
+import React, { useState , useEffect} from 'react';
 import axios from 'axios';
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import "../../style/updateBabygrowth.css";
 
 function UpdateBabygrowth() {
-  const [title, setTitle] = useState('');
-  const [description, setDescription] = useState('');
-  const [title_ar, setTitleAr] = useState('');
-  const [description_ar, setDescriptionAr] = useState('');
-  const [month, setMonth] = useState('');
-  const [image, setImage] = useState(null);
+  const [babygrowth, setBabyGrowth] = useState({
+    title: "",
+    description: "",
+    month :"",
+    image:"",
+    err: "",
+    loading: false,
+    reload: false,
+    success: null,
+  });
   const [message, setMessage] = useState('');
   const navigate = useNavigate();
   const { id } = useParams();
@@ -19,12 +23,10 @@ function UpdateBabygrowth() {
     e.preventDefault();
 
     const formData = new FormData();
-    if (title !== '') formData.append('title', title);
-    if (description !== '') formData.append('description', description);
-    if (title_ar !== '') formData.append('title_ar', title_ar);
-    if (description_ar !== '') formData.append('description_ar', description_ar);
-    if (month !== '') formData.append('month', month);
-    if (image !== null) formData.append('image', image);
+    if (babygrowth.title !== '') formData.append('title', babygrowth.title);
+    if (babygrowth.description !== '') formData.append('description', babygrowth.description);
+    if (babygrowth.month !== '') formData.append('month', babygrowth.month);
+    if (babygrowth.image !== null) formData.append('image', babygrowth.image);
 
     try {
       const response = await axios.post(`https://gradhub.hwnix.com/api/update_DESC/${id}`, formData, {
@@ -39,6 +41,28 @@ function UpdateBabygrowth() {
     }
   };
 
+  useEffect(() => {
+    axios
+      .get("https://gradhub.hwnix.com/api/get_Byid/en/" + id)
+      .then((resp) => {
+        setBabyGrowth({
+          ...babygrowth,
+          title: resp.data.title,
+          description: resp.data.description,
+          month : resp.data.month,
+          image: resp.data.image,
+        });
+      })
+      .catch((err) => {
+        setBabyGrowth({
+          ...babygrowth,
+          loading: false,
+          success: null,
+          err: "Something went wrong, please try again later !",
+        });
+      });
+  }, [babygrowth.reload]);
+
   return (
 
     <div className='body-uG'>
@@ -50,8 +74,8 @@ function UpdateBabygrowth() {
             <div><input
               type="text"
               id="title"
-              value={title}
-              onChange={(e) => setTitle(e.target.value)}
+              value={babygrowth.title}
+              onChange={(e) => setBabyGrowth({ ...babygrowth, title: e.target.value })}
             /></div>
           </div>
 
@@ -61,44 +85,21 @@ function UpdateBabygrowth() {
              <div>
               <textarea
                 id="description-G"
-                value={description}
-                onChange={(e) => setDescription(e.target.value)}
+                value={babygrowth.description}
+                onChange={(e) => setBabyGrowth({ ...babygrowth, description: e.target.value })}
               /></div>
           </div>
 
-          
           <div className='row-G'>
             <div className=' clo-25-G'>
-            <label htmlFor="title" className='label-U-G'>Title In Arabic:</label></div>
-            <div><input
-              type="text"
-              id="title"
-              value={title_ar}
-              onChange={(e) => setTitleAr(e.target.value)}
-            /></div>
-          </div>
-
-          <div className='row-G'>
-            <div className=' clo-25-G'>
-              <label htmlFor="description" className='label-U-G'>Description In Arabic:</label></div>
-             <div>
-              <textarea
-                id="description-G"
-                value={description_ar}
-                onChange={(e) => setDescriptionAr(e.target.value)}
-              /></div>
-          </div>     
-
-          <div className='row-G'>
-            <div className=' clo-25-G'>
-
               <label htmlFor="month" className='label-U-G'>Month:</label></div>
             <div>
               <input
                 type="text"
                 id="month"
-                value={month}
-                onChange={(e) => setMonth(e.target.value)}
+                value={babygrowth.month}
+                onChange={(e) => setBabyGrowth({ ...babygrowth, month: e.target.value })}
+
               /></div>
           </div>
 
@@ -111,7 +112,8 @@ function UpdateBabygrowth() {
                 className='file-upload-G'
                 type="file"
                 id="image"
-                onChange={(e) => setImage(e.target.files[0])}
+                onChange={(e) => setBabyGrowth({ ...babygrowth, image: e.target.value })}
+
               /></div>
           </div>
           <div class="row-G">

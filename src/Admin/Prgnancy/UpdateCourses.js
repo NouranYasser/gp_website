@@ -1,14 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState , useEffect } from 'react';
 import axios from 'axios';
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import"../../style/updatecourses.css";
 function UpdateCourses() {
-  const [title, setTitle] = useState('');
-  const [description, setDescription] = useState('');
-  const [title_ar, setTitleAr] = useState('');
-  const [description_ar, setDescriptionAr] = useState('');
-  const [video, setVideo] = useState(null);
+  const [courses, setCourses] = useState({
+    description: "",
+    video:"",
+    err: "",
+    loading: false,
+    reload: false,
+    success: null,
+  });
   const [message, setMessage] = useState('');
   const navigate = useNavigate();
   const { id } = useParams(); 
@@ -17,11 +20,8 @@ function UpdateCourses() {
     e.preventDefault();
 
     const formData = new FormData();
-    if (title !== '') formData.append('title', title);
-    if (description !== '') formData.append('description', description);
-    if (title_ar !== '') formData.append('title_ar', title_ar);
-    if (description_ar !== '') formData.append('description_ar', description_ar);
-    if (video !== '') formData.append('video', video);
+    if (courses.description !== '') formData.append('description', courses.description);
+    if (courses.video !== '') formData.append('video', courses.video);
     try {
       const response = await axios.post(`https://gradhub.hwnix.com/api/update/${id}`, formData, {
         headers: {
@@ -35,6 +35,26 @@ function UpdateCourses() {
     }
   };
 
+  useEffect(() => {
+    axios
+      .get("https://gradhub.hwnix.com/api/get_vedio/en/" + id)
+      .then((resp) => {
+        setCourses({
+          ...courses,
+          description: resp.data.description,
+          video : resp.data.video,
+        });
+      })
+      .catch((err) => {
+        setCourses({
+          ...courses,
+          loading: false,
+          success: null,
+          err: "Something went wrong, please try again later !",
+        });
+      });
+  }, [courses.reload]);
+
   return (
     <div className='body-u-C'>
     <div className='container-u-C'>
@@ -46,20 +66,9 @@ function UpdateCourses() {
         <div>
         <textarea
           id="description-C"
-          value={description}
-          onChange={(e) => setDescription(e.target.value)}
-        /></div>
-        </div>
+          value={courses.description}
+          onChange={(e) => setCourses({ ...courses, description: e.target.value })}
 
-
-        <div className='row-C'>
-      <div className=' clo-25-C'>
-        <label htmlFor="description"className='label-u-C'>Description In Arabic:</label></div>
-        <div>
-        <textarea
-          id="description-C"
-          value={description_ar}
-          onChange={(e) => setDescriptionAr(e.target.value)}
         /></div>
         </div>
       
@@ -70,8 +79,8 @@ function UpdateCourses() {
         <input
           type="text"
           id="Video"
-          value={video}
-          onChange={(e) => setVideo(e.target.value)}
+          value={courses.video}
+          onChange={(e) => setCourses({ ...courses, video: e.target.value })}
         /></div>
         </div>
         <div class="row">

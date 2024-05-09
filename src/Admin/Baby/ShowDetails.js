@@ -14,8 +14,8 @@ const ShowDetails = () => {
   useEffect(() => {
     setDetails({ ...details, loading: true });
     axios
-
-      .get(`https://gradhub.hwnix.com/api/get_issue/1/en`)
+       
+      .get(`https://gradhub.hwnix.com/api/get_issue/${id}/en`)
       .then((resp) => {
         setDetails((prevDetails) => ({
           ...prevDetails,
@@ -28,7 +28,6 @@ const ShowDetails = () => {
         console.log(err); // Log the error
       });
   }, [details.reload]);
-
 
 
   const deleteBabygrowth = (id) => {
@@ -65,10 +64,13 @@ const ShowDetails = () => {
                     <td>{result.title}</td>
                     <td>{result.description}</td>                
                      <td>
-                      <Link to={"/Update/" + result.id}>
+                      <Link to={"/UpdateIssue/" + result.id}>
                         <button className="btnUpdate">Update</button>
-                      </Link>
+                      </Link>    
+
                     </td>
+                 
+                 
                     <td>
                       <button
                         className="btnDelete"

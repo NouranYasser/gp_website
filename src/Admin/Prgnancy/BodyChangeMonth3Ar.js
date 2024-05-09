@@ -81,7 +81,7 @@ const BodyChangeMonth3Ar = () => {
                     </button>
                   </td>
                   <td>
-                    <Link to={"/UpdateBodyChange/" + bodychanges.results.id}>
+                    <Link to={"/UpdateBodyChangeAr/" + bodychanges.results.id}>
                       <button className="btnUpdate">تعديل</button>
                     </Link>
                   </td>
