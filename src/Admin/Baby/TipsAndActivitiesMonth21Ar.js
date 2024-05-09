@@ -46,6 +46,11 @@ const TipsAndActivitiesMonth21Ar = () => {
   return (
     <>
       <div className="bmo">
+      <div className="b-con">
+      <Link to={"/TipsAndActivitiesMonth21"}>
+                    <button className="btnArabic">English</button>
+        </Link>
+</div>
         {tips.err && <p>{tips.err}</p>}
         {tips.loading ? (
           <p>Loading...</p>
@@ -77,7 +82,7 @@ const TipsAndActivitiesMonth21Ar = () => {
                     </td>
                     
                     <td>
-                      <Link to={"/Update/" + result.id}>
+                      <Link to={"/UpdateTipsAndActivitiesAr/" + result.id}>
                         <button className="btnUpdate">تعديل</button>
                       </Link>
                     </td>
@@ -89,9 +94,7 @@ const TipsAndActivitiesMonth21Ar = () => {
               </tbody>
             </table>
          
-            <Link to={"/TipsAndActivitiesMonth21"}>
-                    <button className="btnArabic">English</button>
-        </Link>
+            
          
          
           </div>

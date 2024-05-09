@@ -4,10 +4,10 @@ import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import "../../style/updateBodychange.css";
 
-function UpdateArtificalFeeding() {
+function UpdateArtificalFeedingAr() {
   const [artifical, setArtificals] = useState({
-    title: "",
-    description: "",
+    title_ar: "",
+    description_ar: "",
     month :"",
     err: "",
     loading: false,
@@ -23,8 +23,8 @@ function UpdateArtificalFeeding() {
    setArtificals({ ...artifical, loading: true });
 
     const formData = new FormData();
-    if (artifical.title !== "")formData.append("title", artifical.title);
-    if (artifical.description !== "")formData.append("description", artifical.description);
+    if (artifical.title_ar !== "")formData.append("title_ar", artifical.title_ar);
+    if (artifical.description_ar !== "")formData.append("description_ar", artifical.description_ar);
     if (artifical.month !== "")formData.append("month",artifical.month);
 
     try {
@@ -46,12 +46,12 @@ function UpdateArtificalFeeding() {
   
   useEffect(() => {
     axios
-      .get("https://gradhub.hwnix.com/api/get_Byid/en/" + id)
+      .get("https://gradhub.hwnix.com/api/get_Byid/ar/" + id)
       .then((resp) => {
         setArtificals({
           ...artifical,
-          title: resp.data.title,
-          description: resp.data.description,
+          title_ar: resp.data.title_ar,
+          description_ar: resp.data.description_ar,
           month : resp.data.month,
         });
       })
@@ -76,8 +76,8 @@ function UpdateArtificalFeeding() {
         <div><input
           type="text"
           id="title"
-          value={artifical.title}
-          onChange={(e) => setArtificals({ ...artifical, title: e.target.value })}
+          value={artifical.title_ar}
+          onChange={(e) => setArtificals({ ...artifical, title_ar: e.target.value })}
         /></div>
          </div>
       
@@ -87,8 +87,8 @@ function UpdateArtificalFeeding() {
         <div>
         <textarea
           id="description-u-CH"
-          value={artifical.description}
-          onChange={(e) => setArtificals({ ...artifical, description: e.target.value })}
+          value={artifical.description_ar}
+          onChange={(e) => setArtificals({ ...artifical, description_ar: e.target.value })}
         /></div>
         </div>
 
@@ -114,4 +114,4 @@ function UpdateArtificalFeeding() {
   );
 }
 
-export default UpdateArtificalFeeding;
+export default UpdateArtificalFeedingAr;

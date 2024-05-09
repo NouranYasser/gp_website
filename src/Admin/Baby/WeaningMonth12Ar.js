@@ -45,7 +45,11 @@ const WeaningMonth12Ar = () => {
 
   return (
     <>
-       <div className="bmo">
+<div className="bmo">
+        <div className="b-con">
+        <Link to={"/WeaningMonth12"}>
+                    <button className="btnArabic-c">English</button>
+        </Link> </div>
         {tips.err && <p>{tips.err}</p>}
         {tips.loading ? (
           <p>Loading...</p>
@@ -77,7 +81,7 @@ const WeaningMonth12Ar = () => {
                     </td>
                     
                     <td>
-                      <Link to={"/Update/" + result.id}>
+                      <Link to={"/UpdateWeaningAr/" + result.id}>
                         <button className="btnUpdate">تعديل</button>
                       </Link>
                     </td>
@@ -89,9 +93,7 @@ const WeaningMonth12Ar = () => {
               </tbody>
             </table>
          
-            <Link to={"/WeaningMonth12"}>
-                    <button className="btnArabic">English</button>
-        </Link>
+           
         
           </div>
         )}

@@ -4,10 +4,10 @@ import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import "../../style/updateBodychange.css";
 
-function UpdateArtificalFeeding() {
-  const [artifical, setArtificals] = useState({
-    title: "",
-    description: "",
+function UpdateIssueAr() {
+  const [issue, setIssues] = useState({
+    title_ar: "",
+    description_ar: "",
     month :"",
     err: "",
     loading: false,
@@ -20,16 +20,15 @@ function UpdateArtificalFeeding() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-   setArtificals({ ...artifical, loading: true });
+   setIssues({ ...issue, loading: true });
 
     const formData = new FormData();
-    if (artifical.title !== "")formData.append("title", artifical.title);
-    if (artifical.description !== "")formData.append("description", artifical.description);
-    if (artifical.month !== "")formData.append("month",artifical.month);
+    if (issue.title_ar !== "")formData.append("title_ar", issue.title_ar);
+    if (issue.description_ar !== "")formData.append("description_ar", issue.description_ar);
 
     try {
       const response = await axios.post(
-        `https://gradhub.hwnix.com/api/update_DESC/${id}`,
+        `https://gradhub.hwnix.com/api/update_issue/${id}`,
         formData,
         {
           headers: {
@@ -38,7 +37,7 @@ function UpdateArtificalFeeding() {
         }
       );
       setMessage(response.data.Result);
-      navigate("/ArtificalFeeding");
+      navigate("/CommonIssues");
     } catch (error) {
       setMessage("There is something wrong");
     }
@@ -46,24 +45,24 @@ function UpdateArtificalFeeding() {
   
   useEffect(() => {
     axios
-      .get("https://gradhub.hwnix.com/api/get_Byid/en/" + id)
+      .get( `https://gradhub.hwnix.com/api/get_issueById/ar/${id}`)
       .then((resp) => {
-        setArtificals({
-          ...artifical,
-          title: resp.data.title,
-          description: resp.data.description,
-          month : resp.data.month,
+        setIssues({
+          ...issue,
+          title_ar: resp.data.title_ar,
+          description_ar: resp.data.description_ar,
+       
         });
       })
       .catch((err) => {
-        setArtificals({
-          ...artifical,
+        setIssues({
+          ...issue,
           loading: false,
           success: null,
           err: "Something went wrong, please try again later !",
         });
       });
-  }, [artifical.reload]);
+  }, [issue.reload]);
  
   return (
     <div className='body-uCH'>
@@ -76,34 +75,21 @@ function UpdateArtificalFeeding() {
         <div><input
           type="text"
           id="title"
-          value={artifical.title}
-          onChange={(e) => setArtificals({ ...artifical, title: e.target.value })}
+          value={issue.title_ar}
+          onChange={(e) => setIssues({ ...issue, title_ar: e.target.value })}
         /></div>
          </div>
-      
         <div className='row-CH'>
         <div className=' clo-25-CH'>
         <label htmlFor="description" className='label-u-CH'>Description:</label></div>
         <div>
         <textarea
           id="description-u-CH"
-          value={artifical.description}
-          onChange={(e) => setArtificals({ ...artifical, description: e.target.value })}
+          value={issue.description_ar}
+          onChange={(e) => setIssues({ ...issue, description_ar: e.target.value })}
         /></div>
         </div>
 
-       
-        <div className='row-CH'>
-            <div className=' clo-25-CH'>
-        <label htmlFor="month" className='label-u-CH'>Month:</label></div>
-            <div>
-        <input
-          type="text"
-          id="month"
-          value={artifical.month}
-          onChange={(e) => setArtificals({ ...artifical, month: e.target.value })}
-        /></div>
-        </div>
       
          <div class="row-CH">
         <button type="submit" className='b-u-CH'>Submit</button></div>
@@ -114,4 +100,4 @@ function UpdateArtificalFeeding() {
   );
 }
 
-export default UpdateArtificalFeeding;
+export default UpdateIssueAr;

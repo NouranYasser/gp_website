@@ -33,11 +33,7 @@ const Sidebar  = ({children}) => {
             name:"Nutrition",
             icon:<IoFastFoodOutline/>
         },
-        {
-            path:"/Vaccinations",
-            name:"Vaccinations",
-            icon:<GiMedicines/>
-        },
+        
         {
             path:"/commonIssues",
             name:"common issues",

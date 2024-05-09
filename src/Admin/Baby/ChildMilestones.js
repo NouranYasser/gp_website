@@ -2,7 +2,7 @@
  import { Link } from "react-router-dom";
  import axios from "axios";
  import "../../style/food.css";
- import "../../style/tips.css";
+//  import "../../style/tips.css";
 
 
 const ChildMilestones = () => {
@@ -10,16 +10,14 @@ const ChildMilestones = () => {
     return (
       <>  
 
-<br></br>  <br></br>
+<div className="f_foot">
 <Link to="/AddChildMilestones">
         <button className="btn-addBCh">
           Add Data in Child Milestones
         </button>
       </Link>
 
-<br></br>
-<br></br>
-<br></br>
+
 
 <div className="fo-container">
       <div>
@@ -59,16 +57,7 @@ const ChildMilestones = () => {
       </div>
 
 
-<br></br>
-<br></br>
-<br></br>
-
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-<br></br>
+      </div>
         </>
     );
   };

@@ -9,8 +9,6 @@ import Babygrowth from "./Admin/Prgnancy/Babygrowth.js";
 import AddIssue from "./Admin/Baby/AddIssue.js";
 
 import AddDetails from "./Admin/Baby/AddDetails.js";
-
-
 import AddBodyChange from "./Admin/Prgnancy/AddBodyChange.js"
 import Bodychange from "./Admin/Prgnancy/Bodychange.js";
 import BodychangeMonth1 from "./Admin/Prgnancy/BodyChangeMonth1.js";
@@ -35,13 +33,19 @@ import UpdateBodyChange from "./Admin/Prgnancy/UpdateBodyChange.js";
 import UpdateBabygrowth from "./Admin/Prgnancy/UpdateBabygrowth.js";
 import UpdateFood from "./Admin/Prgnancy/UpdateFood.js";
 import UpdateVitamins from "./Admin/Prgnancy/UpdateVitamins.js";
-
 import UpdateTipsAndActivities from "./Admin/Baby/UpdateTipsAndActivities.js";
 import UpdateChildMilestones from "./Admin/Baby/UpdateChildMilestones.js";
 import UpdateWeaning from "./Admin/Baby/UpdateWeaning.js";
 import UpdateBreastFeeding from "./Admin/Baby/UpdateBreastFeeding.js";
 import UpdateArtificalFeeding from "./Admin/Baby/UpdateArtificalFeeding.js";
 import UpdateIssue from "./Admin/Baby/UpdateIssue.js";
+import UpdateTipsAndActivitiesAr from "./Admin/Baby/UpdateTipsAndActivitiesAr.js";
+import UpdateChildMilestonesAr from "./Admin/Baby/UpdateChildMilestonesAr.js";
+import UpdateWeaningAr from "./Admin/Baby/UpdateWeaningAr.js";
+import UpdateBreastFeedingAr from "./Admin/Baby/UpdateBreastFeedingAr.js";
+import UpdateArtificalFeedingAr from "./Admin/Baby/UpdateArtificalFeedingAr.js";
+import UpdateIssueAr from "./Admin/Baby/UpdateIssueAr.js";
+
 
 
 import Feeding from "./Admin/Prgnancy/Feeding.js";
@@ -99,8 +103,6 @@ import TipsAndActivitiesMonth15Ar from "../src/Admin/Baby/TipsAndActivitiesMonth
 import TipsAndActivitiesMonth18Ar from "../src/Admin/Baby/TipsAndActivitiesMonth18Ar.js";
 import TipsAndActivitiesMonth21Ar from "./Admin/Baby/TipsAndActivitiesMonth21Ar.js";
 
-
-
 import {createBrowserRouter } from "react-router-dom";
 import ChildMilestones from "./Admin/Baby/ChildMilestones.js";
 import ChildMilestonesMonth1 from "./Admin/Baby/ChildMilestonesMonth1.js"
@@ -144,7 +146,6 @@ import AddTipsAndActivities from "./Admin/Baby/AddTipsAndActivities.js";
 import AddBabyGrowth from "./Admin/Prgnancy/AddBabyGrowth.js";
 
 import AddChildMilestones from "./Admin/Baby/AddChildMilestones.js";
-
 import UpdateCourses from "./Admin/Prgnancy/UpdateCourses.js";
 import BreastFeedingMonth1 from "./Admin/Baby/BreastFeedingMonth1"
 import BreastFeedingMonth6 from "./Admin/Baby/BreastFeedingMonth6"
@@ -201,18 +202,11 @@ export const router = createBrowserRouter([
             element: <AddExercises />,
           },
 
-
-          
           
           {
             path: "/AddDetails/:id",
             element: <AddDetails />,
           },
-
-
-
-
-
 
 
           {
@@ -331,7 +325,41 @@ export const router = createBrowserRouter([
             path: "/UpdateTipsAndActivities/:id",
             element: <UpdateTipsAndActivities />,
           },
+
+
+          {
+            path: "/UpdateTipsAndActivitiesAr/:id",
+            element: <UpdateTipsAndActivitiesAr />,
+          },
+
+
+          {
+            path: "/UpdateChildMilestonesAr/:id",
+            element: <UpdateChildMilestonesAr />,
+          },   
+
+          {
+            path: "/UpdateWeaningAr/:id",
+            element: <UpdateWeaningAr />,
+          },
+
+          {
+            path: "/UpdateBreastFeedingAr/:id",
+            element: <UpdateBreastFeedingAr />,
+          },
+
+          {
+            path: "/UpdateArtificalFeedingAr/:id",
+            element: <UpdateArtificalFeedingAr />,
+          },
           
+          {
+            path: "/UpdateIssueAr/:id",
+            element: <UpdateIssueAr />,
+          },
+
+
+
           {
             path: "/UpdateChildMilestones/:id",
             element: <UpdateChildMilestones />,

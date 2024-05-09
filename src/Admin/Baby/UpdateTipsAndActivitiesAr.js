@@ -4,10 +4,10 @@ import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import "../../style/updateBodychange.css";
 
-function UpdateTipsAndActivities() {
+function UpdateTipsAndActivitiesAr() {
     const [tip, setTips] = useState({
-      title: "",
-      description: "",
+      title_ar: "",
+      description_ar: "",
       month :"",
       err: "",
       loading: false,
@@ -23,8 +23,8 @@ function UpdateTipsAndActivities() {
      setTips({ ...tip, loading: true });
   
       const formData = new FormData();
-      if (tip.title !== "")formData.append("title", tip.title);
-      if (tip.description !== "")formData.append("description", tip.description);
+      if (tip.title_ar !== "")formData.append("title_ar", tip.title_ar);
+      if (tip.description_ar !== "")formData.append("description_ar", tip.description_ar);
       if (tip.month !== "")formData.append("month",tip.month);
   
       try {
@@ -46,12 +46,12 @@ function UpdateTipsAndActivities() {
     
     useEffect(() => {
       axios
-        .get("https://gradhub.hwnix.com/api/get_Byid/en/" + id)
+        .get("https://gradhub.hwnix.com/api/get_Byid/ar/" + id)
         .then((resp) => {
           setTips({
             ...tip,
-            title: resp.data.title,
-            description: resp.data.description,
+            title_ar: resp.data.title_ar,
+            description_ar: resp.data.description_ar,
             month : resp.data.month,
           });
         })
@@ -75,8 +75,8 @@ function UpdateTipsAndActivities() {
         <div><input
           type="text"
           id="title"
-          value = {tip.title}
-          onChange={(e) => setTips({ ...tip, title: e.target.value })}        /></div>
+          value = {tip.title_ar}
+          onChange={(e) => setTips({ ...tip, title_ar: e.target.value })}        /></div>
          </div>
        
         <div className='row-CH'>
@@ -85,8 +85,8 @@ function UpdateTipsAndActivities() {
         <div>
         <textarea
           id="description-u-CH"
-          value={tip.description}
-        onChange={(e) => setTips({ ...tip, description: e.target.value })}        /></div>
+          value={tip.description_ar}
+        onChange={(e) => setTips({ ...tip, description_ar: e.target.value })}        /></div>
         </div>
 
         <div className='row-CH'>
@@ -109,4 +109,4 @@ function UpdateTipsAndActivities() {
   );
 }
 
-export default UpdateTipsAndActivities;
+export default UpdateTipsAndActivitiesAr;

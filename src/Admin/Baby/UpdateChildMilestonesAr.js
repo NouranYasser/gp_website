@@ -4,10 +4,10 @@ import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import "../../style/updateBodychange.css";
 
-function UpdateArtificalFeeding() {
-  const [artifical, setArtificals] = useState({
-    title: "",
-    description: "",
+function UpdateChildMilestonesAr() {
+  const [child, setChilds] = useState({
+    title_ar: "",
+    description_ar: "",
     month :"",
     err: "",
     loading: false,
@@ -20,12 +20,12 @@ function UpdateArtificalFeeding() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-   setArtificals({ ...artifical, loading: true });
+   setChilds({ ...child, loading: true });
 
     const formData = new FormData();
-    if (artifical.title !== "")formData.append("title", artifical.title);
-    if (artifical.description !== "")formData.append("description", artifical.description);
-    if (artifical.month !== "")formData.append("month",artifical.month);
+    if (child.title_ar !== "")formData.append("title_ar", child.title_ar);
+    if (child.description_ar !== "")formData.append("description_ar", child.description_ar);
+    if (child.month !== "")formData.append("month",child.month);
 
     try {
       const response = await axios.post(
@@ -38,7 +38,7 @@ function UpdateArtificalFeeding() {
         }
       );
       setMessage(response.data.Result);
-      navigate("/ArtificalFeeding");
+      navigate("/ChildMilestones");
     } catch (error) {
       setMessage("There is something wrong");
     }
@@ -46,25 +46,25 @@ function UpdateArtificalFeeding() {
   
   useEffect(() => {
     axios
-      .get("https://gradhub.hwnix.com/api/get_Byid/en/" + id)
+      .get("https://gradhub.hwnix.com/api/get_Byid/ar/" + id)
       .then((resp) => {
-        setArtificals({
-          ...artifical,
-          title: resp.data.title,
-          description: resp.data.description,
+        setChilds({
+          ...child,
+          title_ar: resp.data.title_ar,
+          description_ar: resp.data.description_ar,
           month : resp.data.month,
         });
       })
       .catch((err) => {
-        setArtificals({
-          ...artifical,
+        setChilds({
+          ...child,
           loading: false,
           success: null,
           err: "Something went wrong, please try again later !",
         });
       });
-  }, [artifical.reload]);
- 
+  }, [child.reload]);
+   
   return (
     <div className='body-uCH'>
     <div className='container-u-CH'>
@@ -76,23 +76,22 @@ function UpdateArtificalFeeding() {
         <div><input
           type="text"
           id="title"
-          value={artifical.title}
-          onChange={(e) => setArtificals({ ...artifical, title: e.target.value })}
-        /></div>
+          value={child.title_ar}
+          onChange={(e) => setChilds({ ...child, title_ar: e.target.value })}        /></div>
          </div>
-      
+       
         <div className='row-CH'>
         <div className=' clo-25-CH'>
         <label htmlFor="description" className='label-u-CH'>Description:</label></div>
         <div>
         <textarea
           id="description-u-CH"
-          value={artifical.description}
-          onChange={(e) => setArtificals({ ...artifical, description: e.target.value })}
+          value={child.description_ar}
+          onChange={(e) => setChilds({ ...child, description_ar: e.target.value })}
         /></div>
         </div>
 
-       
+      
         <div className='row-CH'>
             <div className=' clo-25-CH'>
         <label htmlFor="month" className='label-u-CH'>Month:</label></div>
@@ -100,8 +99,8 @@ function UpdateArtificalFeeding() {
         <input
           type="text"
           id="month"
-          value={artifical.month}
-          onChange={(e) => setArtificals({ ...artifical, month: e.target.value })}
+          value={child.month}
+          onChange={(e) => setChilds({ ...child, title: e.target.value })}
         /></div>
         </div>
       
@@ -114,4 +113,4 @@ function UpdateArtificalFeeding() {
   );
 }
 
-export default UpdateArtificalFeeding;
+export default UpdateChildMilestonesAr;

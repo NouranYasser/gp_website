@@ -45,7 +45,12 @@ const ChildMilestonesMonth12Ar = () => {
 
   return (
     <>
-      <div className="bmo">
+      <div className='bmo'>
+        <div className="b-con" >
+        <Link to={"/ChildMilestonesMonth12"}>
+                    <button className="btnArabic-c">English</button>
+        </Link>
+        </div>
         {childs.err && <p>{childs.err}</p>}
         {childs.loading ? (
           <p>Loading...</p>
@@ -77,7 +82,7 @@ const ChildMilestonesMonth12Ar = () => {
                     </td>
                     
                     <td>
-                      <Link to={"/Update/" + result.id}>
+                      <Link to={"/UpdateChildMilestonesAr/" + result.id}>
                         <button className="btnUpdate">تعديل</button>
                       </Link>
                     </td>
@@ -88,9 +93,7 @@ const ChildMilestonesMonth12Ar = () => {
                 ))}
               </tbody>
             </table>
-            <Link to={"/ChildMilestonesMonth12"}>
-                    <button className="btnArabic">English</button>
-        </Link>
+           
         
           </div>
         )}

@@ -8,7 +8,7 @@ const BreastFeeding = () => {
  
     return (
       <>
-    
+       <div className="f_foot">
    
 <br></br>
 <br></br>
@@ -44,16 +44,10 @@ const BreastFeeding = () => {
       </Link>
       </div>
 
-<br></br>
-<br></br>
-<br></br>
 
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-<br></br>
+
+
+</div> 
         </>
     );
   };

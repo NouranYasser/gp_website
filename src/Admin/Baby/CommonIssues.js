@@ -5,15 +5,17 @@ import"../../style/commonissues.css";
 
 function CommonIssues() {
   return (
-    <div>
+    <div className ='c_fo'>
       <h1 className="c1">Common Issues</h1>
-      <div className="b-iss"><Link to="/AddIssue">
+      <div className="b_conC">
+      <div ><Link to="/AddIssue">
         <button className="bb"> Add Issue </button>
       </Link></div>
-     
+     <div>
       <Link to={"/ProductCardAr"}>
-            <button className="">Arabic</button>
+            <button className="bb">Arabic</button>
         </Link>
+        </div></div>
      
       <ProductList/>
 

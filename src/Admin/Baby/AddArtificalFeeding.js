@@ -70,7 +70,7 @@ function AddArtificalFeeding() {
         </select>
         <br /><br />
 
-        <label htmlFor="title" className='CH'> Title In Arabic:</label>
+        <label htmlFor="title" className='label-pregnancy'> Title In Arabic:</label>
           <input
             className='outbox'
             type="text"
@@ -78,15 +78,14 @@ function AddArtificalFeeding() {
             value={title_ar}
             onChange={(e) => setTitleAr(e.target.value)}
           />
-          <br></br>
-          <label htmlFor="description" className='label-CH'>Description In Arabic:</label><br />
+         
+          <label htmlFor="description" className='label-pregnancy'>Description In Arabic:</label><br />
           <textarea
             id="description"
             value={description_ar}
             onChange={(e) => setDescriptionAr(e.target.value)}
           />
           <br />
-          <br /><br />
 
         <button type="submit" className='b-pregnancy'>Submit</button>
       </form>
