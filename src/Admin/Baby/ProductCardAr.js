@@ -14,7 +14,7 @@ function ProductCardAr() {
 
   const fetchIssues = () => {
     axios
-      .get("https://gradhub.hwnix.com/api/get_AllIssues/ar")
+      .get("https://gradhub.hwnix.com/api/get_issues/ar")
       .then((res) => {
         setIssues(res.data);
       })
@@ -42,7 +42,6 @@ function ProductCardAr() {
             <div className="card-top"></div>
             <div className="card-info">
               <h3 className="title">{item.name_ar}</h3>
-              {/* <button onClick={() => deleteIssue(item.id)}>Delete</button> */}
               <Link to={"/ShowDetailsAr/" + item.id}>
                 <button className="btnShow">عرض التفاصيل</button>
               </Link>
@@ -55,3 +54,5 @@ function ProductCardAr() {
 }
 
 export default ProductCardAr;
+
+  {/* <button onClick={() => deleteIssue(item.id)}>Delete</button> */}
