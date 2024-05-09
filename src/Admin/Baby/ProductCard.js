@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import "../../style/productCard.css";
 import axios from "axios";
 import { Link } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTrash } from '@fortawesome/free-solid-svg-icons';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faTrash } from '@fortawesome/free-solid-svg-icons';
 function ProductCard() {
   const [issues, setIssues] = useState([]);
 
@@ -45,7 +45,7 @@ function ProductCard() {
           <button className="btnShow">Show Details</button>
         </Link>
         <button onClick={() => deleteIssue(item.id)}>
-          <FontAwesomeIcon icon={faTrash} />
+          {/* <FontAwesomeIcon icon={faTrash} /> */}
         </button>
       </div>
     </div>
