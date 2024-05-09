@@ -62,11 +62,9 @@ const FoodMonth1 = () => {
               <tr>
                 <th>Title</th>
                 <th>Description</th>
-                <th>Month</th>
                 <th>Image</th>
                 <th></th>
                 <th></th>
-              
               </tr>
             </thead>
             <tbody>

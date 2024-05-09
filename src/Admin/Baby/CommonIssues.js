@@ -12,7 +12,7 @@ function CommonIssues() {
         <button className="bb"> Add Issue </button>
       </Link></div>
      <div>
-      <Link to={"/ProductCardAr"}>
+      <Link to={"/CommonIssuesAr"}>
             <button className="bb">Arabic</button>
         </Link>
         </div></div>

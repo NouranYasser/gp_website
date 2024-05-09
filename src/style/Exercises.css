@@ -1,5 +1,5 @@
 .exf{
-   min-height: calc(100vh -220px);
+  min-height: calc(100vh - 220px);
 }
 .div-E-container{
     margin-top: 15px;
@@ -15,7 +15,6 @@
     border-radius: 5px 5px 0 0;
     overflow: hidden;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-  
   }
   .table-content-E thead tr{
     background-color: rgb(83, 78, 158);
@@ -53,5 +52,6 @@
       border: none;
       background-color: rgb(83, 78, 158); 
       color: rgb(251, 250, 252);
+      cursor: pointer;
       /* margin: 30px; */
   }

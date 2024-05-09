@@ -4,10 +4,10 @@ import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import "../../style/updateVitamins.css";
 
-function UpdateVitamin() {
+function UpdateVitaminAr() {
   const [Vitamin, setVitamin] = useState({
-    title: "",
-    description: "",
+    title_ar: "",
+    description_ar: "",
     image:"",
     err: "",
     loading: false,
@@ -22,8 +22,8 @@ function UpdateVitamin() {
     e.preventDefault();
 
     const formData = new FormData();
-    if (Vitamin.title !== '') formData.append('title', Vitamin.title);
-    if (Vitamin.description !== '') formData.append('description', Vitamin.description);
+    if (Vitamin.title_ar !== '') formData.append('title_ar', Vitamin.title_ar);
+    if (Vitamin.description_ar !== '') formData.append('description_ar', Vitamin.description_ar);
     if (Vitamin.image !== null) formData.append('image', Vitamin.image);
 
     try {
@@ -33,7 +33,7 @@ function UpdateVitamin() {
         },
       });
       setMessage(response.data.Result);
-      navigate("/Vitamins")
+      navigate("/VitaminsAr")
     } catch (error) {
       setMessage('There is something wrong');
     }
@@ -41,12 +41,12 @@ function UpdateVitamin() {
 
   useEffect(() => {
     axios
-      .get("https://gradhub.hwnix.com/api/get_Byid/en/" + id)
+      .get("https://gradhub.hwnix.com/api/get_Byid/ar/" + id)
       .then((resp) => {
         setVitamin({
           ...Vitamin,
-          title: resp.data.title,
-          description: resp.data.description,
+          title_ar: resp.data.title_ar,
+          description_ar: resp.data.description_ar,
           month : resp.data.month,
           image: resp.data.image,
         });
@@ -67,24 +67,24 @@ function UpdateVitamin() {
       <form onSubmit={handleSubmit}>
       <div className='row-V'>
       <div className=' clo-25-V'>
-        <label htmlFor="title"className='label-u-V'>Title:</label></div>
+        <label htmlFor="title"className='label-u-V'>:العنوان</label></div>
         <div>
         <input
           type="text"
           id="title"
-          value={Vitamin.title}
-          onChange={(e) => setVitamin({ ...Vitamin, title: e.target.value })}
+          value={Vitamin.title_ar}
+          onChange={(e) => setVitamin({ ...Vitamin, title_ar: e.target.value })}
         /></div>
         </div>
         <div className='row-V'>
       <div className=' clo-25-V'>
      
-  <label htmlFor="description"className='label-u-V'>Description:</label></div>
+  <label htmlFor="description"className='label-u-V'>:الوصف</label></div>
         <div>
         <textarea
           id="description-V"
-          value={Vitamin.description}
-          onChange={(e) => setVitamin({ ...Vitamin, description: e.target.value })}
+          value={Vitamin.description_ar}
+          onChange={(e) => setVitamin({ ...Vitamin, description_ar: e.target.value })}
         />
       </div>
         </div>
@@ -108,4 +108,4 @@ function UpdateVitamin() {
   );
 }
 
-export default UpdateVitamin;
+export default UpdateVitaminAr;

@@ -4,10 +4,10 @@ import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import "../../style/updateBabygrowth.css";
 
-function UpdateBabygrowth() {
+function UpdateBabygrowthAr() {
   const [babygrowth, setBabyGrowth] = useState({
-    title: "",
-    description: "",
+    title_ar: "",
+    description_ar: "",
     month :"",
     image:"",
     err: "",
@@ -23,8 +23,8 @@ function UpdateBabygrowth() {
     e.preventDefault();
 
     const formData = new FormData();
-    if (babygrowth.title !== '') formData.append('title', babygrowth.title);
-    if (babygrowth.description !== '') formData.append('description', babygrowth.description);
+    if (babygrowth.title_ar !== '') formData.append('title', babygrowth.title_ar);
+    if (babygrowth.description_ar !== '') formData.append('description', babygrowth.description_ar);
     if (babygrowth.month !== '') formData.append('month', babygrowth.month);
     if (babygrowth.image !== null) formData.append('image', babygrowth.image);
 
@@ -47,8 +47,8 @@ function UpdateBabygrowth() {
       .then((resp) => {
         setBabyGrowth({
           ...babygrowth,
-          title: resp.data.title,
-          description: resp.data.description,
+          title: resp.data.title_ar,
+          description: resp.data.description_ar,
           month : resp.data.month,
           image: resp.data.image,
         });
@@ -70,29 +70,29 @@ function UpdateBabygrowth() {
         <form onSubmit={handleSubmit}>
           <div className='row-G'>
             <div className=' clo-25-G'>
-            <label htmlFor="title" className='label-U-G'>Title:</label></div>
+            <label htmlFor="title" className='label-U-G'>:العنوان</label></div>
             <div><input
               type="text"
               id="title"
-              value={babygrowth.title}
-              onChange={(e) => setBabyGrowth({ ...babygrowth, title: e.target.value })}
+              value={babygrowth.title_ar}
+              onChange={(e) => setBabyGrowth({ ...babygrowth, title_ar: e.target.value })}
             /></div>
           </div>
 
           <div className='row-G'>
             <div className=' clo-25-G'>
-              <label htmlFor="description" className='label-U-G'>Description:</label></div>
+              <label htmlFor="description" className='label-U-G'>:الوصف</label></div>
              <div>
               <textarea
                 id="description-G"
-                value={babygrowth.description}
-                onChange={(e) => setBabyGrowth({ ...babygrowth, description: e.target.value })}
+                value={babygrowth.description_ar}
+                onChange={(e) => setBabyGrowth({ ...babygrowth, description_ar: e.target.value })}
               /></div>
           </div>
 
           <div className='row-G'>
             <div className=' clo-25-G'>
-              <label htmlFor="month" className='label-U-G'>Month:</label></div>
+              <label htmlFor="month" className='label-U-G'>:الشهر</label></div>
             <div>
               <input
                 type="text"
@@ -106,7 +106,7 @@ function UpdateBabygrowth() {
           <div className='row-G'>
             <div className=' clo-25-G'>
 
-              <label htmlFor="image" className='label-U-G'>Image:</label></div>
+              <label htmlFor="image" className='label-U-G'>: الصورة</label></div>
             <div>
               <input
                 className='file-upload-G'
@@ -125,4 +125,4 @@ function UpdateBabygrowth() {
   );
 }
 
-export default UpdateBabygrowth;
+export default UpdateBabygrowthAr;

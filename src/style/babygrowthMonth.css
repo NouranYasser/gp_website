@@ -59,6 +59,7 @@
     border: none;
     background-color: rgb(83, 78, 158); 
     color: rgb(251, 250, 252);
+    cursor: pointer;
     /* margin: 30px; */
 }
 .b-con{
@@ -76,4 +77,5 @@
     color: rgb(251, 250, 252);
     margin-top: 20px;
     margin-left: 100px;  
+    cursor: pointer;
 }

@@ -4,7 +4,7 @@ import { setAuthUser } from "../../helper/Storage";
 import { Link } from "react-router-dom";
 import "../../style/login.css";
 import axios from "axios";
-
+import myImage from "../../images/Newborn.webp"
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -42,6 +42,10 @@ const Login = () => {
               </ul>
             </div>
           )} */}
+
+          {/* <div>
+          <img src={myImage} alt="My Image" class="image"  width="10000px" height="300px"/>
+          </div> */}
           <form className="log-form" onSubmit={handleSubmit}>
           {/* <label htmlFor="email" className="label-log">Email:</label> */}
             <input
