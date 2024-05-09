@@ -1,10 +1,9 @@
 .Destination-a {
-    text-align: center;
-    min-height: calc(100vh - 220px);
+  min-height: calc(100vh - 220px);
   }
   .divv {
     
-    box-shadow: 0 0 10px rgba(105, 47, 47, 0.1);
+    box-shadow: 0 0 10px #692f2f1a;
     padding: 20px;
     border-radius: 8px;
   }
@@ -19,6 +18,7 @@
   }
   .ee{
     font-size: x-large;
+    margin-left: 20px;
     padding: 12px 12px 12px 0;
     display: inline-block;
   }
@@ -41,4 +41,7 @@
   }
   .h2{
     font-size: x-large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
