@@ -28,7 +28,7 @@ function UpdateIssue() {
 
     try {
       const response = await axios.post(
-        `https://gradhub.hwnix.com/api/update_DESC/${id}`,
+        `https://gradhub.hwnix.com/api/update_issue/${id}`,
         formData,
         {
           headers: {
