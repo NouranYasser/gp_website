@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import"../../style/addBabyGrowth.css";
+import"../../style/AddAll.css";
+
 
 function AddTipsAndActivities() {
   const [title, setTitle] = useState('');
@@ -38,7 +39,7 @@ function AddTipsAndActivities() {
 
   return (
     <>
-      <div className='main-divp'>
+      <div className='main-divpp'>
         <form className="form-p" onSubmit={handleSubmit}>
           <label htmlFor="title" className='label-G'>Title:</label>
           <input className='outbox'

@@ -1,6 +1,9 @@
 import React from 'react';
 import Sidebar from "./Sidebar";
-import "../../style/Pregnancy.css";
+import "../../style/BabyHome.css";
+import myImage from '../../images/BabyBorn.png';
+
+import Headerlogout from "../../components/Headerlogout";
 
 
 function BabyHome() {
@@ -8,10 +11,15 @@ function BabyHome() {
   return (
     <>
       <Sidebar />
-      <div className='pfot'>
-         <div className='main-divp'>
+      <div className='back'>
+         <div className='main-back'>
         
+
+         <img src={myImage} alt="My Image" class="image"  width="4000px" height="1000px"/>
          </div>
+
+         <Headerlogout/>
+      
       </div>
 
     </>

@@ -1,9 +1,6 @@
 .pfot{
   min-height: calc(100vh - 220px );
-  background-image: url("../images/BabyHome.jpg");
-  background-size:500px;
-  background-position: right;
-  background-repeat: no-repeat; 
+
 }
 
 .main-divp{
@@ -16,6 +13,7 @@
   justify-content: space-around;
   align-items: center;
   min-height: calc(100vh - 220px - 10px);
+
 } 
 
 
@@ -23,7 +21,7 @@
   width: 40%;
   /* height: 100%; */
     /* background-image: url("../R.png"); */
-    background-color: rgb(233, 231, 234);
+    background-color: rgb(240, 240, 243);
     /* width: max-content;
     height: 400px; */
     border-radius: 20px;

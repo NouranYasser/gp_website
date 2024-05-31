@@ -77,6 +77,8 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import"../../style/AddAll.css";
+
 
 function AddChildMilestones() {
   const [title, setTitle] = useState('');
@@ -113,7 +115,7 @@ function AddChildMilestones() {
   return (
     <>
     <div className="pfot">
-      <div className='main-divp'>
+      <div className='main-divpp'>
         <form className="form-p" onSubmit={handleSubmit}>
           <label htmlFor="title" className='label-pregnancy'>Title:</label>
           <input className='outbox'

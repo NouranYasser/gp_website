@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import "../../style/addissue.css";
+import "../../style/AddAll.css";
 
 function AddIssue() {
   const [name, setName] = useState("");
@@ -32,7 +32,7 @@ function AddIssue() {
 
   return (
     <div className="Destination-a">
-        <div className='main-divp'>
+        <div className='main-divpp'>
       <form className="form-p" onSubmit={handleSubmit}>
 
         <h2 className="h2">Add Issue</h2>
