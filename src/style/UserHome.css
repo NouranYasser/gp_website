@@ -2,15 +2,27 @@
     padding: 15px;
     margin-top: 100px;
     height: 100%;
+    width :100%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
     
 }
-.nouran{
-    /* background-image: url("../images/images.jfif"); */
-    background-repeat: no-repeat;
+.nouran222{
+    background-color: hsla(223, 68%, 94%, 1);
+    width: 100%;
+    height: 100vh;
+    background-size: cover 100% 100%;
+    /* position: relative; */
+}
+.header12{
+    width: 100%;
+    position: fixed;
+    font-size: 1.4rem;
+    /* top: 0%;
+    right: 0%;
+    left: 0%; */
 }
 .b-div{   
     max-width: 450px;

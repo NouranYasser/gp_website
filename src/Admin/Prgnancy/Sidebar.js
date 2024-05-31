@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "../../components/Headerlogout";
-import myImage from '../../images/image.png';
+import myImage from '../../images/baby born-02.png';
 import { useState } from "react";
 import "../../style/Sidebar.css";
 import { PiBabyLight } from "react-icons/pi";

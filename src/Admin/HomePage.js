@@ -2,23 +2,47 @@ import React from "react";
 import Header from "../components/Headerlogout";
 import "../style/UserHome.css";
 import { Link } from "react-router-dom";
-// import Image from "../images/logo.png"
-// import myImage from '../images/images logo.png';
-import Image from "../images/pregnancy.jpg"
-import myImage from "../images/Baby2.jpg";
+import { removeAuthUser } from "../helper/Storage";
+import myImage from "../images/imagepr2.png"
+import Image from "../images/imageconverted.png"
+import myImage2 from "../images/baby born-02.png";
 import "./Baby/Sidebar";
 import "./Baby/BabyHome";
 //import { useState } from "react";
 
 const UserHome = () => {
- 
+  const handleLogout = () => {
+    removeAuthUser();
+    window.location.href = "/Login";
+  };
   return (
     <> 
-       <div className="nouran">
-       <Header />
+       <div className="nouran222">
+        <div className="header12">
+       <header>
+    <img src={myImage2} alt="My Image2" class="logo"  width="200px" height="200px"/>
+    
+    <button className="Newlogout" onClick={handleLogout}>Logout</button>
+
+    <nav className="navbar">
+      
+      {/* <ul>
+          <div className="divHome">
+          <a to="/">Home</a>
+          </div>
+         
+          <div className="divHome">
+            
+          
+          </div>
+          </ul>
+       */}
+    </nav>
+  </header>
+  </div>
       <div className="main-div">
       <div className="b-div">
-       <img src={myImage} alt="My Image" class="image"  width="300px" height="300px"/>
+       <img src={myImage} alt="My Image" class="image"  width="400px" height="400px"/>
       <br></br>
       <Link to="/BabyHome">
         <button className="Newborn"> New Born</button>
@@ -26,7 +50,7 @@ const UserHome = () => {
       </div>
       <div className="b-div">
         
-      <img src={Image} alt="My Image" class="image"  width="50px" height="300px"/>
+      <img src={Image} alt="My Image" class="image"  width="400px" height="400px"/>
       <br></br>
        <Link to="/Pregnancy">
         <button className="Newborn"> pregnancy</button>

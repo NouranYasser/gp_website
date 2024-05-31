@@ -1,6 +1,9 @@
 .pfot{
   min-height: calc(100vh - 220px );
-  
+  background-image: url("../images/hero.png");
+  background-size:500px;
+  background-position: right;
+  background-repeat: no-repeat; 
 }
 
 .main-divp{
@@ -13,7 +16,9 @@
   justify-content: space-around;
   align-items: center;
   min-height: calc(100vh - 220px - 10px);
+  
 } 
+
 
 .form-p{
   width: 40%;

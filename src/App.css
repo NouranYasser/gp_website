@@ -1,38 +1,72 @@
-/* .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header-title-nav-wrapper{
   display: flex;
-  flex-direction: column;
+    flex-wrap: nowrap;
+    flex: 1 0 67%;
+    justify-content: center;
+    align-items: center;
+}
+.header-title-logo img {
+  width: auto;
+  width: 200px;
+  height: 100px;
+  margin-left: -1300px;
+}
+.header-background, .header-background::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transition: opacity 400ms cubic-bezier(.4,0,.2,1);
+  will-change: opacity;
+}
+.header-display-desktop {
+  position: relative;
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  justify-content: flex-start;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.header-nav-list {
+  display: flex;
+  gap: 20px; /* Space between nav items */
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.App-link {
-  color: #61dafb;
+.header-nav-item {
+  display: flex;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
+.header-nav-folder-title,
+.header-nav-folder-item {
+  text-decoration: none;
+  color: inherit;
+}
+
+.sqs-html-content {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.sqsrte-text-color--black {
+  color: black;
+}
+
+header .navbar a {
+  font-size: 1.7rem;
+  margin-left: .7rem;
+  padding: .5rem 2rem;
+  border-radius: .5rem;
+  color: var(--purple);
+  text-decoration: none;
+}
+.nouran2{
+    background-image: url("./images/hero.png");
+    background-size:500px;
+    background-position: right;
+    background-repeat: no-repeat; 
+}

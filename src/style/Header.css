@@ -76,13 +76,13 @@ header.sticky{
    
 }  */
 .Newlogout{
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     margin-left: .7rem;
     padding:.5rem 2rem;   
     color:var(--dark-blue);
     text-decoration: none;
     border-radius: 20px;
-    margin-left: 1100px;
+    margin-left: 1050px;
     cursor: pointer;  
 } 
 
