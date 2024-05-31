@@ -1,61 +1,61 @@
 .log-form{
-    margin-top: 10px;
-   
-    
+  margin-top: 10px;
+ 
+  
 }
 .signadmin{
-    font-size: large;
-    width: 80%;
-    height: 40px;
-    border-radius: 20px;
-    border: none;
-    background-color: rgb(83, 78, 158); 
-    color: white;
-    margin: 30px;  
-    cursor: pointer;
-  }
-   
-  .bodyForm{
-    width: 30%;
-    height: 80%;
-    border-radius: 20px;
-    /* margin-left: -400px; */
-  }
-  .content{
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    /* justify-content: center;
-    align-items: center; */
-    background-image: url("../images/hero.png");
-    background-size:100%; 
-    background-repeat: no-repeat;
-   
+  font-size: large;
+  width: 80%;
+  height: 40px;
+  border-radius: 20px;
+  border: none;
+  background-color: rgb(83, 78, 158); 
+  color: white;
+  margin: 30px;  
+  cursor: pointer;
+}
+ 
+.bodyForm{
+  width: 30%;
+  height: 80%;
+  border-radius: 20px;
+  /* margin-left: -400px; */
+}
+.content{
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  /* justify-content: center;
+  align-items: center; */
+  background-image: url("../images/hero.png");
+  background-size:100%; 
+  background-repeat: no-repeat;
+ 
 }
 .output-box{
-        width: 90%;
-        height: 30px;
-        border-color: rgb(25, 25, 25);
-        border: 2px;
-        border-radius:5px ;
-        margin:0 20px; 
-        margin-bottom: 20px;
-        
-      }
-      .label-log{
-        margin-left: 10px;
-        margin-bottom: 10px;
-      }
-      .pp{
-        margin-left: 10px;
-        font-size: large;
-      }
+      width: 90%;
+      height: 30px;
+      border-color: rgb(25, 25, 25);
+      border: 2px;
+      border-radius:5px ;
+      margin:0 20px; 
+      margin-bottom: 20px;
+      
+    }
+    .label-log{
+      margin-left: 10px;
+      margin-bottom: 10px;
+    }
+    .pp{
+      margin-left: 10px;
+      font-size: large;
+    }
 
 /* .imageLogin{
-  color: black;
-  background-position: center;
-  width: 100%;
-  object-fit: contain;
-  margin-left: 490px;
-  margin-top: 400px;
+color: black;
+background-position: center;
+width: 100%;
+object-fit: contain;
+margin-left: 490px;
+margin-top: 400px;
 } */

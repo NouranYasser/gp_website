@@ -167,8 +167,7 @@ import UpdateCoursesAr from "./Admin/Prgnancy/UpdateCoursesAr.js";
 import UpdateExerciseAr from "./Admin/Prgnancy/UpdateExerciseAr.js";
 import UpdateFoodAr from "./Admin/Prgnancy/UpdateFoodAr.js";
 import UpdateVitaminAr from "./Admin/Prgnancy/UpdateVitaminsAr.js";
-//import {Welcome}from "./Admin/Welcome.js"
-import Index from "./Admin/Index.js";
+
 export const router = createBrowserRouter([
   {
       
@@ -177,14 +176,7 @@ export const router = createBrowserRouter([
       path: "/",
       element: <App />,
       },
-      {
-      path: "/index",
-      element: <Index/>,
-      },
-      // {
-      //   path: "/welcome",
-      //   element: <Welcome/>,
-      // },
+     
       {
         path: "/Login",
         element: <Login />,

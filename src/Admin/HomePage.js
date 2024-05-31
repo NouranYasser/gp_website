@@ -64,9 +64,6 @@ const UserHome = () => {
 <br></br>
 <br></br>
 <br></br>
-
-
-
     </>
   );
 };
