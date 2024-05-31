@@ -22,7 +22,7 @@ const UserHome = () => {
        <header>
     <img src={myImage2} alt="My Image2" class="logo"  width="200px" height="200px"/>
     
-    <button className="Newlogout" onClick={handleLogout}>Logout</button>
+    <button className="Newlogout2" onClick={handleLogout}>Logout</button>
 
     <nav className="navbar">
       

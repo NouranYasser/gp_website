@@ -60,7 +60,7 @@ const Sidebar  = ({children}) => {
            <div style={{width: isOpen ? "200px" : "50px"}} className="sidebar">
                <div className="top_section">
                  
-                   <div style={{marginLeft: isOpen ? "50px" : "0px"}} className="bars">
+                   <div style={{marginLeft: isOpen ? "0px" : "0px"}} className="bars ">
                        <FaBars onClick={toggle}/>
                    </div>
                </div>
@@ -73,8 +73,8 @@ const Sidebar  = ({children}) => {
                {
        menuItem.map((item, index)=>(
                        <NavLink to={item.path} key={index} className="link" activeclassName="active">
-                           <div className="icon">{item.icon}</div>
-                           <div style={{display: isOpen ? "block" : "none"}} className="link_text">{item.name}</div>
+                           <div className="icon mr-3" >{item.icon}</div>
+                           <div style={{display: isOpen ? "block" : "none"}} className="link_text mx-3">{item.name}</div>
                        </NavLink>
                    ))
                }

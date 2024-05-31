@@ -6,7 +6,6 @@
 }
 
 header{
-    /* margin-left: 95px; */
     width: 1400px;
     height: 10px;
     display: flex;
@@ -24,6 +23,8 @@ header{
 
 header .logo{
     object-fit: contain;
+    margin-left: -70px;
+    margin-top: 10px;
 }
 
 
@@ -82,8 +83,27 @@ header.sticky{
     color:var(--dark-blue);
     text-decoration: none;
     border-radius: 20px;
-    margin-left: 1050px;
-    cursor: pointer;  
+    margin-left: 1280px;
+    cursor: pointer; 
+    margin-right: -100px; 
+    margin-top: 10px;
+    background-color: hsla(223, 68%, 94%, 1);
+    transition: all 0.50s;
+} 
+
+.Newlogout2{
+    font-size: 1.4rem;
+    margin-left: .7rem;
+    padding:.5rem 2rem;   
+    color:var(--dark-blue);
+    text-decoration: none;
+    border-radius: 20px;
+    margin-left: 1130px;
+    cursor: pointer; 
+    margin-right: -100px; 
+    margin-top: 10px;
+    background-color: hsla(223, 68%, 94%, 1);
+    transition: all 0.50s;
 } 
 
 .Newlogout:hover {

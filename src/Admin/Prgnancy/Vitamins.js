@@ -46,7 +46,7 @@ const Vitamins = () => {
   return (
     <>
       <div className='v_foot'>
-        <div className="b_conV">
+        <div className="b_conV mb-3">
         <div><Link to="/AddVitamin">
           <button className="btn-addV"> Add Data in Vitamins</button>
         </Link></div>
