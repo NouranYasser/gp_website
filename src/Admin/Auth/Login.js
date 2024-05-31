@@ -4,7 +4,11 @@ import { setAuthUser } from "../../helper/Storage";
 import { Link } from "react-router-dom";
 import "../../style/login.css";
 import axios from "axios";
-import myImage from "../../images/Newborn.webp"
+import myImage from "../../images/lo.png";
+
+
+
+
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -29,9 +33,14 @@ const Login = () => {
 
   return (
     <>
+    
       <div className="content">
-      
-        <div className="bodyForm">
+      <div className="bodyForm">
+         
+         
+      <img src={myImage} alt="My Image" width="180px" height="160px" className="d-inline-block align-top mr-2" />
+         
+         
           {/* {errors.length > 0 && (
             <div>
               <h2>Errors:</h2>

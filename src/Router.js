@@ -4,6 +4,9 @@ import CommonIssuesAr from "./Admin/Baby/CommonIssuesAr.js";
 import ShowDetailsAr from "./Admin/Baby/ShowDetailsAr"
 import SignUp from "./Admin/Auth/SignUp.js";
 import Login from "./Admin/Auth/Login.js";
+
+
+
 import App from "./App";
 import Pregnancy from "./Admin/Prgnancy/Pregnancy.js";
 import Babygrowth from "./Admin/Prgnancy/Babygrowth.js";
@@ -50,7 +53,6 @@ import UpdateWeaningAr from "./Admin/Baby/UpdateWeaningAr.js";
 import UpdateBreastFeedingAr from "./Admin/Baby/UpdateBreastFeedingAr.js";
 import UpdateArtificalFeedingAr from "./Admin/Baby/UpdateArtificalFeedingAr.js";
 import UpdateIssueAr from "./Admin/Baby/UpdateIssueAr.js";
-
 
 
 import Feeding from "./Admin/Prgnancy/Feeding.js";
@@ -178,9 +180,9 @@ import UpdateFoodAr from "./Admin/Prgnancy/UpdateFoodAr.js";
 import UpdateVitaminAr from "./Admin/Prgnancy/UpdateVitaminsAr.js";
 export const router = createBrowserRouter([
   {
+
     path: "/",
-    element: <App />,
-    children: [
+    element: <App />,},
       {
         path: "/Login",
         element: <Login />,
@@ -190,6 +192,7 @@ export const router = createBrowserRouter([
         path: "/SignUp",
         element: <SignUp />,
       },
+
 
       {
         element: <Guest />,
@@ -963,6 +966,5 @@ export const router = createBrowserRouter([
           },
         ],
       },
-    ],
-  },
+  
 ]);

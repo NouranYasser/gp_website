@@ -2,10 +2,11 @@ import React from "react";
 import "../style/Header.css";
 import {Link} from "react-router-dom";
 import { removeAuthUser } from "../helper/Storage";
+
 // import { Link } from "react-router-dom";
 
 // import myImage from '../images/images.png';
-import myImage from "../images/final.png";
+//import myImage from "../images/final.png";
 
 
 const Header = () => {
@@ -14,7 +15,7 @@ const Header = () => {
     window.location.href = "/Login";
   };
   return (<header>
-    <img src={myImage} alt="My Image" class="logo"  width="110px" height="110px"/>
+    {/* <img src={myImage} alt="My Image" class="logo"  width="110px" height="110px"/> */}
     
     <button className="Newlogout" onClick={handleLogout}>Logout</button>
 

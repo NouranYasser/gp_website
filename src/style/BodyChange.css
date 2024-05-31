@@ -1,6 +1,6 @@
 .ch_foot{
     min-height: calc(100vh - 220px);
-    background-image: url("../images/R.jpg");
+ /* background-image: url("../images/R.jpg"); */
     background-repeat: no-repeat;
     background-attachment: fixed;
     height: 100%;

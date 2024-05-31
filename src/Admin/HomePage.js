@@ -1,9 +1,9 @@
 import React from "react";
 import Header from "../components/Headerlogout";
+//import HomePage from "./Admin/HomePage.js";
+
 import "../style/UserHome.css";
 import { Link } from "react-router-dom";
-// import Image from "../images/logo.png"
-// import myImage from '../images/images logo.png';
 import Image from "../images/pregnancy.jpg"
 import myImage from "../images/Baby2.jpg";
 import "./Baby/Sidebar";

@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import "../../style/productCard.css";
 import axios from "axios";
 import { Link } from 'react-router-dom';
-import { MdDelete } from "react-icons/md";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrash } from '@fortawesome/free-solid-svg-icons';
 function ProductCard() {
@@ -43,15 +42,10 @@ function ProductCard() {
         <div key={item.id} className="product-Card">
           <div className="card-top"></div>
           <div className="card-info">
-<<<<<<< HEAD
-            <h3 className="title">{item.name}</h3>
-            
-=======
           <button onClick={() => deleteIssue(item.id)}>
           <FontAwesomeIcon icon={faTrash} />
         </button>
             <h3 className="title">{item.name}</h3>  
->>>>>>> e29f2e91daad5bc151029131f3d162a5f0bf9ce6
             <Link to={"/ShowDetails/" + item.id}>
               <button className="btnShow">Show Details</button>
             </Link>

@@ -1,6 +1,6 @@
 .log-form{
     margin-top: 10px;
-    
+   
 }
 .signadmin{
     font-size: large;
@@ -25,10 +25,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url("../images/Newborn.webp");
+
+   
+    /* background-image: url("../images/Newborn.webp");
     background-size:500px;
     background-position: right;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; */
 }
 .output-box{
         width: 90%;
@@ -38,6 +40,7 @@
         border-radius:5px ;
         margin:0 20px; 
         margin-bottom: 20px;
+        
         
       }
       .label-log{
@@ -49,11 +52,11 @@
         font-size: large;
       }
 
-/* .imageLogin{
+/* /* .imageLogin{
   color: black;
   background-position: center;
   width: 100%;
   object-fit: contain;
   margin-left: 490px;
   margin-top: 400px;
-} */
+}  */
