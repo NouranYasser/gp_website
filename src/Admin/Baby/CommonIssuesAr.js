@@ -7,6 +7,7 @@ import ProductListAr from "./ProductListAr";
 function CommonIssuesAr() {
   return (
     <div className="c_fo">
+      <br></br>
       <h1 className="c1">المشاكل الشائعة</h1>
       <div className="b_conC">
         <div>

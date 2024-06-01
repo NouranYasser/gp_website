@@ -6,6 +6,7 @@ import"../../style/commonissues.css";
 function CommonIssues() {
   return (
     <div className ='c_fo'>
+       <br></br>
       <h1 className="c1">Common Issues</h1>
       <div className="b_conC">
       <div ><Link to="/AddIssue">
