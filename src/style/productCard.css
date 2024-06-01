@@ -26,6 +26,7 @@
     padding: 15px;
     color:black;
     font-size: 15px;
+    
     }
     
     .title{
@@ -69,6 +70,6 @@
     border: none;
     background-color: rgb(83, 78, 158); 
     color: rgb(251, 250, 252);
-    margin-left: 20px;
+    margin-left: 60px;
     cursor: pointer;
 }

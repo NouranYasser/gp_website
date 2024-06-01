@@ -37,6 +37,10 @@ function AddWeaning() {
   };
 
   return (
+    <>
+     <div className="pfott">
+      <div className="d">
+
     <div className='main-divpp'>
       <form className="form-p" onSubmit={handleSubmit}>
         <label htmlFor="title" className='label-pregnancy'>Title:</label>
@@ -91,6 +95,9 @@ function AddWeaning() {
       </form>
       {message && <p>{message}</p>}
     </div>
+    </div>
+    </div>
+    </>
   );
 }
 
