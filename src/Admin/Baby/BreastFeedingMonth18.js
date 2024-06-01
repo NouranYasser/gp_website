@@ -94,9 +94,6 @@ const BreastFeedingMonth18 = () => {
               </tbody>
             </table>
         
-            <Link to={"/BreastFeedingMonth18Ar"}>
-                    <button className="btnArabic">Arabic</button>
-        </Link>
           </div>
         )}
       </div>

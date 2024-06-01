@@ -47,7 +47,7 @@ const TipsAndActivitiesMonth21 = () => {
     <>
       <div className="bmo">
       <div className="b-con">
-      <Link to={"/psAndAcTitivitiesMonth21Ar"}>
+      <Link to={"/TipsAndActivitiesMonth21Ar"}>
                     <button className="btnArabic-c">Arabic</button>
         </Link>
 </div>
