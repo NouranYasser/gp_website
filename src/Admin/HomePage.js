@@ -26,17 +26,6 @@ const UserHome = () => {
 
     <nav className="navbar">
       
-      {/* <ul>
-          <div className="divHome">
-          <a to="/">Home</a>
-          </div>
-         
-          <div className="divHome">
-            
-          
-          </div>
-          </ul>
-       */}
     </nav>
   </header>
   </div>
@@ -60,10 +49,7 @@ const UserHome = () => {
       </div>
       </div>
 
-<br></br>
-<br></br>
-<br></br>
-<br></br>
+
     </>
   );
 };

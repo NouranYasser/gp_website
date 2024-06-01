@@ -1,4 +1,4 @@
-.log-form{
+/* .log-form{
   margin-top: 10px;
  
   
@@ -19,14 +19,12 @@
   width: 30%;
   height: 80%;
   border-radius: 20px;
-  /* margin-left: -400px; */
+ 
 }
 .content{
   height: 100vh;
   width: 100%;
   display: flex;
-  /* justify-content: center;
-  align-items: center; */
   background-image: url("../images/hero.png");
   background-size:cover; 
   background-repeat: no-repeat;
@@ -50,7 +48,7 @@
     .pp{
       margin-left: 10px;
       font-size: large;
-    }
+    } */
 
 /* .imageLogin{
 color: black;
