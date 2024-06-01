@@ -14,7 +14,6 @@
         color: rgb(26, 19, 54);
         height: 100vh;
         transition: all 0.5s;
-        /* width: 104px !important; */
         position: fixed;
         top: 0;
         left: 0;
@@ -30,7 +29,6 @@
     
     .link_text{
         color: rgb(26, 19, 54);
-        /* padding: 1%; */
     }
     .icon{
       
@@ -40,7 +38,6 @@
     .bars{
     font-size: 25px;
     display: flex;
-    /* margin-left: 500px; */
     }
     
     .link{
