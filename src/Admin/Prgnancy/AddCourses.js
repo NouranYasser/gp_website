@@ -38,7 +38,7 @@ function AddCourses() {
   return (
     <>
       <div className='main-divCH'>
-        <form className="form-p" onSubmit={handleSubmit}>
+        <form className="form-CH" onSubmit={handleSubmit}>
 
           <label htmlFor="description" className='label-CH'>Description:</label><br />
           <textarea

@@ -28,7 +28,7 @@ const Sidebar = ({ children }) => {
     <div className="main-container">
       <div className="sidebar" style={{ width: isOpen ? "200px" : "50px" }}>
         <div className="top_section">
-          <div className="bars" onClick={toggle}>
+          <div className="bars" onClick={toggle} style={{ marginLeft: isOpen ? "50px" : "0px" }}>
             <FaBars />
           </div>
         </div>
