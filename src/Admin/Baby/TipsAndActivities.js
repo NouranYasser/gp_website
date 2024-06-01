@@ -52,12 +52,6 @@ const TipsAndActivities = () => {
       <br></br>
       <br></br>
 
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
     </>
   );
 };
