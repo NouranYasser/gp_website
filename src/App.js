@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { setAuthUser } from "../src/helper/Storage"
-import { Link } from "react-router-dom";
-import "../src/style/login.css";
+import  "./App.css"
 import axios from "axios";
  import myImage from "../src/images/baby born-02.png"
  import "bootstrap/dist/css/bootstrap.min.css"
@@ -30,23 +29,9 @@ const App = () => {
 
   return (
     <>
-      <div className="content">
+      <div className="contentApp">
       
         <div className="bodyForm">
-          {/* {errors.length > 0 && (
-            <div>
-              <h2>Errors:</h2>
-              <ul>
-                {errors.map((error, index) => (
-                  <li key={index}>{error.msg}</li>
-                ))}
-              </ul>
-            </div>
-          )} */}
-
-          {/* <div>
-          <img src={myImage} alt="My Image" class="image"  width="10000px" height="300px"/>
-          </div> */}
          
          <div className="row mt-3">
           
