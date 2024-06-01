@@ -24,7 +24,7 @@ const UserHome = () => {
     <button className="Newlogout2" onClick={handleLogout}>Logout</button>
 
     <nav className="navbar">
-
+      
     </nav>
   </header>
   </div>

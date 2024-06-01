@@ -70,3 +70,53 @@ header .navbar a {
     background-position: right;
     background-repeat: no-repeat; 
 }
+.log-form{
+  margin-top: 10px;
+ 
+  
+}
+.signadmin{
+  font-size: large;
+  width: 80%;
+  height: 40px;
+  border-radius: 20px;
+  border: none;
+  background-color: rgb(83, 78, 158); 
+  color: white;
+  margin: 30px;  
+  cursor: pointer;
+}
+ 
+.bodyForm{
+  width: 30%;
+  height: 80%;
+  border-radius: 20px;
+ 
+}
+.contentApp{
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  background-image: url("./images/hero.png");
+  background-size:100%; 
+  background-repeat: no-repeat;
+ 
+}
+.output-box{
+      width: 90%;
+      height: 30px;
+      border-color: rgb(25, 25, 25);
+      border: 2px;
+      border-radius:5px ;
+      margin:0 20px; 
+      margin-bottom: 20px;
+      
+    }
+    .label-log{
+      margin-left: 10px;
+      margin-bottom: 10px;
+    }
+    .pp{
+      margin-left: 10px;
+      font-size: large;
+    }
