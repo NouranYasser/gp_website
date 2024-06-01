@@ -6,7 +6,7 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    
+
 }
 .nouran222{
     background-color: hsla(223, 68%, 94%, 1);
@@ -19,11 +19,9 @@
     width: 100%;
     position: fixed;
     font-size: 1.4rem;
-    /* top: 0%;
-    right: 0%;
-    left: 0%; */
+
 }
-.b-div{   
+.b-div{
     max-width: 450px;
     max-height: 450px;
     display: flex;
@@ -33,7 +31,7 @@
 }
 .b-div button{
     margin-top: 1px;
-    
+
 }
 
 
