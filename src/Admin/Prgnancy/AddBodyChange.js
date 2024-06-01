@@ -40,7 +40,7 @@ function AddBodyChange() {
   return (
     <>
       <div className='main-divCH'>
-        <form className="form-p" onSubmit={handleSubmit}>
+        <form className="form-CH" onSubmit={handleSubmit}>
           <label htmlFor="title" className='label-CH'>Title:</label>
           <input
             className='outboxCH'
