@@ -9,6 +9,8 @@ const Nutrition = () => {
     return (
       <>  
       <div className='f_foot'>
+        <br></br>
+        <br></br>
 <h1 className="f-p">Nutrition </h1>
 <br></br>
 <br></br>

@@ -6,6 +6,7 @@ import "../../style/tips.css";
 const TipsAndActivities = () => {
   return (
     <>
+    <div className="mainTipscontainer">
       <Link to="/AddTipsAndActivities">
         <button className="btn-addATA">
           {" "}
@@ -51,7 +52,7 @@ const TipsAndActivities = () => {
       <br></br>
       <br></br>
       <br></br>
-
+      </div>
     </>
   );
 };

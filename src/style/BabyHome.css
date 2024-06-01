@@ -15,8 +15,8 @@
 .main-back{
 
     height: 100%;
-    padding: 15px;
-    margin-top: 20px;
+    /* padding: 15px; */
+    /* margin-top: 20px; */
     display: flex;
     flex-direction: row;
     justify-content: space-around;

@@ -31,8 +31,10 @@ function AddIssue() {
   }
 
   return (
-    <div className="Destination-a">
-        <div className='main-divpp'>
+    <div className="pfott">
+      <div className="d">
+    {/* <div className="Destination-a"> */}
+        <div className='main-divppissue'>
       <form className="form-p" onSubmit={handleSubmit}>
 
         <h2 className="h2">Add Issue</h2>
@@ -109,6 +111,8 @@ function AddIssue() {
       </form>
       </div>
     </div>
+    </div>
+    // </div>
   );
 }
 

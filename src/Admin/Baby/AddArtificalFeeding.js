@@ -36,6 +36,9 @@ function AddArtificalFeeding() {
   };
 
   return (
+    <>
+    <div className="pfott">
+      <div className="d">
     <div className='main-divpp'>
       <form className="form-p" onSubmit={handleSubmit}>
         <label htmlFor="title" className='label-pregnancy'>Title:</label>
@@ -91,6 +94,9 @@ function AddArtificalFeeding() {
       </form>
       {message && <p>{message}</p>}
     </div>
+    </div>
+    </div>
+    </>
   );
 }
 

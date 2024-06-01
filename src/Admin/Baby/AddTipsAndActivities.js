@@ -39,16 +39,18 @@ function AddTipsAndActivities() {
 
   return (
     <>
+    <div className="pfott">
+      <div className="d">
       <div className='main-divpp'>
         <form className="form-p" onSubmit={handleSubmit}>
-          <label htmlFor="title" className='label-G'>Title:</label>
+          <label htmlFor="title" className='label-pregnancy'>Title:</label>
           <input className='outbox'
             type="text"
             id="title"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
           />
-          <label htmlFor="description" className='label-G'>Description:</label><br />
+          <label htmlFor="description" className='label-pregnancy'>Description:</label><br />
           <textarea
             id="description"
             value={description}
@@ -56,9 +58,9 @@ function AddTipsAndActivities() {
           />
           <br />
           <div className="mb-2">
-            <label htmlFor="month" className='label-G'>
+            <label htmlFor="month" className='label-pregnancy'>
               Month
-            </label>
+            </label><br></br>
             <select
               id="month"
               value={month}
@@ -76,8 +78,8 @@ function AddTipsAndActivities() {
               <option value="12">21</option>
 
             </select>
-            <br></br> <br></br>
-          <label htmlFor="title" className='label-G'> Title In Arabic:</label>
+            <br></br> 
+          <label htmlFor="title" className='label-pregnancy'> Title In Arabic:</label>
           <input
             className='outbox'
             type="text"
@@ -86,18 +88,20 @@ function AddTipsAndActivities() {
             onChange={(e) => setTitleAr(e.target.value)}
           />
           <br></br>
-          <label htmlFor="description" className='label-G'>Description In Arabic:</label><br />
+          <label htmlFor="description" className='label-pregnancy'>Description In Arabic:</label><br />
           <textarea
             id="description"
             value={description_ar}
             onChange={(e) => setDescriptionAr(e.target.value)}
           />
-          <br />
+          
           </div>
           <br />
           <button type="submit" className='b-Growth'>Submit</button>
         </form>
         {message && <p>{message}</p>}
+        </div>
+      </div>
       </div>
     </>
   );
