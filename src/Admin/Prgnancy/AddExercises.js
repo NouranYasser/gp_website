@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import "../../style/addBodyChange.css";
+import "../../style/addexercises.css";
 
 function AddExercises() {
   const [title, setTitle] = useState('');
@@ -35,27 +35,27 @@ function AddExercises() {
 
   return (
     <>
-      <div className='main-divCH'>
-        <form className="form-p" onSubmit={handleSubmit}>
+      <div className='main-divCEX'>
+        <form className="form-EX" onSubmit={handleSubmit}>
           
 
-          <label htmlFor="description" className='label-CH'>Description:</label><br />
+          <label htmlFor="description" className='label-CEX'>Description:</label><br />
           <textarea
-            id="description"
+            id="descriptionEX"
             value={description}
             onChange={(e) => setDescription(e.target.value)}
           />
           <br />
 
-          <label htmlFor="description" className='label-CH'>Description In Arabic:</label><br />
+          <label htmlFor="description" className='label-CEX'>Description In Arabic:</label><br />
           <textarea
-            id="description"
+            id="descriptionEX"
             value={description_ar}
             onChange={(e) => setDescriptionAr(e.target.value)}
           />
           <br />
          
-          <label htmlFor="VideoUrl" className='label-CH'>Video Url:</label><br />
+          <label htmlFor="VideoUrl" className='label-CEX'>Video Url:</label><br />
           <textarea
             id="VideoUrl"
             value={video_url}
@@ -64,7 +64,7 @@ function AddExercises() {
           <br />
 
           <br /><br />
-          <button type="submit" className='b-Change'>Submit</button>
+          <button type="submit" className='b-ChangeEX'>Submit</button>
         </form>
         {message && <p>{message}</p>}
       </div>

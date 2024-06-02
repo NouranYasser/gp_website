@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import"../../style/addBabyGrowth.css";
+import"../../style/addfeeding.css";
 
 
 
@@ -39,28 +39,28 @@ function AddFeeding() {
   return (
     <>
 
-      <div className='main-divG'>
-        <form className="form-G" onSubmit={handleSubmit}>
+      <div className='main-divFE'>
+        <form className="form-GFE" onSubmit={handleSubmit}>
           
-          <label htmlFor="title"  className='label-G'>Title:</label>
-          <input className='outbox'
+          <label htmlFor="title"  className='label-GFE'>Title:</label>
+          <input className='outbox-FE'
             type="text"
             id="title"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
           />
 
-          <label htmlFor="description"  className='label-G'>Description:</label><br></br>
+          <label htmlFor="description"  className='label-GFE'>Description:</label><br></br>
 
           <textarea
 
-            id="description"
+            id="descriptionFE"
             value={description}
             onChange={(e) => setDescription(e.target.value)}
           />
           <br></br>
-          <label htmlFor="month"  className='label-G'>Month:</label><br></br>
-          <input className='outbox'
+          <label htmlFor="month"  className='label-GFE'>Month:</label><br></br>
+          <input className='outbox-FE'
             type="text"
             id="month"
             value={month}
@@ -68,14 +68,14 @@ function AddFeeding() {
           />
 
 
-          <label htmlFor="image"  className='label-G'>Image:</label>
+          <label htmlFor="image"  className='label-GFE'>Image:</label>
           <input
             type="file"
             id="image"
             onChange={(e) => setImage(e.target.files[0])}
           />
           <br></br><br></br>
-          <button type="submit" className='b-Growth'>Submit</button>
+          <button type="submit" className='b-GrowthFE'>Submit</button>
         </form>
         {message && <p>{message}</p>}
       </div>
