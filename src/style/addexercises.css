@@ -1,0 +1,82 @@
+
+.main-divCEX{
+    /* background-image: url("../R.png"); */
+    width: 60%;
+    height: 100%;
+    padding: 15px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    min-height: calc(100vh - 220px);
+    margin-left: 250px;
+}
+  
+  .img-EX{
+    margin-left: 10px;
+  }
+  
+  .form-EX{
+    width: 70%;
+    background-color: rgb(240, 240, 243);
+    /* height: 100%; */
+      /* background-image: url("../R.png"); */
+      /* background-color: rgb(240, 240, 243); */
+      /* width: max-content;
+      height: 400px; */
+      border-radius: 20px;
+      padding-top: 15px;
+      
+      
+      
+      
+  }
+  .outboxCEX {
+      width: 95%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      margin-top: 6px;
+      margin-bottom: 1px;
+      margin-left: 10px;
+      resize: vertical;
+      justify-content:start ;
+      height: 30px;
+      display: block;
+  
+    }
+    .Select-cEX{
+    width: 95%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    margin-left: 10px;
+    }
+    #descriptioncEX{
+      width: 91%;
+    margin-left: 10px;
+    
+    height: 22px;}
+    .label-CEX{
+      font-size: larger;
+      display: inline-block;
+      margin-top: 10px;
+      margin-left: 10px;
+      margin-bottom: 0px;
+    }
+    .b-ChangeEX{
+      font-size: large;
+      width: 80%;
+      height: 40px;
+      border-radius: 20px;
+      border: none;
+      background-color: rgb(83, 78, 158); 
+      color: white;
+      margin: 30px; 
+      cursor: pointer; 
+      
+    }
+  

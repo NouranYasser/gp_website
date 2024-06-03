@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import "../../style/addBodyChange.css";
+import "../../style/addcourses.css";
 
 function AddCourses() {
   // const [title, setTitle] = useState('');
@@ -37,26 +37,26 @@ function AddCourses() {
 
   return (
     <>
-      <div className='main-divCH'>
-        <form className="form-CH" onSubmit={handleSubmit}>
+      <div className='main-divCo'>
+        <form className="form-Co" onSubmit={handleSubmit}>
 
-          <label htmlFor="description" className='label-CH'>Description:</label><br />
+          <label htmlFor="description" className='label-CO'>Description:</label><br />
           <textarea
-            id="description"
+            id="descriptionCO"
             value={description}
             onChange={(e) => setDescription(e.target.value)}
           />
           <br />
 
-          <label htmlFor="description" className='label-CH'>Description In Arabic:</label><br />
+          <label htmlFor="description" className='label-CO'>Description In Arabic:</label><br />
           <textarea
-            id="description"
+            id="descriptionCO"
             value={description_ar}
             onChange={(e) => setDescriptionAr(e.target.value)}
           />
           <br />
          
-          <label htmlFor="VideoUrl" className='label-CH'>Video Url:</label><br />
+          <label htmlFor="VideoUrl" className='label-CO'>Video Url:</label><br />
           <textarea
             id="VideoUrl"
             value={video_url}
@@ -65,7 +65,7 @@ function AddCourses() {
           <br />
 
           <br /><br />
-          <button type="submit" className='b-Change'>Submit</button>
+          <button type="submit" className='b-ChangeCO'>Submit</button>
         </form>
         {message && <p>{message}</p>}
       </div>

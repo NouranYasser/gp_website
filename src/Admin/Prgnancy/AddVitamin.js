@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import"../../style/addBabyGrowth.css";
+import"../../style/addvitamins.css";
 
 
 function AddVitamin() {
@@ -40,51 +40,51 @@ function AddVitamin() {
   return (
     <>
 
-      <div className='main-divG'>
-        <form className="form-G" onSubmit={handleSubmit}>
+      <div className='main-divGV '>
+        <form className="form-GV" onSubmit={handleSubmit}>
           
-          <label htmlFor="title"  className='label-G'>Title:</label>
-          <input className='outbox'
+          <label htmlFor="title"  className='label-GV'>Title:</label>
+          <input className='outbox-V'
             type="text"
             id="title"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
           />
 
-          <label htmlFor="description"  className='label-G'>Description:</label><br></br>
+          <label htmlFor="description"  className='label-GV'>Description:</label><br></br>
 
           <textarea
 
-            id="description"
+            id="descriptionV"
             value={description}
             onChange={(e) => setDescription(e.target.value)}
           />
           <br></br>
-          <label htmlFor="title"  className='label-G'>Title:</label>
-          <input className='outbox'
+          <label htmlFor="title"  className='label-GV'>Title:</label>
+          <input className='outbox-V'
             type="text"
             id="title"
             value={title_ar}
             onChange={(e) => setTitleAr(e.target.value)}
           />
 
-          <label htmlFor="description"  className='label-G'>Description:</label><br></br>
+          <label htmlFor="description"  className='label-GV'>Description:</label><br></br>
 
           <textarea
 
-            id="description"
+            id="description-V"
             value={description_ar}
             onChange={(e) => setDescriptionAr(e.target.value)}
           />
           <br></br>
-          <label htmlFor="image"  className='label-G'>Image:</label>
+          <label htmlFor="image"  className='label-GV'>Image:</label>
           <input
             type="file"
             id="image"
             onChange={(e) => setImage(e.target.files[0])}
           />
           <br></br><br></br>
-          <button type="submit" className='b-Growth'>Submit</button>
+          <button type="submit" className='b-GrowthV'>Submit</button>
         </form>
         {message && <p>{message}</p>}
       </div>
