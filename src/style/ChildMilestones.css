@@ -1,0 +1,45 @@
+ .ff_foot{
+   
+    background-color: hsla(223, 68%, 94%, 1);
+    background-size: cover ;
+     min-height: calc(100vh - 0vh);  
+ }
+ 
+ 
+ .fooo-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+    margin-bottom: 100px;
+ } 
+ 
+ .btn-addBCh{
+    font-size: large;
+    width: 300px;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    background-color: rgb(83, 78, 158);
+    color: white;
+    margin: 30px;
+    cursor: pointer;    
+    margin-left: 485px;
+    margin-top: 50px;
+        margin-bottom: 40px;
+        
+    }
+
+
+ .foob{
+    font-size: large;
+    width: 300px;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    background-color: rgb(83, 78, 158); 
+    color: white;
+    margin: 30px;  
+    cursor: pointer; 
+}
