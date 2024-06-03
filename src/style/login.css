@@ -26,8 +26,9 @@
   width: 100%;
   display: flex;
   background-image: url("../images/hero.png");
-  background-size:100%; 
+  background-size:cover; 
   background-repeat: no-repeat;
+  background-attachment: fixed;
  
 }
 .output-box{

@@ -48,11 +48,11 @@ const Vitamins = () => {
       <div className='v_foot'>
         <div className="b_conV mb-3">
         <div><Link to="/AddVitamin">
-          <button className="btn-addV"> Add Data in Vitamins</button>
+          <button className="btn-addV mt-5"> Add Data in Vitamins</button>
         </Link></div>
         <div></div>
         <Link to="/VitaminsAr">
-          <button className="btn-addV"> Arabic</button>
+          <button className="btn-addV mt-5"> Arabic</button>
         </Link>
         </div>
         {vitamines.err && <p>{vitamines.err}</p>}
@@ -81,7 +81,7 @@ const Vitamins = () => {
                         <img
                           src={vitamine.FullSrc}
                           alt="Vitamin Image"
-                          style={{ maxWidth: "80%", maxHeight: "80%" }}
+                          style={{ maxWidth: "80px", maxHeight: "80px" }}
                         />
                       ) : (
                         <span>No image available</span>

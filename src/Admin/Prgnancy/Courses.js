@@ -51,10 +51,10 @@ const Courses = () => {
      <div className="bho">
      <div className="b_conV">
      <Link to={"/AddCourses"}>
-            <button className="btn-addV">Add Course</button>
+            <button className="btn-addV mt-5">Add Course</button>
      </Link>      
      <Link to={"/CoursesAr"}>
-                    <button className="btn-addV">Arabic</button>
+                    <button className="btn-addV mt-5">Arabic</button>
                   </Link></div>
       
         {courses.err && <p>{courses.err}</p>}

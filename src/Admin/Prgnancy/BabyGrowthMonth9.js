@@ -79,7 +79,7 @@ const BabyGrowthMonth9 = () => {
                     <img
                       src={babygrowths.results.FullSrc}
                       alt="Baby Image"
-                      style={{ maxWidth: '10%', maxHeight: '10%' }}
+                      style={{ maxWidth: '80px', maxHeight: '80px' }}
                     />
                   ) : (
                     <span>No image available</span>

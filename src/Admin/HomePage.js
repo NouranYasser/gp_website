@@ -1,5 +1,4 @@
 import React from "react";
-import Header from "../components/Headerlogout";
 import "../style/UserHome.css";
 import { Link } from "react-router-dom";
 import { removeAuthUser } from "../helper/Storage";
@@ -21,7 +20,7 @@ const UserHome = () => {
         <div className="header12">
        <header>
     <img src={myImage2} alt="My Image2" class="logo"  width="200px" height="200px"/>
-    
+
     <button className="Newlogout2" onClick={handleLogout}>Logout</button>
 
     <nav className="navbar">
@@ -34,11 +33,11 @@ const UserHome = () => {
        <img src={myImage} alt="My Image" class="image"  width="400px" height="400px"/>
       <br></br>
       <Link to="/BabyHome">
-        <button className="Newborn"> New Born</button>
-      </Link>     
+        <button className="Newborn"> Newborn</button>
+      </Link>
       </div>
       <div className="b-div">
-        
+
       <img src={Image} alt="My Image" class="image"  width="400px" height="400px"/>
       <br></br>
        <Link to="/Pregnancy">
@@ -54,4 +53,3 @@ const UserHome = () => {
   );
 };
 export default UserHome;
-
