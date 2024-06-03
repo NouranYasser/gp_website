@@ -42,7 +42,7 @@ function AddBabyGrowth() {
 
   return (
     <>
-
+      <div className="growthcon"> 
       <div className='main-divG'>
         <form className="form-G" onSubmit={handleSubmit}>
           
@@ -98,7 +98,7 @@ function AddBabyGrowth() {
           />
 
           <br></br>
-          <br></br><br></br>
+          <br></br>
           <button type="submit" className='b-Growth'>Submit</button>
         </form>
         {message && <p>{message}</p>}
@@ -107,7 +107,7 @@ function AddBabyGrowth() {
       <br></br>
       <br></br>
       <br></br> */}
-      
+      </div>
     </>
   );
 }

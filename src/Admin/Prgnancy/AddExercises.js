@@ -35,6 +35,7 @@ function AddExercises() {
 
   return (
     <>
+    <div className="exercisesCon">
       <div className='main-divCEX'>
         <form className="form-EX" onSubmit={handleSubmit}>
           
@@ -67,6 +68,7 @@ function AddExercises() {
           <button type="submit" className='b-ChangeEX'>Submit</button>
         </form>
         {message && <p>{message}</p>}
+      </div>
       </div>
     </>
   );

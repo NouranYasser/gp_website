@@ -38,7 +38,7 @@ function AddFeeding() {
 
   return (
     <>
-
+      <div className="feedCon">
       <div className='main-divFE'>
         <form className="form-GFE" onSubmit={handleSubmit}>
           
@@ -80,7 +80,7 @@ function AddFeeding() {
         {message && <p>{message}</p>}
       </div>
       
-
+   </div>
       
     </>
   );

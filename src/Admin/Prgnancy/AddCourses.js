@@ -37,6 +37,7 @@ function AddCourses() {
 
   return (
     <>
+    <div className="coursrCon">
       <div className='main-divCo'>
         <form className="form-Co" onSubmit={handleSubmit}>
 
@@ -68,6 +69,7 @@ function AddCourses() {
           <button type="submit" className='b-ChangeCO'>Submit</button>
         </form>
         {message && <p>{message}</p>}
+      </div>
       </div>
     </>
   );

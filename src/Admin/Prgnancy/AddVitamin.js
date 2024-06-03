@@ -39,7 +39,7 @@ function AddVitamin() {
 
   return (
     <>
-
+     <div className="vitCon">
       <div className='main-divGV '>
         <form className="form-GV" onSubmit={handleSubmit}>
           
@@ -92,7 +92,7 @@ function AddVitamin() {
       <br></br>
       <br></br>
       <br></br> */}
-      
+      </div>
     </>
   );
 }

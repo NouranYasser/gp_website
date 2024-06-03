@@ -9,7 +9,7 @@ const Bodychange = () => {
       <div className="ch_foot">
         
       <Link to="/AddBodyChange">
-        <button className="btn-addBCh"> Add Data in Body change </button>
+        <button className="btn-addBChc"> Add Data in Body change </button>
       </Link>
       
       <div className="containerBCH">

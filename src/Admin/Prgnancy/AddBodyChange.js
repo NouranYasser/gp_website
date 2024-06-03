@@ -39,6 +39,7 @@ function AddBodyChange() {
 
   return (
     <>
+    <div className="changecon">
       <div className='main-divCH'>
         <form className="form-CH" onSubmit={handleSubmit}>
           <label htmlFor="title" className='label-CH'>Title:</label>
@@ -103,6 +104,7 @@ function AddBodyChange() {
           <button type="submit" className='b-Change'>Submit</button>
         </form>
         {message && <p>{message}</p>}
+      </div>
       </div>
     </>
   );
