@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from "react";
  import { Link } from "react-router-dom";
  import axios from "axios";
- import "../../style/food.css"
+ import "../../style/foodBaby.css";
 
 
 const BreastFeeding = () => {
  
     return (
       <>
-       <div className="f_foot">
+       <div className="fb_foot">
    
 <br></br>
 <br></br>
@@ -25,22 +25,22 @@ const BreastFeeding = () => {
 <br></br>
 <br></br>
 <br></br> 
-<div className="fo-container">
+<div className="fob-container">
       <Link to="/BreastFeedingMonth1">
-        <button className="fo-b"> Month 1-6</button>
+        <button className="fo-baby"> Month 1-6</button>
       </Link> 
 
       <Link to="/BreastFeedingMonth6">
-        <button className="fo-b"> Month 6-12</button>
+        <button className="fo-baby"> Month 6-12</button>
       </Link>  
 
 
       <Link to="/BreastFeedingMonth12">
-        <button className="fo-b"> Month 12-18</button>
+        <button className="fo-baby"> Month 12-18</button>
       </Link> 
 
       <Link to="/BreastFeedingMonth18">
-        <button className="fo-b"> Month 18-24</button>
+        <button className="fo-baby"> Month 18-24</button>
       </Link>
       </div>
 

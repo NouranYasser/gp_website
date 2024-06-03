@@ -23,7 +23,7 @@
     color: white;
     margin: 30px;
     cursor: pointer;    
-    margin-left: 440px;
+    margin-left: 485px;
     margin-top: 50px;
         margin-bottom: 40px;
         
@@ -42,4 +42,16 @@
     
         /* min-height: calc(100vh - 220px ); */
         
+    }
+
+    .fo-bbb{
+        font-size: large;
+        width: 300px;
+        height: 40px;
+        border-radius: 20px;
+        border: none;
+        background-color: rgb(83, 78, 158); 
+        color: white;
+        margin: 30px;  
+        cursor: pointer; 
     }
