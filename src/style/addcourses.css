@@ -11,6 +11,7 @@
     align-items: center;
     min-height: calc(100vh - 220px);
     margin-left: 250px;
+    background-color: hsla(223, 68%, 94%, 1);
 }
   
   .img-co{

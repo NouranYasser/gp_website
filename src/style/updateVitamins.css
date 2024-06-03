@@ -5,7 +5,13 @@
     margin-top: 20px;
     margin-bottom: 10px;
     min-height: calc(100vh - 220px);
-    
+    background-color: hsla(223, 68%, 94%, 1);
+    width: 100%;
+    height: 100vh;
+    background-size: cover 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 
   }
   .container-u-V  input[type=text], select, textarea {

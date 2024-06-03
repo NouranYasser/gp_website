@@ -21,34 +21,37 @@ function AddData() {
         <div className="content-div">
           <img src={myImage2} alt="My Image" className="image123" width="400px" height="400px"/> 
           <div className="info-section">
-            <h2 className="mx-10">About Pregnancy</h2>
-            <p>
-              Pregnancy is a beautiful and transformative journey in a woman's life, typically lasting around 40 weeks from the last menstrual period to childbirth. During this time, the body undergoes significant changes to support the development of the fetus. Regular prenatal care, a healthy diet, and appropriate exercise are crucial for the health of both the mother and the baby. Emotional support from family, friends, and healthcare providers also plays an important role in ensuring a positive pregnancy experience.
-            </p>
+            <h2> About Pregnancy</h2>
 
-            <h3>Managing Body Changes</h3>
+            <h3>Body Changes</h3>
             <p>
-              Throughout pregnancy, a woman's body undergoes numerous changes, including weight gain, hormonal fluctuations, and physical transformations. Managing these changes involves maintaining a balanced diet, staying hydrated, and wearing comfortable clothing. It’s important to stay informed about what changes to expect and to communicate with healthcare providers to address any concerns.
+            Give the mother data about how her body changes each month during pregnancy
             </p>
 
             <h3>Baby Growth</h3>
             <p>
-              Baby growth during pregnancy is a miraculous process, with the fetus developing from a single cell to a fully formed baby. This growth is tracked in three trimesters, each marked by significant milestones such as the development of the heart, brain, and limbs. Regular ultrasounds and prenatal visits help monitor the baby’s progress and ensure everything is on track.
+            Provide the mother with data about the change in the size of the newborn in her womb and an example of it in real life so that she knows its exact shape
             </p>
 
             <h3>Feeding</h3>
             <p>
-              Proper nutrition is vital during pregnancy to support the health of both the mother and the developing baby. A diet rich in fruits, vegetables, lean proteins, and whole grains provides essential nutrients. Prenatal vitamins often supplement the diet to ensure adequate intake of important nutrients like folic acid, iron, and calcium.
+            Provide the mothers information about her nutrition during pregnancy, about the foods that are not allowed during each month, and about the foods that should be eaten in excess during pregnancy.
             </p>
 
             <h3>Exercises</h3>
             <p>
-              Staying active during pregnancy is beneficial for both physical and mental health. Gentle exercises such as walking, swimming, and prenatal yoga can help improve circulation, reduce stress, and prepare the body for labor. It’s important to consult with healthcare providers before starting any exercise regimen to ensure it’s safe for both mother and baby.
+            Provide the mothers exercise tips to stay active during pregnancy because it is good for physical and mental health.   Light exercises such as walking, swimming,and prenatal <br></br>yoga can help improve blood circulation and reduce stress
             </p>
 
-            <h3>Vitamins and Courses</h3>
+            <h3>Vitamins</h3>
             <p>
-              Prenatal vitamins play a crucial role in supporting a healthy pregnancy. These vitamins typically include folic acid, iron, calcium, and DHA, which are essential for fetal development. Additionally, attending prenatal courses can be incredibly beneficial for expecting parents. These courses provide valuable information on childbirth, breastfeeding, and newborn care, helping parents feel more prepared and confident.
+            Provide the mothers about prenatal vitamins and that they play a crucial role in supporting a healthy pregnancy.  It is necessary for a healthy body
+ Fetal growth
+            </p>
+
+            <h3>Courses</h3>
+            <p>
+            Provide the mothers tips and advice and recommend videos about the pregnancy period and how to get through it correctly and healthily.
             </p>
           </div>
         </div>
