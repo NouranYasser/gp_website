@@ -23,33 +23,33 @@ function AddData() {
           <div className="info-section">
             <h2> About Pregnancy</h2>
 
-            <h3>Body Changes</h3>
+            <h3 className='pr-title'>Body Changes</h3>
             <p>
             Give the mother data about how her body changes each month during pregnancy
             </p>
 
-            <h3>Baby Growth</h3>
+            <h3 className='pr-title'>Baby Growth</h3>
             <p>
             Provide the mother with data about the change in the size of the newborn in her womb and an example of it in real life so that she knows its exact shape
             </p>
 
-            <h3>Feeding</h3>
+            <h3 className='pr-title'>Feeding</h3>
             <p>
             Provide the mothers information about her nutrition during pregnancy, about the foods that are not allowed during each month, and about the foods that should be eaten in excess during pregnancy.
             </p>
 
-            <h3>Exercises</h3>
+            <h3 className='pr-title'>Exercises</h3>
             <p>
             Provide the mothers exercise tips to stay active during pregnancy because it is good for physical and mental health.   Light exercises such as walking, swimming,and prenatal <br></br>yoga can help improve blood circulation and reduce stress
             </p>
 
-            <h3>Vitamins</h3>
+            <h3 className='pr-title'>Vitamins</h3>
             <p>
             Provide the mothers about prenatal vitamins and that they play a crucial role in supporting a healthy pregnancy.  It is necessary for a healthy body
- Fetal growth
+            Fetal growth
             </p>
 
-            <h3>Courses</h3>
+            <h3 className='pr-title'>Courses</h3>
             <p>
             Provide the mothers tips and advice and recommend videos about the pregnancy period and how to get through it correctly and healthily.
             </p>
