@@ -67,15 +67,14 @@ function AddTipsAndActivities() {
               onChange={(e) => setMonth(e.target.value)}
             >
               <option value="">Select Month</option>
-              <option value="1">1</option>
-              <option value="3">3</option>
-              <option value="6">6</option>
-              <option value="9">9</option>
-              <option value="12">12</option>
-              <option value="12">15</option>
-              <option value="12">15</option>
-              <option value="12">18</option>
-              <option value="12">21</option>
+              <option value="1">1-3</option>
+              <option value="3">3-6</option>
+              <option value="6">6-9</option>
+              <option value="9">9-12</option>
+              <option value="12">12-15</option>
+              <option value="15">15-18</option>
+              <option value="18">18-21</option>
+              <option value="21">21-24</option>
 
             </select>
             <br></br> 

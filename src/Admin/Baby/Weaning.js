@@ -26,20 +26,20 @@ const Weaning = () => {
 <br></br> 
 <div className="fob-container">
       <Link to="/WeaningMonth1">
-        <button className="fo-baby"> Month 1-6</button>
+        <button className="fo-baby"> Month 6-8</button>
       </Link> 
 
       <Link to="/WeaningMonth6">
-        <button className="fo-baby"> Month 6-12</button>
+        <button className="fo-baby"> Month 8-12</button>
       </Link>  
 
 
       <Link to="/WeaningMonth12">
-        <button className="fo-baby"> Month 12-18</button>
+        <button className="fo-baby"> 1 year</button>
       </Link> 
 
       <Link to="/WeaningMonth18">
-        <button className="fo-baby"> Month 18-24</button>
+        <button className="fo-baby"> 2 year</button>
       </Link>
       </div>
 

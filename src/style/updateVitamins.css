@@ -2,9 +2,9 @@
     display:flex;
     align-items: center;
     justify-content: center;
-    /* margin-top: 20px;
-    margin-bottom: 10px; */
-    min-height: calc(100vh - 0vh);
+    margin-top: 20px;
+    margin-bottom: 10px;
+    min-height: calc(100vh - 220px);
     background-color: hsla(223, 68%, 94%, 1);
     width: 100%;
     height: 100vh;
@@ -23,7 +23,6 @@
   }
 .file-upload-V{
   display: inline-block;
-  /* padding: 10px 20px; */
   cursor: pointer;
   background-color: #fdfdfd;
   color: #8eacda;
@@ -35,7 +34,6 @@
 ::-webkit-file-upload-button{
   color:white;
   background-color:  rgb(112, 109, 153);
-  /* padding: 20px; */
   border: none;
   border-radius: 50px;
   box-shadow: 1px 0 1px 1px black;

@@ -14,6 +14,7 @@ function AddBabyGrowth() {
   const [message, setMessage] = useState('');
   const [title_ar, setTitle_ar] = useState('');
   const [description_ar, setDescription_ar] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
@@ -27,6 +28,8 @@ function AddBabyGrowth() {
     formData.append('title_ar', title_ar);
     formData.append('description_ar', description_ar);
 
+   
+
     try {
       const response = await axios.post(`https://gradhub.hwnix.com/api/add_DESC/2`, formData, {
         headers: {
@@ -39,6 +42,21 @@ function AddBabyGrowth() {
       setMessage('There is something wrong');
     }
   };
+  
+  const handleLanguage = async (e) => {
+  const newValue = e.target.value;
+
+  // Regular expression to detect Arabic characters
+  const arabicRegex = /[\u0600-\u06FF]/;
+
+  if (arabicRegex.test(newValue)) {
+    setErrorMessage('Please write data in English.');
+  } else {
+    setErrorMessage('');
+  }
+
+  setTitle(newValue);
+}
 
   return (
     <>
@@ -46,13 +64,15 @@ function AddBabyGrowth() {
       <div className='main-divG'>
         <form className="form-G" onSubmit={handleSubmit}>
           
-          <label htmlFor="title"  className='label-G'>Title:</label>
-          <input className='outbox'
-            type="text"
-            id="title"
-            value={title}
-            onChange={(e) => setTitle(e.target.value)}
-          />
+        <label htmlFor="title" className='label-G'>Title:</label>
+      <input
+        className='outbox'
+        type="text"
+        id="title"
+        value={title}
+        onChange={handleLanguage}
+      />
+      {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
 
           <label htmlFor="description"  className='label-G'>Description:</label><br></br>
 
