@@ -11,6 +11,10 @@ function AddBodyChange() {
   const [title_ar, setTitleAr] = useState('');
   const [description_ar, setDescriptionAr] = useState('');
   const [message, setMessage] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
+  const [error, setError] = useState('');
+  const [errorMessage2, setErrorMessage2] = useState('');
+  const [errorMessage3, setErrorMessage3] = useState('');
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
@@ -37,6 +41,67 @@ function AddBodyChange() {
     }
   };
 
+  const handleLanguage = async (e) => {
+    const newValue = e.target.value;
+  
+    // Regular expression to detect Arabic characters
+    const arabicRegex = /[\u0600-\u06FF]/;
+  
+    if (arabicRegex.test(newValue)) {
+      setErrorMessage('Please write title in English.');
+    } else {
+      setErrorMessage('');
+      setTitle(newValue);
+    }
+  
+    
+  }
+  
+  
+  const handleDescriptionChange = async (e) => {
+    const value = e.target.value;
+  
+    // Regular expression to detect Arabic characters
+    const arabicRegex = /[\u0600-\u06FF]/;
+  
+    if (arabicRegex.test(value)) {
+      setError('Please write Description in English.');
+    } else {
+      setError('');
+      setDescription(value);
+    }
+  
+    
+  }
+  
+  const handleTitleChangeA = (e) => {
+    const newValue2 = e.target.value;
+  
+    // Regular expression to detect English characters
+    const englishRegex = /[A-Za-z]/;
+  
+    if (englishRegex.test(newValue2)) {
+      setErrorMessage2('Please write title in Arabic.');
+    } else {
+      setErrorMessage2('');
+      setTitleAr(newValue2);
+    }
+  };
+  
+  const handleDescriptionChangeA = (e) => {
+    const newValue3 = e.target.value;
+  
+    // Regular expression to detect English characters
+    const englishRegex = /[A-Za-z]/;
+  
+    if (englishRegex.test(newValue3)) {
+      setErrorMessage3('Please write Description in Arabic.');
+    } else {
+      setErrorMessage3('');
+      setDescriptionAr(newValue3);
+    }
+  };
+
   return (
     <>
     <div className="changecon">
@@ -48,15 +113,17 @@ function AddBodyChange() {
             type="text"
             id="title"
             value={title}
-            onChange={(e) => setTitle(e.target.value)}
+            onChange={handleLanguage}
           />
+          {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
 
           <label htmlFor="descriptionch" className='label-CH'>Description:</label><br />
           <textarea
             id="descriptionch"
             value={description}
-            onChange={(e) => setDescription(e.target.value)}
+            onChange={handleDescriptionChange}
           />
+          {error && <p style={{ color: 'red' }}>{error}</p>}
       <br></br>
           <label htmlFor="month" className='label-CH'>Month:</label><br />
           <select
@@ -91,16 +158,16 @@ function AddBodyChange() {
             type="text"
             id="title"
             value={title_ar}
-            onChange={(e) => setTitleAr(e.target.value)}
+            onChange={handleTitleChangeA}
           />
-          
+          {errorMessage2 && <p style={{ color: 'red' }}>{errorMessage2}</p>}
           <label htmlFor="descriptionch" className='label-CH'>Description In Arabic:</label><br />
           <textarea
             id="descriptionch"
             value={description_ar}
-            onChange={(e) => setDescriptionAr(e.target.value)}
+            onChange={handleDescriptionChangeA}
           />
-          
+          {errorMessage3 && <p style={{ color: 'red' }}>{errorMessage3}</p>}
           <button type="submit" className='b-Change'>Submit</button>
         </form>
         {message && <p>{message}</p>}

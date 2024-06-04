@@ -529,6 +529,8 @@ function AddBabyGrowth() {
   const [description_ar, setDescription_ar] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
   const [error, setError] = useState('');
+  const [errorMessage2, setErrorMessage2] = useState('');
+  const [errorMessage3, setErrorMessage3] = useState('');
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
@@ -564,42 +566,59 @@ function AddBabyGrowth() {
   const arabicRegex = /[\u0600-\u06FF]/;
 
   if (arabicRegex.test(newValue)) {
-    setErrorMessage('Please write data in English.');
+    setErrorMessage('Please write title in English.');
   } else {
     setErrorMessage('');
+    setTitle(newValue);
   }
 
-  setTitle(newValue);
+  
 }
 
-const handleDescriptionChange = (e) => {
-  const value = e.target.value;
-
-  // Regular expression to match Arabic characters
-  const arabicRegex = /[\u0600-\u06FF\u0750-\u077F\u08A0-\u08FF]/;
-
-  if (arabicRegex.test(value)) {
-    setError('Please write Description in English');
-  } else {
-    setError('');
-    setDescription(value);
-  }
-};
 
 const handleDescriptionChange = async (e) => {
-  const newValue = e.target.value;
+  const value = e.target.value;
 
   // Regular expression to detect Arabic characters
   const arabicRegex = /[\u0600-\u06FF]/;
 
-  if (arabicRegex.test(newValue)) {
-    setErrorMessage('Please write data in English.');
+  if (arabicRegex.test(value)) {
+    setError('Please write Description in English.');
   } else {
-    setErrorMessage('');
+    setError('');
+    setDescription(value);
   }
 
-  setTitle(newValue);
+  
 }
+
+const handleTitleChangeA = (e) => {
+  const newValue2 = e.target.value;
+
+  // Regular expression to detect English characters
+  const englishRegex = /[A-Za-z]/;
+
+  if (englishRegex.test(newValue2)) {
+    setErrorMessage2('Please write title in Arabic.');
+  } else {
+    setErrorMessage2('');
+    setTitle_ar(newValue2);
+  }
+};
+
+const handleDescriptionChangeA = (e) => {
+  const newValue3 = e.target.value;
+
+  // Regular expression to detect English characters
+  const englishRegex = /[A-Za-z]/;
+
+  if (englishRegex.test(newValue3)) {
+    setErrorMessage3('Please write Description in Arabic.');
+  } else {
+    setErrorMessage3('');
+    setDescription_ar(newValue3);
+  }
+};
 
   return (
     <>
@@ -627,14 +646,6 @@ const handleDescriptionChange = async (e) => {
       />
       {error && <p style={{ color: 'red' }}>{error}</p>}
 
-          {/* <label htmlFor="description"  className='label-G'>Description:</label><br></br>
-
-          <textarea
-
-            id="description"
-            value={description}
-            onChange={(e) => setDescription(e.target.value)}
-          /> */}
           <br></br>
           <label htmlFor="month"  className='label-G'>Month:</label><br></br>
           <input className='outbox'
@@ -653,13 +664,15 @@ const handleDescriptionChange = async (e) => {
           />
           <br></br> <br></br>
 
-        <label htmlFor="title"  className='label-G'> Title In Arabic:</label>
-          <input className='outbox'
-            type="text"
-            id="title"
-            value={title_ar}
-            onChange={(e) => setTitle_ar(e.target.value)}
-          />
+          <label htmlFor="title" className='label-G'>Title In Arabic:</label>
+      <input
+        className='outbox'
+        type="text"
+        id="title"
+        value={title_ar}
+        onChange={handleTitleChangeA}
+      />
+      {errorMessage2 && <p style={{ color: 'red' }}>{errorMessage2}</p>}
 
           <label htmlFor="description"  className='label-G'>Description In Arabic:</label><br></br>
 
@@ -667,9 +680,9 @@ const handleDescriptionChange = async (e) => {
 
             id="description"
             value={description_ar}
-            onChange={(e) => setDescription_ar(e.target.value)}
+            onChange={handleDescriptionChangeA}
           />
-
+        {errorMessage3 && <p style={{ color: 'red' }}>{errorMessage3}</p>}
           <br></br>
           <br></br>
           <button type="submit" className='b-Growth'>Submit</button>
