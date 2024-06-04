@@ -1,10 +1,13 @@
-  .body-uG{
+
+ .body-uG{
     display:flex;
     align-items: center;
     justify-content: center;
-    margin-top: 20px;
-    margin-bottom: 10px;
-    min-height: calc(100vh - 220px);
+    /* margin-top: 20px;
+    margin-bottom: 10px; */
+    min-height: calc(100vh - 0vh);
+    width: 100%;
+    background-size: cover ;
   }
   .container-u-G  input[type=text], select, textarea {
     width: 90%;
