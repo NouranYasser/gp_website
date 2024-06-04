@@ -5,6 +5,8 @@
     margin-top: 20px;
     margin-bottom: 10px;
     min-height: calc(100vh - 220px);
+    background-color: hsla(223, 68%, 94%, 1);
+    
   }
   .container-u-G  input[type=text], select, textarea {
     width: 90%;
@@ -101,6 +103,7 @@
     .col-25, .col-75, input[type=submit] {
       width: 100%;
       margin-top: 0;
+      
     }
   }
   
