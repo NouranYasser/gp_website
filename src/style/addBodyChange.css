@@ -71,15 +71,15 @@
     }
     .b-Change{
       font-size: large;
-      width: 50%;
+      width: 40%;
       height: 40px;
-      margin-left: 100px;
-      
+      margin-left: 130px;    
+      margin-top: 50px;
       border-radius: 20px;
       border: none;
       background-color:rgb(44, 72, 143); 
       color: white;
-      margin: 50px;
+      /* margin: 50px; */
       cursor: pointer; 
       
     }

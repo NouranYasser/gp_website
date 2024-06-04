@@ -26,6 +26,7 @@
   
   .form-G{
     width: 40%;
+    height: 650px;
     /* height: 100%; */
       /* background-image: url("../R.png"); */
       background-color: rgb(240, 240, 243);
@@ -61,13 +62,14 @@
     }
     .b-Growth{
       font-size: large;
-      width: 80%;
+      width: 40%;
       height: 40px;
+      margin-left: 130px;    
+      margin-top: 30px;
       border-radius: 20px;
       border: none;
       background-color:  rgb(83, 78, 158); 
       color:azure;
-      margin: 30px; 
       cursor: pointer; 
     }
   

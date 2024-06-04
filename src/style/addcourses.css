@@ -31,6 +31,7 @@
   
   .form-Co{
     width: 70%;
+    height: 400px;
     background-color: rgb(240, 240, 243);
     /* height: 100%; */
       /* background-image: url("../R.png"); */
@@ -81,13 +82,14 @@
     }
     .b-ChangeCO{
       font-size: large;
-      width: 80%;
+      width: 40%;
       height: 40px;
+      margin-left: 130px;    
+      margin-top: 10px;
       border-radius: 20px;
       border: none;
       background-color: rgb(83, 78, 158); 
       color: white;
-      margin: 30px; 
       cursor: pointer; 
       
     }
