@@ -9,6 +9,8 @@ function AddCourses() {
   // const [title_ar, setTitleAr] = useState('');
   const [description_ar, setDescriptionAr] = useState('');
   const [video_url, setvideo_url] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
+  const [errorMessage2, setErrorMessage2] = useState('');
   const [message, setMessage] = useState('');
   const navigate = useNavigate();
 
@@ -34,7 +36,34 @@ function AddCourses() {
       setMessage('There is something wrong');
     }
   };
-
+  
+  const handleDescriptionChange = async (e) => {
+    const value = e.target.value;
+  
+    // Regular expression to detect Arabic characters
+    const arabicRegex = /[\u0600-\u06FF]/;
+  
+    if (arabicRegex.test(value)) {
+      setErrorMessage('Please write Description in English.');
+    } else {
+      setErrorMessage('');
+      setDescription(value);
+    }
+  }
+  
+  const handleDescriptionChangeA = (e) => {
+    const newValue3 = e.target.value;
+  
+    // Regular expression to detect English characters
+    const englishRegex = /[A-Za-z]/;
+  
+    if (englishRegex.test(newValue3)) {
+      setErrorMessage2('Please write Description in Arabic.');
+    } else {
+      setErrorMessage2('');
+      setDescriptionAr(newValue3);
+    }
+  };
   return (
     <>
     <div className="coursrCon">
@@ -45,16 +74,18 @@ function AddCourses() {
           <textarea
             id="descriptionCO"
             value={description}
-            onChange={(e) => setDescription(e.target.value)}
-          />
+            onChange={handleDescriptionChange}
+            />
+            {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
           <br />
 
           <label htmlFor="description" className='label-CO'>Description In Arabic:</label><br />
           <textarea
             id="descriptionCO"
             value={description_ar}
-            onChange={(e) => setDescriptionAr(e.target.value)}
-          />
+            onChange={handleDescriptionChangeA}
+            />
+            {errorMessage2 && <p style={{ color: 'red' }}>{errorMessage2}</p>}
           <br />
          
           <label htmlFor="VideoUrl" className='label-CO'>Video Url:</label><br />
