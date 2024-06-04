@@ -42,22 +42,9 @@
     display: inline-block;
   }
   
-  /* input[type=submit] {
-    background-color: #04AA6D;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    float: right;
-  }
-  
-  input[type=submit]:hover {
-    background-color: #45a049;
-  }
-   */
+
   .container-u-FO {
-    background-color: rgb(233, 231, 234) ;
+    background-color: white;
     width: 40%;
     border-radius: 20px;
     color:Black;

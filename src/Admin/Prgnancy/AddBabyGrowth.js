@@ -5,7 +5,6 @@ import { useNavigate } from "react-router-dom";
 import"../../style/addBabyGrowth.css";
 
 
-
 function AddBabyGrowth() {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
