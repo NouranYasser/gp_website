@@ -28,7 +28,7 @@
   width: 40%;
   /* height: 100%; */
     /* background-image: url("../R.png"); */
-    background-color: rgb(240, 240, 243);
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent for better readability */
     /* width: max-content;
     height: 400px; */
     border-radius: 20px;
@@ -65,7 +65,7 @@
     height: 40px;
     border-radius: 20px;
     border: none;
-    background-color: rgb(83, 78, 158); 
+    background-color: hsla(223, 68%, 94%, 1); 
     color: white;
     margin: 30px; 
     cursor: pointer; 
