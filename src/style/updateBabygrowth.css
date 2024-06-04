@@ -3,6 +3,7 @@
     display:flex;
     align-items: center;
     justify-content: center;
+    background-color: hsla(223, 68%, 94%, 1);
     /* margin-top: 20px;
     margin-bottom: 10px; */
     min-height: calc(100vh - 0vh);
@@ -61,7 +62,7 @@
     background-color:rgb(233, 231, 234) ;
     width: 50%;
     height: 50%;
-    border-radius: 10px;
+    border-radius: 30px;
     color:rgb(3, 0, 0);
     padding:0  20px ;
     padding-bottom: 20PX;
