@@ -1,5 +1,6 @@
 .vitCon{
-  background: radial-gradient(ellipse,rgb(83, 78, 158),rgb(242, 239, 245));
+  /* background: radial-gradient(ellipse,rgb(83, 78, 158),rgb(242, 239, 245)); */
+  background-color: hsla(223, 68%, 94%, 1);
   min-height: calc(100vh - 0vh);
   display: flex;
   justify-content: center;
@@ -28,7 +29,7 @@
     width: 40%;
     /* height: 100%; */
       /* background-image: url("../R.png"); */
-      background-color:rgb(205, 210, 218);
+      background-color: rgb(240, 240, 243);
       /* width: max-content;
       height: 400px; */
       border-radius: 20px;
@@ -65,8 +66,8 @@
       height: 40px;
       border-radius: 20px;
       border: none;
-      background-color: rgb(194, 193, 220); 
-      color: black;
+      background-color:  rgb(92, 87, 165); 
+      color: rgb(245, 244, 244);
       margin: 30px; 
       cursor: pointer; 
     }

@@ -1,5 +1,5 @@
 .exercisesCon{
-  background: radial-gradient(ellipse,rgb(83, 78, 158),rgb(242, 239, 245));
+  background-color: hsla(223, 68%, 94%, 1);
   min-height: calc(100vh - 0vh);
   display: flex;
   justify-content: center;
