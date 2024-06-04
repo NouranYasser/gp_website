@@ -122,6 +122,7 @@ function UpdateBabygrowth() {
         {message && <p>{message}</p>}
         </div>
     </div>
+    
   );
 }
 
