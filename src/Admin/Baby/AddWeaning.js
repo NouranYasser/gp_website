@@ -65,10 +65,10 @@ function AddWeaning() {
           onChange={(e) => setMonth(e.target.value)}
         >
           <option value="">Select Month</option>
-          <option value="1">1</option>
-          <option value="6">6</option>
-          <option value="12">12</option>
-          <option value="18">18</option>
+          <option value="1">6-8</option>
+          <option value="6">8-12</option>
+          <option value="12">year</option>
+          <option value="18">2 years</option>
    
         </select>
         <br /><br />
