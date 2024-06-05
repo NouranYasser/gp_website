@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import"../../style/AddAll.css";
+import"../../style/addTips.css";
 
 
 function AddTipsAndActivities() {
@@ -42,7 +42,7 @@ function AddTipsAndActivities() {
     <div className="pfott">
       <div className="d">
       <div className='main-divpp'>
-        <form className="form-p" onSubmit={handleSubmit}>
+        <form className="form-ppp" onSubmit={handleSubmit}>
           <label htmlFor="title" className='label-pregnancy'>Title:</label>
           <input className='outbox'
             type="text"
@@ -96,7 +96,7 @@ function AddTipsAndActivities() {
           
           </div>
           <br />
-          <button type="submit" className='b-Growth'>Submit</button>
+          <button type="submit" className='b-tips'>Submit</button>
         </form>
         {message && <p>{message}</p>}
         </div>
