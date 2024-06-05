@@ -48,7 +48,7 @@ const TipsAndActivitiesMonth21Ar = () => {
       <div className="bmo">
       <div className="b-con">
       <Link to={"/TipsAndActivitiesMonth21"}>
-                    <button className="btnArabic">English</button>
+                    <button className="btnArabic-c">English</button>
         </Link>
 </div>
         {tips.err && <p>{tips.err}</p>}

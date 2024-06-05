@@ -24,17 +24,17 @@
 } 
 
 
-.form-p{
-  width: 40%;
+/* .form-p{
+  width: 40%; */
   /* height: 100%; */
     /* background-image: url("../R.png"); */
-    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent for better readability */
+    /* background-color: rgba(255, 255, 255, 0.9); Semi-transparent for better readability */
     /* width: max-content;
     height: 400px; */
-    border-radius: 20px;
+    /* border-radius: 20px;
     padding-top: 15px;
     
-}
+} */
 .outbox-T {
     width: 90%;
     padding: 12px;
