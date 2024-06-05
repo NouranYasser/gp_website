@@ -106,7 +106,7 @@ function AddBreastFeeding() {
     <div className="pfott">
       <div className="d">
     <div className='main-divpp'>
-      <form className="form-p" onSubmit={handleSubmit}>
+      <form className="form-All" onSubmit={handleSubmit}>
         <label htmlFor="title" className='label-pregnancy'>Title:</label>
         <input
           className='outbox'

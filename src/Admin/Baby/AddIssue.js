@@ -131,7 +131,7 @@ function AddIssue() {
       <div className="d">
     {/* <div className="Destination-a"> */}
         <div className='main-divppissue'>
-      <form className="form-p" onSubmit={handleSubmit}>
+      <form className="form-All" onSubmit={handleSubmit}>
 
         <h2 className="h2">Add Issue</h2>
 
