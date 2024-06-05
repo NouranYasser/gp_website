@@ -1,0 +1,94 @@
+.pfott {
+    height: 100vh;
+    width: 100%;
+    min-height: calc(100vh - 0vh); 
+    background-color: hsla(223, 68%, 94%, 1);
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  
+  .d {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  .h2{
+    font-size: x-large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .main-divpp {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent for better readability */
+    border-radius: 20px;
+    /* padding: 20px; */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-ppp {
+    width: 100%;
+    height: 600px;
+    border-radius: 20px;
+    padding-top: 15px;
+    background-color: rgb(240, 240, 243);
+    
+  }
+  .main-divppissue {
+    width: 45%;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent for better readability */
+    border-radius: 20px;
+    /* padding: 20px; */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+   
+  }
+  
+  
+  .label-pregnancy {
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .outbox-T {
+    width: 90%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    margin-left: 10px;
+    resize: vertical;
+    display: block;
+    height: 30px;
+  }
+  
+  #description-P {
+    margin-left: 10px;
+    width: 85%; 
+    height: 22px;
+  }
+  
+.b-tips {
+    font-size: large;
+    width: 40%;
+    height: 40px;
+    margin-left: 130px;
+    margin-top: 10px;
+    border-radius: 20px;
+    border: none;
+    background-color: rgb(83, 78, 158);
+    color: azure;
+    cursor: pointer;
+}

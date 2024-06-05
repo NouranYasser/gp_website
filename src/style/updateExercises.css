@@ -45,6 +45,7 @@
   
   .container-u-EX {
     width: 50%;
+    height: 400px;
     border-radius: 20px;
     background-color: rgb(240, 240, 243);
     width: 40%;
@@ -74,15 +75,16 @@
   }
   .b-u-EX{
     font-size: large;
-    width: 80%;
+    width: 40%;
     height: 40px;
+    margin-left: 120px;    
+    margin-top: 60px;
+
     border-radius: 20px;
     border: none;
     background-color: rgb(83, 78, 158); 
     color: white;
-    margin-top: 30px; 
     cursor: pointer; 
-    margin-left: 30px;
     margin-bottom: 5px;
   }
   
