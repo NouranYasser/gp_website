@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import "../../style/AddAll.css";
+import "../../style/addissue.css";
 
 function AddIssue() {
   const [name, setName] = useState("");
@@ -131,10 +131,7 @@ function AddIssue() {
       <div className="d">
     {/* <div className="Destination-a"> */}
         <div className='main-divppissue'>
-      <form className="form-All" onSubmit={handleSubmit}>
-
-        <h2 className="h2">Add Issue</h2>
-
+      <form className="form-issue" onSubmit={handleSubmit}>
 
         <label htmlFor="from" className="label-pregnancy">
           Name
@@ -207,8 +204,8 @@ function AddIssue() {
 
 
 
-        <button type="submit" className="b-pregnancy">
-          <h3>Add</h3>
+        <button type="submit" className="b-issue">
+        Submit
         </button>
       </form>
       </div>

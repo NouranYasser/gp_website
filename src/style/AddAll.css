@@ -33,6 +33,7 @@
 
 .form-All {
   width: 100%;
+  height: 600px;
   border-radius: 20px;
   padding-top: 15px;
   background-color: rgb(240, 240, 243);
@@ -79,12 +80,12 @@
   height: 22px;
 }
 
-.b-pregnancy {
+.b-All {
     font-size: large;
     width: 40%;
     height: 40px;
     margin-left: 130px;    
-    margin-top: 20px; 
+    margin-top: 30px; 
   border-radius: 20px;
   border: none;
   background-color: rgb(83, 78, 158); 

@@ -157,7 +157,7 @@ function AddArtificalFeeding() {
           {errorMessage3 && <p style={{ color: 'red' }}>{errorMessage3}</p>}
           <br />
 
-        <button type="submit" className='b-pregnancy'>Submit</button>
+        <button type="submit" className='b-All'>Submit</button>
       </form>
       {message && <p>{message}</p>}
     </div>

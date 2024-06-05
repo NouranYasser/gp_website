@@ -161,7 +161,7 @@ function AddWeaning() {
           
           <br /><br />
       
-        <button type="submit" className='b-pregnancy'>Submit</button>
+        <button type="submit" className='b-All'>Submit</button>
       </form>
       {message && <p>{message}</p>}
     </div>
