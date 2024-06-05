@@ -39,18 +39,18 @@ function AddTipsAndActivities() {
 
   return (
     <>
-    <div className="pfott">
-      <div className="d">
+    <div className="pfott-tips">
+      <div className="d-tips">
       <div className='main-divpp'>
         <form className="form-ppp" onSubmit={handleSubmit}>
-          <label htmlFor="title" className='label-pregnancy'>Title:</label>
+          <label htmlFor="title" className='label-tips'>Title:</label>
           <input className='outbox'
             type="text"
             id="title"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
           />
-          <label htmlFor="description" className='label-pregnancy'>Description:</label><br />
+          <label htmlFor="description" className='label-tips'>Description:</label><br />
           <textarea
             id="description"
             value={description}
@@ -58,7 +58,7 @@ function AddTipsAndActivities() {
           />
           <br />
           <div className="mb-2">
-            <label htmlFor="month" className='label-pregnancy'>
+            <label htmlFor="month" className='label-tips'>
               Month
             </label><br></br>
             <select
@@ -78,7 +78,7 @@ function AddTipsAndActivities() {
 
             </select>
             <br></br> 
-          <label htmlFor="title" className='label-pregnancy'> Title In Arabic:</label>
+          <label htmlFor="title" className='label-tips'> Title In Arabic:</label>
           <input
             className='outbox'
             type="text"
@@ -87,7 +87,7 @@ function AddTipsAndActivities() {
             onChange={(e) => setTitleAr(e.target.value)}
           />
           <br></br>
-          <label htmlFor="description" className='label-pregnancy'>Description In Arabic:</label><br />
+          <label htmlFor="description" className='label-tips'>Description In Arabic:</label><br />
           <textarea
             id="description"
             value={description_ar}
