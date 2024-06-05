@@ -10,6 +10,12 @@ function AddIssue() {
   const [title_ar, setTitleAr] = useState("");
   const [description, setDescription] = useState("");
   const [description_ar, setDescriptionAr] = useState("");
+  const [errorMessage, setErrorMessage] = useState('');
+  const [error, setError] = useState('');
+  const [errorMessage0, setErrorMessage0] = useState('');
+  const [errorMessage1, setErrorMessage1] = useState('');
+  const [errorMessage2, setErrorMessage2] = useState('');
+  const [errorMessage3, setErrorMessage3] = useState('');
   const navigate = useNavigate();
 
   function handleSubmit(event) {
@@ -30,6 +36,96 @@ function AddIssue() {
       .catch((err) => console.log(err));
   }
 
+  const handleLanguage2 = async (e) => {
+    const newValue = e.target.value;
+  
+    // Regular expression to detect Arabic characters
+    const arabicRegex = /[\u0600-\u06FF]/;
+  
+    if (arabicRegex.test(newValue)) {
+      setErrorMessage1('Please write Name in English.');
+    } else {
+      setErrorMessage1('');
+      setName(newValue);
+    }
+  
+  }
+  const handleNameChangeNA = (e) => {
+    const newValue2 = e.target.value;
+  
+    // Regular expression to detect English characters
+    const englishRegex = /[A-Za-z]/;
+  
+    if (englishRegex.test(newValue2)) {
+      setErrorMessage0('Please write Name in Arabic.');
+    } else {
+      setErrorMessage0('');
+      setNameAr(newValue2);
+    }
+  };
+ 
+
+  const handleLanguage = async (e) => {
+    const newValue = e.target.value;
+  
+    // Regular expression to detect Arabic characters
+    const arabicRegex = /[\u0600-\u06FF]/;
+  
+    if (arabicRegex.test(newValue)) {
+      setErrorMessage('Please write title in English.');
+    } else {
+      setErrorMessage('');
+      setTitle(newValue);
+    }
+  
+    
+  }
+  
+  
+  const handleDescriptionChange = async (e) => {
+    const value = e.target.value;
+  
+    // Regular expression to detect Arabic characters
+    const arabicRegex = /[\u0600-\u06FF]/;
+  
+    if (arabicRegex.test(value)) {
+      setError('Please write Description in English.');
+    } else {
+      setError('');
+      setDescription(value);
+    }
+  
+    
+  }
+  
+  const handleTitleChangeA = (e) => {
+    const newValue2 = e.target.value;
+  
+    // Regular expression to detect English characters
+    const englishRegex = /[A-Za-z]/;
+  
+    if (englishRegex.test(newValue2)) {
+      setErrorMessage2('Please write title in Arabic.');
+    } else {
+      setErrorMessage2('');
+      setTitleAr(newValue2);
+    }
+  };
+  
+  const handleDescriptionChangeA = (e) => {
+    const newValue3 = e.target.value;
+  
+    // Regular expression to detect English characters
+    const englishRegex = /[A-Za-z]/;
+  
+    if (englishRegex.test(newValue3)) {
+      setErrorMessage3('Please write Description in Arabic.');
+    } else {
+      setErrorMessage3('');
+      setDescriptionAr(newValue3);
+    }
+  };
+
   return (
     <div className="pfott">
       <div className="d">
@@ -46,8 +142,9 @@ function AddIssue() {
         <input
           className="outbox"
           value={name}
-          onChange={(e) => setName(e.target.value)}
-        />
+          onChange={handleLanguage2}
+      />
+      {errorMessage1 && <p style={{ color: 'red' }}>{errorMessage1}</p>}
 
 
 
@@ -55,8 +152,10 @@ function AddIssue() {
         <input
           className="outbox"
           value={name_ar}
-          onChange={(e) => setNameAr(e.target.value)}
-        />
+          onChange={handleNameChangeNA}
+      />
+      {errorMessage0 && <p style={{ color: 'red' }}>{errorMessage0}</p>}
+
 
 
 
@@ -66,8 +165,9 @@ function AddIssue() {
           <input
             className="outbox"
             value={title}
-            onChange={(e) => setTitle(e.target.value)}
-          />
+            onChange={handleLanguage}
+            />
+            {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
         
 
        
@@ -77,8 +177,9 @@ function AddIssue() {
           <input
             className="outbox"
             value={title_ar}
-            onChange={(e) => setTitleAr(e.target.value)}
-          />
+            onChange={handleTitleChangeA}
+      />
+      {errorMessage2 && <p style={{ color: 'red' }}>{errorMessage2}</p>}
        
        
           <label htmlFor="from" className="label-pregnancy">
@@ -87,8 +188,9 @@ function AddIssue() {
           <input
             className="outbox"
             value={description}
-            onChange={(e) => setDescription(e.target.value)}
-          />
+            onChange={handleDescriptionChange}
+      />
+      {error && <p style={{ color: 'red' }}>{error}</p>}
        
 
       
@@ -98,10 +200,10 @@ function AddIssue() {
           <input
             className="outbox"
             value={description_ar}
-            onChange={(e) => setDescriptionAr(e.target.value)}
-          />
+            onChange={handleDescriptionChangeA}
+            />
+          {errorMessage3 && <p style={{ color: 'red' }}>{errorMessage3}</p>}
        
-
 
 
 

@@ -10,6 +10,10 @@ function AddDetails() {
   const [title_ar, setTitleAr] = useState('');
   const [description_ar, setDescriptionAr] = useState('');
   const [message, setMessage] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
+  const [error, setError] = useState('');
+  const [errorMessage2, setErrorMessage2] = useState('');
+  const [errorMessage3, setErrorMessage3] = useState('');
   const navigate = useNavigate();
   const { id } = useParams(); 
 
@@ -34,7 +38,67 @@ function AddDetails() {
       setMessage('There is something wrong');
     }
   };
-
+  
+  const handleLanguage = async (e) => {
+    const newValue = e.target.value;
+  
+    // Regular expression to detect Arabic characters
+    const arabicRegex = /[\u0600-\u06FF]/;
+  
+    if (arabicRegex.test(newValue)) {
+      setErrorMessage('Please write title in English.');
+    } else {
+      setErrorMessage('');
+      setTitle(newValue);
+    }
+  
+    
+  }
+  
+  
+  const handleDescriptionChange = async (e) => {
+    const value = e.target.value;
+  
+    // Regular expression to detect Arabic characters
+    const arabicRegex = /[\u0600-\u06FF]/;
+  
+    if (arabicRegex.test(value)) {
+      setError('Please write Description in English.');
+    } else {
+      setError('');
+      setDescription(value);
+    }
+  
+    
+  }
+  
+  const handleTitleChangeA = (e) => {
+    const newValue2 = e.target.value;
+  
+    // Regular expression to detect English characters
+    const englishRegex = /[A-Za-z]/;
+  
+    if (englishRegex.test(newValue2)) {
+      setErrorMessage2('Please write title in Arabic.');
+    } else {
+      setErrorMessage2('');
+      setTitleAr(newValue2);
+    }
+  };
+  
+  const handleDescriptionChangeA = (e) => {
+    const newValue3 = e.target.value;
+  
+    // Regular expression to detect English characters
+    const englishRegex = /[A-Za-z]/;
+  
+    if (englishRegex.test(newValue3)) {
+      setErrorMessage3('Please write Description in Arabic.');
+    } else {
+      setErrorMessage3('');
+      setDescriptionAr(newValue3);
+    }
+  };
   return ( 
     <div className='body-uCH'>
     <div className='container-u-CH'>
@@ -47,8 +111,9 @@ function AddDetails() {
           type="text"
           id="title"
           value={title}
-          onChange={(e) => setTitle(e.target.value)}
-        /></div>
+          onChange={handleLanguage}
+      />
+      {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}</div>
          </div>
         <div className='row-CH'>
         <div className=' clo-25-CH'>
@@ -57,8 +122,9 @@ function AddDetails() {
         <textarea
           id="description-u-CH"
           value={description}
-          onChange={(e) => setDescription(e.target.value)}
-        /></div>
+          onChange={handleDescriptionChange}
+      />
+      {error && <p style={{ color: 'red' }}>{error}</p>}</div>
         </div>
 
         <div className='row-CH'>
@@ -69,8 +135,9 @@ function AddDetails() {
           type="text"
           id="title"
           value={title_ar}
-          onChange={(e) => setTitleAr(e.target.value)}
-        /></div>
+          onChange={handleTitleChangeA}
+          />
+          {errorMessage2 && <p style={{ color: 'red' }}>{errorMessage2}</p>}</div>
          </div>
         <div className='row-CH'>
         <div className=' clo-25-CH'>
@@ -79,8 +146,9 @@ function AddDetails() {
         <textarea
           id="description-u-CH"
           value={description_ar}
-          onChange={(e) => setDescriptionAr(e.target.value)}
-        /></div>
+          onChange={handleDescriptionChangeA}
+            />
+          {errorMessage3 && <p style={{ color: 'red' }}>{errorMessage3}</p>}</div>
         </div>
              
          <div class="row-CH">
