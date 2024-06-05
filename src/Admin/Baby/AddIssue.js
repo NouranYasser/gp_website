@@ -201,9 +201,6 @@ function AddIssue() {
             />
           {errorMessage3 && <p style={{ color: 'red' }}>{errorMessage3}</p>}
        
-
-
-
         <button type="submit" className="b-issue">
         Submit
         </button>
