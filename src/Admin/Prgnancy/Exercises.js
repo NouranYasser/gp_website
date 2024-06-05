@@ -33,9 +33,9 @@ const Exercises = () => {
       });
   }, [exercises.reload]);
 
-  const deleteExercise = (id) => {
+  const deleteExercise= (id) => {
     axios
-      .delete("https://gradhub.hwnix.com/api/delete/${id}")
+      .delete(`https://gradhub.hwnix.com/api/delete/${id}`)
       .then((resp) => {
         setExercises({ ...exercises, reload: exercises.reload + 1 });
       })

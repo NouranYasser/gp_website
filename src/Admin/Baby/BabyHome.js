@@ -54,20 +54,20 @@ function BabyHome(){
            
             <h3 className='pre-title'>Tips and Activities</h3>
             <p>
-            Babies love to play, and even more so when they can touch different textures with their little hands. Babies learn about about themselves and the world around them through hands-on activities. That’s why sensory play activities are not only fun for babies but also an important part of their development.            
+            Talk to the mother that children love to play, and they love to play more when they can touch different materials with their little hands. Children learn about themselves and the world around them through hands-on activities
             </p>
 
             <h3 className='pre-title'>Child Milestones</h3>
             <p>
-            Developmental milestones are the behaviors that mark stages of typical growth. Children all develop at their own pace. However, most children pass through specific changes at approximately the same time as they get older. Examples of developmental milestones in a baby’s first year of life may include:Smiling intentionally.
-            Sitting without support.Waving goodbye.Moving objects from one hand to the other.Transitioning from crawling to taking steps.As they grow older, a child’s developmental milestones may include:Knowing names of people or body parts.Using sentences with two to four words.Sorting shapes and colors.Repeating familiar songs or poems from memory.Telling stories.           </p>
+            Talk to the mother about developmental milestones, which are behaviors that define the stages of typical growth. Children all develop at their own pace. However, most <br></br>children go through certain changes around the same time as they grow older.
+            </p>
 
           <h3 className='pre-title'>Feeding</h3>
             <p>
             Types of Feeding for Baby Born :
             <br></br>
 
-            - Breastfeeding:Breast milk is the best source of nutrition for most babies. As the baby grows, the mother's breast milk will change to meet the baby's nutritional needs.
+            - Breastfeeding:Breast milk is the best source of nutrition for most babies. As the baby grows, the mother's breast milk will change to meet the baby's nutritional <br></br><tr></tr>needs.
             <br></br>
 
             - BottleFeeding:Use the provided bottle to simulate feeding. The bottle can be filled with water to mimic real feeding.
@@ -79,7 +79,7 @@ function BabyHome(){
 
             <h3 className='pre-title'>CommonIssuses</h3>
             <p>
-            Babies often encounter a variety of common issues as they grow and develop. Understanding these issues and knowing how to address them can help parents ensure their baby's well-being.
+            Children often face a variety of common problems as they grow and develop. Talk to the mother about these problems and help her solve them because understanding ,<br></br>these problems and knowing how to address them can help parents ensure the health of their children.
             </p>
 
           </div>

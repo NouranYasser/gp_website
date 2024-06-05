@@ -21,7 +21,7 @@ function AddData() {
         <div className="content-div">
           <img src={myImage2} alt="My Image" className="image123" width="400px" height="400px"/> 
           <div className="info-section">
-            <h2> About Pregnancy</h2>
+            <h2 className='AP'> About Pregnancy</h2>
 
             <h3 className='pr-title'>Body Changes</h3>
             <p>
@@ -35,7 +35,7 @@ function AddData() {
 
             <h3 className='pr-title'>Feeding</h3>
             <p>
-            Provide the mothers information about her nutrition during pregnancy, about the foods that are not allowed during each month, and about the foods that should be eaten in excess during pregnancy.
+            Provide the mothers information about her nutrition during pregnancy, about the foods that are not allowed during each month, and about the foods that should be eaten,<br></br> in excess during pregnancy.
             </p>
 
             <h3 className='pr-title'>Exercises</h3>
