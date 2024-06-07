@@ -8,7 +8,6 @@ function UpdateWeaning() {
   const [weaning, setWeanings] = useState({
     title: "",
     description: "",
-    month :"",
     err: "",
     loading: false,
     reload: false,
@@ -25,7 +24,6 @@ function UpdateWeaning() {
     const formData = new FormData();
     if (weaning.title !== "")formData.append("title", weaning.title);
     if (weaning.description !== "")formData.append("description", weaning.description);
-    if (weaning.month !== "")formData.append("month",weaning.month);
 
     try {
       const response = await axios.post(
@@ -52,7 +50,6 @@ function UpdateWeaning() {
           ...weaning,
           title: resp.data.title,
           description: resp.data.description,
-          month : resp.data.month,
         });
       })
       .catch((err) => {
@@ -91,18 +88,6 @@ function UpdateWeaning() {
         /></div>
         </div>
 
-      
-        <div className='row-CH'>
-            <div className=' clo-25-CH'>
-        <label htmlFor="month" className='label-u-CH'>Month:</label></div>
-            <div>
-        <input
-          type="text"
-          id="month"
-          value={weaning.month}
-          onChange={(e) => setWeanings({ ...weaning, month: e.target.value })}
-        /></div>
-        </div>
       
          <div class="row-CH">
         <button type="submit" className='b-u-CH'>Submit</button></div>

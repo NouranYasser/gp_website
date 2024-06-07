@@ -8,7 +8,6 @@ function UpdateTipsAndActivities() {
     const [tip, setTips] = useState({
       title: "",
       description: "",
-      month :"",
       err: "",
       loading: false,
       reload: false,
@@ -25,7 +24,6 @@ function UpdateTipsAndActivities() {
       const formData = new FormData();
       if (tip.title !== "")formData.append("title", tip.title);
       if (tip.description !== "")formData.append("description", tip.description);
-      if (tip.month !== "")formData.append("month",tip.month);
   
       try {
         const response = await axios.post(
@@ -52,7 +50,7 @@ function UpdateTipsAndActivities() {
             ...tip,
             title: resp.data.title,
             description: resp.data.description,
-            month : resp.data.month,
+           
           });
         })
         .catch((err) => {
@@ -89,16 +87,6 @@ function UpdateTipsAndActivities() {
         onChange={(e) => setTips({ ...tip, description: e.target.value })}        /></div>
         </div>
 
-        <div className='row-CH'>
-            <div className=' clo-25-CH'>
-        <label htmlFor="month" className='label-u-CH'>Month:</label></div>
-            <div>
-        <input
-          type="text"
-          id="month"
-          value={tip.month}
-        onChange={(e) => setTips({ ...tip, month: e.target.value })}        /></div>
-        </div>
 
          <div class="row-CH">
         <button type="submit" className='b-u-CH'>Submit</button></div>

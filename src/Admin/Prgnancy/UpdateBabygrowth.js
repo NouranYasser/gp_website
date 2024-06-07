@@ -8,7 +8,6 @@ function UpdateBabygrowth() {
   const [babygrowth, setBabyGrowth] = useState({
     title: "",
     description: "",
-    month :"",
     image:"",
     err: "",
     loading: false,
@@ -25,7 +24,6 @@ function UpdateBabygrowth() {
     const formData = new FormData();
     if (babygrowth.title !== '') formData.append('title', babygrowth.title);
     if (babygrowth.description !== '') formData.append('description', babygrowth.description);
-    if (babygrowth.month !== '') formData.append('month', babygrowth.month);
     if (babygrowth.image !== null) formData.append('image', babygrowth.image);
 
     try {
@@ -49,7 +47,6 @@ function UpdateBabygrowth() {
           ...babygrowth,
           title: resp.data.title,
           description: resp.data.description,
-          month : resp.data.month,
           image: resp.data.image,
         });
       })
@@ -90,19 +87,7 @@ function UpdateBabygrowth() {
               /></div>
           </div>
 
-          <div className='row-G'>
-            <div className=' clo-25-G'>
-              <label htmlFor="month" className='label-U-G'>Month:</label></div>
-            <div>
-              <input
-                type="text"
-                id="month"
-                value={babygrowth.month}
-                onChange={(e) => setBabyGrowth({ ...babygrowth, month: e.target.value })}
-
-              /></div>
-          </div>
-
+    
           <div className='row-G'>
             <div className=' clo-25-G'>
 

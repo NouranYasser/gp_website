@@ -1,4 +1,4 @@
-import React, { useState ,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import axios from 'axios';
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
@@ -8,7 +8,6 @@ function UpdateChildMilestonesAr() {
   const [child, setChilds] = useState({
     title_ar: "",
     description_ar: "",
-    month :"",
     err: "",
     loading: false,
     reload: false,
@@ -20,12 +19,11 @@ function UpdateChildMilestonesAr() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-   setChilds({ ...child, loading: true });
+    setChilds({ ...child, loading: true });
 
     const formData = new FormData();
-    if (child.title_ar !== "")formData.append("title_ar", child.title_ar);
-    if (child.description_ar !== "")formData.append("description_ar", child.description_ar);
-    if (child.month !== "")formData.append("month",child.month);
+    if (child.title_ar !== "") formData.append("title_ar", child.title_ar);
+    if (child.description_ar !== "") formData.append("description_ar", child.description_ar);
 
     try {
       const response = await axios.post(
@@ -43,7 +41,7 @@ function UpdateChildMilestonesAr() {
       setMessage("There is something wrong");
     }
   };
-  
+
   useEffect(() => {
     axios
       .get("https://gradhub.hwnix.com/api/get_Byid/ar/" + id)
@@ -52,7 +50,7 @@ function UpdateChildMilestonesAr() {
           ...child,
           title_ar: resp.data.title_ar,
           description_ar: resp.data.description_ar,
-          month : resp.data.month,
+         
         });
       })
       .catch((err) => {
@@ -64,50 +62,44 @@ function UpdateChildMilestonesAr() {
         });
       });
   }, [child.reload]);
-   
+
   return (
     <div className='body-uCH'>
-    <div className='container-u-CH'>
-      <form onSubmit={handleSubmit}>
-      <div className='row-CH'>
-      <div className=' clo-25-CH'>
-
-        <label htmlFor="title" className='label-u-CH'>Title:</label></div>
-        <div><input
-          type="text"
-          id="title"
-          value={child.title_ar}
-          onChange={(e) => setChilds({ ...child, title_ar: e.target.value })}        /></div>
-         </div>
-       
-        <div className='row-CH'>
-        <div className=' clo-25-CH'>
-        <label htmlFor="description" className='label-u-CH'>Description:</label></div>
-        <div>
-        <textarea
-          id="description-u-CH"
-          value={child.description_ar}
-          onChange={(e) => setChilds({ ...child, description_ar: e.target.value })}
-        /></div>
-        </div>
-
-      
-        <div className='row-CH'>
-            <div className=' clo-25-CH'>
-        <label htmlFor="month" className='label-u-CH'>Month:</label></div>
+      <div className='container-u-CH'>
+        <form onSubmit={handleSubmit}>
+          <div className='row-CH'>
+            <div className='clo-25-CH'>
+              <label htmlFor="title" className='label-u-CH'>Title:</label>
+            </div>
             <div>
-        <input
-          type="text"
-          id="month"
-          value={child.month}
-          onChange={(e) => setChilds({ ...child, title: e.target.value })}
-        /></div>
-        </div>
-      
-         <div class="row-CH">
-        <button type="submit" className='b-u-CH'>Submit</button></div>
-      </form>
-      {message && <p>{message}</p>}
+              <input
+                type="text"
+                id="title"
+                value={child.title_ar}
+                onChange={(e) => setChilds({ ...child, title_ar: e.target.value })}
+              />
+            </div>
+          </div>
+
+          <div className='row-CH'>
+            <div className='clo-25-CH'>
+              <label htmlFor="description" className='label-u-CH'>Description:</label>
+            </div>
+            <div>
+              <textarea
+                id="description-u-CH"
+                value={child.description_ar}
+                onChange={(e) => setChilds({ ...child, description_ar: e.target.value })}
+              />
+            </div>
+          </div>
+
+
+          <div className="row-CH">
+            <button type="submit" className='b-u-CH'>Submit</button>
+          </div>
+        </form>
+        {message && <p>{message}</p>}
       </div>
     </div>
   );

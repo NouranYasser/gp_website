@@ -8,8 +8,7 @@ function UpdateFoodAr() {
   const [Food, setFood] = useState({
     title_ar: "",
     description_ar: "",
-    month :"",
-    image:"",
+    image: null,
     err: "",
     loading: false,
     reload: false,
@@ -25,7 +24,6 @@ function UpdateFoodAr() {
     const formData = new FormData();
     if (Food.title_ar !== '') formData.append('title_ar', Food.title_ar);
     if (Food.description_ar !== '') formData.append('description_ar', Food.description_ar);
-    if (Food.month !== '') formData.append('month', Food.month);
     if (Food.image !== null) formData.append('image', Food.image);
 
     try {
@@ -49,8 +47,7 @@ function UpdateFoodAr() {
           ...Food,
           title_ar: resp.data.title_ar,
           description_ar: resp.data.description_ar,
-          month : resp.data.month,
-          image: resp.data.image,
+          image: null,
         });
       })
       .catch((err) => {
@@ -88,19 +85,8 @@ function UpdateFoodAr() {
             onChange={(e) => setFood({ ...Food, description_ar: e.target.value })}
           /></div>
           </div>
-        
-          <div className='row-FO'>
-              <div className=' clo-25-FO'>
-          <label htmlFor="month" className='label-u-FO'>Month:</label></div>
-            <div>
-          <input
-            type="text"
-            id="month"
-            value={Food.month}
-            onChange={(e) => setFood({ ...Food, month: e.target.value })}
-          /></div>
-          </div>
-        
+
+
           <div className='row-FO'>
               <div className=' clo-25-FO'>
           <label htmlFor="image" className='label-u-FO'>Image:</label></div>

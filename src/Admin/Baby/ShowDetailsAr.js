@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import "../../style/babygrowthMonth.css";
+import "../../style/ShowDetailsAr.css";
+
 import { useParams } from "react-router-dom";
 const ShowDetailsAr = () => {
   const [details, setDetails] = useState({
@@ -65,18 +66,20 @@ const ShowDetailsAr = () => {
 
                     <td>
                       <button
-                        className="btnDelete"
+                        className="btnArabicDelete"
                         onClick={() => {
                           deleteBabygrowth(result.id);
                         }}
                       >
                         إزالة
                       </button>
+                      </td>
+                    
                       <td>
                       <Link to={"/UpdateIssueAr/" + result.id}>
-                        <button className="btnUpdate">تعديل</button>
+                        <button className="btnArabicUpdate">تعديل</button>
                       </Link>
-                    </td>
+          
                     </td>
                     <td>{result.description_ar}</td>     
                     <td>{result.title_ar}</td>           

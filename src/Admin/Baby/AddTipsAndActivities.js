@@ -131,7 +131,7 @@ function AddTipsAndActivities() {
               value={month}
               onChange={(e) => setMonth(e.target.value)}
             >
-              <option value="">Select Month</option>
+              <option value=""disabled>Select Month</option>
               <option value="1">1-3</option>
               <option value="3">3-6</option>
               <option value="6">6-9</option>
