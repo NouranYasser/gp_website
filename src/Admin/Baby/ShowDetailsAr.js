@@ -72,11 +72,12 @@ const ShowDetailsAr = () => {
                       >
                         إزالة
                       </button>
+                      </td>
                       <td>
                       <Link to={"/UpdateIssueAr/" + result.id}>
                         <button className="btnUpdate">تعديل</button>
                       </Link>
-                    </td>
+                   
                     </td>
                     <td>{result.description_ar}</td>     
                     <td>{result.title_ar}</td>           

@@ -37,7 +37,7 @@
 }
   
   .label-U-G {
-    font-size: x-large;
+    font-size: larger;
     padding: 12px 12px 12px 0;
     display: inline-block;
     }
@@ -88,7 +88,7 @@
     font-size: larger;
     width: 40%;
     height: 40px;
-    margin-left: 130px;    
+    margin-left: 190px;    
     margin-top: 60px;
     border-radius: 20px;
     border: none;

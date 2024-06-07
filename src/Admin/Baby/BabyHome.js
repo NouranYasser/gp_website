@@ -50,7 +50,7 @@ function BabyHome(){
         <div className='main-back'>
           <img src={myImage2} alt="My Image" className="image123" width="400px" height="400px"/> 
           <div className="info-section">
-            <h2 className="mx-10">About BabyBorn</h2>
+            <h2 className="Ab">About BabyBorn</h2>
            
             <h3 className='pre-title'>Tips and Activities</h3>
             <p>
