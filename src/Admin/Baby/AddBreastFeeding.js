@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import"../../style/AddAll.css";
-
+import "../../style/AddAll.css";
 
 function AddBreastFeeding() {
   const [title, setTitle] = useState('');
@@ -40,45 +39,40 @@ function AddBreastFeeding() {
     }
   };
 
-  const handleLanguage = async (e) => {
+  const handleLanguage = (e) => {
     const newValue = e.target.value;
-  
+
     // Regular expression to detect Arabic characters
     const arabicRegex = /[\u0600-\u06FF]/;
-  
+
     if (arabicRegex.test(newValue)) {
       setErrorMessage('Please write title in English.');
     } else {
       setErrorMessage('');
       setTitle(newValue);
     }
-  
-    
-  }
-  
-  
-  const handleDescriptionChange = async (e) => {
+  };
+
+  const handleDescriptionChange = (e) => {
     const value = e.target.value;
-  
+
     // Regular expression to detect Arabic characters
     const arabicRegex = /[\u0600-\u06FF]/;
-  
+
     if (arabicRegex.test(value)) {
       setError('Please write Description in English.');
     } else {
       setError('');
       setDescription(value);
     }
-  
-    
-  }
-  
+  };
+
   const handleTitleChangeA = (e) => {
     const newValue2 = e.target.value;
-  
+
     // Regular expression to detect English characters
     const englishRegex = /[A-Za-z]/;
-  
+
     if (englishRegex.test(newValue2)) {
       setErrorMessage2('Please write title in Arabic.');
     } else {
@@ -86,13 +80,13 @@ function AddBreastFeeding() {
       setTitleAr(newValue2);
     }
   };
-  
+
   const handleDescriptionChangeA = (e) => {
     const newValue3 = e.target.value;
-  
+
     // Regular expression to detect English characters
     const englishRegex = /[A-Za-z]/;
-  
+
     if (englishRegex.test(newValue3)) {
       setErrorMessage3('Please write Description in Arabic.');
     } else {
@@ -100,70 +94,74 @@ function AddBreastFeeding() {
       setDescriptionAr(newValue3);
     }
   };
-  
 
   return (
     <div className="pfott">
       <div className="d">
-    <div className='main-divpp'>
-      <form className="form-All" onSubmit={handleSubmit}>
-        <label htmlFor="title" className='label-pregnancy'>Title:</label>
-        <input
-          className='outbox'
-          type="text"
-          id="title"
-          value={title}
-          onChange={handleLanguage}
-          />
-          {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
+        <div className='main-divpp'>
+          <form className="form-All" onSubmit={handleSubmit}>
+            <label htmlFor="title" className='label-pregnancy'>Title:</label>
+            <input
+              className='outbox'
+              type="text"
+              id="title"
+              value={title}
+              onChange={handleLanguage}
+              required
+            />
+            {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
 
-        <label htmlFor="description" className='label-pregnancy'>Description:</label><br />
-        <textarea
-          id="description"
-          value={description}
-          onChange={handleDescriptionChange}
-          />
-          {error && <p style={{ color: 'red' }}>{error}</p>}
-        <br />
-        <label htmlFor="month" className='label-pregnancy'>Month:</label><br />
-        <select
-          id="month"
-          value={month}
-          onChange={(e) => setMonth(e.target.value)}
-        >
-          <option value=""disabled>Select Month</option>
-          <option value="1">1-6</option>
-          <option value="6">6-12</option>
-          <option value="12">12-18</option>
-          <option value="18">18-24</option>
-          
-        </select>
-        <br /><br />
+            <label htmlFor="description" className='label-pregnancy'>Description:</label><br />
+            <textarea
+              id="description"
+              value={description}
+              onChange={handleDescriptionChange}
+              required
+            />
+            {error && <p style={{ color: 'red' }}>{error}</p>}
+            <br />
 
-        <label htmlFor="title" className='label-pregnancy'> Title In Arabic:</label>
-          <input
-            className='outbox'
-            type="text"
-            id="title"
-            value={title_ar}
-            onChange={handleTitleChangeA}
+            <label htmlFor="month" className='label-pregnancy'>Month:</label><br />
+            <select
+              id="month"
+              value={month}
+              onChange={(e) => setMonth(e.target.value)}
+              required
+            >
+              <option value="" disabled>Select Month</option>
+              <option value="1">1-6</option>
+              <option value="6">6-12</option>
+              <option value="12">12-18</option>
+              <option value="18">18-24</option>
+            </select>
+            <br /><br />
+
+            <label htmlFor="title_ar" className='label-pregnancy'> Title In Arabic:</label>
+            <input
+              className='outbox'
+              type="text"
+              id="title_ar"
+              value={title_ar}
+              onChange={handleTitleChangeA}
+              required
             />
             {errorMessage2 && <p style={{ color: 'red' }}>{errorMessage2}</p>}
-         
-          <label htmlFor="description" className='label-CH'>Description In Arabic:</label><br />
-          <textarea
-            id="description"
-            value={description_ar}
-            onChange={handleDescriptionChangeA}
-          />
-        {errorMessage3 && <p style={{ color: 'red' }}>{errorMessage3}</p>}
-         
-          <br />
-        <button type="submit" className='b-All'>Submit</button>
-      </form>
-      {message && <p>{message}</p>}
-    </div>
-    </div>
+
+            <label htmlFor="description_ar" className='label-CH'>Description In Arabic:</label><br />
+            <textarea
+              id="description_ar"
+              value={description_ar}
+              onChange={handleDescriptionChangeA}
+              required
+            />
+            {errorMessage3 && <p style={{ color: 'red' }}>{errorMessage3}</p>}
+            <br />
+
+            <button type="submit" className='b-All'>Submit</button>
+          </form>
+          {message && <p>{message}</p>}
+        </div>
+      </div>
     </div>
   );
 }

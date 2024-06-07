@@ -36,26 +36,26 @@ function AddIssue() {
       .catch((err) => console.log(err));
   }
 
-  const handleLanguage2 = async (e) => {
+  const handleLanguage2 = (e) => {
     const newValue = e.target.value;
-  
+
     // Regular expression to detect Arabic characters
     const arabicRegex = /[\u0600-\u06FF]/;
-  
+
     if (arabicRegex.test(newValue)) {
       setErrorMessage1('Please write Name in English.');
     } else {
       setErrorMessage1('');
       setName(newValue);
     }
-  
   }
+
   const handleNameChangeNA = (e) => {
     const newValue2 = e.target.value;
-  
+
     // Regular expression to detect English characters
     const englishRegex = /[A-Za-z]/;
-  
+
     if (englishRegex.test(newValue2)) {
       setErrorMessage0('Please write Name in Arabic.');
     } else {
@@ -63,47 +63,41 @@ function AddIssue() {
       setNameAr(newValue2);
     }
   };
- 
 
-  const handleLanguage = async (e) => {
+  const handleLanguage = (e) => {
     const newValue = e.target.value;
-  
+
     // Regular expression to detect Arabic characters
     const arabicRegex = /[\u0600-\u06FF]/;
-  
+
     if (arabicRegex.test(newValue)) {
       setErrorMessage('Please write title in English.');
     } else {
       setErrorMessage('');
       setTitle(newValue);
     }
-  
-    
   }
-  
-  
-  const handleDescriptionChange = async (e) => {
+
+  const handleDescriptionChange = (e) => {
     const value = e.target.value;
-  
+
     // Regular expression to detect Arabic characters
     const arabicRegex = /[\u0600-\u06FF]/;
-  
+
     if (arabicRegex.test(value)) {
       setError('Please write Description in English.');
     } else {
       setError('');
       setDescription(value);
     }
-  
-    
   }
-  
+
   const handleTitleChangeA = (e) => {
     const newValue2 = e.target.value;
-  
+
     // Regular expression to detect English characters
     const englishRegex = /[A-Za-z]/;
-  
+
     if (englishRegex.test(newValue2)) {
       setErrorMessage2('Please write title in Arabic.');
     } else {
@@ -111,13 +105,13 @@ function AddIssue() {
       setTitleAr(newValue2);
     }
   };
-  
+
   const handleDescriptionChangeA = (e) => {
     const newValue3 = e.target.value;
-  
+
     // Regular expression to detect English characters
     const englishRegex = /[A-Za-z]/;
-  
+
     if (englishRegex.test(newValue3)) {
       setErrorMessage3('Please write Description in Arabic.');
     } else {
@@ -129,86 +123,79 @@ function AddIssue() {
   return (
     <div className="pfott">
       <div className="d">
-    {/* <div className="Destination-a"> */}
         <div className='main-divppissue'>
-      <form className="form-issue" onSubmit={handleSubmit}>
+          <form className="form-issue" onSubmit={handleSubmit}>
+            <label htmlFor="name" className="label-pregnancy">
+              Name
+            </label>
+            <input
+              className="outbox"
+              value={name}
+              onChange={handleLanguage2}
+              required
+            />
+            {errorMessage1 && <p style={{ color: 'red' }}>{errorMessage1}</p>}
 
-        <label htmlFor="from" className="label-pregnancy">
-          Name
-        </label>
-        <input
-          className="outbox"
-          value={name}
-          onChange={handleLanguage2}
-      />
-      {errorMessage1 && <p style={{ color: 'red' }}>{errorMessage1}</p>}
+            <label htmlFor="name_ar" className="label-pregnancy">Name In Arabic</label>
+            <input
+              className="outbox"
+              value={name_ar}
+              onChange={handleNameChangeNA}
+              required
+            />
+            {errorMessage0 && <p style={{ color: 'red' }}>{errorMessage0}</p>}
 
-
-
-        <label htmlFor="from" className="label-pregnancy">Name In Arabic</label>
-        <input
-          className="outbox"
-          value={name_ar}
-          onChange={handleNameChangeNA}
-      />
-      {errorMessage0 && <p style={{ color: 'red' }}>{errorMessage0}</p>}
-
-
-
-
-          <label htmlFor="from" className="label-pregnancy">
-            Title
-          </label>
-          <input
-            className="outbox"
-            value={title}
-            onChange={handleLanguage}
+            <label htmlFor="title" className="label-pregnancy">
+              Title
+            </label>
+            <input
+              className="outbox"
+              value={title}
+              onChange={handleLanguage}
+              required
             />
             {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
-        
 
-       
-          <label htmlFor="from" className="label-pregnancy">
-            Title In Arabic
-          </label>
-          <input
-            className="outbox"
-            value={title_ar}
-            onChange={handleTitleChangeA}
-      />
-      {errorMessage2 && <p style={{ color: 'red' }}>{errorMessage2}</p>}
-       
-       
-          <label htmlFor="from" className="label-pregnancy">
-            Description
-          </label>
-          <input
-            className="outbox"
-            value={description}
-            onChange={handleDescriptionChange}
-      />
-      {error && <p style={{ color: 'red' }}>{error}</p>}
-       
-
-      
-          <label htmlFor="from" className="label-pregnancy">
-            Description In Arabic
-          </label>
-          <input
-            className="outbox"
-            value={description_ar}
-            onChange={handleDescriptionChangeA}
+            <label htmlFor="title_ar" className="label-pregnancy">
+              Title In Arabic
+            </label>
+            <input
+              className="outbox"
+              value={title_ar}
+              onChange={handleTitleChangeA}
+              required
             />
-          {errorMessage3 && <p style={{ color: 'red' }}>{errorMessage3}</p>}
-       
-        <button type="submit" className="b-issue">
-        Submit
-        </button>
-      </form>
+            {errorMessage2 && <p style={{ color: 'red' }}>{errorMessage2}</p>}
+
+            <label htmlFor="description" className="label-pregnancy">
+              Description
+            </label>
+            <input
+              className="outbox"
+              value={description}
+              onChange={handleDescriptionChange}
+              required
+            />
+            {error && <p style={{ color: 'red' }}>{error}</p>}
+
+            <label htmlFor="description_ar" className="label-pregnancy">
+              Description In Arabic
+            </label>
+            <input
+              className="outbox"
+              value={description_ar}
+              onChange={handleDescriptionChangeA}
+              required
+            />
+            {errorMessage3 && <p style={{ color: 'red' }}>{errorMessage3}</p>}
+
+            <button type="submit" className="b-issue">
+              Submit
+            </button>
+          </form>
+        </div>
       </div>
     </div>
-    </div>
-    // </div>
   );
 }
 
