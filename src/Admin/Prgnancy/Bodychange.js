@@ -19,7 +19,7 @@ const Bodychange = () => {
             <button className="btn-M"> Month 1</button>
           </Link>
 
-          <Link to="/BodyChangeMonth2">
+          <Link to="/BodyChangeMonth4">
             <button className="btn-M"> Month 4</button>
           </Link>
 

@@ -134,7 +134,7 @@ function AddFeeding() {
 
             <label htmlFor="month" className="label-GFE">Month:</label><br />
             <select
-              className='outbox-FE'
+              className='Select-ch'
               id="month"
               value={month}
               onChange={(e) => setMonth(e.target.value)}
