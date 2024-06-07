@@ -43,43 +43,38 @@ function AddBodyChange() {
 
   const handleLanguage = async (e) => {
     const newValue = e.target.value;
-  
+
     // Regular expression to detect Arabic characters
     const arabicRegex = /[\u0600-\u06FF]/;
-  
+
     if (arabicRegex.test(newValue)) {
       setErrorMessage('Please write title in English.');
     } else {
       setErrorMessage('');
       setTitle(newValue);
     }
-  
-    
   }
-  
-  
+
   const handleDescriptionChange = async (e) => {
     const value = e.target.value;
-  
+
     // Regular expression to detect Arabic characters
     const arabicRegex = /[\u0600-\u06FF]/;
-  
+
     if (arabicRegex.test(value)) {
       setError('Please write Description in English.');
     } else {
       setError('');
       setDescription(value);
     }
-  
-    
   }
-  
+
   const handleTitleChangeA = (e) => {
     const newValue2 = e.target.value;
-  
+
     // Regular expression to detect English characters
     const englishRegex = /[A-Za-z]/;
-  
+
     if (englishRegex.test(newValue2)) {
       setErrorMessage2('Please write title in Arabic.');
     } else {
@@ -87,13 +82,13 @@ function AddBodyChange() {
       setTitleAr(newValue2);
     }
   };
-  
+
   const handleDescriptionChangeA = (e) => {
     const newValue3 = e.target.value;
-  
+
     // Regular expression to detect English characters
     const englishRegex = /[A-Za-z]/;
-  
+
     if (englishRegex.test(newValue3)) {
       setErrorMessage3('Please write Description in Arabic.');
     } else {
@@ -104,74 +99,80 @@ function AddBodyChange() {
 
   return (
     <>
-    <div className="changecon">
-      <div className='main-divCH'>
-        <form className="form-CH" onSubmit={handleSubmit}>
-          <label htmlFor="title" className='label-CH'>Title:</label>
-          <input
-            className='outboxCH'
-            type="text"
-            id="title"
-            value={title}
-            onChange={handleLanguage}
-          />
-          {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
+      <div className="changecon">
+        <div className='main-divCH'>
+          <form className="form-CH" onSubmit={handleSubmit}>
+            <label htmlFor="title" className='label-CH'>Title:</label>
+            <input
+              className='outboxCH'
+              type="text"
+              id="title"
+              value={title}
+              onChange={handleLanguage}
+              required
+            />
+            {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
 
-          <label htmlFor="descriptionch" className='label-CH'>Description:</label><br />
-          <textarea
-            id="descriptionch"
-            value={description}
-            onChange={handleDescriptionChange}
-          />
-          {error && <p style={{ color: 'red' }}>{error}</p>}
-      <br></br>
-          <label htmlFor="month" className='label-CH'>Month:</label><br />
-          <select
-            className='Select-ch'
-            id="month"
-            value={month}
-            onChange={(e) => setMonth(e.target.value)}
-          >
-          <option value=""disabled>Select Month</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option> 
-          <option value="5">5</option>
-          <option value="6">6</option>
-          <option value="7">7</option>
-          <option value="8">8</option>
-          <option value="9">9</option>
-          </select>
-          
-          <label htmlFor="image" className='label-CH'>Image:</label><br/>
-          <input
-          className="img-ch"
-            type="file"
-            id="image"
-            onChange={(e) => setImage(e.target.files[0])}
-          />
-          <br />
-          <label htmlFor="title" className='label-CH'>Title In Arabic:</label><br />
-          <input
-            className='outboxCH'
-            type="text"
-            id="title"
-            value={title_ar}
-            onChange={handleTitleChangeA}
-          />
-          {errorMessage2 && <p style={{ color: 'red' }}>{errorMessage2}</p>}
-          <label htmlFor="descriptionch" className='label-CH'>Description In Arabic:</label><br />
-          <textarea
-            id="descriptionch"
-            value={description_ar}
-            onChange={handleDescriptionChangeA}
-          />
-          {errorMessage3 && <p style={{ color: 'red' }}>{errorMessage3}</p>}
-          <button type="submit" className='b-Change'>Submit</button>
-        </form>
-        {message && <p>{message}</p>}
-      </div>
+            <label htmlFor="descriptionch" className='label-CH'>Description:</label><br />
+            <textarea
+              id="descriptionch"
+              value={description}
+              onChange={handleDescriptionChange}
+              required
+            />
+            {error && <p style={{ color: 'red' }}>{error}</p>}
+            <br></br>
+            <label htmlFor="month" className='label-CH'>Month:</label><br />
+            <select
+              className='Select-ch'
+              id="month"
+              value={month}
+              onChange={(e) => setMonth(e.target.value)}
+              required
+            >
+              <option value="" disabled>Select Month</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option> 
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+            </select>
+
+            <label htmlFor="image" className='label-CH'>Image:</label><br/>
+            <input
+              className="img-ch"
+              type="file"
+              id="image"
+              onChange={(e) => setImage(e.target.files[0])}
+              required
+            />
+            <br />
+            <label htmlFor="title_ar" className='label-CH'>Title In Arabic:</label><br />
+            <input
+              className='outboxCH'
+              type="text"
+              id="title_ar"
+              value={title_ar}
+              onChange={handleTitleChangeA}
+              required
+            />
+            {errorMessage2 && <p style={{ color: 'red' }}>{errorMessage2}</p>}
+            <label htmlFor="description_ar" className='label-CH'>Description In Arabic:</label><br />
+            <textarea
+              id="description_ar"
+              value={description_ar}
+              onChange={handleDescriptionChangeA}
+              required
+            />
+            {errorMessage3 && <p style={{ color: 'red' }}>{errorMessage3}</p>}
+            <button type="submit" className='b-Change'>Submit</button>
+          </form>
+          {message && <p>{message}</p>}
+        </div>
       </div>
     </>
   );

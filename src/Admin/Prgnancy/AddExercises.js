@@ -6,7 +6,7 @@ import "../../style/addexercises.css";
 function AddExercises() {
   const [description, setDescription] = useState('');
   const [description_ar, setDescriptionAr] = useState('');
-  const [video_url, setvideo_url] = useState('');
+  const [video_url, setVideoUrl] = useState('');
   const [message, setMessage] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
   const [errorMessage2, setErrorMessage2] = useState('');
@@ -33,71 +33,75 @@ function AddExercises() {
     }
   };
 
-  const handleDescriptionChange = async (e) => {
+  const handleDescriptionChange = (e) => {
     const value = e.target.value;
-  
+
     // Regular expression to detect Arabic characters
     const arabicRegex = /[\u0600-\u06FF]/;
-  
+
     if (arabicRegex.test(value)) {
       setErrorMessage('Please write Description in English.');
     } else {
       setErrorMessage('');
       setDescription(value);
     }
-  }
-  
+  };
+
   const handleDescriptionChangeA = (e) => {
-    const newValue3 = e.target.value;
-  
+    const value = e.target.value;
+
     // Regular expression to detect English characters
     const englishRegex = /[A-Za-z]/;
-  
-    if (englishRegex.test(newValue3)) {
+
+    if (englishRegex.test(value)) {
       setErrorMessage2('Please write Description in Arabic.');
     } else {
       setErrorMessage2('');
-      setDescriptionAr(newValue3);
+      setDescriptionAr(value);
     }
   };
+
   return (
     <>
-    <div className="exercisesCon">
-      <div className='main-divCEX'>
-        <form className="form-EX" onSubmit={handleSubmit}>
-          
+      <div className="exercisesCon">
+        <div className='main-divCEX'>
+          <form className="form-EX" onSubmit={handleSubmit}>
 
-          <label htmlFor="description" className='label-CEX'>Description:</label><br />
-          <textarea
-            id="descriptionEX"
-            value={description}
-            onChange={handleDescriptionChange}
+            <label htmlFor="description" className='label-CEX'>Description:</label><br />
+            <textarea
+              id="descriptionEX"
+              value={description}
+              onChange={handleDescriptionChange}
+              required
             />
             {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
-          <br />
+            <br />
 
-          <label htmlFor="description" className='label-CEX'>Description In Arabic:</label><br />
-          <textarea
-            id="descriptionEX"
-            value={description_ar}
-            onChange={handleDescriptionChangeA}
+            <label htmlFor="description_ar" className='label-CEX'>Description In Arabic:</label><br />
+            <textarea
+              id="descriptionArEX"
+              value={description_ar}
+              onChange={handleDescriptionChangeA}
+              required
             />
             {errorMessage2 && <p style={{ color: 'red' }}>{errorMessage2}</p>}
-          <br />
-         
-          <label htmlFor="VideoUrl" className='label-CEX'>Video Url:</label><br />
-          <textarea
-            id="VideoUrl"
-            value={video_url}
-            onChange={(e) => setvideo_url(e.target.value)}
-          />
-          <br />
+            <br />
 
-          <br /><br />
-          <button type="submit" className='b-ChangeEX'>Submit</button>
-        </form>
-        {message && <p>{message}</p>}
-      </div>
+            <label htmlFor="VideoUrl" className='label-CEX'>Video Url:</label><br />
+            <input
+              type="text"
+              id="VideoUrl"
+              value={video_url}
+              onChange={(e) => setVideoUrl(e.target.value)}
+              required
+            />
+            <br />
+
+            <br /><br />
+            <button type="submit" className='b-ChangeEX'>Submit</button>
+          </form>
+          {message && <p>{message}</p>}
+        </div>
       </div>
     </>
   );
