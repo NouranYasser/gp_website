@@ -8,7 +8,6 @@ function UpdateBabygrowth() {
   const [babygrowth, setBabyGrowth] = useState({
     title: "",
     description: "",
-    month :"",
     image:"",
     err: "",
     loading: false,
@@ -25,7 +24,6 @@ function UpdateBabygrowth() {
     const formData = new FormData();
     if (babygrowth.title !== '') formData.append('title', babygrowth.title);
     if (babygrowth.description !== '') formData.append('description', babygrowth.description);
-    if (babygrowth.month !== '') formData.append('month', babygrowth.month);
     if (babygrowth.image !== null) formData.append('image', babygrowth.image);
 
     try {
@@ -49,7 +47,6 @@ function UpdateBabygrowth() {
           ...babygrowth,
           title: resp.data.title,
           description: resp.data.description,
-          month : resp.data.month,
           image: resp.data.image,
         });
       })
@@ -90,27 +87,7 @@ function UpdateBabygrowth() {
               /></div>
           </div>
 
-          <div className='row-G'>
-            <div className=' clo-25-G'>
-              <label htmlFor="month" className='label-U-G'>Month:</label></div>
-              <select
-            className='Select-ch'
-            id="month"
-            value={babygrowth.month}
-            onChange={(e) => setBabyGrowth({ ...babygrowth, description: e.target.value })}
-          >
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option> 
-          <option value="5">5</option>
-          <option value="6">6</option>
-          <option value="7">7</option>
-          <option value="8">8</option>
-          <option value="9">9</option>
-          </select>
-          </div>
-
+    
           <div className='row-G'>
             <div className=' clo-25-G'>
 

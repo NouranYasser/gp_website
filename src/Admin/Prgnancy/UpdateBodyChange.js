@@ -8,7 +8,6 @@ function UpdateBodyChanges() {
   const [bodychange, setBodyChanges] = useState({
     title: "",
     description: "",
-    month :"",
     image:"",
     err: "",
     loading: false,
@@ -26,7 +25,6 @@ function UpdateBodyChanges() {
     const formData = new FormData();
     if (bodychange.title !== "")formData.append("title", bodychange.title);
     if (bodychange.description !== "")formData.append("description", bodychange.description);
-    if (bodychange.month !== "")formData.append("month",bodychange.month);
     if (bodychange.image !== "")formData.append("image",bodychange.image);
 
     try {
@@ -54,7 +52,6 @@ function UpdateBodyChanges() {
           ...bodychange,
           title: resp.data.title,
           description: resp.data.description,
-          month : resp.data.month,
           image: resp.data.image,
         });
       })
@@ -102,22 +99,6 @@ function UpdateBodyChanges() {
             </div>
           </div>
 
-
-          <div className="row-CH">
-            <div className=" clo-25-CH">
-              <label htmlFor="month" className="label-u-CH">
-                Month:
-              </label>
-            </div>
-            <div>
-              <input
-                type="text"
-                id="month"
-                value={bodychange.month}
-                onChange={(e) => setBodyChanges({ ...bodychange, month: e.target.value })}
-              />
-            </div>
-          </div>
 
           <div className="row-CH">
             <div className=" clo-25-CH">

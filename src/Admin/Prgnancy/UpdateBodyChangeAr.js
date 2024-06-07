@@ -8,7 +8,6 @@ function UpdateBodyChangesAr() {
   const [bodychange, setBodyChanges] = useState({
     title_ar: "",
     description_ar: "",
-    month:"",
     image:"",
     err: "",
     loading: false,
@@ -26,7 +25,6 @@ function UpdateBodyChangesAr() {
     const formData = new FormData();
     if (bodychange.title_ar !== "")formData.append("title_ar", bodychange.title_ar);
     if (bodychange.description_ar !== "")formData.append("description_ar", bodychange.description_ar);
-    if (bodychange.month !== "")formData.append("month",bodychange.month);
     if (bodychange.image !== "")formData.append("image",bodychange.image);
 
     try {
@@ -54,7 +52,6 @@ function UpdateBodyChangesAr() {
           ...bodychange,
           title_ar: resp.data.title_ar,
           description_ar: resp.data.description_ar,
-          month : resp.data.month,
           image: resp.data.image,
         });
       })
@@ -106,22 +103,6 @@ function UpdateBodyChangesAr() {
             </div>
           </div>
 
-
-          <div className="row-CH">
-            <div className=" clo-25-CH">
-              <label htmlFor="month" className="label-u-CH">
-                Month:
-              </label>
-            </div>
-            <div>
-              <input
-                type="text"
-                id="month"
-                value={bodychange.month}
-                onChange={(e) => setBodyChanges({ ...bodychange, month: e.target.value })}
-              />
-            </div>
-          </div>
 
           <div className="row-CH">
             <div className=" clo-25-CH">

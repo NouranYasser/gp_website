@@ -8,7 +8,6 @@ function UpdateChildMilestones() {
   const [child, setChilds] = useState({
     title: "",
     description: "",
-    month :"",
     err: "",
     loading: false,
     reload: false,
@@ -25,7 +24,6 @@ function UpdateChildMilestones() {
     const formData = new FormData();
     if (child.title !== "")formData.append("title", child.title);
     if (child.description !== "")formData.append("description", child.description);
-    if (child.month !== "")formData.append("month",child.month);
 
     try {
       const response = await axios.post(
@@ -52,7 +50,6 @@ function UpdateChildMilestones() {
           ...child,
           title: resp.data.title,
           description: resp.data.description,
-          month : resp.data.month,
         });
       })
       .catch((err) => {
@@ -91,19 +88,7 @@ function UpdateChildMilestones() {
         /></div>
         </div>
 
-      
-        <div className='row-CH'>
-            <div className=' clo-25-CH'>
-        <label htmlFor="month" className='label-u-CH'>Month:</label></div>
-            <div>
-        <input
-          type="text"
-          id="month"
-          value={child.month}
-          onChange={(e) => setChilds({ ...child, title: e.target.value })}
-        /></div>
-        </div>
-      
+
          <div class="row-CH">
         <button type="submit" className='b-u-CH'>Submit</button></div>
       </form>

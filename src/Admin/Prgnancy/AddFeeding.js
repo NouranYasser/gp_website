@@ -24,6 +24,8 @@ function AddFeeding() {
     const formData = new FormData();
     formData.append("title", title);
     formData.append("description", description);
+    formData.append("title_ar", title_ar);
+    formData.append("description_ar", description_ar);
     formData.append("month", month);
     formData.append("image", image);
 
@@ -133,17 +135,40 @@ function AddFeeding() {
           />
           {error && <p style={{ color: 'red' }}>{error}</p>}
             <br></br>
-            <label htmlFor="month" className="label-GFE">
+            {/* <label htmlFor="month" className="label-GFE">
               Month:
             </label>
             <br></br>
-            <input
-              className="outbox-FE"
-              type="text"
-              id="month"
-              value={month}
-              onChange={(e) => setMonth(e.target.value)}
-            />
+            <select
+            className='outbox-FE'
+            id="month"
+            value={month}
+            onChange={(e) => setMonth(e.target.value)}
+          >
+          <option value=""disabled>Select Month</option>
+          <option value="1">1-3</option>
+          <option value="3">3-6</option>
+          <option value="3">6-9</option>
+      
+          </select>
+           */}
+
+<label htmlFor="month" className='label-GFE'>Month:</label><br />
+          <select
+            className='outbox-FE'
+            id="month"
+            value={month}
+            onChange={(e) => setMonth(e.target.value)}
+          >
+          <option value=""disabled>Select Month</option>
+          <option value="1">1-3</option>
+          <option value="3">3-6</option>
+          <option value="3">6-9</option>
+          </select>
+        
+
+
+
 
             <label htmlFor="image" className="label-GFE">
               Image:

@@ -8,7 +8,6 @@ function UpdateWeaningAr() {
   const [weaning, setWeanings] = useState({
     title_ar: "",
     description_ar: "",
-    month :"",
     err: "",
     loading: false,
     reload: false,
@@ -25,8 +24,6 @@ function UpdateWeaningAr() {
     const formData = new FormData();
     if (weaning.title_ar !== "")formData.append("title_ar", weaning.title_ar);
     if (weaning.description_ar !== "")formData.append("description_ar", weaning.description_ar);
-    if (weaning.month !== "")formData.append("month",weaning.month);
-
     try {
       const response = await axios.post(
         `https://gradhub.hwnix.com/api/update_DESC/${id}`,
@@ -52,7 +49,6 @@ function UpdateWeaningAr() {
           ...weaning,
           title_ar: resp.data.title_ar,
           description_ar: resp.data.description_ar,
-          month : resp.data.month,
         });
       })
       .catch((err) => {
@@ -91,18 +87,6 @@ function UpdateWeaningAr() {
         /></div>
         </div>
 
-      
-        <div className='row-CH'>
-            <div className=' clo-25-CH'>
-        <label htmlFor="month" className='label-u-CH'>Month:</label></div>
-            <div>
-        <input
-          type="text"
-          id="month"
-          value={weaning.month}
-          onChange={(e) => setWeanings({ ...weaning, month: e.target.value })}
-        /></div>
-        </div>
       
          <div class="row-CH">
         <button type="submit" className='b-u-CH'>Submit</button></div>

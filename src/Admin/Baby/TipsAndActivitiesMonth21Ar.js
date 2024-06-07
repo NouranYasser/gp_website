@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import axios from "axios";
-import "../../style/babygrowthMonth.css";
+import "../../style/TipsMonth.css";
 
 const TipsAndActivitiesMonth21Ar = () => {
   const [tips, setTips] = useState({
@@ -48,7 +48,7 @@ const TipsAndActivitiesMonth21Ar = () => {
       <div className="bmo">
       <div className="b-con">
       <Link to={"/TipsAndActivitiesMonth21"}>
-                    <button className="btnArabic-c">English</button>
+                    <button className="buttonArabic">English</button>
         </Link>
 </div>
         {tips.err && <p>{tips.err}</p>}
@@ -72,7 +72,7 @@ const TipsAndActivitiesMonth21Ar = () => {
 
                    <td>
                       <button
-                        className="btnDelete"
+                        className="buttonDelete"
                         onClick={() => {
                           deleteBabygrowth(result.id);
                         }}
@@ -83,7 +83,7 @@ const TipsAndActivitiesMonth21Ar = () => {
                     
                     <td>
                       <Link to={"/UpdateTipsAndActivitiesAr/" + result.id}>
-                        <button className="btnUpdate">تعديل</button>
+                        <button className="buttonUpdate">تعديل</button>
                       </Link>
                     </td>
                     <td>{result.description_ar}</td>

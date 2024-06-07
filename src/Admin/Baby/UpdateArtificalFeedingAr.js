@@ -8,7 +8,6 @@ function UpdateArtificalFeedingAr() {
   const [artifical, setArtificals] = useState({
     title_ar: "",
     description_ar: "",
-    month :"",
     err: "",
     loading: false,
     reload: false,
@@ -25,8 +24,6 @@ function UpdateArtificalFeedingAr() {
     const formData = new FormData();
     if (artifical.title_ar !== "")formData.append("title_ar", artifical.title_ar);
     if (artifical.description_ar !== "")formData.append("description_ar", artifical.description_ar);
-    if (artifical.month !== "")formData.append("month",artifical.month);
-
     try {
       const response = await axios.post(
         `https://gradhub.hwnix.com/api/update_DESC/${id}`,
@@ -52,7 +49,6 @@ function UpdateArtificalFeedingAr() {
           ...artifical,
           title_ar: resp.data.title_ar,
           description_ar: resp.data.description_ar,
-          month : resp.data.month,
         });
       })
       .catch((err) => {
@@ -92,19 +88,7 @@ function UpdateArtificalFeedingAr() {
         /></div>
         </div>
 
-       
-        <div className='row-CH'>
-            <div className=' clo-25-CH'>
-        <label htmlFor="month" className='label-u-CH'>Month:</label></div>
-            <div>
-        <input
-          type="text"
-          id="month"
-          value={artifical.month}
-          onChange={(e) => setArtificals({ ...artifical, month: e.target.value })}
-        /></div>
-        </div>
-      
+
          <div class="row-CH">
         <button type="submit" className='b-u-CH'>Submit</button></div>
       </form>
