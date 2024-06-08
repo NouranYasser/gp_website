@@ -47,7 +47,7 @@ function UpdateBabygrowth() {
           ...babygrowth,
           title: resp.data.title,
           description: resp.data.description,
-          image: resp.data.image,
+          image: null,
         });
       })
       .catch((err) => {

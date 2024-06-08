@@ -90,7 +90,7 @@ return (
   <label htmlFor="VideoUrl" className='label-CO'>Video Url:</label><br />
   <input
     type="text"
-    id="VideoUrl"
+    id="descriptionCO"
     value={video_url}
     onChange={(e) => setVideoUrl(e.target.value)}
     required

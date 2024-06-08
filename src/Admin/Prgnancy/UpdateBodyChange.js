@@ -8,7 +8,7 @@ function UpdateBodyChanges() {
   const [bodychange, setBodyChanges] = useState({
     title: "",
     description: "",
-    image:"",
+    image:"null",
     err: "",
     loading: false,
     reload: false,
@@ -25,7 +25,7 @@ function UpdateBodyChanges() {
     const formData = new FormData();
     if (bodychange.title !== "")formData.append("title", bodychange.title);
     if (bodychange.description !== "")formData.append("description", bodychange.description);
-    if (bodychange.image !== "")formData.append("image",bodychange.image);
+    if (bodychange.image !== null) formData.append('image', bodychange.image);
 
     try {
       const response = await axios.post(
@@ -52,7 +52,7 @@ function UpdateBodyChanges() {
           ...bodychange,
           title: resp.data.title,
           description: resp.data.description,
-          image: resp.data.image,
+          image: null,
         });
       })
       .catch((err) => {
